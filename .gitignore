@@ -1,0 +1,18 @@
+# Bower
+/vendor/
+
+# NPM
+/node_modules/
+
+# CSS
+/css/
+
+# JS
+/js/
+
+# Favicons
+/favicons/
+/partials/favicons.php
+
+# Build
+/dist/
