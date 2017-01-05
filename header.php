@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6">
-                    <!-- Atalhos de teclado -->
+                    <?php get_template_part('partials/barra-atralhos'); ?>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <!-- Barra de Acessibilidade & Idiomas -->
