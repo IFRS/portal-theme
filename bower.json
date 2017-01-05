@@ -5,6 +5,7 @@
         "html5shiv":                    "*",
         "respond-minmax":               "*",
         "jquery":                       "~1.*",
-        "bootstrap-sass":               "~3.*"
+        "bootstrap-sass":               "~3.*",
+        "prettyPhoto":                  "scaron/prettyphoto"
     }
 }
