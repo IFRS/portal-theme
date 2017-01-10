@@ -2,8 +2,8 @@
 // Habilita a personalização de cabeçalho
 add_theme_support('custom-header', array(
     'default-image'          => '',
-	'width'                  => 555,
-	'height'                 => 300,
+	'width'                  => 350,
+	'height'                 => 120,
 	'flex-height'            => false,
 	'flex-width'             => false,
 	'uploads'                => true,
