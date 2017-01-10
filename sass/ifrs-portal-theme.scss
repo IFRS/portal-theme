@@ -1,10 +1,13 @@
-@import '../vendor/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-
+@import 'fonts';
 @import 'vars';
 
 @import '../vendor/bootstrap-sass/assets/stylesheets/bootstrap';
 
-@import 'fonts';
 @import 'barra-brasil-fix';
+@import 'header';
+@import 'menu';
+@import 'widgets';
 
-@import "header";
+
+@import 'footer';
+@import 'footer-brasil';
