@@ -6,6 +6,8 @@
         "respond-minmax":               "*",
         "jquery":                       "~1.*",
         "bootstrap-sass":               "~3.*",
-        "prettyPhoto":                  "scaron/prettyphoto"
+        "prettyPhoto":                  "scaron/prettyphoto",
+        "jQuery-Flex-Vertical-Center":  "*",
+        "masonry":                      "*"
     }
 }
