@@ -29,13 +29,21 @@ function load_scripts_portal() {
         wp_enqueue_script( 'respond-matchmedia', get_stylesheet_directory_uri().'/vendor/respond-minmax/dest/respond.matchmedia.addListener.src.js', array(), false, false );
         wp_script_add_data( 'respond-matchmedia', 'conditional', 'lt IE 9' );
 
-        wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.min.js', array(), false, false );
+        // wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.min.js', array(), false, false );
 
         wp_enqueue_script( 'jquery', get_stylesheet_directory_uri().'/vendor/jquery/dist/jquery.js', array(), false, false );
         wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri().'/vendor/bootstrap-sass/assets/javascripts/bootstrap.js', array('jquery'), false, false );
 
+        wp_enqueue_script('jquery-flex-vertical', get_stylesheet_directory_uri().'/vendor/jQuery-Flex-Vertical-Center/jquery.flexverticalcenter.js', array('jquery'), false, true);
+        wp_enqueue_script('vertical-align', get_stylesheet_directory_uri().'/src/vertical-align.js', array('jquery-flex-vertical'), false, true);
+
+        wp_enqueue_script('menu', get_stylesheet_directory_uri().'/src/menu.js', array('bootstrap'), false, true);
+
         wp_enqueue_script( 'jquery-prettyPhoto', get_stylesheet_directory_uri().'/vendor/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), false, true );
         wp_enqueue_script('prettyPhoto-config', get_stylesheet_directory_uri().'/src/prettyPhoto-config.js', array(), false, true);
+
+        wp_enqueue_script( 'masonry-custom', get_template_directory_uri().'/vendor/masonry/dist/masonry.pkgd.js', array(), false, true );
+        wp_enqueue_script( 'masonry-config', get_template_directory_uri().'/src/masonry-config.js', array('masonry-custom'), false, true );
     } else {
         wp_enqueue_script( 'html5shiv', get_stylesheet_directory_uri().'/vendor/html5shiv/dist/html5shiv.min.js', array(), false, false );
         wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
@@ -47,13 +55,21 @@ function load_scripts_portal() {
         wp_enqueue_script( 'respond-matchmedia', get_stylesheet_directory_uri().'/vendor/respond-minmax/dest/respond.matchmedia.addListener.min.js', array(), false, false );
         wp_script_add_data( 'respond-matchmedia', 'conditional', 'lt IE 9' );
 
-        wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.min.js', array(), false, false );
+        // wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.min.js', array(), false, false );
 
         wp_enqueue_script( 'jquery', get_stylesheet_directory_uri().'/vendor/jquery/dist/jquery.min.js', array(), false, false );
         wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri().'/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js', array('jquery'), false, false );
 
+        wp_enqueue_script('jquery-flex-vertical', get_stylesheet_directory_uri().'/vendor/jQuery-Flex-Vertical-Center/jquery.flexverticalcenter.js', array('jquery'), false, true);
+        wp_enqueue_script('vertical-align', get_stylesheet_directory_uri().'/js/vertical-align.min.js', array('jquery-flex-vertical'), false, true);
+
+        wp_enqueue_script('menu', get_stylesheet_directory_uri().'/src/menu.min.js', array('bootstrap'), false, true);
+
         wp_enqueue_script( 'jquery-prettyPhoto', get_stylesheet_directory_uri().'/vendor/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), false, true );
         wp_enqueue_script('prettyPhoto-config', get_stylesheet_directory_uri().'/js/prettyPhoto-config.min.js', array(), false, true);
+
+        wp_enqueue_script( 'masonry-custom', get_template_directory_uri().'/vendor/masonry/dist/masonry.pkgd.min.js', array(), false, true );
+        wp_enqueue_script( 'masonry-config', get_template_directory_uri().'/js/masonry-config.min.js', array('masonry-custom'), false, true );
 
         wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), false, true );
     }
