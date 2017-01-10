@@ -1,0 +1,100 @@
+#menu-relevancia {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+
+    > li {
+        border-top: 1px solid #D6DCD7;
+        font-size: 14px;
+        min-height: 30px;
+
+        &:last-child {
+            border-bottom: 1px solid #D6DCD7;
+        }
+
+        > a {
+            color: #03316F;
+            display: block;
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+    #menu-principal {
+        list-style: none;
+        padding: 0;
+
+        .menu-item {
+            > a {
+                border-bottom: 1px solid #D6DCD7;
+            }
+        }
+
+        > li {
+            > a {
+                background: #EAEBEE;
+                border-top: 4px solid $cor-primaria-verde;
+                color: #00500F;
+                display: block;
+                font-size: 12px;
+                font-weight: bold;
+                text-transform: uppercase;
+                height: 47px; // As bordas contam como tamanho do elemento, por isso não é 42px como diz o guia.
+                margin-top: 30px;
+                padding-left: 10px;
+                padding-top: 3px;
+            }
+        }
+
+        .sub-menu {
+            list-style: none;
+            padding: 0;
+            > li {
+                > a {
+                    color: #172938;
+                    display: block;
+                    font-size: 14px;
+                    height: 100%;
+                    min-height: 30px;
+                    padding-left: 15px;
+                    padding-top: 3px; // FIXME: alinhar verticalmente o texto desses elementos.
+                }
+
+                &.current-menu-item {
+                    > a {
+                        font-weight: bold;
+                    }
+                }
+
+                &.menu-item-has-children {
+                    > a {
+                        background-color: #EAEBEE;
+                        border-top: 2px solid #00520F;
+                        border-bottom: 1px solid #00520F;
+                        color: #172938;
+                        font-size: 14px;
+                        font-weight: bold;
+
+                        // TODO: achar uma forma de colocar o glyphicon.
+                        // &:before {
+                        //     @extend .glyphicon;
+                        //     @extend .glyphicon-chevron-right;
+                        //     font-size: 10px;
+                        //     padding-right: 2px;
+                        // }
+                    }
+
+                    .menu-item {
+                        > a {
+                            background-color: #EAEBEE;
+                            border-bottom: 1px solid #00520F;
+                            font-size: 13px;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
