@@ -26,21 +26,21 @@
     <header>
         <h1 class="sr-only"><?php bloginfo('name'); ?></h1>
         <div class="container">
-            <div class="row">
+            <div class="row" id="header-menus">
                 <div class="col-xs-12 col-md-6">
-                    <?php get_template_part('partials/barra-atralhos'); ?>
+                    <?php get_template_part('partials/menu-atalhos'); ?>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <!-- Barra de Acessibilidade & Idiomas -->
+                    <?php get_template_part('partials/menu-acessibilidade'); ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-6" id="header-left">
                 <?php if (get_header_image() != '') : ?>
-                    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" alt="Marca do IFRS" class="center-block img-responsive"/></a>
+                    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" alt="Marca do IFRS" class="img-responsive"/></a>
                 <?php endif; ?>
                 </div>
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-6" id="header-right">
                     <div class="row">
                         <div class="col-xs-12">
                             <?php get_search_form(); ?>
@@ -48,23 +48,28 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <!-- Redes Sociais e RSS -->
+                            <?php get_template_part('partials/menu-social'); ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <!-- Barra de Serviços -->
+        </div>
+        <div id="barra-servicos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <?php get_template_part('partials/menu-servicos'); ?>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section role="main">
+    <section role="main" class="container">
         <div class="row">
             <div class="col-xs-12 col-md-2">
                 <!-- Menu -->
+                <?php get_template_part('partials/menu'); ?>
             </div>
             <div class="col-xs-12 col-md-10">
                 <!-- Conteúdo -->
