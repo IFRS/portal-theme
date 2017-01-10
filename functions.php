@@ -15,16 +15,25 @@ require_once('lib/post-thumbnails.php');
 require_once('lib/breadcrumb.php');
 
 // Script Condicional
-require_once('lib/script_conditional.php');
+require_once('lib/script-conditional.php');
 
 // Scripts & Styles
 require_once('lib/assets.php');
 
 // Adicionar PrettyPhoto automaticamente.
-require_once('lib/prettyphoto_rel.php');
+require_once('lib/prettyphoto-rel.php');
 
 // Paginação personalizada
 require_once('lib/pagination.php');
 
 // Filtro para buscas vazias
 require_once('lib/empty-search-filter.php');
+
+// Menu do Bootstrap
+// require_once('lib/vendor/wp_bootstrap_navwalker.php');
+
+// Menu do IFRS
+require_once('lib/ifrs-navwalker.php');
+
+// Widgets
+require_once('lib/widgets.php');
