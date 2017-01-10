@@ -1,6 +1,121 @@
 header {
     background-color: $cor-primaria-cinza;
     // background: linear-gradient(#F0F2F1, #ECEDF1); // Padrão do Governo
-    background: linear-gradient(#FFFFFF, #ECEDF1);
-    padding: 15px 48px 0 48px;
+    @include gradient-vertical(#FFFFFF, #ECEDF1);
+    margin-bottom: $grid-gutter-width;
+    // padding: 15px 33px 0 33px;
+    padding-top: 15px;
+
+    a {
+        color: $cor-primaria-verde;
+
+        &:hover {
+            color: $cor-primaria-verde;
+        }
+    }
+
+    .barra {
+        font-size: 10px;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            display: inline;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .search-form {
+        margin-bottom: 15px;
+    }
+}
+
+#header-menus {
+    margin-bottom: 30px;
+}
+
+#header-left {
+    margin-bottom: 30px;
+}
+
+#header-right {
+    margin-bottom: 17px;
+    text-align: right;
+}
+
+#menu-atalhos {
+    font-family: Arial, sans-serif;
+    li {
+        .badge {
+            font-size: 10px;
+        }
+    }
+}
+
+#menu-acessibilidade {
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+    }
+}
+
+#menu-social {
+    text-align: right;
+
+    li {
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+#barra-servicos {
+    background-color: $cor-barra-servicos;
+    color: #FFFFFF;
+    height: 30px;
+
+    a {
+        color: #FFFFFF;
+    }
+}
+
+#menu-servicos {
+    font-size: 12px;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align: right;
+
+    li {
+        display: inline-block;
+
+        + li:before {
+            $nbsp: "\00a0";
+            padding: 0 10px;
+            content: "|#{$nbsp}";
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+}
+
+
+
+
+> li {
+  display: inline-block;
+
+
 }
