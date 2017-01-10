@@ -1,0 +1,53 @@
+footer {
+    background-color: $cor-rodape;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    padding-top: 30px;
+
+    #menu-rodape {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        >.menu-item {
+            border-left: 1px dotted #80A887;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 46px;
+            margin-bottom: 46px;
+            padding-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .sub-menu {
+            list-style: none;
+            padding: 0;
+            margin-top: 18px;
+
+            >.menu-item {
+                font-size: 13px;
+                font-weight: normal;
+                text-transform: none;
+            }
+        }
+
+        a {
+            color: #FFFFFF;
+        }
+    }
+}
+
+#footer-bottom {
+    background-color: #FFFFFF;
+    p {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 0.9em;
+
+        a {
+            color: #000;
+        }
+    }
+}
