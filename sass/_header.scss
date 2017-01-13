@@ -43,8 +43,10 @@ header {
 }
 
 #header-right {
+    @media only screen and (min-width: $screen-md-min) {
+        text-align: right;
+    }
     margin-bottom: 17px;
-    text-align: right;
 }
 
 #menu-atalhos {
@@ -57,7 +59,11 @@ header {
 }
 
 #menu-acessibilidade {
-    text-align: center;
+    @media only screen and (min-width: $screen-md-min) {
+        margin-top: 0;
+        text-align: center;
+    }
+    margin-top: 10px;
     text-transform: uppercase;
 
     a {
@@ -67,7 +73,9 @@ header {
 }
 
 #menu-social {
-    text-align: right;
+    @media only screen and (min-width: $screen-md-min) {
+        text-align: right;
+    }
 
     li {
         margin-right: 5px;
