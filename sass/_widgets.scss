@@ -1,3 +1,10 @@
-.widget-nav {
+.widget {
     margin-bottom: $grid-gutter-width;
+}
+
+.widget-nav {
+    img {
+        @extend .center-block;
+        @extend .img-responsive;
+    }
 }
