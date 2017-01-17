@@ -29,11 +29,14 @@ require_once('lib/pagination.php');
 // Filtro para buscas vazias
 require_once('lib/empty-search-filter.php');
 
-// Menu do Bootstrap
-// require_once('lib/vendor/wp_bootstrap_navwalker.php');
-
 // Menu do IFRS
 require_once('lib/ifrs-navwalker.php');
 
 // Widgets
 require_once('lib/widgets.php');
+
+// Custom Excerpt
+require_once('lib/excerpt.php');
+
+// Queries personalizadas em determinados templates.
+require_once('lib/custom-queries.php');
