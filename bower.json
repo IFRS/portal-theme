@@ -1,13 +1,14 @@
 {
-    "name": "ifrs-portal-theme",
-    "private": true,
-    "dependencies": {
-        "html5shiv":                    "*",
-        "respond-minmax":               "*",
-        "jquery":                       "~1.*",
-        "bootstrap-sass":               "~3.*",
-        "prettyPhoto":                  "scaron/prettyphoto",
-        "jQuery-Flex-Vertical-Center":  "*",
-        "masonry":                      "*"
-    }
+  "name": "ifrs-portal-theme",
+  "private": true,
+  "dependencies": {
+    "html5shiv": "*",
+    "respond-minmax": "*",
+    "jquery": "~1.*",
+    "bootstrap-sass": "~3.*",
+    "prettyPhoto": "scaron/prettyphoto",
+    "jQuery-Flex-Vertical-Center": "*",
+    "masonry": "*",
+    "slicknav": "^1.0.10"
+  }
 }
