@@ -1,6 +1,6 @@
 <?php if (!dynamic_sidebar('widget-nav')) : endif; ?>
 
-<nav class="menu-nav">
+<nav class="menu-nav" id="menu-navbar">
 <?php
     wp_nav_menu(
         array(
