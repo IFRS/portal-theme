@@ -1,9 +1,8 @@
 header {
     background-color: $cor-primaria-cinza;
-    // background: linear-gradient(#F0F2F1, #ECEDF1); // Padrão do Governo
-    @include gradient-vertical(#FFFFFF, #ECEDF1);
+    // background: linear-gradient(#F0F2F1, $cor-primaria-cinza); // Padrão do Governo
+    @include gradient-vertical(#FFFFFF, $cor-primaria-cinza);
     margin-bottom: $grid-gutter-width;
-    // padding: 15px 33px 0 33px;
     padding-top: 15px;
 
     a {
@@ -36,9 +35,19 @@ header {
 
 #header-menus {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 #header-left {
+    @media only screen and (max-width: $screen-md-min) {
+        a {
+            > img {
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+
     margin-bottom: 30px;
 }
 
@@ -46,11 +55,18 @@ header {
     @media only screen and (min-width: $screen-md-min) {
         text-align: right;
     }
+
     margin-bottom: 17px;
+    text-align: center;
 }
 
 #menu-atalhos {
+    @media only screen and (min-width: $screen-md-min) {
+        text-align: left;
+    }
+
     font-family: Arial, sans-serif;
+
     li {
         .badge {
             font-size: 10px;
@@ -61,8 +77,9 @@ header {
 #menu-acessibilidade {
     @media only screen and (min-width: $screen-md-min) {
         margin-top: 0;
-        text-align: center;
+        text-align: right;
     }
+
     margin-top: 10px;
     text-transform: uppercase;
 
@@ -116,14 +133,4 @@ header {
             margin-right: 0;
         }
     }
-
-}
-
-
-
-
-> li {
-  display: inline-block;
-
-
 }
