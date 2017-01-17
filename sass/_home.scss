@@ -1,0 +1,21 @@
+.carousel {
+    .carousel-control.left,
+    .carousel-control.right {
+        @include reset-filter();
+        background-image: none !important;
+        outline: 0;
+    }
+
+    @media (min-width: $screen-md-min) {
+        .carousel-control {
+            visibility: hidden;
+            width: 5% !important;
+        }
+
+        &:hover {
+            .carousel-control {
+                visibility: visible;
+            }
+        }
+    }
+}
