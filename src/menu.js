@@ -7,13 +7,16 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.collapse').on('show.bs.collapse', function() {
-        $(this).prevAll('.glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
+    $('.collapse').on('show.bs.collapse', function(e) {
+        var collapse = $(e.target);
+        collapse.prev('a').children('.glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
     });
 
-    $('.collapse').on('hide.bs.collapse', function() {
-        $(this).prevAll('.glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        var collapse = $(e.target);
+        collapse.prev('a').children('.glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
     });
 
+    // Abre todos os collapse até o item atual;
     $('.current-menu-item').parents('.collapse').collapse('show');
 });
