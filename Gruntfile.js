@@ -80,7 +80,7 @@ grunt.initConfig({
     sass: {
         dist: {
             options: {
-                noCache: true,
+                // noCache: true,
                 loadPath: 'sass',
                 style: 'expanded',
             },
@@ -113,6 +113,8 @@ grunt.initConfig({
     watch: {
         options: {
             livereload: true,
+            livereloadOnError: false,
+            spawn: false
         },
         template: {
             files: '**/*.php',
@@ -146,28 +148,30 @@ grunt.initConfig({
 
 
     // Tasks
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', [
+        'build',
+        'copy' // dist
+    ]);
 
     grunt.registerTask('images', [
         'imagemin',
         'favicons'
     ]);
+
     grunt.registerTask('css', [
         'sass',
         'postcss',
         'cssmin'
     ]);
+
     grunt.registerTask('js', [
         'uglify'
     ]);
+
     grunt.registerTask('build', [
         'clean',
         'images',
         'css',
         'js'
-    ]);
-    grunt.registerTask('dist', [
-        'build',
-        'copy'
     ]);
 };
