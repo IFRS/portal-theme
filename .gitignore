@@ -1,18 +1,21 @@
+# NPM
+/node_modules/
+
 # Bower
 /vendor/
 
-# NPM
-/node_modules/
+# Favicons
+/favicons/
+/partials/favicons.php
+
+#SASS
+.sass-cache/
 
 # CSS
 /css/
 
 # JS
 /js/
-
-# Favicons
-/favicons/
-/partials/favicons.php
 
 # Build
 /dist/
