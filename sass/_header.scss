@@ -106,7 +106,7 @@ header {
 #barra-servicos {
     background-color: $cor-barra-servicos;
     color: #FFFFFF;
-    height: 30px;
+    min-height: 30px;
 
     a {
         color: #FFFFFF;
