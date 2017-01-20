@@ -1,6 +1,5 @@
 <?php
-function breadcrumb_portal()
-{
+function portal_breadcrumb() {
     $home      = 'Home';
     $before    = '<li class="active">';
     $sep       = '';

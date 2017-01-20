@@ -67,6 +67,11 @@
 
     <section role="main" class="container">
         <div class="row">
+            <div class="col-xs-12">
+                <?php portal_breadcrumb(); ?>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xs-12 col-md-2">
                 <!-- Menu -->
                 <?php get_template_part('partials/menu'); ?>
