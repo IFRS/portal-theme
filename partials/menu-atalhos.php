@@ -1,4 +1,4 @@
-<ul id="menu-atalhos" class="barra">
+<ul id="menu-atalhos" class="barra hidden-xs">
     <li><a href="#inicio-conteudo"><?php _e('Ir para o conteúdo'); ?>&nbsp;<span class="badge">1</span></a></li>
     <li><a href="#inicio-menu"><?php _e('Ir para o menu'); ?>&nbsp;<span class="badge">2</span></a></li>
     <li><a href="#search-field"><?php _e('Ir para a busca'); ?>&nbsp;<span class="badge">3</span></a></li>
