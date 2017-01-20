@@ -1,5 +1,5 @@
 <?php
-function custom_pagination() {
+function portal_pagination() {
     global $wp_query;
 
     $big = 999999999; // need an unlikely integer
