@@ -49,6 +49,12 @@ function load_scripts_portal() {
 
         wp_enqueue_script( 'slicknav', get_template_directory_uri().'/vendor/slicknav/dist/jquery.slicknav.js', array(), false, true );
         wp_enqueue_script( 'slicknav-config', get_template_directory_uri().'/src/slicknav-config.js', array('slicknav'), false, true );
+
+        wp_enqueue_script( 'picturefill', get_template_directory_uri().'/vendor/picturefill/dist/picturefill.js', array(), false, true );
+        wp_enqueue_script( 'picturefill-config', get_template_directory_uri().'/src/picturefill-config.js', array('picturefill'), false, true );
+
+        wp_enqueue_script( 'lazysizes', get_template_directory_uri().'/vendor/lazysizes/lazysizes.js', array(), false, true );
+        wp_enqueue_script( 'lazysizes-config', get_template_directory_uri().'/src/lazysizes-config.js', array('lazysizes'), false, true );
     } else {
         wp_enqueue_script( 'html5shiv', get_stylesheet_directory_uri().'/vendor/html5shiv/dist/html5shiv.min.js', array(), false, false );
         wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
@@ -78,6 +84,12 @@ function load_scripts_portal() {
 
         wp_enqueue_script( 'slicknav', get_template_directory_uri().'/vendor/slicknav/dist/jquery.slicknav.min.js', array(), false, true );
         wp_enqueue_script( 'slicknav-config', get_template_directory_uri().'/js/slicknav-config.min.js', array('slicknav'), false, true );
+
+        wp_enqueue_script( 'picturefill', get_template_directory_uri().'/vendor/picturefill/dist/picturefill.min.js', array(), false, true );
+        wp_enqueue_script( 'picturefill-config', get_template_directory_uri().'/js/picturefill-config.min.js', array('picturefill'), false, true );
+
+        wp_enqueue_script( 'lazysizes', get_template_directory_uri().'/vendor/lazysizes/lazysizes.min.js', array(), false, true );
+        wp_enqueue_script( 'lazysizes-config', get_template_directory_uri().'/js/lazysizes-config.min.js', array('lazysizes'), false, true );
 
         wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), false, true );
     }
