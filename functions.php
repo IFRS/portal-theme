@@ -40,3 +40,7 @@ require_once('lib/excerpt.php');
 
 // Queries personalizadas em determinados templates.
 require_once('lib/custom-queries.php');
+
+// Seleção única de categoria em posts.
+require_once('lib/taxonomy-single-term/class.taxonomy-single-term.php');
+require_once('lib/category-single-term.php');
