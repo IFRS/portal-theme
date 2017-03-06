@@ -65,10 +65,12 @@
         </div>
     </header>
 
+    <?php portal_breadcrumb(); ?>
+
     <section role="main" class="container">
         <div class="row">
             <div class="col-xs-12">
-                <?php portal_breadcrumb(); ?>
+
             </div>
         </div>
         <div class="row">
