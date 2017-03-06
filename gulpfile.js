@@ -81,4 +81,8 @@ gulp.task('watch', function() {
     watcherJS.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
+
+    gulp.watch(['*.php', '**/*.php']).on('change', function(file) {
+        livereload.changed(file.path);
+    });
 });
