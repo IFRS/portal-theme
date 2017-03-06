@@ -4,11 +4,7 @@
 # Bower
 /vendor/
 
-# Favicons
-/favicons/
-/partials/favicons.php
-
-#SASS
+#Sass
 .sass-cache/
 
 # CSS
