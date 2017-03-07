@@ -3,6 +3,7 @@
         font-size: 16px;
         text-transform: uppercase;
         font-weight: bold;
+        margin: 0;
     }
 
     .post-title {
@@ -19,7 +20,7 @@
     }
 
     .post-date {
-        color: #2c66ce;
+        color: $cor-secundaria-azul-claro;
         font-size: 12px;
     }
 
@@ -45,7 +46,6 @@
     }
 
     .post-tags {
-        color: #3A70D1;
         font-size: 11px;
         list-style: none;
         margin: 0;
@@ -58,6 +58,24 @@
     }
 }
 
-.latest-post {
+.latest-posts {
     margin-top: 30px;
+
+    h2 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .latest-post-title {
+        font-size: 16px;
+        line-height: 18px;
+
+        a {
+            color: #172938;
+        }
+    }
+
+    .latest-post-date {
+        font-size: 11px;
+    }
 }
