@@ -2,9 +2,9 @@
  Copyright Crunchify
  http://crunchify.me/1VIxAsz
 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $screen-md-min) {
     .crunchify-whatsapp {
-	display: none !important;
+	    display: none !important;
     }
 }
 
@@ -58,22 +58,13 @@
     background: #b53525;
 }
 
-.crunchify-buffer {
-    background: #444;
-}
-
-.crunchify-buffer:hover,
-.crunchify-buffer:active {
-    background: #222;
-}
-
 .crunchify-pinterest {
     background: #bd081c;
 }
 
 .crunchify-pinterest:hover,
 .crunchify-pinterest:active {
-    background: #bd081c;
+    background: #a40003;
 }
 
 .crunchify-linkedin {
@@ -95,10 +86,12 @@
 }
 
 .crunchify-social {
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     font-size: 12px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
 
     li {
         display: inline-block;
