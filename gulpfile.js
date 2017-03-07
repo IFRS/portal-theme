@@ -11,7 +11,7 @@ var imagemin     = require('gulp-imagemin');
 var livereload   = require('gulp-livereload');
 
 
-gulp.task('default', ['clean', 'images', 'css', 'js'], function() {
+gulp.task('default', ['clean:dist', 'images', 'css', 'js'], function() {
     return gulp.src([
         '**', '!.**',
         '!img/favicon.source.png',
@@ -29,7 +29,7 @@ gulp.task('css', ['clean:css'], function() {
         autoprefixer({browsers: ['> 1%', 'last 3 versions']})
     ];
     return gulp.src('sass/*.scss')
-    .pipe(sass({includePaths: 'sass', outputStyle: 'expanded'}))
+    .pipe(sass({includePaths: 'sass', outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(gulp.dest('css/'))
     .pipe(postcss(postCSSplugins, {map: true}))
     .pipe(cssmin())
@@ -66,7 +66,7 @@ gulp.task('clean:js', function() {
 });
 
 gulp.task('clean', function() {
-    gulp.start('clean:dist', 'clean:css', 'clean:js');
+    return gulp.start('clean:dist', 'clean:css', 'clean:js');
 });
 
 gulp.task('watch', function() {
