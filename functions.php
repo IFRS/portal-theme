@@ -1,4 +1,6 @@
 <?php
+// Suporte para page title.
+require_once('lib/theme-support.php');
 
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas.
 require_once('lib/depth-limit.php');
@@ -9,12 +11,6 @@ require_once('lib/menus.php');
 // Fix SSL
 require_once('lib/ssl-fix.php');
 
-// Custom Header
-require_once('lib/custom-header.php');
-
-// Post Thumbnail
-require_once('lib/post-thumbnails.php');
-
 // Breadcrumb
 require_once('lib/breadcrumb.php');
 
@@ -24,7 +20,7 @@ require_once('lib/script-conditional.php');
 // Scripts & Styles
 require_once('lib/assets.php');
 
-// Adicionar PrettyPhoto automaticamente.
+// Adicionar PrettyPhoto automaticamente nas imagens do conteúdo.
 require_once('lib/prettyphoto-rel.php');
 
 // Paginação personalizada
