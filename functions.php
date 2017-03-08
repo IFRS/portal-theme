@@ -1,7 +1,7 @@
 <?php
-// Limita o número de níveis na construção dos menus
-require_once('lib/menu-depth-limit.php');
 
+// Limita o número de níveis na construção dos menus e de aninhamento das páginas.
+require_once('lib/depth-limit.php');
 
 // Registra os menus
 require_once('lib/menus.php');
