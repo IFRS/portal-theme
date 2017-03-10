@@ -9,18 +9,15 @@ var cssmin       = require('gulp-cssmin');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var livereload   = require('gulp-livereload');
+var bower        = require('gulp-bower');
 
 
-gulp.task('default', ['clean:dist', 'images', 'css', 'js'], function() {
-    return gulp.src([
-        '**', '!.**',
-        '!img/favicon.source.png',
-        '!node_modules{,/**}',
-        '!sass{,/**}',
-        '!src{,/**}',
-        '!bower.json', '!gulpfile.js', '!package.json'
-    ])
-    .pipe(gulp.dest('dist/'));
+gulp.task('default', ['bower'], function() {
+    return gulp.start('images', 'css', 'js');
+});
+
+gulp.task('bower', function() {
+    return bower();
 });
 
 gulp.task('css', ['clean:css'], function() {
@@ -40,7 +37,6 @@ gulp.task('css', ['clean:css'], function() {
 
 gulp.task('js', ['clean:js'], function() {
     return gulp.src('src/*.js')
-    // .pipe(gulp.dest('js/'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
@@ -85,4 +81,16 @@ gulp.task('watch', function() {
     gulp.watch(['*.php', '**/*.php']).on('change', function(file) {
         livereload.changed(file.path);
     });
+});
+
+gulp.task('dist', ['clean:dist', 'default'], function() {
+    return gulp.src([
+        '**', '!.**',
+        '!img/favicon.source.png',
+        '!node_modules{,/**}',
+        '!sass{,/**}',
+        '!src{,/**}',
+        '!bower.json', '!gulpfile.js', '!package.json'
+    ])
+    .pipe(gulp.dest('dist/'));
 });
