@@ -1,9 +1,11 @@
 <?php
 function portal_custom_queries( $query ) {
-    if ($query->is_main_query() & !is_admin()) {
+    if (!is_admin() && $query->is_main_query()) {
         if ($query->is_post_type_archive('edital')) {
-            $query->query_vars['posts_per_page'] = -1;
-            $query->query_vars['nopaging'] = true;
+            $query->set('posts_per_page', -1);
+            $query->set('nopaging', true);
+            $query->set('orderby', 'modified');
+            $query->set('order', 'DESC');
         }
     }
 }
