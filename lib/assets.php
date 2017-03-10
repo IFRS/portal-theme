@@ -11,6 +11,14 @@ function load_styles_portal() {
         wp_enqueue_style( 'css-prettyPhoto', get_stylesheet_directory_uri().'/vendor/prettyPhoto/css/prettyPhoto.css', array(), false, 'screen' );
         wp_enqueue_style( 'css-slicknav', get_stylesheet_directory_uri().'/vendor/slicknav/dist/slicknav.min.css', array(), false, 'screen' );
     }
+
+    wp_register_style( 'css-datatables', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/css/jquery.dataTables.css' : '/vendor/datatables/media/css/jquery.dataTables.min.css'), array(), false, 'screen' );
+
+    wp_register_style( 'css-datatables-bootstrap', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/css/dataTables.bootstrap.css' : '/vendor/datatables/media/css/dataTables.bootstrap.min.css'), array(), false, 'screen' );
+
+    if (is_post_type_archive( 'edital' )) {
+        wp_enqueue_style('css-datatables-bootstrap');
+    }
 }
 
 function load_scripts_portal() {
@@ -92,6 +100,16 @@ function load_scripts_portal() {
         wp_enqueue_script( 'lazysizes-config', get_template_directory_uri().'/js/lazysizes-config.min.js', array('lazysizes'), false, true );
 
         wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), false, true );
+    }
+
+    wp_register_script( 'jquery-datatables', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/js/jquery.dataTables.js' : '/vendor/datatables/media/js/jquery.dataTables.min.js'), array('jquery'), false, true );
+    wp_register_script( 'jquery-datatables-bootstrap', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/js/dataTables.bootstrap.js' : '/vendor/datatables/media/js/dataTables.bootstrap.min.js'), array('jquery','jquery-dataTables'), false, true );
+    wp_register_script( 'datatables-config', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/datatables-config.js' : '/js/datatables-config.min.js'), array('jquery', 'jquery-datatables'), false, true );
+
+    if (is_post_type_archive( 'edital' )) {
+        wp_enqueue_script('jquery-datatables');
+        wp_enqueue_script('jquery-datatables-bootstrap');
+        wp_enqueue_script('datatables-config');
     }
 }
 
