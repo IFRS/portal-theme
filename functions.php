@@ -1,15 +1,12 @@
 <?php
-// Suporte para page title.
+// Suporte para page title
 require_once('lib/theme-support.php');
 
-// Limita o número de níveis na construção dos menus e de aninhamento das páginas.
+// Limita o número de níveis na construção dos menus e de aninhamento das páginas
 require_once('lib/depth-limit.php');
 
 // Registra os menus
 require_once('lib/menus.php');
-
-// Fix SSL
-require_once('lib/ssl-fix.php');
 
 // Breadcrumb
 require_once('lib/breadcrumb.php');
@@ -20,7 +17,7 @@ require_once('lib/script-conditional.php');
 // Scripts & Styles
 require_once('lib/assets.php');
 
-// Adicionar PrettyPhoto automaticamente nas imagens do conteúdo.
+// Adicionar PrettyPhoto automaticamente nas imagens do conteúdo
 require_once('lib/prettyphoto-rel.php');
 
 // Paginação personalizada
@@ -29,18 +26,11 @@ require_once('lib/pagination.php');
 // Filtro para buscas vazias
 require_once('lib/empty-search-filter.php');
 
-// Menu do IFRS
-require_once('lib/ifrs-navwalker.php');
-
 // Widgets
 require_once('lib/widgets.php');
 
-// Custom Excerpt
+// Tamanho personalizado do resumo automático
 require_once('lib/excerpt.php');
 
-// Queries personalizadas em determinados templates.
+// Queries personalizadas em determinados templates
 require_once('lib/custom-queries.php');
-
-// Seleção única de categoria em posts.
-require_once('lib/taxonomy-single-term/class.taxonomy-single-term.php');
-require_once('lib/category-single-term.php');
