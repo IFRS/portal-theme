@@ -20,11 +20,11 @@
                         </div>
                         <div class="list-group">
                             <?php foreach ($edital_file as $file) : ?>
-                                <a class="list-group-item list-group-item-info" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><?php echo $file['title'] ?></a>
+                                <a class="list-group-item list-group-item-info" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><span class="glyphicon glyphicon-file"></span>&nbsp;<?php echo $file['title'] ?></a>
                             <?php endforeach; ?>
                             <?php if ( !empty( $edital_retifica ) ) : ?>
                                 <?php foreach ($edital_retifica as $file) : ?>
-                                    <a class="list-group-item" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><?php echo $file['title'] ?></a>
+                                    <a class="list-group-item" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><span class="glyphicon glyphicon-file"></span>&nbsp;<?php echo $file['title'] ?></a>
                                 <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="list-group">
                                 <?php foreach ($edital_anexos as $file) : ?>
-                                    <a class="list-group-item" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><?php echo $file['title'] ?></a>
+                                    <a class="list-group-item" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><span class="glyphicon glyphicon-file"></span>&nbsp;<?php echo $file['title'] ?></a>
                                 <?php endforeach; ?>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="list-group">
                                 <?php foreach ($edital_publica as $file) : ?>
-                                    <a class="list-group-item" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><?php echo $file['title'] ?></a>
+                                    <a class="list-group-item" title="<?php echo $file['title'] ?>" href="<?php echo $file['url'] ?>"><span class="glyphicon glyphicon-file"></span>&nbsp;<?php echo $file['title'] ?></a>
                                 <?php endforeach; ?>
                             </div>
                         </div>
