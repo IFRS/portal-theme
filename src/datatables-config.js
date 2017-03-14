@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('.table-editais').DataTable({
+        order: [],
         searching: false,
         paging: false,
         bAutoWidth: false,
