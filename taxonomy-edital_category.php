@@ -12,7 +12,7 @@
                     </div>
                 <?php else : ?>
                     <div class="alert alert-warning" role="alert">
-                        <p><strong>Aguarde!</strong>&nbsp;<?php printf(__('Ainda n&atilde;o h&aacute; Editais publicados na categoria %s .'), single_term_title('', false)); ?></p>
+                        <p><strong>Aguarde!</strong>&nbsp;<?php printf(__('Ainda n&atilde;o h&aacute; Editais publicados na categoria %s.'), single_term_title('', false)); ?></p>
                     </div>
                 <?php endif; ?>
         <?php endif; ?>
