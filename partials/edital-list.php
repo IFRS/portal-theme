@@ -12,7 +12,7 @@
         <tr>
             <td><?php the_modified_date(); ?></td>
             <td><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></td>
-            <td><a href="<?php echo get_permalink(); ?>"><?php echo get_the_term_list( get_the_ID(), 'edital_category', '', ', ' ); ?></a></td>
+            <td><?php echo get_the_term_list( get_the_ID(), 'edital_category', '', ', ' ); ?></td>
             <td><?php echo rwmb_meta( 'edital_date' ); ?></td>
         </tr>
     <?php endwhile; ?>
