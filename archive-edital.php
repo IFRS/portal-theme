@@ -13,14 +13,14 @@
                     </div>
                 <?php else : ?>
                     <div class="alert alert-warning" role="alert">
-                        <p><strong>Aguarde!</strong>&nbsp;<?php _e('Ainda n&atilde;o h&aacute; Editais publicados.'); ?></p>
+                        <p><strong><?php _e('Aguarde!'); ?></strong>&nbsp;<?php _e('Ainda n&atilde;o h&aacute; Editais publicados.'); ?></p>
                     </div>
                 <?php endif; ?>
         <?php endif; ?>
     </div>
     <div class="col-xs-12 col-md-3">
         <aside>
-            <?php get_template_part('partials/edital-category', 'list'); ?>
+            <?php get_template_part('partials/edital-category-list'); ?>
             <?php get_template_part('partials/edital-search'); ?>
         </aside>
     </div>
