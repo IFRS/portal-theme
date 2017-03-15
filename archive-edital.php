@@ -21,7 +21,7 @@
     <div class="col-xs-12 col-md-3">
         <aside>
             <?php get_template_part('partials/edital-category-list'); ?>
-            <?php get_template_part('partials/edital-search'); ?>
+            <?php get_template_part('partials/search-local'); ?>
         </aside>
     </div>
 </div>

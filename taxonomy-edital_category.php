@@ -20,7 +20,7 @@
     <div class="col-xs-12 col-md-3">
         <aside>
             <?php get_template_part('partials/edital-category-list'); ?>
-            <?php get_template_part('partials/edital-search'); ?>
+            <?php get_template_part('partials/search-local'); ?>
             <br>
             <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="btn btn-default btn-block"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<?php _e('Todos os Editais'); ?></a>
         </aside>
