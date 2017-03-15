@@ -16,7 +16,7 @@
                 <div class="col-xs-12 col-md-6">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Arquivos Principais</h3>
+                            <h3 class="panel-title"><?php _e('Arquivos Principais'); ?></h3>
                         </div>
                         <div class="list-group">
                             <?php foreach ($edital_file as $file) : ?>
@@ -34,7 +34,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Anexos</h3>
+                                <h3 class="panel-title"><?php _e('Anexos'); ?></h3>
                             </div>
                             <div class="list-group">
                                 <?php foreach ($edital_anexos as $file) : ?>
@@ -48,7 +48,7 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Outras Publicações</h3>
+                                <h3 class="panel-title"><?php _e('Outras Publica&ccedil&otilde;es'); ?></h3>
                             </div>
                             <div class="list-group">
                                 <?php foreach ($edital_publica as $file) : ?>
@@ -62,13 +62,21 @@
         </div>
     </div>
     <div class="col-xs-12 col-md-3">
-        <div class="row">
-            <div class="col-xs-12">
-                <h3 class="title-box">Dados do Edital</h3>
-                <p><strong>Data de Publicação:</strong>&nbsp;<?php echo rwmb_meta( 'edital_date' ); ?></p>
-                <p><strong>Última Modificação:</strong>&nbsp;<?php the_modified_date(); ?></p>
+        <aside>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="title-box"><?php _e('Dados do Edital'); ?></h3>
+                    <p><strong>Data de Publicação:</strong>&nbsp;<?php echo rwmb_meta( 'edital_date' ); ?></p>
+                    <p><strong>Última Modificação:</strong>&nbsp;<?php the_modified_date(); ?></p>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="title-box"><?php _e('Categorias do Edital'); ?></h3>
+                    <p><?php echo get_the_term_list( get_the_ID(), 'edital_category', '', '<br>', '' ); ?></p>
+                </div>
+            </div>
+        </aside>
     </div>
 </div>
 
