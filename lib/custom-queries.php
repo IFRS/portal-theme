@@ -7,6 +7,12 @@ function portal_custom_queries( $query ) {
             $query->set('orderby', 'modified');
             $query->set('order', 'DESC');
         }
+        if ($query->is_post_type_archive('concurso') || $query->is_tax('concurso_status')) {
+            $query->set('posts_per_page', -1);
+            $query->set('nopaging', true);
+            $query->set('orderby', 'modified');
+            $query->set('order', 'DESC');
+        }
     }
 }
 
