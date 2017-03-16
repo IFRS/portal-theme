@@ -1,0 +1,15 @@
+.concurso-status-list {
+    padding-left: 5px;
+
+    li {
+        >ul {
+            padding-left: 15px;
+        }
+
+        &.current-cat {
+            >a {
+                font-weight: bold;
+            }
+        }
+    }
+}
