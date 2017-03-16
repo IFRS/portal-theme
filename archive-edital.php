@@ -6,7 +6,6 @@
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/edital-list'); ?>
         <?php else : ?>
-
                 <?php if (is_search()) : ?>
                     <div class="alert alert-danger" role="alert">
                         <p><?php _e('N&atilde;o foram encontrados Editais com os termos buscados.'); ?></p>
