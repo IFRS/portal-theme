@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <?php get_template_part('partials/share', 'buttons'); ?>
+                    <?php get_template_part('partials/share-buttons'); ?>
                 </div>
             </div>
         </article>
