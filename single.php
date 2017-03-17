@@ -33,11 +33,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="post-content">
-                        <?php
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail('full', array('class' => 'post-thumb'));
-                            }
-                        ?>
+                        <?php if (has_post_thumbnail()) : ?>
+                            <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0]; ?>"><?php the_post_thumbnail('full', array('class' => 'post-thumb')); ?></a>
+                        <?php endif; ?>
                         <?php the_content(); ?>
                     </div>
                 </div>
