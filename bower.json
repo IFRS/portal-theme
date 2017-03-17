@@ -6,12 +6,12 @@
     "respond-minmax": "*",
     "jquery": "~1.*",
     "bootstrap-sass": "~3.*",
-    "prettyPhoto": "scaron/prettyphoto",
     "jQuery-Flex-Vertical-Center": "*",
     "masonry": "*",
     "slicknav": "^1.0.10",
     "picturefill": "^3.0.2",
     "lazysizes": "^2.0.7",
-    "datatables": "^1.10.13"
+    "datatables": "^1.10.13",
+    "fancybox": "^2.1.6"
   }
 }

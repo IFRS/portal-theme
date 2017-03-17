@@ -17,9 +17,6 @@ require_once('lib/script-conditional.php');
 // Scripts & Styles
 require_once('lib/assets.php');
 
-// Adicionar PrettyPhoto automaticamente nas imagens do conteúdo
-require_once('lib/prettyphoto-rel.php');
-
 // Paginação personalizada
 require_once('lib/pagination.php');
 
