@@ -10,16 +10,7 @@
                     <h2 class="post-title"><?php the_title(); ?></h2>
                 </div>
             </div>
-            <?php $children = get_pages(array('child_of' => get_the_ID())); ?>
-            <?php if (count($children) > 0) : ?>
-                <ul class="nav nav-tabs">
-                    <?php foreach ($children as $child): ?>
-                        <li role="presentation"><a href="<?php echo get_page_link($child->ID); ?>"><?php echo $child->post_title; ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php else : ?>
-                <hr>
-            <?php endif; ?>
+            <?php get_template_part('partials/page-menu'); ?>
             <div class="row">
                 <div class="col-xs-12">
                     <div class="post-content">
