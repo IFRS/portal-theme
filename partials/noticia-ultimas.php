@@ -14,8 +14,8 @@
             $last_posts = get_posts($args);
         ?>
         <?php if (!empty($last_posts)) : ?>
-            <div class="well latest-posts">
-                <h2>&Uacute;ltimas Not&iacute;cias</h2>
+            <div class="latest-posts">
+                <h2 class="title-box">&Uacute;ltimas Not&iacute;cias</h2>
                 <?php foreach ($last_posts as $post) : ?>
                     <h3 class="latest-post-title"><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><?php echo $post->post_title; ?></a></h3>
                     <p class="latest-post-date"><?php echo get_the_date('d/m/Y', $post->ID); ?></p>
