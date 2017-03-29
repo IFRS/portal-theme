@@ -1,4 +1,5 @@
 var gulp         = require('gulp');
+var gutil        = require('gulp-util');
 var del          = require('del');
 var rename       = require('gulp-rename');
 var sass         = require('gulp-sass');
@@ -10,17 +11,30 @@ var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var livereload   = require('gulp-livereload');
 var bower        = require('gulp-bower');
+var rsync        = require('gulp-rsync');
+var argv         = require('yargs').argv;
 
+var dist = [
+    '**',
+    '!.**',
+    '!img/favicon.source.png',
+    '!node_modules{,/**}',
+    '!sass{,/**}',
+    '!src{,/**}',
+    '!bower.json',
+    '!gulpfile.js',
+    '!package.json'
+];
 
-gulp.task('default', ['bower'], function() {
-    return gulp.start('images', 'css', 'js');
+gulp.task('default', ['clean', 'bower'], function() {
+    return gulp.start('css', 'js', 'images');
 });
 
 gulp.task('bower', function() {
     return bower();
 });
 
-gulp.task('css', ['clean:css'], function() {
+gulp.task('css', function() {
     var postCSSplugins = [
         pixrem(),
         autoprefixer({browsers: ['> 1%', 'last 3 versions']})
@@ -35,7 +49,7 @@ gulp.task('css', ['clean:css'], function() {
     .pipe(livereload());
 });
 
-gulp.task('js', ['clean:js'], function() {
+gulp.task('js', function() {
     return gulp.src('src/*.js')
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
@@ -49,20 +63,8 @@ gulp.task('images', function() {
     .pipe(gulp.dest('img/'));
 });
 
-gulp.task('clean:dist', function() {
-    return del(['dist/']);
-});
-
-gulp.task('clean:css', function() {
-    return del(['css/']);
-});
-
-gulp.task('clean:js', function() {
-    return del(['js/']);
-});
-
 gulp.task('clean', function() {
-    return gulp.start('clean:dist', 'clean:css', 'clean:js');
+    return del(['dist/', 'css/', 'js']);
 });
 
 gulp.task('watch', function() {
@@ -83,14 +85,19 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('dist', ['clean:dist', 'default'], function() {
-    return gulp.src([
-        '**', '!.**',
-        '!img/favicon.source.png',
-        '!node_modules{,/**}',
-        '!sass{,/**}',
-        '!src{,/**}',
-        '!bower.json', '!gulpfile.js', '!package.json'
-    ])
+gulp.task('dist', ['default'], function() {
+    return gulp.src(dist)
     .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('deploy', ['default'], function() {
+    return gulp.src(dist)
+    .pipe(rsync({
+        root: './',
+        hostname: (argv.host === undefined ? false : argv.host),
+        destination: (argv.path === undefined ? false : argv.path),
+        archive: true,
+        silent: false,
+        compress: true
+    }));
 });
