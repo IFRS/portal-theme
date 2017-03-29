@@ -8,4 +8,12 @@ $(window).load(function() {
         itemSelector: '#lista-noticias > div',
         percentPosition: true
     });
+
+    $('.panel-collapse').on('shown.bs.collapse', function() {
+        $('.panel-concurso .concurso-arquivos').masonry({
+            itemSelector: '.col-xs-12',
+            columnWidth: '.col-xs-12',
+            percentPosition: true
+        });
+    });
 });
