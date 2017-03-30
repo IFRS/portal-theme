@@ -30,6 +30,9 @@ function portal_breadcrumb() {
         } elseif (is_tax('edital_category')) {
             echo '<li><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
+        } elseif (is_tax('concurso_status')) {
+            echo '<li><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
+            echo $before . single_term_title('', false) . $after;
         } elseif (is_day()) {
             echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                 'Y'
