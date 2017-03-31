@@ -1,0 +1,20 @@
+.documento {
+    margin-bottom: $grid-gutter-width;
+
+    .documento-date-time {
+        font-size: 0.95em;
+        font-weight: lighter;
+
+        .glyphicon {
+            color: $cor-primaria-verde;
+        }
+    }
+
+    .documento-body {
+        border-left: 1px solid $cor-primaria-cinza;
+    }
+
+    .documento-type {
+        font-weight: bold;
+    }
+}
