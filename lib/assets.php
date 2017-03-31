@@ -63,12 +63,17 @@ function portal_load_scripts() {
 
     wp_register_script( 'add-rel-to-img-link', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/add-rel-to-img-link.js' : '/js/add-rel-to-img-link.min.js'), array('jquery'), false, true );
 
+    wp_register_script( 'documentos', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/documentos.js' : '/js/documentos.min.js'), array('jquery'), false, true );
+
     if (!WP_DEBUG) wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), false, true );
 
     if (is_post_type_archive( 'edital' ) || is_tax('edital_category')) {
         wp_enqueue_script('jquery-datatables');
         wp_enqueue_script('jquery-datatables-bootstrap');
         wp_enqueue_script('datatables-config');
+    }
+    if (is_post_type_archive( 'documento' )) {
+        wp_enqueue_script('documentos');
     }
     if (is_single()) {
         wp_enqueue_script('add-rel-to-img-link');
