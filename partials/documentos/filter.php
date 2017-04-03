@@ -11,22 +11,26 @@
             </a>
         </div>
         <div id="collapseYearly" class="collapse<?php if (is_year()) echo ' in'; ?>" role="tabpanel" aria-labelledby="toggleYearly">
-        <?php
-            wp_get_archives(array(
-                'type'      => 'yearly',
-                'order'     => 'DESC',
-                'post_type' => 'documento'
-            ));
-        ?>
+            <ul>
+            <?php
+                wp_get_archives(array(
+                    'type'      => 'yearly',
+                    'order'     => 'DESC',
+                    'post_type' => 'documento'
+                ));
+            ?>
+            </ul>
         </div>
         <div id="collapseMonthly" class="collapse<?php if (is_month()) echo ' in'; ?>" role="tabpanel" aria-labelledby="toggleMonthly">
-        <?php
-            wp_get_archives(array(
-                'type'      => 'monthly',
-                'order'     => 'DESC',
-                'post_type' => 'documento'
-            ));
-        ?>
+            <ul>
+            <?php
+                wp_get_archives(array(
+                    'type'      => 'monthly',
+                    'order'     => 'DESC',
+                    'post_type' => 'documento'
+                ));
+            ?>
+            </ul>
         </div>
     </div>
 </div>
