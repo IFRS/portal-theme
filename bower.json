@@ -12,6 +12,7 @@
     "picturefill": "^3.0.2",
     "lazysizes": "^2.0.7",
     "datatables": "^1.10.13",
-    "fancybox": "^2.1.6"
+    "fancybox": "^2.1.6",
+    "bxslider-4": "^4.2.12"
   }
 }
