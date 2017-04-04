@@ -18,5 +18,14 @@ function portal_widgets_init() {
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
+	register_sidebar(array(
+		'name'          => 'Widget Galeria',
+		'id'            => 'widget-gallery',
+		'description'   => 'Área abaixo das notícias na página inicial.',
+		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-gallery %2$s">',
+		'after_widget'  => '</div></div></div>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
 }
 add_action( 'widgets_init', 'portal_widgets_init' );

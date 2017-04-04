@@ -55,4 +55,12 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <?php if (!dynamic_sidebar('widget-gallery')) : endif; ?>
+    </div>
+</div>
+
+
+
 <?php get_footer(); ?>
