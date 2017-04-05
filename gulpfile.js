@@ -9,7 +9,7 @@ var autoprefixer = require('autoprefixer');
 var cssmin       = require('gulp-cssmin');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
-var livereload   = require('gulp-livereload');
+var browserSync  = require('browser-sync').create();
 var bower        = require('gulp-bower');
 var rsync        = require('gulp-rsync');
 var argv         = require('yargs').argv;
@@ -34,6 +34,10 @@ gulp.task('bower', function() {
     return bower();
 });
 
+gulp.task('clean', function() {
+    return del(['dist/', 'css/', 'js']);
+});
+
 gulp.task('css', function() {
     var postCSSplugins = [
         pixrem(),
@@ -46,15 +50,15 @@ gulp.task('css', function() {
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
-    .pipe(livereload());
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js', function() {
-    return gulp.src('src/*.js')
+    return gulp.src(['src/*.js', '!src/browser-sync-config.js'])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
-    .pipe(livereload());
+    .pipe(browserSync.stream());
 });
 
 gulp.task('images', function() {
@@ -63,26 +67,17 @@ gulp.task('images', function() {
     .pipe(gulp.dest('img/'));
 });
 
-gulp.task('clean', function() {
-    return del(['dist/', 'css/', 'js']);
-});
-
 gulp.task('watch', function() {
-    livereload.listen();
-
-    var watcherCSS = gulp.watch('sass/**/*.scss', ['css']);
-    watcherCSS.on('change', function(event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    browserSync.init({
+        open: false,
+        notify: false
     });
 
-    var watcherJS = gulp.watch('src/**/*.js', ['js']);
-    watcherJS.on('change', function(event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    });
+    gulp.watch('sass/**/*.scss', ['css']).on('change', browserSync.reload);
 
-    gulp.watch(['*.php', '**/*.php']).on('change', function(file) {
-        livereload.changed(file.path);
-    });
+    gulp.watch('src/**/*.js', ['js']).on('change', browserSync.reload);
+
+    gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
 gulp.task('dist', ['default'], function() {

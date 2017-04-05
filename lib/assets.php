@@ -65,6 +65,7 @@ function portal_load_scripts() {
 
     wp_register_script( 'documentos', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/documentos.js' : '/js/documentos.min.js'), array('jquery'), false, true );
 
+    if (WP_DEBUG) wp_enqueue_script( 'browser-sync-config', get_template_directory_uri().'/src/browser-sync-config.js', array(), false, true );
     if (!WP_DEBUG) wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), false, true );
 
     if (is_post_type_archive( 'edital' ) || is_tax('edital_category')) {
