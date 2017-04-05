@@ -11,7 +11,7 @@ function portal_load_styles() {
     wp_register_style( 'css-datatables', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/css/jquery.dataTables.css' : '/vendor/datatables/media/css/jquery.dataTables.min.css'), array(), false, 'screen' );
     wp_register_style( 'css-datatables-bootstrap', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/css/dataTables.bootstrap.css' : '/vendor/datatables/media/css/dataTables.bootstrap.min.css'), array(), false, 'screen' );
 
-    if (is_post_type_archive( 'edital' ) || is_tax('edital_category')) {
+    if (is_post_type_archive( 'edital' ) || is_tax('edital_category') || is_post_type_archive( 'concurso' )) {
         wp_enqueue_style('css-datatables-bootstrap');
     }
 }
@@ -57,8 +57,11 @@ function portal_load_scripts() {
     wp_enqueue_script( 'jquery-fancybox', get_stylesheet_directory_uri().'/vendor/fancybox/source/jquery.fancybox.pack.js', array('jquery'), false, true );
     wp_register_script('fancybox-config', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/fancybox-config.js' : '/js/fancybox-config.min.js'), array('jquery-fancybox'), false, true);
 
+    wp_register_script( 'moment', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/moment/min/moment-with-locales.js' : '/vendor/moment/min/moment-with-locales.min.js'), array('jquery'), false, true );
+
     wp_register_script( 'jquery-datatables', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/js/jquery.dataTables.js' : '/vendor/datatables/media/js/jquery.dataTables.min.js'), array('jquery'), false, true );
     wp_register_script( 'jquery-datatables-bootstrap', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/js/dataTables.bootstrap.js' : '/vendor/datatables/media/js/dataTables.bootstrap.min.js'), array('jquery','jquery-dataTables'), false, true );
+    wp_register_script( 'datatables-datetime-moment', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/datatables-datetime-moment.js' : '/js/datatables-datetime-moment.min.js'), array('jquery', 'jquery-datatables'), false, true );
     wp_register_script( 'datatables-config', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/datatables-config.js' : '/js/datatables-config.min.js'), array('jquery', 'jquery-datatables'), false, true );
 
     wp_register_script( 'add-rel-to-img-link', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/add-rel-to-img-link.js' : '/js/add-rel-to-img-link.min.js'), array('jquery'), false, true );
@@ -66,11 +69,14 @@ function portal_load_scripts() {
     wp_register_script( 'documentos', get_stylesheet_directory_uri().(WP_DEBUG ? '/src/documentos.js' : '/js/documentos.min.js'), array('jquery'), false, true );
 
     if (WP_DEBUG) wp_enqueue_script( 'browser-sync-config', get_template_directory_uri().'/src/browser-sync-config.js', array(), false, true );
+
     if (!WP_DEBUG) wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), false, true );
 
-    if (is_post_type_archive( 'edital' ) || is_tax('edital_category')) {
+    if (is_post_type_archive( 'edital' ) || is_tax('edital_category') || is_post_type_archive( 'concurso' )) {
+        wp_enqueue_script('moment');
         wp_enqueue_script('jquery-datatables');
         wp_enqueue_script('jquery-datatables-bootstrap');
+        wp_enqueue_script('datatables-datetime-moment');
         wp_enqueue_script('datatables-config');
     }
     if (is_post_type_archive( 'documento' )) {

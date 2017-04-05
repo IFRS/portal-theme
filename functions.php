@@ -1,4 +1,7 @@
 <?php
+// Utilidades
+require_once('lib/utils.php');
+
 // Suporte para page title
 require_once('lib/theme-support.php');
 
