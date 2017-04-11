@@ -9,7 +9,7 @@ var autoprefixer = require('autoprefixer');
 var cssmin       = require('gulp-cssmin');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
-var browserSync  = require('browser-sync').create();
+var livereload   = require('gulp-livereload');
 var bower        = require('gulp-bower');
 var rsync        = require('gulp-rsync');
 var argv         = require('yargs').argv;
@@ -50,7 +50,7 @@ gulp.task('css', function() {
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
-    .pipe(browserSync.stream());
+    .pipe(livereload());
 });
 
 gulp.task('js', function() {
@@ -58,7 +58,7 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
-    .pipe(browserSync.stream());
+    .pipe(livereload());
 });
 
 gulp.task('images', function() {
@@ -68,16 +68,15 @@ gulp.task('images', function() {
 });
 
 gulp.task('watch', function() {
-    browserSync.init({
-        open: false,
-        notify: false
+    livereload.listen();
+
+    gulp.watch('sass/**/*.scss', ['css']);
+
+    gulp.watch('src/**/*.js', ['js']);
+
+    gulp.watch('**/*.php').on('change', function(file) {
+        livereload.changed(file.path);
     });
-
-    gulp.watch('sass/**/*.scss', ['css']).on('change', browserSync.reload);
-
-    gulp.watch('src/**/*.js', ['js']).on('change', browserSync.reload);
-
-    gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
 gulp.task('dist', ['default'], function() {
