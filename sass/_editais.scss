@@ -12,10 +12,31 @@
     }
 }
 
-        &.current-cat {
-            >a {
-                font-weight: bold;
-            }
+.latest-editais {
+    article {
+        border-bottom: 2px solid $cor-primaria-cinza;
+        margin-bottom: $grid-gutter-width / 2;
+    }
+
+    .edital-date-time {
+        font-size: 0.95em;
+        font-weight: lighter;
+
+        .glyphicon {
+            color: $cor-editais;
         }
+    }
+
+    .edital-body {
+        border-left: 1px solid $cor-editais;
+    }
+
+    .edital-category {
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
+    .edital-title {
+        font-size: 1.4em;
     }
 }
