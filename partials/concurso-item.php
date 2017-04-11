@@ -9,43 +9,43 @@
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Edital'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Edital'];
         }, rwmb_meta('concurso_file' ))
     );
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Edital'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Edital'];
         }, rwmb_meta('concurso_retifica_files' ))
     );
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Anexos'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Anexos'];
         }, rwmb_meta('concurso_anexos_files' ))
     );
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Cronograma'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Cronograma'];
         }, rwmb_meta('concurso_cronograma_files' ))
     );
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Provas'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Provas'];
         }, rwmb_meta('concurso_provas_files' ))
     );
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Resultados'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Resultados'];
         }, rwmb_meta('concurso_resultado_files' ))
     );
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
-            return $arr + ['date' => get_the_modified_date('d/m/Y H:i', $arr['ID']), 'group' => 'Nomeações'];
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Nomeações'];
         }, rwmb_meta('concurso_nomeia_files' ))
     );
 
@@ -53,8 +53,8 @@
 ?>
 
 <?php if ( !empty( $concurso_files ) ) : ?>
-    <div class="concurso-arquivos">
-        <table class="table table-arquivos">
+    <div class="col-xs-12 concurso-arquivos">
+        <table class="table table-striped table-arquivos">
             <thead>
                 <tr>
                     <th><span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php _e('Publicado em'); ?></th>
@@ -65,8 +65,8 @@
             <tbody>
             <?php foreach ($concurso_files as $key => $file) : ?>
                 <tr>
-                    <td><?php echo $file['date']; ?></td>
-                    <td><a href="<?php echo $file['url']; ?>"><?php echo $file['title']; ?></a></td>
+                    <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
+                    <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
                     <td><?php echo $file['group']; ?></td>
                 </tr>
             <?php endforeach; ?>

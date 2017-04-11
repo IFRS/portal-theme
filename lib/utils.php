@@ -1,6 +1,6 @@
 <?php
 function concurso_files_sort($a, $b) {
-    $format = 'd/m/Y H:i';
+    $format = 'U';
     $date1 = DateTime::createFromFormat($format, $a['date']);
     $date2 = DateTime::createFromFormat($format, $b['date']);
 
