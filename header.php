@@ -67,17 +67,18 @@
 
     <?php portal_breadcrumb(); ?>
 
-    <section role="main" class="container">
-        <div class="row">
-            <div class="col-xs-12">
+    <?php
+        if (is_front_page()) {
+            get_template_part('partials/menu-campi');
+        }
+    ?>
 
-            </div>
-        </div>
+    <section role="main" class="container">
         <div class="row">
             <div class="col-xs-12 col-md-2">
                 <!-- Menu -->
                 <?php get_template_part('partials/menu'); ?>
             </div>
-            <div class="col-xs-12 col-md-10">
+            <div class="col-xs-12 col-md-10" id="content">
                 <!-- Conteúdo -->
                 <a href="#inicio-conteudo" id="inicio-conteudo" class="sr-only">In&iacute;cio do conte&uacute;do</a>
