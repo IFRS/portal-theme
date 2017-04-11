@@ -1,61 +1,64 @@
 $(document).ready(function() {
-    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
+
 
     $('.table-editais').DataTable({
-        order: [],
-        searching: false,
-        paging: false,
+        order:      [],
+        searching:  false,
+        paging:     false,
+        info:       false,
         bAutoWidth: false,
         language: {
-            "sEmptyTable": "Nenhum Edital encontrado",
-            "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ Editais",
-            "sInfoEmpty": "Mostrando 0 até 0 de 0 Editais",
-            "sInfoFiltered": "(Filtrados de _MAX_ Editais)",
-            "sInfoPostFix": "",
-            "sInfoThousands": ".",
-            "sLengthMenu": "_MENU_ Editais por página",
+            "sEmptyTable":     "Nenhum Edital encontrado",
+            "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Editais",
+            "sInfoEmpty":      "Mostrando 0 até 0 de 0 Editais",
+            "sInfoFiltered":   "(Filtrados de _MAX_ Editais)",
+            "sInfoPostFix":    "",
+            "sInfoThousands":  ".",
+            "sLengthMenu":     "_MENU_ Editais por página",
             "sLoadingRecords": "Carregando...",
-            "sProcessing": "Processando...",
-            "sZeroRecords": "Nenhum Edital encontrado",
-            "sSearch": "Pesquisar na lista de Editais",
+            "sProcessing":     "Processando...",
+            "sZeroRecords":    "Nenhum Edital encontrado",
+            "sSearch":         "Pesquisar na lista de Editais",
             "oPaginate": {
-                "sNext": "Próximo",
+                "sNext":     "Próximo",
                 "sPrevious": "Anterior",
-                "sFirst": "Primeiro",
-                "sLast": "Último"
+                "sFirst":    "Primeiro",
+                "sLast":     "Último"
             },
             "oAria": {
-                "sSortAscending": ": Ordenar colunas de forma ascendente",
+                "sSortAscending":  ": Ordenar colunas de forma ascendente",
                 "sSortDescending": ": Ordenar colunas de forma descendente"
             }
         }
     });
 
+    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
     $('.table-arquivos').DataTable({
-        order: [],
-        searching: false,
-        paging: false,
+        order:      [],
+        searching:  false,
+        paging:     false,
+        info:       false,
         bAutoWidth: false,
         language: {
-            "sEmptyTable": "Nenhum arquivo encontrado",
-            "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ arquivos",
-            "sInfoEmpty": "Mostrando 0 até 0 de 0 arquivos",
-            "sInfoFiltered": "(Filtrados de _MAX_ arquivos)",
-            "sInfoPostFix": "",
-            "sInfoThousands": ".",
-            "sLengthMenu": "_MENU_ arquivos por página",
+            "sEmptyTable":     "Nenhum arquivo encontrado",
+            "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ arquivos",
+            "sInfoEmpty":      "Mostrando 0 até 0 de 0 arquivos",
+            "sInfoFiltered":   "(Filtrados de _MAX_ arquivos)",
+            "sInfoPostFix":    "",
+            "sInfoThousands":  ".",
+            "sLengthMenu":     "_MENU_ arquivos por página",
             "sLoadingRecords": "Carregando...",
-            "sProcessing": "Processando...",
-            "sZeroRecords": "Nenhum arquivo encontrado",
-            "sSearch": "Pesquisar na lista de arquivos",
+            "sProcessing":     "Processando...",
+            "sZeroRecords":    "Nenhum arquivo encontrado",
+            "sSearch":         "Pesquisar na lista de arquivos",
             "oPaginate": {
-                "sNext": "Próximo",
+                "sNext":     "Próximo",
                 "sPrevious": "Anterior",
-                "sFirst": "Primeiro",
-                "sLast": "Último"
+                "sFirst":    "Primeiro",
+                "sLast":     "Último"
             },
             "oAria": {
-                "sSortAscending": ": Ordenar colunas de forma ascendente",
+                "sSortAscending":  ": Ordenar colunas de forma ascendente",
                 "sSortDescending": ": Ordenar colunas de forma descendente"
             }
         }
