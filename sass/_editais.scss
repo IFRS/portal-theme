@@ -1,10 +1,16 @@
-.edital-category-list {
-    padding-left: 5px;
+#editais,
+#edital,
+.latest-editais {
+    .title-box {
+        color: $cor-editais;
+        border-top-color: $cor-editais;
+        @include title-background('../img/bg-editais.png');
+    }
 
-    li {
-        >ul {
-            padding-left: 15px;
-        }
+    a {
+        color: $cor-editais;
+    }
+}
 
         &.current-cat {
             >a {

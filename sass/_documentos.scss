@@ -1,3 +1,15 @@
+#documentos {
+    .title-box {
+        color: $cor-documentos;
+        border-top-color: $cor-documentos;
+        @include title-background('../img/bg-documentos.png');
+    }
+
+    a {
+        color: $cor-documentos;
+    }
+}
+
 .documento {
     margin-bottom: $grid-gutter-width;
 
@@ -6,7 +18,7 @@
         font-weight: lighter;
 
         .glyphicon {
-            color: $cor-primaria-verde;
+            color: $cor-documentos;
         }
     }
 
