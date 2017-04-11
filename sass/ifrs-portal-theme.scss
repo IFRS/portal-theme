@@ -3,12 +3,15 @@
 
 @import '../vendor/bootstrap-sass/assets/stylesheets/bootstrap';
 
+@import 'mixins';
+
 @import 'responsive-images-fade';
 @import 'barra-brasil-fix';
 
 @import 'headings';
 @import 'aside';
 @import 'forms';
+@import 'lists';
 
 @import 'header';
 @import 'menu';
@@ -18,12 +21,14 @@
 @import 'share-buttons';
 
 @import 'front-page';
+@import 'content';
+@import 'galeria';
+@import 'agenda';
 
 @import 'single';
 @import 'editais';
 @import 'concursos';
 @import 'documentos';
-@import 'galeria';
 
 @import 'footer';
 @import 'footer-brasil';
