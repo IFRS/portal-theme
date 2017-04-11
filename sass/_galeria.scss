@@ -8,3 +8,11 @@
         margin-bottom: 5px;
     }
 }
+
+.galeria {
+    .title-box {
+        color: $cor-galeria;
+        border-top-color: $cor-galeria;
+        @include title-background('../img/bg-galeria.png');
+    }
+}
