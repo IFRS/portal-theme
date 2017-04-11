@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-9">
+    <div class="col-xs-12 col-md-9" id="edital">
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="title-box"><?php the_title(); ?></h2>
