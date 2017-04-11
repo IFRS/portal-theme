@@ -1,0 +1,6 @@
+@mixin title-background($image-url) {
+    background-image: url($image-url);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
