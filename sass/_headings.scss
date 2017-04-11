@@ -5,10 +5,10 @@ h4,
 h5,
 h6 {
     margin-top: 0;
+}
 
-    &.title-box {
-        background-color: $cor-primaria-cinza;
-        border-top: 5px solid $cor-primaria-verde;
-        padding: 15px 10px 25px 15px;
-    }
+.title-box {
+    background-color: $cor-primaria-cinza;
+    border-top: 5px solid $cor-primaria-verde;
+    padding: 15px 10px 25px 15px;
 }
