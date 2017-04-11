@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-9">
+    <div class="col-xs-12 col-md-9" id="concursos">
         <h2 class="title-box">Concursos<?php if (is_search() && get_search_query()) : ?><small>&nbsp;(Resultados da busca por &ldquo;<?php echo get_search_query(); ?>&rdquo;)</small><?php endif; ?></h2>
         <p><!-- TODO: Texto explicativo sobre os concursos. --></p>
         <?php if (have_posts()) : ?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-9">
+    <div class="col-xs-12 col-md-9" id="editais">
         <h2 class="title-box">Editais na categoria <?php single_term_title(); ?><?php if (is_search() && get_search_query()) : ?><small>&nbsp;(Resultados da busca por &ldquo;<?php echo get_search_query(); ?>&rdquo;)</small><?php endif; ?></h2>
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/edital-list'); ?>
