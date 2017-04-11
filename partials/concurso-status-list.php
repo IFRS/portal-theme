@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
         <h3 class="title-box"><?php _e('Status'); ?></h3>
-        <ul class="concurso-status-list">
+        <ul class="side-list">
         <?php
             wp_list_categories(array(
                 'title_li' => '',

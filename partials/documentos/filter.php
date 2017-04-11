@@ -11,7 +11,7 @@
             </a>
         </div>
         <div id="collapseYearly" class="collapse<?php if (is_year()) echo ' in'; ?>" role="tabpanel" aria-labelledby="toggleYearly">
-            <ul>
+            <ul class="side-list">
             <?php
                 wp_get_archives(array(
                     'type'      => 'yearly',
@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div id="collapseMonthly" class="collapse<?php if (is_month()) echo ' in'; ?>" role="tabpanel" aria-labelledby="toggleMonthly">
-            <ul>
+            <ul class="side-list">
             <?php
                 wp_get_archives(array(
                     'type'      => 'monthly',

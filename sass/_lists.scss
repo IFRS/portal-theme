@@ -1,0 +1,17 @@
+.side-list {
+    list-style: square;
+    list-style-image: url('../img/list-style.png');
+    padding-left: 20px;
+
+    li {
+        &.current-cat {
+            >a {
+                font-weight: bold;
+            }
+        }
+
+        >ul {
+            padding-left: 15px;
+        }
+    }
+}
