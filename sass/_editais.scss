@@ -40,3 +40,7 @@
         font-size: 1.4em;
     }
 }
+
+.link-todos-editais {
+    @include link-todos($cor-editais);
+}

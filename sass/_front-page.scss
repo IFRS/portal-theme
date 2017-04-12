@@ -85,3 +85,7 @@
         margin-bottom: $grid-gutter-width;
     }
 }
+
+.link-todas-noticias {
+    @include link-todos($cor-primaria-verde);
+}

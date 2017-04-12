@@ -49,7 +49,7 @@
 <div class="row">
     <div class="col-xs-12">
         <?php wp_reset_query(); ?>
-        <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn btn-link btn-sm pull-right"><?php _e('Acesse mais notícias'); ?></a>
+        <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="pull-right link-todas-noticias"><?php _e('Acesse mais notícias'); ?></a>
     </div>
 </div>
 

@@ -37,6 +37,6 @@
 <div class="row">
     <div class="col-xs-12">
         <?php wp_reset_query(); ?>
-        <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="btn btn-link btn-sm pull-right"><?php _e('Acesse todos os Editais'); ?></a>
+        <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="pull-right link-todos-editais"><?php _e('Acesse todos os Editais'); ?></a>
     </div>
 </div>
