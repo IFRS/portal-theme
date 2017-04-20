@@ -28,10 +28,10 @@
         <div class="container">
             <div class="row" id="header-menus">
                 <div class="col-xs-12 col-md-6">
-                    <?php get_template_part('partials/menu-atalhos'); ?>
+                    <?php get_template_part('partials/menus/atalhos'); ?>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <?php get_template_part('partials/menu-acessibilidade'); ?>
+                    <?php get_template_part('partials/menus/acessibilidade'); ?>
                 </div>
             </div>
             <div class="row">
@@ -48,7 +48,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <?php get_template_part('partials/menu-social'); ?>
+                            <?php get_template_part('partials/menus/social'); ?>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <?php get_template_part('partials/menu-servicos'); ?>
+                        <?php get_template_part('partials/menus/servicos'); ?>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
 
     <?php
         if (is_front_page()) {
-            get_template_part('partials/menu-campi');
+            get_template_part('partials/menus/campi');
         }
     ?>
 
@@ -77,7 +77,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-2">
                 <!-- Menu -->
-                <?php get_template_part('partials/menu'); ?>
+                <?php get_template_part('partials/menus/principal'); ?>
             </div>
             <div class="col-xs-12 col-md-10" id="content">
                 <!-- Conteúdo -->
