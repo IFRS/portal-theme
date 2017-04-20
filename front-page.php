@@ -83,4 +83,10 @@
 
 <hr>
 
+<div class="row">
+    <div class="col-xs-12">
+        <?php if (!dynamic_sidebar('widget-home-banners')) : endif; ?>
+    </div>
+</div>
+
 <?php get_footer(); ?>

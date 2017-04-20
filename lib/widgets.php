@@ -36,5 +36,14 @@ function portal_widgets_init() {
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
+	register_sidebar(array(
+		'name'          => 'Widget Home Banners',
+		'id'            => 'widget-home-banners',
+		'description'   => 'Área mais abaixo na página inicial, antes do rodapé.',
+		'before_widget' => '<div id="%1$s" class="widget widget-home-banner %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
 }
 add_action( 'widgets_init', 'portal_widgets_init' );
