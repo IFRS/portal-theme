@@ -14,5 +14,5 @@
     }
 
     if (is_search() && get_search_query()) : ?>
-        <small>&nbsp;(Resultados da busca por &ldquo;<?php echo get_search_query(); ?>&rdquo;)</small>
+        <small>(Resultados da busca por &ldquo;<?php echo get_search_query(); ?>&rdquo;)</small>
     <?php endif;
