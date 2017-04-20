@@ -56,7 +56,7 @@
         </article>
     </div>
     <div class="col-xs-12 col-md-3">
-        <?php get_template_part('partials/noticia', 'ultimas'); ?>
+        <?php get_template_part('partials/noticias/latest'); ?>
     </div>
 </div>
 
