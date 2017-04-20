@@ -15,7 +15,7 @@
         </div>
         <div id="collapse-<?php the_ID(); ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php the_ID(); ?>">
             <div class="panel-body">
-                <?php get_template_part('partials/concurso-item'); ?>
+                <?php get_template_part('partials/concursos/item'); ?>
             </div>
         </div>
     </div>
