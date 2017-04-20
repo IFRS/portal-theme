@@ -8,6 +8,7 @@ register_nav_menus(
         'campi'          => __('Lista de Campi'),
         'relevancia'     => __('Menu de Relevância'),
         'principal'      => __('Menu Principal'),
+        'externo'        => __('Menu de Acesso Rápido aos Portais Externos'),
         'rodape'         => __('Menu do Rodapé')
     )
 );

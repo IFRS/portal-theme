@@ -74,4 +74,13 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title-box"><?php _e('Links Externos'); ?></h2>
+        <?php get_template_part('partials/menu-externo'); ?>
+    </div>
+</div>
+
+<hr>
+
 <?php get_footer(); ?>
