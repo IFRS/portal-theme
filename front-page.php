@@ -24,7 +24,7 @@
         <!-- Notícia Destaque -->
         <?php $query->the_post(); ?>
         <article class="noticia-destaque">
-            <?php get_template_part('partials/noticia', 'home'); ?>
+            <?php get_template_part('partials/noticias/item-front-page'); ?>
         </article>
     </div>
     <div class="col-xs-12 col-md-6">
@@ -38,7 +38,7 @@
     <?php while ($query->have_posts()) : $query->the_post(); ?>
         <div class="col-xs-12 col-sm-6 col-md-3">
             <article class="noticia">
-                <?php get_template_part('partials/noticia', 'home'); ?>
+                <?php get_template_part('partials/noticias/item-front-page'); ?>
             </article>
         </div>
     <?php endwhile; ?>
@@ -56,11 +56,11 @@
 <div class="row">
     <div class="col-xs-12 col-md-4">
         <!-- TODO Agenda -->
-        <?php get_template_part('partials/evento-ultimos'); ?>
+        <?php get_template_part('partials/eventos/latest'); ?>
     </div>
     <div class="col-xs-12 col-md-8">
         <!-- TODO Últimos Editais -->
-        <?php get_template_part('partials/edital-ultimos'); ?>
+        <?php get_template_part('partials/editais/latest'); ?>
     </div>
 </div>
 
@@ -77,7 +77,7 @@
 <div class="row">
     <div class="col-xs-12">
         <h2 class="title-box"><?php _e('Links Externos'); ?></h2>
-        <?php get_template_part('partials/menu-externo'); ?>
+        <?php get_template_part('partials/menus/externo'); ?>
     </div>
 </div>
 
