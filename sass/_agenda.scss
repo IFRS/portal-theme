@@ -1,0 +1,29 @@
+.next-eventos {
+    .title-box {
+        color: $cor-agenda;
+        border-top-color: $cor-agenda;
+        @include title-background('../img/bg-agenda.png');
+    }
+
+    .dates {
+        margin-bottom: 0;
+        font-size: 13px;
+        color: #888;
+    }
+
+    a {
+        color: $cor-agenda;
+    }
+
+    .glyphicon {
+        color: $cor-agenda;
+    }
+
+    .modal-title {
+        color: $cor-agenda;
+    }
+
+    .evento-location {
+        margin-left: 17px;
+    }
+}
