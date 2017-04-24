@@ -8,7 +8,7 @@ function portal_breadcrumb() {
     if (!is_home() && !is_front_page() || is_paged()) {
 		echo '<div class="container" id="breadcrumb"><div class="row"><div class="col-xs-12">';
 		echo '<ol class="breadcrumb">';
-		echo 'Voc&ecirc; est&aacute; em: ';
+		echo __('Voc&ecirc; est&aacute; em: ');
 
         global $post;
         $homeLink = home_url();
@@ -27,6 +27,8 @@ function portal_breadcrumb() {
                 echo get_category_parents($parentCat, true, $sep);
             }
             echo $before . single_cat_title('', false) . $after;
+        } elseif (is_search()) {
+            echo $before . 'Resultado da pesquisa por: "' . get_search_query() . '"' . $after;
         } elseif (is_tax('concurso_status')) {
             echo '<li><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
@@ -92,8 +94,6 @@ function portal_breadcrumb() {
                 echo $crumb;
             }
             echo $before . get_the_title() . $after;
-        } elseif (is_search()) {
-            echo $before . 'Resultado da pesquisa: "' . get_search_query() . '"' . $after;
         } elseif (is_tag()) {
             echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
         } elseif (is_author()) {
