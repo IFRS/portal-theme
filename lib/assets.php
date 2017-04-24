@@ -77,7 +77,7 @@ function portal_load_scripts() {
         wp_enqueue_script( 'datatables-datetime-moment' );
         wp_enqueue_script( 'datatables-config' );
     }
-    if (is_post_type_archive( 'documento' )) {
+    if (is_post_type_archive( 'documento' ) || is_tax('documento_type')) {
         wp_enqueue_script( 'documentos' );
     }
     if (is_single()) {
