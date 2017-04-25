@@ -9,9 +9,15 @@
         </a>
     </div>
 </div>
+
 <div class="row">
     <div class="col-xs-12">
         <h2 class="noticia-titulo"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <p class="noticia-data"><?php echo get_the_date(); ?></p>
     </div>
 </div>
 <div class="row">
