@@ -14,7 +14,7 @@
     ?>
     <?php if ($last_editais->have_posts()) : ?>
         <div class="latest-editais">
-            <h2 class="title-box"><?php _e('&Uacute;ltimos Editais'); ?></h2>
+            <h2 class="title"><?php _e('&Uacute;ltimos Editais'); ?></h2>
             <?php while ($last_editais->have_posts()) : $last_editais->the_post(); ?>
                 <article>
                     <div class="row">

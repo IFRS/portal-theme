@@ -19,7 +19,7 @@
     $last_eventos = new WP_Query($args);
 ?>
 <div class="next-eventos">
-    <h2 class="title-box"><?php _e('Agenda'); ?></h2>
+    <h2 class="title"><?php _e('Agenda'); ?></h2>
     <?php if ($last_eventos->have_posts()) : ?>
         <?php while ($last_eventos->have_posts()) : $last_eventos->the_post(); ?>
             <p class="dates"><strong><?php echo date_i18n( 'd/m/Y', rwmb_meta( 'evento_start' ) ); ?></strong>&nbsp;<?php echo date_i18n( 'H:i', rwmb_meta( 'evento_start' ) ); ?></p>

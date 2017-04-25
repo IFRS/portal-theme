@@ -1,8 +1,6 @@
 #concursos {
-    .title-box {
-        color: $cor-concursos;
-        border-top-color: $cor-concursos;
-        @include title-background('../img/bg-concursos.png');
+    .title {
+        @include title-box($cor-concursos, '../img/bg-concursos.png');
     }
 
     a {

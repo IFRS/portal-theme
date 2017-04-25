@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12 col-md-9" id="documentos">
-        <h2 class="title-box"><?php get_template_part('partials/documentos/title'); ?></h2>
+        <h2 class="title"><?php get_template_part('partials/documentos/title'); ?></h2>
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/documentos/loop'); ?>
         <?php else : ?>

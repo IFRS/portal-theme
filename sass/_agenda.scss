@@ -1,8 +1,6 @@
 .next-eventos {
-    .title-box {
-        color: $cor-agenda;
-        border-top-color: $cor-agenda;
-        @include title-background('../img/bg-agenda.png');
+    .title {
+        @include title-box($cor-agenda, '../img/bg-agenda.png');
     }
 
     .dates {

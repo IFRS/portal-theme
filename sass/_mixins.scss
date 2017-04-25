@@ -1,8 +1,18 @@
-@mixin title-background($image-url) {
-    background-image: url($image-url);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: contain;
+@mixin title-box($color: $cor-primaria-verde, $image-url: '') {
+    background-color: $cor-primaria-cinza;
+    border-top: 5px solid $color;
+    padding: 15px 10px 25px 15px;
+
+    @if $color != $cor-primaria-verde {
+        color: $color;
+    }
+
+    @if $image-url != '' {
+        background-image: url($image-url);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 @mixin link-todos($cor) {

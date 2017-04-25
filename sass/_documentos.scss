@@ -1,8 +1,6 @@
 #documentos {
-    .title-box {
-        color: $cor-documentos;
-        border-top-color: $cor-documentos;
-        @include title-background('../img/bg-documentos.png');
+    .title {
+        @include title-box($cor-documentos, '../img/bg-documentos.png');
     }
 
     a {

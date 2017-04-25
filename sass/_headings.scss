@@ -8,7 +8,5 @@ h6 {
 }
 
 .title-box {
-    background-color: $cor-primaria-cinza;
-    border-top: 5px solid $cor-primaria-verde;
-    padding: 15px 10px 25px 15px;
+    @include title-box();
 }

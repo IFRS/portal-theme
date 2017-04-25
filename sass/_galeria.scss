@@ -10,9 +10,7 @@
 }
 
 .galeria {
-    .title-box {
-        color: $cor-galeria;
-        border-top-color: $cor-galeria;
-        @include title-background('../img/bg-galeria.png');
+    .title {
+        @include title-box($cor-galeria, '../img/bg-galeria.png');
     }
 }

@@ -1,10 +1,8 @@
 #editais,
 #edital,
 .latest-editais {
-    .title-box {
-        color: $cor-editais;
-        border-top-color: $cor-editais;
-        @include title-background('../img/bg-editais.png');
+    .title {
+        @include title-box($cor-editais, '../img/bg-editais.png');
     }
 
     a {
