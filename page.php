@@ -4,19 +4,19 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <article class="post">
+        <article class="page">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 class="post-title"><?php the_title(); ?></h2>
+                    <h2 class="page-title"><?php the_title(); ?></h2>
                 </div>
             </div>
             <?php get_template_part('partials/menus/subpage-menu'); ?>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="post-content">
+                    <div class="page-content">
                         <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail('full', array('class' => 'post-thumb'));
+                                the_post_thumbnail('full', array('class' => 'page-thumb'));
                             }
                         ?>
                         <?php the_content(); ?>
