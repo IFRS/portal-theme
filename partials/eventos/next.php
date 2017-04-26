@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <?php echo rwmb_meta('evento_map', array('type' => 'map', 'width' => '100%', 'height' => '450px')); ?>
+                            
                         </div>
                     </div>
                 </div>
