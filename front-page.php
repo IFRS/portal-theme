@@ -56,7 +56,7 @@
 <div class="row">
     <div class="col-xs-12 col-md-4">
         <!-- TODO Agenda -->
-        <?php get_template_part('partials/eventos/latest'); ?>
+        <?php get_template_part('partials/eventos/next'); ?>
     </div>
     <div class="col-xs-12 col-md-8">
         <!-- TODO Últimos Editais -->
