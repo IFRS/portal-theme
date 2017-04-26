@@ -73,12 +73,13 @@
         }
     ?>
 
-    <section role="main" class="container">
+    <section class="container">
         <div class="row">
             <div class="col-xs-12 col-md-2">
                 <!-- Menu -->
                 <?php get_template_part('partials/menus/principal'); ?>
             </div>
-            <div class="col-xs-12 col-md-10" id="content">
+            <div class="col-xs-12 col-md-10">
                 <!-- Conteúdo -->
-                <a href="#inicio-conteudo" id="inicio-conteudo" class="sr-only">In&iacute;cio do conte&uacute;do</a>
+                <main role="main">
+                    <a href="#inicio-conteudo" id="inicio-conteudo" class="sr-only">In&iacute;cio do conte&uacute;do</a>

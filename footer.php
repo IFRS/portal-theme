@@ -1,7 +1,8 @@
-                <a href="#fim-conteudo" id="fim-conteudo" class="sr-only">Fim do conte&uacute;do</a>
+                    <a href="#fim-conteudo" id="fim-conteudo" class="sr-only">Fim do conte&uacute;do</a>
+                </main>
             </div>
-        </div>
-    </section>
+        </div> <!-- /div.row -->
+    </section> <!-- /section.container -->
 
     <footer>
         <div class="container">
