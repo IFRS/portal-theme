@@ -9,6 +9,10 @@
     }
 }
 
+.facebook-widget {
+    @extend .center-block;
+}
+
 .widget-home-banner {
     float: left;
     margin: 0 10px 10px 0;
