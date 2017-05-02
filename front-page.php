@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row">
+<div class="row hidden-xs">
     <div class="col-xs-12">
         <!-- Carousel -->
         <?php
@@ -20,16 +20,16 @@
 ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-6 col-md-push-6">
+        <!-- Banners -->
+        <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-pull-6">
         <!-- Notícia Destaque -->
         <?php $query->the_post(); ?>
         <article class="noticia-destaque">
             <?php get_template_part('partials/noticias/item-front-page'); ?>
         </article>
-    </div>
-    <div class="col-xs-12 col-md-6">
-        <!-- Banners -->
-        <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
     </div>
 </div>
 
