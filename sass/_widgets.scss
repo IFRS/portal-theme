@@ -9,6 +9,19 @@
     }
 }
 
+.widget-home {
+    img {
+        @extend .center-block;
+        @extend .img-responsive;
+    }
+}
+
+.widget-home-side {
+    img {
+        @extend .center-block;
+    }
+}
+
 .facebook-widget {
     @extend .center-block;
 }
