@@ -4,7 +4,7 @@
     <div class="panel panel-concurso">
         <div class="panel-heading" role="tab" id="heading-<?php the_ID(); ?>">
         <?php $status = get_the_terms(get_the_ID(), 'concurso_status'); ?>
-        <?php if ($status) : ?>
+        <?php if ($status && is_post_type_archive('concurso')) : ?>
             <span class="label label-primary"><?php echo $status[0]->name; ?></span>
         <?php endif; ?>
             <h3 class="panel-title">
