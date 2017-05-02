@@ -14,22 +14,31 @@
 }
 
 #menu-campi {
+    @media (min-width: $screen-sm-min) {
+        background-image: url('../img/bg-unidades.png');
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-size: 1.2em;
+        padding: 10px 100px 10px 150px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        padding: 10px 110px 10px 110px;
+    }
+
     background-color: $cor-primaria-cinza;
-    background-image: url('../img/bg-unidades.png');
-    background-position: center left;
-    background-repeat: no-repeat;
-    background-size: contain;
     border-radius: 4px;
+    font-size: 1.1em;
     list-style: none;
     margin: 0;
     margin-bottom: $grid-gutter-width;
-    padding: 10px 110px 10px 110px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
 
     li {
         border-right: 1px solid #ccc;
         display: inline-block;
-        font-size: 1.2em;
         margin-bottom: 5px;
         padding: 0 10px;
 
