@@ -105,6 +105,7 @@ header {
     background-color: $cor-barra-servicos;
     color: #FFFFFF;
     min-height: 30px;
+    padding: 3px 0;
 
     a {
         color: #FFFFFF;
@@ -112,11 +113,14 @@ header {
 }
 
 #menu-servicos {
+    @media (min-width: $screen-sm-min) {
+        text-align: right;
+    }
+
     font-size: 12px;
     list-style: none;
     margin-bottom: 0;
     padding-left: 0;
-    text-align: right;
 
     li {
         display: inline-block;
