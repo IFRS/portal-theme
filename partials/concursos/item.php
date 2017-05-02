@@ -54,24 +54,26 @@
 
 <?php if ( !empty( $concurso_files ) ) : ?>
     <div class="col-xs-12 concurso-arquivos">
-        <table class="table table-striped table-arquivos">
-            <thead>
-                <tr>
-                    <th><span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php _e('Publicado em'); ?></th>
-                    <th><?php _e('Arquivo'); ?></th>
-                    <th><?php _e('Grupo'); ?></th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($concurso_files as $key => $file) : ?>
-                <tr>
-                    <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
-                    <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
-                    <td><?php echo $file['group']; ?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped table-arquivos">
+                <thead>
+                    <tr>
+                        <th><?php _e('Publicado em'); ?></th>
+                        <th><?php _e('Arquivo'); ?></th>
+                        <th><?php _e('Grupo'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($concurso_files as $key => $file) : ?>
+                    <tr>
+                        <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
+                        <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
+                        <td><?php echo $file['group']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 <?php endif; ?>
 </div>
