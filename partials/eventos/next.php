@@ -70,11 +70,14 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            
                         </div>
                     </div>
                 </div>
             </div>
         <?php endwhile; ?>
+    <?php else : ?>
+        <div class="alert alert-warning">
+            <p><strong><?php _e('Aguarde!'); ?></strong>&nbsp;<?php _e('Ainda n&atilde;o h&aacute; eventos futuros cadastrados.'); ?></p>
+        </div>
     <?php endif; ?>
 </div>
