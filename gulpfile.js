@@ -35,7 +35,7 @@ gulp.task('bower', function() {
 });
 
 gulp.task('clean', function() {
-    return del(['dist/', 'css/', 'js']);
+    return del(['css/', 'js/']);
 });
 
 gulp.task('css', function() {
@@ -79,12 +79,7 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('dist', ['default'], function() {
-    return gulp.src(dist)
-    .pipe(gulp.dest('dist/'));
-});
-
-gulp.task('deploy', ['default'], function() {
+gulp.task('deploy', function() {
     return gulp.src(dist)
     .pipe(rsync({
         root: './',
