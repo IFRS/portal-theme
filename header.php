@@ -77,7 +77,9 @@
         <div class="row">
             <div class="col-xs-12 col-md-2">
                 <!-- Menu -->
+                <a href="#inicio-menu" id="inicio-menu" class="sr-only">In&iacute;cio da navega&ccedil;&atilde;o</a>
                 <?php get_template_part('partials/menus/principal'); ?>
+                <a href="#fim-menu" id="fim-menu" class="sr-only">Fim da navega&ccedil;&atilde;o</a>
             </div>
             <div class="col-xs-12 col-md-10">
                 <!-- Conteúdo -->
