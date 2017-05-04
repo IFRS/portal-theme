@@ -4,6 +4,7 @@
         </div> <!-- /div.row -->
     </section> <!-- /section.container -->
 
+    <a href="#inicio-rodape" id="inicio-rodape" class="sr-only">In&iacute;cio do rodap&eacute;</a>
     <footer>
         <div class="container">
             <div class="row">
@@ -47,6 +48,7 @@
             </div>
         </div>
     </div>
+    <a href="#fim-rodape" id="fim-rodape" class="sr-only">Fim do rodap&eacute;</a>
 
     <?php wp_footer(); ?>
 </body>
