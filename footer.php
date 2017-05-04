@@ -35,7 +35,7 @@
                 <div class="col-xs-12">
                     <p>
                         <!-- Wordpress -->
-                        <a href="http://br.wordpress.org/" target="blank">Desenvolvido com o CMS de código aberto Wordpress<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <span class="glyphicon glyphicon-new-window"></span>
+                        <a href="http://br.wordpress.org/" target="blank">Desenvolvido com o CMS de c&oacute;digo aberto Wordpress<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <span class="glyphicon glyphicon-new-window"></span>
                         &mdash;
                         <!-- Código-fonte -->
                         <a href="https://github.com/IFRS/portal-theme" target="blank">C&oacute;digo-fonte deste tema sob a licen&ccedil;a GPLv3<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <span class="glyphicon glyphicon-new-window"></span>
