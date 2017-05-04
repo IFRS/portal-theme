@@ -70,7 +70,23 @@
     </div>
     <div class="col-xs-12 col-md-4">
         <?php if (!dynamic_sidebar('widget-home-side')) : endif; ?>
-        <?php get_template_part('partials/facebook'); ?>
+
+
+        <!-- Social Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#embed-facebook" aria-controls="embed-facebook" role="tab" data-toggle="tab">Facebook</a></li>
+            <li role="presentation"><a href="#embed-twitter" aria-controls="embed-twitter" role="tab" data-toggle="tab">Twitter</a></li>
+        </ul>
+
+        <!-- Social Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="embed-facebook">
+                <?php get_template_part('partials/facebook'); ?>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="embed-twitter">
+                <?php get_template_part('partials/twitter'); ?>
+            </div>
+        </div>
     </div>
 </div>
 
