@@ -12,11 +12,11 @@
 
         $last_editais = new WP_Query($args);
     ?>
-    <?php if ($last_editais->have_posts()) : ?>
+
         <div class="latest-editais">
             <h2 class="title"><?php _e('&Uacute;ltimos Editais'); ?></h2>
-            <?php while ($last_editais->have_posts()) : $last_editais->the_post(); ?>
-                <article>
+            <?php if ($last_editais->have_posts()) : ?>
+                <?php while ($last_editais->have_posts()) : $last_editais->the_post(); ?>
                     <div class="row">
                         <div class="edital-date-time col-xs-12 col-sm-3">
                             <p class="edital-date"><span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php echo get_the_date('d/m/Y'); ?></p>
@@ -27,10 +27,9 @@
                             <h3 class="edital-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         </div>
                     </div>
-                </article>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
-    <?php endif; ?>
     </div>
 </div>
 
