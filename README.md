@@ -39,13 +39,9 @@ limpar o projeto:
 
 `gulp clean`
 
-construir e preparar para distribuição:
-
-`gulp dist` (a pasta `./dist` conterá os arquivos do tema)
-
 realizar o deploy (usando rsync):
 
-`gulp deploy --host=ENDEREÇO-DO-SERVIDOR --path=/caminho/para/a/pasta/do/tema`
+`gulp deploy [--host=ENDEREÇO-DO-SERVIDOR] --path=/caminho/para/a/pasta/do/tema`
 
 ## Projetos relacionados
 
