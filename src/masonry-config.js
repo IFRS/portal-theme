@@ -8,4 +8,9 @@ $(window).load(function() {
         itemSelector: '#lista-noticias > div',
         percentPosition: true
     });
+
+    $('.instagram-pics').masonry({
+        itemSelector: 'li',
+        percentPosition: true
+    });
 });

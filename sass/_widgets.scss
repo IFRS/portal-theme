@@ -22,6 +22,36 @@
     }
 }
 
+.widget-gallery {
+    h2 {
+        @include title-box($cor-galeria, '../img/bg-galeria.png');
+    }
+
+    .instagram-pics {
+        list-style: none;
+        padding: 0;
+
+        li {
+            @extend .col-xs-6;
+            @extend .col-sm-4;
+            @extend .col-md-3;
+            display: inline-block;
+            padding: 0;
+
+            img {
+                @extend .img-responsive;
+            }
+        }
+    }
+
+    .clear {
+        a {
+            @extend .pull-right;
+            @include link-todos($cor-galeria);
+        }
+    }
+}
+
 .facebook-widget {
     @extend .center-block;
 }
