@@ -24,13 +24,13 @@ function portal_widgets_init() {
 		'description'   => 'Área abaixo das notícias na página inicial.',
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-gallery %2$s">',
 		'after_widget'  => '</div></div></div>',
-		'before_title'  => '<span class="sr-only">',
-		'after_title'   => '</span>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
 		'name'          => 'Widget Home Lateral',
 		'id'            => 'widget-home-side',
-		'description'   => 'Área ao lado da Galeria, acima do Facebook na página inicial.',
+		'description'   => 'Área ao lado da Galeria, acima do Facebook/Twitter na página inicial.',
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-home-side %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<span class="sr-only">',
