@@ -48,6 +48,16 @@
         color: #172938;
         font-size: 16px;
         line-height: 21px;
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 21px;     /* fallback */
+            max-height: 42px;      /* fallback */ /* number of lines * line-height */
+            -webkit-line-clamp: 2; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
     }
 }
 
@@ -79,6 +89,16 @@
         color: #172938;
         font-size: 14px;
         line-height: 21px;
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 21px;     /* fallback */
+            max-height: 84px;      /* fallback */
+            -webkit-line-clamp: 4; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
     }
 }
 
