@@ -38,8 +38,5 @@ require_once('lib/empty-search-filter.php');
 // Widgets
 require_once('lib/widgets.php');
 
-// Tamanho personalizado do resumo automático
-require_once('lib/excerpt.php');
-
 // Queries personalizadas em determinados templates
 require_once('lib/custom-queries.php');
