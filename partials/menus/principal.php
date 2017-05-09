@@ -23,7 +23,6 @@
             'container_id'      => false,
             'depth'             => 3,
             'theme_location'    => 'principal',
-            'walker'            => new wp_ifrs_navwalker()
         )
     );
 ?>

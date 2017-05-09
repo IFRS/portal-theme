@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $('.menu-collapse .sub-menu').addClass('collapse');
+    $('.menu-collapse .sub-menu').prev('a').addClass('collapsed');
+
     $('#menu-main .sub-menu').collapse({
         toggle: false
     });
@@ -9,12 +12,12 @@ $(document).ready(function() {
 
     $('.collapse').on('show.bs.collapse', function(e) {
         var collapse = $(e.target);
-        collapse.prev('a').children('.glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
+        collapse.prev('a').removeClass('collapsed');
     });
 
     $('.collapse').on('hide.bs.collapse', function(e) {
         var collapse = $(e.target);
-        collapse.prev('a').children('.glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
+        collapse.prev('a').addClass('collapsed');
     });
 
     // Abre todos os collapse até o item atual;

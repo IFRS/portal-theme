@@ -14,9 +14,6 @@ require_once('lib/widget-text-shortcode.php');
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
 require_once('lib/depth-limit.php');
 
-// Navwalker personalizado
-require_once('lib/ifrs-navwalker.php');
-
 // Registra os menus
 require_once('lib/menus.php');
 
