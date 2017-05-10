@@ -1,63 +1,65 @@
 <div class="row">
-    <div class="col-xs-12 col-md-9" id="edital">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="title"><?php the_title(); ?></h2>
-            </div>
-        </div>
-        <div class="row">
-        <?php
-            $edital_files = array();
-            $edital_files = array_merge(
-                $edital_files,
-                array_map(function($arr){
-                    return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Edital'];
-                }, rwmb_meta('edital_file' ))
-            );
-            $edital_files = array_merge(
-                $edital_files,
-                array_map(function($arr){
-                    return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Retificações'];
-                }, rwmb_meta('edital_retifica_files' ))
-            );
-            $edital_files = array_merge(
-                $edital_files,
-                array_map(function($arr){
-                    return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Anexos'];
-                }, rwmb_meta('edital_anexos_files' ))
-            );
-            $edital_files = array_merge(
-                $edital_files,
-                array_map(function($arr){
-                    return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Publicações'];
-                }, rwmb_meta('edital_publica_files' ))
-            );
-        ?>
-        <?php if ( !empty( $edital_files ) ) : ?>
-            <div class="col-xs-12 edital-arquivos">
-                <div class="table-responsive">
-                    <table class="table table-striped table-arquivos">
-                        <thead>
-                            <tr>
-                                <th><?php _e('Publicado em'); ?></th>
-                                <th><?php _e('Arquivo'); ?></th>
-                                <th><?php _e('Grupo'); ?></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($edital_files as $key => $file) : ?>
-                            <tr>
-                                <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
-                                <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
-                                <td><?php echo $file['group']; ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
+    <div class="col-xs-12 col-md-9">
+        <article id="edital">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title"><?php the_title(); ?></h2>
                 </div>
             </div>
-        <?php endif; ?>
-        </div>
+            <div class="row">
+            <?php
+                $edital_files = array();
+                $edital_files = array_merge(
+                    $edital_files,
+                    array_map(function($arr){
+                        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Edital'];
+                    }, rwmb_meta('edital_file' ))
+                );
+                $edital_files = array_merge(
+                    $edital_files,
+                    array_map(function($arr){
+                        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Retificações'];
+                    }, rwmb_meta('edital_retifica_files' ))
+                );
+                $edital_files = array_merge(
+                    $edital_files,
+                    array_map(function($arr){
+                        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Anexos'];
+                    }, rwmb_meta('edital_anexos_files' ))
+                );
+                $edital_files = array_merge(
+                    $edital_files,
+                    array_map(function($arr){
+                        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Publicações'];
+                    }, rwmb_meta('edital_publica_files' ))
+                );
+            ?>
+            <?php if ( !empty( $edital_files ) ) : ?>
+                <div class="col-xs-12 edital-arquivos">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-arquivos">
+                            <thead>
+                                <tr>
+                                    <th><?php _e('Publicado em'); ?></th>
+                                    <th><?php _e('Arquivo'); ?></th>
+                                    <th><?php _e('Grupo'); ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($edital_files as $key => $file) : ?>
+                                <tr>
+                                    <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
+                                    <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
+                                    <td><?php echo $file['group']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <?php endif; ?>
+            </div>
+        </article>
         <div class="row">
             <div class="col-xs-12">
                 <?php get_template_part('partials/share-buttons'); ?>
