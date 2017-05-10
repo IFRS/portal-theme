@@ -17,7 +17,11 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <p class="noticia-data"><?php echo get_the_date(); ?></p>
+        <?php
+            $categories = get_the_category();
+            $cat_name = $categories[0]->cat_name;
+        ?>
+        <p><span class="noticia-cartola"><?php echo $cat_name; ?></span> - <span class="noticia-data"><?php echo get_the_date(); ?></span></p>
     </div>
 </div>
 <div class="row">
