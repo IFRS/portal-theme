@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 
-<div class="row hidden-xs">
-    <div class="col-xs-12">
-        <!-- Carousel -->
-        <?php
-            if (shortcode_exists('image-carousel')) {
-                echo do_shortcode('[image-carousel twbs="3"]');
-            }
-        ?>
+<?php if (shortcode_exists('image-carousel')) : ?>
+    <div class="row hidden-xs">
+        <div class="col-xs-12">
+            <!-- Carousel -->
+            <?php echo do_shortcode('[image-carousel twbs="3"]'); ?>
+        </div>
     </div>
-</div>
+<?php endif; ?>
 
 <?php
     $args = array(
