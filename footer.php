@@ -18,7 +18,7 @@
                             'container_class'   => false,
                             'container_id'      => 'menu-rodape-nav',
                             'depth'             => 2,
-                            'theme_location'    => 'rodape',
+                            'theme_location'    => 'principal',
                         )
                     );
                 ?>
