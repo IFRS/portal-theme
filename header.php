@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <a href="#content" class="sr-only sr-only-focusable">Pular para o conte&uacute;do</a>
+    <a href="#inicio-conteudo" class="sr-only sr-only-focusable">Pular para o conte&uacute;do</a>
 
     <?php echo get_template_part('partials/barrabrasil'); ?>
 
