@@ -10,21 +10,12 @@
 <?php endif; ?>
 
 <?php
-    $posts_per_page = 5;
-    $sticky_posts = get_option( 'sticky_posts' );
-    if (is_array($sticky_posts)) {
-        $sticky_count = count($sticky_posts);
-        if ($sticky_count < $posts_per_page) {
-            $posts_per_page -= $sticky_count;
-        } else {
-            $posts_per_page = 1;
-        }
-    }
-    $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => $posts_per_page
+    $args_sticky = array(
+        'posts_per_page' => 1,
+        'post__in'  => get_option( 'sticky_posts' ),
+        'ignore_sticky_posts' => 1
     );
-    $query = new WP_Query($args);
+    $query_sticky = new WP_Query( $args_sticky );
 ?>
 
 <div class="row">
@@ -34,12 +25,24 @@
     </div>
     <div class="col-xs-12 col-md-6 col-md-pull-6">
         <!-- Notícia Destaque -->
-        <?php $query->the_post(); ?>
+        <?php
+            $query_sticky->the_post();
+            $sticky_ID = get_the_ID();
+        ?>
         <article class="noticia-destaque">
             <?php get_template_part('partials/noticias/item-front-page'); ?>
         </article>
     </div>
 </div>
+
+<?php
+    $args = array(
+        'post_type' => 'post',
+        'post__not_in' => array($sticky_ID),
+        'posts_per_page' => 4
+    );
+    $query = new WP_Query($args);
+?>
 
 <div class="row">
     <!-- Demais notícias -->
