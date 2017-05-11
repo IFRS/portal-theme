@@ -88,17 +88,17 @@
     </div>
 </div>
 
-<hr>
-
 <div class="row">
     <div class="col-xs-12">
+        <h2 class="title-box"><?php _e('Acesso R&aacute;pido'); ?></h2>
         <?php get_template_part('partials/menus/externo'); ?>
     </div>
 </div>
 
+<hr>
+
 <div class="row">
     <div class="col-xs-12">
-        <h2 class="title-box"><?php _e('Banners'); ?></h2>
         <?php if (!dynamic_sidebar('widget-home-banners')) : endif; ?>
     </div>
 </div>
