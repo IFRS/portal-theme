@@ -10,9 +10,19 @@
 <?php endif; ?>
 
 <?php
+    $posts_per_page = 5;
+    $sticky_posts = get_option( 'sticky_posts' );
+    if (is_array($sticky_posts)) {
+        $sticky_count = count($sticky_posts);
+        if ($sticky_count < $posts_per_page) {
+            $posts_per_page -= $sticky_count;
+        } else {
+            $posts_per_page = 1;
+        }
+    }
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 4
+        'posts_per_page' => $posts_per_page
     );
     $query = new WP_Query($args);
 ?>
