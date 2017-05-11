@@ -134,3 +134,7 @@
 .link-todas-noticias {
     @include link-todos($cor-primaria-verde);
 }
+
+.banner-separator {
+    margin-top: 0;
+}
