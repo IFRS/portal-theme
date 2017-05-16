@@ -1,27 +1,76 @@
-.next-eventos {
-    .title {
+.widget-agenda {
+    >h2 {
         @include title-box($cor-agenda, '../img/bg-agenda.png');
-    }
-
-    .dates {
-        margin-bottom: 0;
-        font-size: 13px;
-        color: #888;
     }
 
     a {
         color: $cor-agenda;
     }
 
-    .glyphicon {
-        color: $cor-agenda;
+    .tribe-list-widget {
+        list-style: none;
+        padding: 0;
+
+        .tribe-events-list-widget-events {
+            padding: 0;
+        }
     }
 
-    .modal-title {
-        color: $cor-agenda;
+    .tribe-event-title {
+        margin-bottom: 0;
     }
 
-    .evento-location {
-        margin-left: 17px;
+    .tribe-event-duration {
+        font-size: 13px;
+        color: #888;
+
+        .tribe-event-date-start {
+            font-weight: bold;
+        }
     }
+
+    .tribe-events-widget-link {
+        text-align: right;
+        a {
+            @include link-todos($cor-agenda);
+        }
+    }
+}
+
+.tribe-events-back {
+    a {
+        @extend .btn;
+        @extend .btn-default;
+        @extend .btn-xs;
+    }
+}
+
+.tribe-events-sub-nav {
+    @extend .pager;
+}
+
+.tribe-events-cal-links {
+    @extend .btn-group;
+    margin-bottom: $grid-gutter-width / 2;
+    a {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-sm;
+    }
+}
+
+.tribe-events-event-meta {
+    @extend .row;
+    margin-bottom: $grid-gutter-width / 2;
+
+    >div {
+        @extend .col-xs-12;
+        @extend .col-md-6;
+    }
+}
+
+.tribe-events-gmap {
+    @extend .btn;
+    @extend .btn-link;
+    @extend .btn-sm;
 }
