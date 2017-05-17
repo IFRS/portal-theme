@@ -1,8 +1,11 @@
-#documentos {
+#documentos,
+#documento {
     .title {
         @include title-box($cor-documentos, '../img/bg-documentos.png');
     }
+}
 
+#documentos {
     a {
         color: $cor-documentos;
     }
