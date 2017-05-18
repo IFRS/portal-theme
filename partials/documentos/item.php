@@ -29,10 +29,16 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h3 class="title-box"><?php _e('Dados do Documento'); ?></h3>
-                    <p><?php echo get_the_term_list( get_the_ID(), 'documento_type', '', '<br>', '' ); ?></p>
-                    <p><strong>Publicação</strong></p>
-                    <p><span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php echo get_the_date('d/m/Y'); ?></p>
-                    <p><span class="glyphicon glyphicon-time"></span>&nbsp;<?php echo get_the_time('G\hi'); ?></p>
+                    <p>
+                        <strong>Tipo</strong>
+                        <br>
+                        <?php echo get_the_term_list( get_the_ID(), 'documento_type', '', '<br>', '' ); ?>
+                    </p>
+                    <p>
+                        <strong>Publicação</strong>
+                        <br>
+                        <?php echo get_the_date(); ?> <?php _e('às'); ?> <?php echo get_the_time('G\hi'); ?>
+                    </p>
                 </div>
             </div>
         </aside>
