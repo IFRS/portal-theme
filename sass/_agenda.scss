@@ -74,3 +74,33 @@
     @extend .btn-link;
     @extend .btn-sm;
 }
+
+.tribe-events-month {
+    .tribe-events-page-title {
+        @include title-box($cor-agenda, '../img/bg-agenda.png');
+    }
+
+    .tribe-events-calendar {
+        thead {
+            background-color: #eee;
+        }
+    }
+
+    .tribe-events-past {
+        color: #666;
+
+        &.tribe-events-othermonth {
+            color: #999;
+        }
+    }
+
+    .tribe-events-present {
+        background-color: #eee;
+    }
+
+    .tribe-events-ical {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-sm;
+    }
+}
