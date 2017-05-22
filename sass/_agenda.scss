@@ -75,6 +75,60 @@
     @extend .btn-sm;
 }
 
+#tribe-bar-views {
+    display: none;
+    visibility: hidden;
+}
+
+.tribe-bar-filters {
+    display: none;
+}
+
+#tribe-bar-form {
+    @extend .form-horizontal;
+}
+
+#tribe-bar-collapse-toggle {
+    @extend .btn;
+    @extend .btn-default;
+    @extend .btn-sm;
+}
+
+.tribe-bar-toggle-arrow {
+    @extend .glyphicon;
+    @extend .glyphicon-chevron-down;
+    margin-left: 5px;
+}
+
+.tribe-bar-filters-open {
+    >.tribe-bar-toggle-arrow {
+        @extend .glyphicon;
+        @extend .glyphicon-chevron-up;
+    }
+}
+
+.tribe-bar-filters {
+    @extend .well;
+    max-width: 25%;
+}
+
+#tribe-bar-dates {
+    @extend .form-group;
+
+    input {
+        @extend .form-control;
+    }
+}
+
+.tribe-bar-submit {
+    @extend .form-group;
+
+    input {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
+
 .tribe-events-month {
     .tribe-events-page-title {
         @include title-box($cor-agenda, '../img/bg-agenda.png');
