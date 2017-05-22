@@ -112,7 +112,8 @@
     max-width: 25%;
 }
 
-#tribe-bar-dates {
+.tribe-bar-date-filter,
+.tribe-bar-search-filter {
     @extend .form-group;
 
     input {
