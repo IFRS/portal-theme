@@ -102,8 +102,9 @@
             text-transform: uppercase;
             min-height: 47px; // As bordas contam como tamanho do elemento, por isso não é 42px como diz o guia.
             margin-top: 30px;
-            padding-left: 10px;
+            padding-left: 7px;
             padding-top: 3px;
+            padding-bottom: 3px;
         }
     }
 
@@ -133,10 +134,10 @@
                 color: #172938;
                 display: block;
                 font-size: 14px;
-                // height: 100%;
                 min-height: 30px;
-                padding-left: 15px;
-                padding-top: 3px; // FIXME: alinhar verticalmente o texto desses elementos.
+                padding-left: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
             }
 
             &.current-menu-item {
@@ -146,18 +147,20 @@
             }
 
             &.menu-item-has-children {
+                border-bottom: 1px solid $menu-inner-border;
+
                 > a {
                     background-color: $menu-fundo-nivel-1-2;
                     border-top: 2px solid $menu-inner-border;
                     border-bottom: 1px solid $menu-inner-border;
                     color: #172938;
                     font-size: 14px;
-                    font-weight: bold;
+                    font-weight: 600;
                 }
 
                 .menu-item {
                     > a {
-                        background-color: #D9DADC;
+                        // background-color: #D9DADC;
                         border-bottom: 1px solid $menu-inner-border;
                         font-size: 13px;
                         padding-left: 20px;
