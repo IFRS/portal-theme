@@ -37,3 +37,6 @@ require_once('lib/widgets.php');
 
 // Queries personalizadas em determinados templates
 require_once('lib/custom-queries.php');
+
+// Custom TinyMCE
+require_once('lib/custom-tinymce.php');
