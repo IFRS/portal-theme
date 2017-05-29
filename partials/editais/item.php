@@ -7,6 +7,11 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-xs-12">
+                    <?php the_content(); ?>
+                </div>
+            </div>
+            <div class="row">
             <?php
                 $edital_files = array();
                 $edital_files = array_merge(
