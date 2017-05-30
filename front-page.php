@@ -36,10 +36,16 @@
 </div>
 
 <?php
+    $posts_to_show = 4;
+    $posts_per_page = $posts_to_show;
+    $sticky_number = count(get_option( 'sticky_posts' ));
+    if ($sticky_number > 1 && $sticky_number <= 4) {
+        $posts_per_page = $posts_to_show - ($sticky_number - 1);
+    }
     $args = array(
         'post_type' => 'post',
         'post__not_in' => array($sticky_ID),
-        'posts_per_page' => 4
+        'posts_per_page' => $posts_per_page
     );
     $query = new WP_Query($args);
 ?>
