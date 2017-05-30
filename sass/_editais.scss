@@ -11,6 +11,10 @@
 }
 
 .latest-editais {
+    >.row {
+        margin-bottom: 10px;
+    }
+
     article {
         border-bottom: 2px solid $cor-primaria-cinza;
         margin-bottom: $grid-gutter-width / 2;
