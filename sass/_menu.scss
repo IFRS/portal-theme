@@ -110,17 +110,21 @@
 
     .menu-item-has-children {
         >a {
+            padding-right: 10px;
+
             &:after {
                 /* symbol for "opening" panels */
                 font-family: 'Glyphicons Halflings';
-                content: "\e114";
+                content: "\e259";
                 float: right;
-                padding: 0 3px;
+                padding: 0 2px 0 0;
                 font-weight: normal;
+                margin-right: -10px;
             }
+
             &.collapsed:after {
                 /* symbol for "collapsed" panels */
-                content: "\e080";
+                content: "\e258";
             }
         }
     }
