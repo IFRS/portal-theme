@@ -7,7 +7,7 @@
                 'orderby' => 'date',
                 'order' => 'DESC',
                 'post_type' => 'post',
-                'numberposts' => 10,
+                'posts_per_page' => 10,
                 'post__not_in' => array($post->ID)
             );
 

@@ -7,7 +7,7 @@
             'orderby' => 'date',
             'order' => 'DESC',
             'post_type' => 'edital',
-            'numberposts' => 5
+            'posts_per_page' => 5
         );
 
         $last_editais = new WP_Query($args);
