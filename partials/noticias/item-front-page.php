@@ -20,8 +20,9 @@
         <?php
             $categories = get_the_category();
             $cat_name = $categories[0]->cat_name;
+            $cat_ID = $categories[0]->term_id;
         ?>
-        <p><span class="noticia-cartola"><?php echo $cat_name; ?></span> - <span class="noticia-data"><?php echo get_the_date(); ?></span></p>
+        <p><?php if (!is_category()) : ?><span class="noticia-cartola"><a href="<?php echo get_category_link($cat_ID); ?>"><?php echo $cat_name; ?></a></span> - <?php endif; ?><span class="noticia-data"><?php echo get_the_date(); ?></span></p>
     </div>
 </div>
 <div class="row">
