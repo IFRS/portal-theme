@@ -72,6 +72,12 @@
         &:last-child {
             border-bottom: 1px solid $menu-border;
         }
+
+        &.current-menu-item {
+            a {
+                font-weight: bold;
+            }
+        }
     }
 }
 
