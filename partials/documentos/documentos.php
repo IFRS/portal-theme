@@ -18,6 +18,7 @@
     <div class="col-xs-12 col-md-3">
         <aside>
             <?php get_template_part('partials/documentos/documento_type'); ?>
+            <?php get_template_part('partials/documentos/documento_origin'); ?>
             <?php
                 if (is_post_type_archive('documento')) {
                     get_template_part('partials/documentos/filter');

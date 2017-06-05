@@ -34,7 +34,7 @@ function portal_breadcrumb() {
         } elseif (is_tax('concurso_status')) {
             echo '<li><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
-        } elseif (is_tax('documento_type')) {
+        } elseif (is_tax('documento_type') || is_tax('documento_origin')) {
             echo '<li><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
         } elseif (is_tax('edital_category')) {

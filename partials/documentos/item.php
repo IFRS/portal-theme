@@ -67,6 +67,14 @@
                         <br>
                         <?php echo get_the_term_list( get_the_ID(), 'documento_type', '', '<br>', '' ); ?>
                     </p>
+                    <?php $documento_origin_list = get_the_term_list( get_the_ID(), 'documento_origin', '', '<br>', '' ); ?>
+                    <?php if ($documento_origin_list) : ?>
+                        <p>
+                            <strong>Origem</strong>
+                            <br>
+                            <?php echo $documento_origin_list; ?>
+                        </p>
+                    <?php endif; ?>
                     <p>
                         <strong>Publicação</strong>
                         <br>

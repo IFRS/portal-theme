@@ -3,6 +3,8 @@
         _e('Documentos');
     } elseif (is_tax('documento_type')) {
         single_term_title();
+    } elseif (is_tax('documento_origin')) {
+        printf(__('Documentos de %s'), single_term_title('', false));
     }
 
     if (is_year()) {
