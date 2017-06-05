@@ -12,9 +12,42 @@
                 </div>
             </div>
             <div class="row">
+            <?php
+                $documento_files = array();
+                $documento_files = array_merge(
+                    $documento_files,
+                    array_map(function($arr){
+                        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Documento'];
+                    }, rwmb_meta('documento_file' ))
+                );
+                $documento_files = array_merge(
+                    $documento_files,
+                    array_map(function($arr){
+                        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Anexos'];
+                    }, rwmb_meta('documento_anexos' ))
+                );
+            ?>
                 <div class="col-xs-12">
-                    <?php $arquivo = rwmb_meta('documento_file', array('limit' => 1)); ?>
-                    <a class="btn btn-primary" href="<?php echo $arquivo[0]['url']; ?>" title="Baixar <?php the_title(); ?>" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;Baixar Arquivo</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-arquivos">
+                            <thead>
+                                <tr>
+                                    <th><?php _e('Publicado em'); ?></th>
+                                    <th><?php _e('Arquivo'); ?></th>
+                                    <th><?php _e('Grupo'); ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($documento_files as $key => $file) : ?>
+                                <tr>
+                                    <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
+                                    <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
+                                    <td><?php echo $file['group']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </article>
