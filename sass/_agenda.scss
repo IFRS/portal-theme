@@ -154,8 +154,20 @@
     }
 
     .tribe-events-month-event-title {
+        background-color: $cor-secundaria-cinza;
         font-size: 18px;
-        padding-left: 2px;
+        padding: 1px 2px 5px 3px;
+        font-weight: normal;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .tribe-events-category-reitor {
+        .tribe-events-month-event-title {
+            background-color: $cor-secundaria-azul-escuro;
+        }
     }
 
     .tribe-events-ical {
