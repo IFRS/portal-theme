@@ -41,5 +41,8 @@ require_once('lib/custom-queries.php');
 // Custom TinyMCE
 require_once('lib/custom-tinymce.php');
 
+// Configurações da Galeria
+require_once('lib/gallery.php');
+
 // Remove "generator" meta tag
 remove_action('wp_head', 'wp_generator');

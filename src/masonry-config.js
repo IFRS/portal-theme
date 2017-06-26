@@ -8,4 +8,9 @@ $(window).load(function() {
         itemSelector: 'li',
         percentPosition: true
     });
+
+    $('.post-content .gallery').masonry({
+        itemSelector: 'dl',
+        percentPosition: true
+    });
 });
