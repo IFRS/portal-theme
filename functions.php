@@ -40,3 +40,6 @@ require_once('lib/custom-queries.php');
 
 // Custom TinyMCE
 require_once('lib/custom-tinymce.php');
+
+// Remove "generator" meta tag
+remove_action('wp_head', 'wp_generator');
