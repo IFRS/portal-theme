@@ -1,14 +1,3 @@
-.bx-wrapper {
-    margin-bottom: 5px !important;
-}
-
-#bx-pager {
-    img {
-        max-height: 50px;
-        margin-bottom: 5px;
-    }
-}
-
 .galeria {
     .title {
         @include title-box($cor-galeria, '../img/bg-galeria.png');
