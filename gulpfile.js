@@ -7,6 +7,7 @@ var postcss      = require('gulp-postcss');
 var pixrem       = require('pixrem');
 var autoprefixer = require('autoprefixer');
 var cssmin       = require('gulp-cssmin');
+var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var livereload   = require('gulp-livereload');
@@ -54,7 +55,9 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src(['src/*.js', '!src/browser-sync-config.js'])
+    return gulp.src('src/*.js')
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('js/'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
