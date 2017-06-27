@@ -18,7 +18,6 @@ var argv         = require('yargs').argv;
 var dist = [
     '**',
     '!.**',
-    '!img/favicon.source.png',
     '!node_modules{,/**}',
     '!sass{,/**}',
     '!src{,/**}',
