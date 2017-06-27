@@ -40,6 +40,7 @@ function portal_load_scripts() {
     wp_enqueue_script( 'moment', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/moment/min/moment-with-locales.js' : '/vendor/moment/min/moment-with-locales.min.js'), array('jquery'), false, false );
     wp_enqueue_script( 'jquery-datatables', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/js/jquery.dataTables.js' : '/vendor/datatables/media/js/jquery.dataTables.min.js'), array('jquery'), false, false );
     wp_enqueue_script( 'jquery-datatables-bootstrap', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/js/dataTables.bootstrap.js' : '/vendor/datatables/media/js/dataTables.bootstrap.min.js'), array('jquery','jquery-datatables'), false, false );
+    wp_enqueue_script( 'jquery-datatables-datetime-moment', get_stylesheet_directory_uri().'/vendor/datatables-plugins/sorting/datetime-moment.js', array('jquery','jquery-datatables'), false, false );
 
     wp_enqueue_script( 'slicknav', get_template_directory_uri().(WP_DEBUG ? '/vendor/slicknav/dist/jquery.slicknav.js' : '/vendor/slicknav/dist/jquery.slicknav.min.js'), array(), false, false );
     wp_enqueue_script( 'masonry-custom', get_template_directory_uri().(WP_DEBUG ? '/vendor/masonry/dist/masonry.pkgd.js' : '/vendor/masonry/dist/masonry.pkgd.min.js'), array(), false, false );
