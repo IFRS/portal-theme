@@ -23,11 +23,12 @@ var dist = [
     '!src{,/**}',
     '!bower.json',
     '!gulpfile.js',
-    '!package.json'
+    '!package.json',
+    '!package-lock.json'
 ];
 
 gulp.task('default', ['clean', 'bower'], function() {
-    return gulp.start('css', 'js', 'images');
+    return gulp.start('css', 'js');
 });
 
 gulp.task('bower', function() {
