@@ -2,7 +2,7 @@
 function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
 
-    wp_enqueue_style('css-ifrs-portal-theme', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/ifrs-portal-theme.css' : '/css/ifrs-portal-theme.min.css'), array(), false, 'all');
+    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array(), false, 'all');
 
     wp_enqueue_style( 'css-fancybox', get_stylesheet_directory_uri().'/vendor/fancybox/source/jquery.fancybox.css', array(), false, 'screen' );
 
