@@ -10,7 +10,7 @@
     <meta name="keywords" content="ifrs, portal, site, institucional">
     <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918">
     <?php echo get_template_part('partials/title'); ?>
-    <link rel="alternate" type="application/rss+xml" title="<?= get_bloginfo('name'); ?> Feed" href="<?= esc_url(get_feed_link()); ?>">
+    <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
     <!-- Favicon -->
     <?php echo get_template_part('partials/favicons'); ?>
     <!-- CSS, JS & etc. -->
