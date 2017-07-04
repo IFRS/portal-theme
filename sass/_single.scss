@@ -40,51 +40,6 @@
         color: #172938;
     }
 
-    .gallery {
-        @extend .row;
-        img {
-            @extend .img-responsive;
-        }
-        .gallery-caption {
-            color: #666;
-            font-size: 0.8em;
-        }
-    }
-
-    .gallery-columns-1 {
-        .gallery-item {
-            @extend .col-xs-12;
-        }
-    }
-
-    .gallery-columns-2 {
-        .gallery-item {
-            @extend .col-xs-12;
-            @extend .col-md-6;
-        }
-    }
-
-    .gallery-columns-3 {
-        .gallery-item {
-            @extend .col-xs-12;
-            @extend .col-md-4;
-        }
-    }
-
-    .gallery-columns-4 {
-        .gallery-item {
-            @extend .col-xs-12;
-            @extend .col-md-3;
-        }
-    }
-
-    .gallery-columns-6 {
-        .gallery-item {
-            @extend .col-xs-12;
-            @extend .col-md-2;
-        }
-    }
-
     .post-to-tags-separator {
         border-color: $cor-primaria-verde;
         border-width: 3px;
