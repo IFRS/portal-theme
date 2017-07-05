@@ -66,6 +66,15 @@ gulp.task('js', function() {
     .pipe(livereload());
 });
 
+gulp.task('fonts', function() {
+    var open_sans = gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
+    .pipe(gulp.dest('fonts/opensans'));
+
+    var bootstrap = gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*')
+    .pipe(gulp.dest('fonts/'));
+
+    return es.concat(open_sans, bootstrap);
+});
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
     .pipe(imagemin())

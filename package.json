@@ -16,5 +16,6 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.1",
     "pixrem": "^3.0.2"
+    "npm-font-open-sans": "^1.0.3",
   }
 }
