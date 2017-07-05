@@ -12,8 +12,6 @@ var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var livereload   = require('gulp-livereload');
 var bower        = require('gulp-bower');
-var rsync        = require('gulp-rsync');
-var argv         = require('yargs').argv;
 
 var dist = [
     '**',
@@ -27,7 +25,11 @@ var dist = [
     '!package-lock.json'
 ];
 
-gulp.task('default', ['clean', 'bower'], function() {
+gulp.task('default', function() {
+    return gulp.start('build', 'dist');
+});
+
+gulp.task('build', ['clean', 'bower'], function() {
     return gulp.start('css', 'js');
 });
 
@@ -36,7 +38,7 @@ gulp.task('bower', function() {
 });
 
 gulp.task('clean', function() {
-    return del(['css/', 'js/']);
+    return del(['css/', 'js/', 'dist/']);
 });
 
 gulp.task('css', function() {
@@ -82,14 +84,7 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('deploy', function() {
+gulp.task('dist', function() {
     return gulp.src(dist)
-    .pipe(rsync({
-        root: './',
-        hostname: (argv.host === undefined ? false : argv.host),
-        destination: (argv.path === undefined ? false : argv.path),
-        archive: true,
-        silent: false,
-        compress: true
-    }));
+    .pipe(gulp.dest('./dist/'));
 });
