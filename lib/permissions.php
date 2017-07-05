@@ -105,6 +105,51 @@ add_action('after_switch_theme', function() {
             'read_private_tribe_organizers'     => true,
         ));
     }
+
+    // Cadastrador de Concursos
+    if (!get_role( 'cadastrador_concursos' )) {
+        add_role('cadastrador_concursos', __('Cadastrador de Concursos'), array(
+            'read'                   => true,
+            'upload_files'           => true,
+            'manage_files'           => true,
+
+            'create_concursos'       => true,
+            'edit_concursos'         => true,
+            'manage_concursos'       => false,
+
+            'assign_concurso_status' => true
+        ));
+    }
+
+    // Cadastrador de Documentos
+    if (!get_role( 'cadastrador_documentos' )) {
+        add_role('cadastrador_documentos', __('Cadastrador de Documentos'), array(
+            'read'                  => true,
+            'upload_files'          => true,
+            'manage_files'          => true,
+
+            'create_documentos'     => true,
+            'edit_documentos'       => true,
+            'manage_documentos'     => false,
+
+            'assign_documento_type' => true
+        ));
+    }
+
+    // Cadastrador de Editais
+    if (!get_role( 'cadastrador_editais' )) {
+        add_role('cadastrador_editais', __('Cadastrador de Editais'), array(
+            'read'                   => true,
+            'upload_files'           => true,
+            'manage_files'           => true,
+
+            'create_editais'         => true,
+            'edit_editais'           => true,
+            'manage_editais'         => false,
+
+            'assign_edital_category' => true
+        ));
+    }
 });
 
 // De-activate Theme
@@ -120,5 +165,14 @@ add_action('switch_theme', function() {
     }
     if (get_role( 'eventos_manager' )) {
         remove_role( 'eventos_manager' );
+    }
+    if (get_role( 'cadastrador_concursos' )) {
+        remove_role( 'cadastrador_concursos' );
+    }
+    if (get_role( 'cadastrador_documentos' )) {
+        remove_role( 'cadastrador_documentos' );
+    }
+    if (get_role( 'cadastrador_editais' )) {
+        remove_role( 'cadastrador_editais' );
     }
 });
