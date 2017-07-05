@@ -1,4 +1,7 @@
-$(window).load(function() {
+require('jquery-bridget');
+require('masonry-layout');
+
+$(document).ready(function() {
     $('#lista-noticias').masonry({
         itemSelector: '#lista-noticias > div',
         percentPosition: true

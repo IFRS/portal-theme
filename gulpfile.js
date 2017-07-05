@@ -11,7 +11,9 @@ var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var livereload   = require('gulp-livereload');
-var bower        = require('gulp-bower');
+var webpack      = require('webpack');
+var path         = require('path');
+var es           = require('event-stream');
 
 var dist = [
     '**',
@@ -19,26 +21,21 @@ var dist = [
     '!node_modules{,/**}',
     '!sass{,/**}',
     '!src{,/**}',
-    '!bower.json',
     '!gulpfile.js',
     '!package.json',
     '!package-lock.json'
 ];
 
 gulp.task('default', function() {
-    return gulp.start('build', 'dist');
+    return gulp.start('build');
 });
 
-gulp.task('build', ['clean', 'bower'], function() {
-    return gulp.start('css', 'js');
-});
-
-gulp.task('bower', function() {
-    return bower();
+gulp.task('build', ['clean'], function() {
+    return gulp.start('css', 'js', 'fonts');
 });
 
 gulp.task('clean', function() {
-    return del(['css/', 'js/', 'dist/']);
+    return del(['css/', 'js/', 'fonts/', 'dist/']);
 });
 
 gulp.task('css', function() {
@@ -47,7 +44,10 @@ gulp.task('css', function() {
         autoprefixer({browsers: ['> 1%', 'last 3 versions']})
     ];
     return gulp.src('sass/*.scss')
-    .pipe(sass({includePaths: 'sass', outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({
+        includePaths: 'sass',
+        outputStyle: 'expanded'
+    }).on('error', sass.logError))
     .pipe(gulp.dest('css/'))
     .pipe(postcss(postCSSplugins, {map: true}))
     .pipe(cssmin())
@@ -56,11 +56,43 @@ gulp.task('css', function() {
     .pipe(livereload());
 });
 
-gulp.task('js', function() {
-    return gulp.src('src/*.js')
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('js/'))
-    .pipe(uglify())
+gulp.task('webpack', function(callback) {
+    webpack({
+        entry: {
+            ie: './src/_ie.js',
+            app: './src/_app.js'
+        },
+        output: {
+            path: path.resolve(__dirname, 'js'),
+            filename: '[name].js',
+        },
+        resolve: {
+            alias: {
+                jquery: 'jquery/src/jquery',
+                bootstrap: 'bootstrap-sass'
+            }
+        },
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+            })
+        ],
+    }, function(err, stats) {
+        if (err) throw new gutil.PluginError('webpack', err);
+        gutil.log('[webpack]', stats.toString({
+            colors: true
+        }));
+        callback();
+    });
+});
+
+gulp.task('js', ['webpack'], function() {
+    return gulp.src(['js/*.js', '!js/*.min.js'])
+    .pipe(uglify({
+        ie8: true,
+        mangle: false,
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
     .pipe(livereload());
@@ -75,6 +107,7 @@ gulp.task('fonts', function() {
 
     return es.concat(open_sans, bootstrap);
 });
+
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
     .pipe(imagemin())
@@ -95,5 +128,5 @@ gulp.task('watch', function() {
 
 gulp.task('dist', function() {
     return gulp.src(dist)
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('dist/'));
 });

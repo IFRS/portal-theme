@@ -1,3 +1,8 @@
+require('datatables.net');
+require('datatables.net-bs');
+require('moment');
+require('datatables.net-plugins/sorting/datetime-moment');
+
 $(document).ready(function() {
     $('.table-editais').DataTable({
         order:      [],
