@@ -33,6 +33,12 @@
     $concurso_files = array_merge(
         $concurso_files,
         array_map(function($arr){
+            return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Editais Complementares'];
+        }, rwmb_meta('concurso_editais_complementares' ))
+    );
+    $concurso_files = array_merge(
+        $concurso_files,
+        array_map(function($arr){
             return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Provas'];
         }, rwmb_meta('concurso_provas_files' ))
     );
