@@ -1,9 +1,10 @@
 @import 'fonts';
 @import '../node_modules/npm-font-open-sans/open-sans.scss';
+
 @import 'vars';
 @import 'config';
 
-@import '../vendor/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 @import 'mixins';
 

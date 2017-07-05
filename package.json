@@ -3,9 +3,12 @@
   "private": true,
   "devDependencies": {
     "autoprefixer": "^6.7.6",
+    "bootstrap-sass": "^3.3.7",
+    "datatables.net": "^1.10.15",
+    "datatables.net-bs": "^1.10.15",
+    "datatables.net-plugins": "^1.10.15",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-imagemin": "^3.1.1",
@@ -15,7 +18,18 @@
     "gulp-rsync": "0.0.7",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.1",
-    "pixrem": "^3.0.2"
+    "html5shiv": "^3.7.3",
+    "jquery": "^1.12.4",
+    "jquery-bridget": "^2.0.1",
+    "jquery-fancybox": "^3.1.0",
+    "lazysizes": "^4.0.0-rc3",
+    "masonry-layout": "^4.2.0",
+    "moment": "^2.18.1",
     "npm-font-open-sans": "^1.0.3",
+    "picturefill": "^3.0.2",
+    "pixrem": "^3.0.2",
+    "respond.js": "^1.4.2",
+    "slicknav": "^1.0.8",
+    "webpack": "^3.0.0"
   }
 }

@@ -1,10 +1,7 @@
 # NPM
 /node_modules/
 
-# Bower
-/vendor/
-
-#Sass
+# SASS
 .sass-cache/
 
 # CSS

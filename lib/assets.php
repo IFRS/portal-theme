@@ -1,25 +1,18 @@
 <?php
 function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
+    /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
-    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array(), false, 'all');
+    wp_enqueue_style('css-vendor', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/vendor.css' : '/css/vendor.min.css'), array(), null, 'all');
 
-    wp_enqueue_style( 'css-fancybox', get_stylesheet_directory_uri().'/vendor/fancybox/source/jquery.fancybox.css', array(), false, 'screen' );
-
-    wp_enqueue_style( 'css-slicknav', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/slicknav/dist/slicknav.css' : '/vendor/slicknav/dist/slicknav.min.css'), array(), false, 'screen' );
-
-    wp_register_style( 'css-datatables', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/css/jquery.dataTables.css' : '/vendor/datatables/media/css/jquery.dataTables.min.css'), array(), false, 'screen' );
-    wp_register_style( 'css-datatables-bootstrap', get_stylesheet_directory_uri().(WP_DEBUG ? '/vendor/datatables/media/css/dataTables.bootstrap.css' : '/vendor/datatables/media/css/dataTables.bootstrap.min.css'), array(), false, 'screen' );
-
-    if (is_singular( 'documento' ) || is_singular( 'edital' ) || is_post_type_archive( 'edital' ) || is_tax('edital_category') || is_post_type_archive( 'concurso' )) {
-        wp_enqueue_style('css-datatables-bootstrap');
-    }
+    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array(), null, 'all');
 }
 
 function portal_load_scripts() {
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
+    /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
 
-    if ( ! is_admin() ) {
+    if (!is_admin()) {
         wp_deregister_script('jquery');
     }
 
