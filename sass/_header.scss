@@ -102,8 +102,10 @@ header {
 }
 
 #barra-servicos {
+    align-items: center;
     background-color: $cor-barra-servicos;
     color: #FFFFFF;
+    display: flex;
     min-height: 30px;
     padding: 3px 0;
 

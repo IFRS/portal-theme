@@ -59,8 +59,9 @@
     padding: 0;
 
     > li {
+        align-items: center;
         border-top: 1px solid $menu-border;
-        display: block;
+        display: flex;
         font-size: 14px;
         min-height: 30px;
 
