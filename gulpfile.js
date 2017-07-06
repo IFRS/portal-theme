@@ -6,6 +6,7 @@ var sass         = require('gulp-sass');
 var postcss      = require('gulp-postcss');
 var pixrem       = require('pixrem');
 var autoprefixer = require('autoprefixer');
+var flexibility  = require('postcss-flexibility');
 var cssmin       = require('gulp-cssmin');
 var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
@@ -40,16 +41,18 @@ gulp.task('clean', function() {
 
 gulp.task('css', function() {
     var postCSSplugins = [
+        require('postcss-flexibility'),
         pixrem(),
-        autoprefixer({browsers: ['> 1%', 'last 3 versions']})
+        autoprefixer({browsers: ['>= 1%', 'last 3 versions', 'ie 8-10', 'not ie <= 7']})
     ];
     return gulp.src('sass/*.scss')
     .pipe(sass({
         includePaths: 'sass',
         outputStyle: 'expanded'
     }).on('error', sass.logError))
+
+    .pipe(postcss(postCSSplugins))
     .pipe(gulp.dest('css/'))
-    .pipe(postcss(postCSSplugins, {map: true}))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
