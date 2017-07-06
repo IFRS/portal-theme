@@ -21,9 +21,13 @@ function portal_load_scripts() {
 
     wp_enqueue_script('app', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/app.js' : '/js/app.min.js'), array(), null, false);
 
-    if (!WP_DEBUG) wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true );
+    if (!WP_DEBUG) {
+        wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true );
+    }
 
-    if (WP_DEBUG) wp_enqueue_script( 'livereload-config', get_template_directory_uri().'/src/livereload-config.js', array(), null, true );
+    if (WP_DEBUG) {
+        wp_enqueue_script( 'livereload-config', get_template_directory_uri().'/src/livereload-config.js', array(), null, true );
+    }
 }
 
 add_action( 'wp_enqueue_scripts', 'portal_load_styles', 1 );
