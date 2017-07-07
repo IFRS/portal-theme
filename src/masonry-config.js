@@ -9,10 +9,9 @@ $(document).ready(function() {
 
     $('.instagram-pics').masonry({
         itemSelector: 'li',
-        percentPosition: true
     });
 
-    $('.post-content .gallery').masonry({
+    $('.gallery').masonry({
         itemSelector: 'dl',
         percentPosition: true
     });
