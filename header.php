@@ -17,7 +17,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <a href="#inicio-conteudo" class="sr-only sr-only-focusable">Pular para o conte&uacute;do</a>
 
     <?php echo get_template_part('partials/barrabrasil'); ?>
@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6" id="header-left">
                 <?php if (get_header_image() != '') : ?>
-                    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" alt="Marca do IFRS" class="img-responsive"/></a>
+                    <a href="<?php esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" alt="Marca do IFRS" class="img-responsive"/></a>
                 <?php endif; ?>
                 </div>
                 <div class="col-xs-12 col-md-6" id="header-right">
