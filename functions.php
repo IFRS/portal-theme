@@ -1,4 +1,7 @@
 <?php
+// Permissões
+require_once('lib/permissions.php');
+
 // Utilidades
 require_once('lib/utils.php');
 
