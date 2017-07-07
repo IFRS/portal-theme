@@ -51,7 +51,7 @@ add_action('after_switch_theme', function() {
 
             'edit_pages'             => true,
             'edit_others_pages'      => true,
-            'delete_pages'           => true,
+            'edit_published_pages'   => true,
         ));
     }
 
