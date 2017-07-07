@@ -117,7 +117,7 @@
 
     .menu-item-has-children {
         >a {
-            padding-right: 12px;
+            padding-right: 15px;
 
             &:after {
                 /* symbol for "opening" panels */
@@ -126,7 +126,7 @@
                 float: right;
                 padding: 0 2px 0 0;
                 font-weight: normal;
-                margin-right: -12px;
+                margin-right: -15px;
             }
 
             &.collapsed:after {
