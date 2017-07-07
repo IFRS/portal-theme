@@ -43,7 +43,7 @@ gulp.task('css', function() {
     var postCSSplugins = [
         require('postcss-flexibility'),
         pixrem(),
-        autoprefixer({browsers: ['>= 1%', 'last 3 versions', 'ie 8-10', 'not ie <= 7']})
+        autoprefixer({browsers: ['> 1%', 'last 3 versions', 'ie 8-10', 'not ie <= 7']})
     ];
     return gulp.src('sass/*.scss')
     .pipe(sass({
