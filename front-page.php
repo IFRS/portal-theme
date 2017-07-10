@@ -24,14 +24,16 @@
         <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
     </div>
     <div class="col-xs-12 col-md-6 col-md-pull-6">
-        <!-- Notícia Destaque -->
-        <?php
-            $query_sticky->the_post();
-            $sticky_ID = get_the_ID();
-        ?>
-        <article class="noticia-destaque">
-            <?php get_template_part('partials/noticias/item-front-page'); ?>
-        </article>
+        <?php if ($query_sticky->have_posts()) : ?>
+            <!-- Notícia Destaque -->
+            <?php
+                $query_sticky->the_post();
+                $sticky_ID = get_the_ID();
+            ?>
+            <article class="noticia-destaque">
+                <?php get_template_part('partials/noticias/item-front-page'); ?>
+            </article>
+        <?php endif; ?>
     </div>
 </div>
 
