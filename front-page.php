@@ -1,14 +1,5 @@
 <?php get_header(); ?>
 
-<?php if (shortcode_exists('image-carousel')) : ?>
-    <div class="row hidden-xs">
-        <div class="col-xs-12">
-            <!-- Carousel -->
-            <?php echo do_shortcode('[image-carousel twbs="3"]'); ?>
-        </div>
-    </div>
-<?php endif; ?>
-
 <?php
     $args_sticky = array(
         'posts_per_page' => 1,
