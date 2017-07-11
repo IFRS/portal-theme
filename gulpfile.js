@@ -39,7 +39,7 @@ gulp.task('clean', function() {
     return del(['css/', 'js/', 'fonts/', 'dist/']);
 });
 
-gulp.task('css', function() {
+gulp.task('sass', function() {
     var postCSSplugins = [
         require('postcss-flexibility'),
         pixrem(),
@@ -53,6 +53,11 @@ gulp.task('css', function() {
 
     .pipe(postcss(postCSSplugins))
     .pipe(gulp.dest('css/'))
+    .pipe(livereload());
+});
+
+gulp.task('css', ['sass'], function() {
+    return gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
@@ -103,7 +108,7 @@ gulp.task('js', ['webpack'], function() {
 
 gulp.task('fonts', function() {
     var open_sans = gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
-    .pipe(gulp.dest('fonts/opensans'));
+    .pipe(gulp.dest('fonts/opensans/'));
 
     var bootstrap = gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*')
     .pipe(gulp.dest('fonts/'));
@@ -120,9 +125,9 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
     livereload.listen();
 
-    gulp.watch('sass/**/*.scss', ['css']);
+    gulp.watch('sass/**/*.scss', ['sass']);
 
-    gulp.watch('src/**/*.js', ['js']);
+    gulp.watch('src/**/*.js', ['webpack']);
 
     gulp.watch('**/*.php').on('change', function(file) {
         livereload.changed(file.path);
