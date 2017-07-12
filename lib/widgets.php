@@ -46,8 +46,8 @@ function portal_widgets_init() {
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
-		'name'          => 'Widget Home Banners',
-		'id'            => 'widget-home-banners',
+		'name'          => 'Widget Banners',
+		'id'            => 'widget-banners',
 		'description'   => 'Área mais abaixo na página inicial, antes do rodapé.',
 		'before_widget' => '<div id="%1$s" class="widget widget-home-banner %2$s">',
 		'after_widget'  => '</div>',
