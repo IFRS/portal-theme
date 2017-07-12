@@ -1,9 +1,3 @@
-.galeria {
-    .title {
-        @include title-box($cor-galeria, '../img/bg-galeria.png');
-    }
-}
-
 .gallery {
     @extend .row;
     img {
