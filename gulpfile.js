@@ -134,7 +134,7 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('dist', function() {
+gulp.task('dist', ['build'], function() {
     return gulp.src(dist)
     .pipe(gulp.dest('dist/'));
 });
