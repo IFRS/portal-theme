@@ -47,5 +47,5 @@ require_once('lib/custom-tinymce.php');
 // Configurações da Galeria
 require_once('lib/gallery.php');
 
-// Remove "generator" meta tag
-remove_action('wp_head', 'wp_generator');
+// Remove all "version" text from output
+require_once('lib/remove-version.php');
