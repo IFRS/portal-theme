@@ -3,9 +3,11 @@ require('datatables.net-bs');
 require('moment');
 require('datatables.net-plugins/sorting/datetime-moment');
 
-$(document).ready(function() {
+$.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
+
+$(function() {
     $('.table-editais').DataTable({
-        order:      [],
+        order:      [0, 'desc'],
         searching:  false,
         paging:     false,
         info:       false,
@@ -35,7 +37,6 @@ $(document).ready(function() {
         }
     });
 
-    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
     $('.table-arquivos').DataTable({
         order:      [0, 'desc'],
         searching:  false,
