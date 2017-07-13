@@ -1,6 +1,6 @@
 require('slicknav/jquery.slicknav');
 
-$(document).ready(function() {
+$(function() {
     $('#menu-navbar').slicknav({
         'appendTo': 'header',
     });

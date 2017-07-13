@@ -1,7 +1,7 @@
 require('jquery-bridget');
 require('masonry-layout');
 
-$(document).ready(function() {
+$(function() {
     $('#lista-noticias').masonry({
         itemSelector: '#lista-noticias > div',
         percentPosition: true

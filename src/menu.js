@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     $('.menu-collapse .sub-menu').addClass('collapse');
     $('.menu-collapse .sub-menu').prev('a').addClass('collapsed');
 

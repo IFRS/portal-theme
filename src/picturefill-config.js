@@ -1,5 +1,5 @@
 require('picturefill');
 
-$(document).ready(function() {
+$(function() {
     picturefill();
 });
