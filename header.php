@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6" id="header-left">
                 <?php if (get_header_image() != '') : ?>
-                    <a href="<?php esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" alt="Marca do IFRS" class="img-responsive"/></a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php header_image(); ?>" alt="Marca do IFRS" class="img-responsive"/></a>
                 <?php endif; ?>
                 </div>
                 <div class="col-xs-12 col-md-6" id="header-right">
