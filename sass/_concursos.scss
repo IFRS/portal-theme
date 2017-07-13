@@ -1,4 +1,5 @@
-#concursos {
+#concursos,
+#concurso {
     .title {
         @include title-box($cor-concursos, '../img/bg-concursos.png');
     }
