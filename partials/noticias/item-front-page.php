@@ -7,11 +7,6 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/noticia-placeholder-<?php echo mt_rand(0, 4); ?>.png" alt="<?php the_title(); ?>" class="img-responsive center-block noticia-imagem"/>
         <?php endif; ?>
         </a>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-12">
         <h2 class="noticia-titulo"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </div>
 </div>

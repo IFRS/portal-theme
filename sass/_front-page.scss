@@ -1,6 +1,12 @@
 .noticia-destaque {
     .noticia-imagem {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        margin-right: 10px;
+
+        @media screen and (min-width: $screen-md-min) {
+            float: left;
+            max-width: 40%;
+        }
     }
 
     .noticia-cartola {
@@ -18,11 +24,11 @@
 
     .noticia-titulo {
         color: #172938;
-        font-size: 34px;
+        font-size: 26px;
         font-weight: bold;
-        line-height: 37px;
+        line-height: 30px;
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
 
         > a {
             color: #172938;
@@ -39,8 +45,8 @@
             text-overflow: ellipsis;
             display: -webkit-box;
             line-height: 21px;     /* fallback */
-            max-height: 42px;      /* fallback */ /* number of lines * line-height */
-            -webkit-line-clamp: 2; /* number of lines to show */
+            max-height: 63px;      /* fallback */ /* number of lines * line-height */
+            -webkit-line-clamp: 3; /* number of lines to show */
             -webkit-box-orient: vertical;
         }
     }

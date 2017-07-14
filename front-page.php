@@ -16,11 +16,11 @@
 ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-push-6">
+    <div class="col-xs-12 col-md-5 col-md-push-7">
         <!-- Banners -->
         <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
     </div>
-    <div class="col-xs-12 col-md-6 col-md-pull-6">
+    <div class="col-xs-12 col-md-7 col-md-pull-5">
         <?php if ($query_sticky->have_posts()) : ?>
             <!-- Notícia Destaque -->
             <?php
