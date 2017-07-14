@@ -67,12 +67,6 @@
 
     <?php portal_breadcrumb(); ?>
 
-    <?php
-        if (is_front_page()) {
-            get_template_part('partials/menus/campi');
-        }
-    ?>
-
     <section class="container">
         <div class="row">
             <div class="col-xs-12 col-md-2">
