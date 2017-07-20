@@ -48,6 +48,7 @@
         a {
             @extend .pull-right;
             @include link-todos($cor-galeria);
+            margin-top: 10px;
         }
     }
 }
