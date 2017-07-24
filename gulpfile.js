@@ -50,7 +50,6 @@ gulp.task('sass', function() {
         includePaths: 'sass',
         outputStyle: 'expanded'
     }).on('error', sass.logError))
-
     .pipe(postcss(postCSSplugins))
     .pipe(gulp.dest('css/'))
     .pipe(livereload());
