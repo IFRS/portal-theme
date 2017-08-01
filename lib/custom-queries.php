@@ -8,8 +8,7 @@ function portal_custom_queries( $query ) {
             $query->set('order', 'DESC');
         }
         if ($query->is_post_type_archive('documento') || $query->is_tax('documento_type') || $query->is_tax('documento_origin')) {
-            $query->set('posts_per_page', -1);
-            $query->set('nopaging', true);
+            $query->set('posts_per_page', 10);
             $query->set('orderby', 'modified');
             $query->set('order', 'DESC');
         }
