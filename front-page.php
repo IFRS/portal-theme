@@ -98,7 +98,7 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <?php if (!dynamic_sidebar('widget-home-banners')) : endif; ?>
+        <?php if (!dynamic_sidebar('widget-banners')) : endif; ?>
     </div>
 </div>
 
