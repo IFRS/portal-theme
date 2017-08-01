@@ -1,4 +1,13 @@
 <?php
+// Remove os atributos de página para não-administradores
+add_action('admin_menu', function() {
+    if ( is_admin() ) {
+        if ( !current_user_can('administrator') ) {
+            remove_meta_box('pageparentdiv', 'page', 'normal');
+        }
+    }
+});
+
 // Fix Media Permissions
 add_action('init', function() {
     global $wp_post_types;
@@ -49,6 +58,7 @@ add_action('after_switch_theme', function() {
             'upload_files'           => true,
             'manage_files'           => true,
 
+            'publish_pages'          => false,
             'edit_pages'             => true,
             'edit_others_pages'      => true,
             'edit_published_pages'   => true,
