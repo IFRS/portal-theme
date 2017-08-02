@@ -27,6 +27,7 @@ add_action('after_switch_theme', function() {
             'publish_posts'          => true,
             'edit_posts'             => true,
             'edit_others_posts'      => true,
+            'edit_published_posts'   => true,
             'delete_posts'           => true,
             'delete_others_posts'    => true,
             'delete_published_posts' => true,
