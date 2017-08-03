@@ -3,9 +3,15 @@ function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
+    wp_enqueue_style('css-critical', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/critical.css' : '/css/critical.min.css'), array(), null, 'all');
+
     wp_enqueue_style('css-vendor', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/vendor.css' : '/css/vendor.min.css'), array(), null, 'all');
 
-    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array(), null, 'all');
+    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array('css-vendor'), null, 'all');
+
+    add_filter('style_loader_tag', function($tag) {
+        return preg_replace(["/='stylesheet' id='css-vendor-css'/", "/='stylesheet' id='css-app-css'/"], ["='preload' id='css-vendor-css' as='style' onload='this.rel=\"stylesheet\"'", "='preload' id='css-app-css' as='style' onload='this.rel=\"stylesheet\"'"], $tag);
+    });
 }
 
 function portal_load_scripts() {
