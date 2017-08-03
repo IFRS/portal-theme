@@ -9,8 +9,8 @@
     <meta name="author" content="Instituto Federal do Rio Grande do Sul - Diretoria de Comunicação">
     <meta name="keywords" content="ifrs, portal, site, institucional">
     <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918">
-    <?php echo get_template_part('partials/title'); ?>
     <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
+    <?php echo get_template_part('partials/title'); ?>
     <!-- Favicon -->
     <?php echo get_template_part('partials/favicons'); ?>
     <!-- CSS, JS & etc. -->
@@ -65,6 +65,7 @@
         </div>
     </header>
 
+    <!-- Corpo -->
     <?php portal_breadcrumb(); ?>
 
     <section class="container">
