@@ -219,7 +219,10 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('dist', function() {
+gulp.task('copy', function() {
     return gulp.src(dist)
     .pipe(gulp.dest('dist/'));
+});
+gulp.task('dist', function(callback) {
+    runSequence('build', 'copy', callback);
 });
