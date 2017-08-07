@@ -37,12 +37,11 @@ gulp.task('default', function() {
 });
 
 gulp.task('build', ['clean'], function(callback) {
-    // return gulp.start('css', 'js', 'fonts');
-    runSequence(['css', 'js', 'fonts'], callback);
+    runSequence(['css', 'js', 'assets'], callback);
 });
 
 gulp.task('clean', function() {
-    return del(['css/', 'js/', 'fonts/', 'dist/']);
+    return del(['css/', 'js/', 'fonts/', 'img/vendor/', 'dist/']);
 });
 
 gulp.task('sass', function() {
@@ -189,14 +188,17 @@ gulp.task('js', ['webpack'], function() {
     .pipe(livereload());
 });
 
-gulp.task('fonts', function() {
+gulp.task('assets', function() {
     var open_sans = gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
     .pipe(gulp.dest('fonts/opensans/'));
 
     var bootstrap = gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*')
     .pipe(gulp.dest('fonts/'));
 
-    return es.concat(open_sans, bootstrap);
+    var fancybox = gulp.src('node_modules/jquery-fancybox/source/img/**/*')
+    .pipe(gulp.dest('img/vendor/'));
+
+    return es.concat(open_sans, bootstrap, fancybox);
 });
 
 gulp.task('images', function() {
