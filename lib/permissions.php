@@ -8,6 +8,17 @@ add_action('admin_menu', function() {
     }
 });
 
+// Remove a metabox do YoastSEO para não-administradores
+add_action( 'add_meta_boxes', function() {
+    if ( ! current_user_can( 'administrator' ) ) {
+        remove_meta_box( 'wpseo_meta', 'post', 'normal' );
+        remove_meta_box( 'wpseo_meta', 'page', 'normal' );
+        remove_meta_box( 'wpseo_meta', 'concurso', 'normal' );
+        remove_meta_box( 'wpseo_meta', 'documento', 'normal' );
+        remove_meta_box( 'wpseo_meta', 'edital', 'normal' );
+    }
+}, 11 );
+
 // Fix Media Permissions
 add_action('init', function() {
     global $wp_post_types;
