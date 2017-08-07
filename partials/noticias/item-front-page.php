@@ -4,7 +4,7 @@
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-responsive center-block noticia-imagem')); ?>
         <?php else : ?>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/noticia-placeholder-<?php echo mt_rand(0, 4); ?>.png" alt="<?php the_title(); ?>" class="img-responsive center-block noticia-imagem"/>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/noticia-placeholder-<?php echo mt_rand(0, 9); ?>.png" alt="<?php the_title(); ?>" class="img-responsive center-block noticia-imagem"/>
         <?php endif; ?>
         </a>
         <h2 class="noticia-titulo"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
