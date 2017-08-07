@@ -10,7 +10,7 @@ $(function() {
         order:      [0, 'desc'],
         searching:  false,
         paging:     true,
-        pageLength: 20,
+        pageLength: 25,
         info:       false,
         bAutoWidth: false,
         language: {
