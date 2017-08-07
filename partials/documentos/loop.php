@@ -1,28 +1,22 @@
-<?php while ( have_posts() ) : the_post(); ?>
-    <article class="documento">
-        <div class="row">
-            <div class="documento-date-time col-xs-12 col-md-2">
-                <p class="documento-date"><span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php echo get_the_date('d/m/Y'); ?></p>
-                <p class="documento-time"><span class="glyphicon glyphicon-time"></span>&nbsp;<?php echo get_the_time('G\hi'); ?></p>
-            </div>
-            <div class="documento-body col-xs-12 col-md-10">
-                <?php $documento_origin_list = get_the_terms( get_the_ID(), 'documento_origin' ); ?>
-                <p class="documento-type">
-                    <?php if (is_post_type_archive('documento') || is_tax('documento_origin')) : ?>
-                        <?php echo get_the_terms(get_the_ID(), 'documento_type')[0]->name; ?>
-                    <?php endif; ?>
-                    <?php if ($documento_origin_list && !is_tax('documento_origin')) : ?>
-                        <?php if (!is_tax('documento_type')) : ?>
-                            <?php echo ' - '; ?>
-                        <?php endif; ?>
-                        <?php echo $documento_origin_list[0]->name; ?>
-                    <?php endif; ?>
-                </p>
-                <h3 class="documento-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-                <div class="documento-content">
-                    <?php the_excerpt(); ?>
-                </div>
-            </div>
-        </div>
-    </article>
-<?php endwhile; ?>
+<div class="table-responsive">
+    <table class="table table-hover table-documentos">
+        <thead>
+            <tr>
+                <th><?php _e('&Uacute;ltima Atualiza&ccedil;&atilde;o'); ?></th>
+                <th><?php _e('Documento'); ?></th>
+                <th><?php _e('Tipo'); ?></th>
+                <th><?php _e('Origem'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php while ( have_posts() ) : the_post(); ?>
+            <tr>
+                <td><?php the_modified_date('d/m/Y H:i'); ?></td>
+                <td><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></td>
+                <td><?php echo get_the_term_list( get_the_ID(), 'documento_type', '', ', ' ); ?></td>
+                <td><?php echo get_the_term_list( get_the_ID(), 'documento_origin', '', ', ' ); ?></td>
+            </tr>
+        <?php endwhile; ?>
+        </tbody>
+    </table>
+</div>

@@ -3,7 +3,6 @@
         <h2 class="title"><?php get_template_part('partials/documentos/title'); ?></h2>
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/documentos/loop'); ?>
-            <?php portal_pagination(); ?>
         <?php else : ?>
             <?php if (is_search()) : ?>
                 <div class="alert alert-danger" role="alert">

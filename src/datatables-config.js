@@ -6,6 +6,38 @@ require('datatables.net-plugins/sorting/datetime-moment');
 $(function() {
     $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
 
+    $('.table-documentos').DataTable({
+        order:      [0, 'desc'],
+        searching:  false,
+        paging:     true,
+        pageLength: 20,
+        info:       false,
+        bAutoWidth: false,
+        language: {
+            "sEmptyTable":     "Nenhum Documento encontrado",
+            "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Documentos",
+            "sInfoEmpty":      "Mostrando 0 até 0 de 0 Documentos",
+            "sInfoFiltered":   "(Filtrados de _MAX_ Documentos)",
+            "sInfoPostFix":    "",
+            "sInfoThousands":  ".",
+            "sLengthMenu":     "_MENU_ Documentos por página",
+            "sLoadingRecords": "Carregando...",
+            "sProcessing":     "Processando...",
+            "sZeroRecords":    "Nenhum Documento encontrado",
+            "sSearch":         "Pesquisar na lista de Documentos",
+            "oPaginate": {
+                "sNext":     "Próximo",
+                "sPrevious": "Anterior",
+                "sFirst":    "Primeiro",
+                "sLast":     "Último"
+            },
+            "oAria": {
+                "sSortAscending":  ": Ordenar colunas de forma ascendente",
+                "sSortDescending": ": Ordenar colunas de forma descendente"
+            }
+        }
+    });
+
     $('.table-editais').DataTable({
         order:      [0, 'desc'],
         searching:  false,
