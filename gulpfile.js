@@ -20,8 +20,6 @@ var es           = require('event-stream');
 var critical     = require('critical');
 var runSequence  = require('run-sequence');
 
-// var dotenv = JSON.parse(fs.readFileSync('./.env.json'));
-
 var dist = [
     '**',
     '!.**',
@@ -63,6 +61,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('critical', ['sass'], function() {
+    gutil.log('[critical]', 'URL: ' + process.env.CRITICAL_URL)
     return crit = critical.generate({
         // Inline the generated critical-path CSS
         // - true generates HTML
@@ -82,31 +81,34 @@ gulp.task('critical', ['sass'], function() {
         css: ['css/vendor.css', 'css/app.css'],
 
         // Viewport width
-        width: 1920,
+        // width: 1920,
 
         // Viewport height
-        height: 1080,
+        // height: 1080,
 
         // Multiple viewport sizes
-        // dimensions: [{
-        //     width: 1920,
-        //     height: 1080
-        // }, {
-        //     width: 1366,
-        //     height: 768
-        // }, {
-        //     width: 1280,
-        //     height: 1024
-        // }, {
-        //     width: 1280,
-        //     height: 800
-        // }, {
-        //     width: 1024,
-        //     height: 768
-        // }, {
-        //     width: 800,
-        //     height: 600
-        // }],
+        dimensions: [{
+            width: 1920,
+            height: 1080
+        }, {
+            width: 1366,
+            height: 768
+        }, {
+            width: 1280,
+            height: 1024
+        }, {
+            width: 1280,
+            height: 800
+        }, {
+            width: 1024,
+            height: 768
+        }, {
+            width: 800,
+            height: 600
+        }, {
+            width: 320,
+            height: 568
+        }],
 
         // Target for final HTML output.
         // use some CSS file when the inline option is not set
@@ -125,7 +127,7 @@ gulp.task('critical', ['sass'], function() {
         // pathPrefix: '/MySubfolderDocrot',
 
         // ignore CSS rules
-        // ignore: ['font-face',/some-regexp/],
+        // ignore: ['font-face'],
 
         // overwrite default options
         // ignoreOptions: {}
