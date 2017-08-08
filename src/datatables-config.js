@@ -4,6 +4,7 @@ require('moment');
 require('datatables.net-plugins/sorting/datetime-moment');
 
 $(function() {
+    $.fn.dataTable.moment( 'DD/MM/YYYY', 'pt-BR' );
     $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
 
     $('.table-documentos').DataTable({
