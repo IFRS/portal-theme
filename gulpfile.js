@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var gulp         = require('gulp');
 var gutil        = require('gulp-util');
 var del          = require('del');
@@ -74,7 +76,7 @@ gulp.task('critical', ['sass'], function() {
         // html: '<html>...</html>',
 
         // HTML source file
-        src: gutil.env.phantomURL === undefined ? 'http://localhost' : gutil.env.phantomURL,
+        src: process.env.CRITICAL_URL,
 
         // Your CSS Files (optional)
         css: ['css/vendor.css', 'css/app.css'],
