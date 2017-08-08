@@ -73,7 +73,11 @@
                 <?php foreach ($concurso_files as $key => $file) : ?>
                     <tr>
                         <td><?php echo date_i18n( 'd/m/Y H:i', $file['date'] ); ?></td>
-                        <td><a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a></td>
+                        <td>
+                            <a href="<?php echo $file['url']; ?>"><strong><?php echo $file['title']; ?></strong></a>
+                            <br>
+                            <?php echo get_post_field('post_content', $file['ID']); ?>
+                        </td>
                         <td><?php echo $file['group']; ?></td>
                     </tr>
                 <?php endforeach; ?>
