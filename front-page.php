@@ -53,10 +53,14 @@
 </div>
 
 <div class="row">
+<?php if (is_active_sidebar('widget-agenda')) : ?>
     <div class="col-xs-12 col-md-4">
         <?php if (!dynamic_sidebar('widget-agenda')) : endif; ?>
     </div>
     <div class="col-xs-12 col-md-8">
+<?php else : ?>
+    <div class="col-xs-12">
+<?php endif; ?>
         <?php get_template_part('partials/editais/latest'); ?>
     </div>
 </div>
