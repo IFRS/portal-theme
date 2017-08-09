@@ -66,57 +66,6 @@ add_action('after_switch_theme', function() {
         ));
     }
 
-    // Cadastrador de Eventos Role
-    if (!get_role( 'eventos_manager' )) {
-        add_role('eventos_manager', __('Gestor de Eventos'), array(
-            'read'                              => true,
-            'upload_files'                      => true,
-            'manage_files'                      => true,
-
-            'edit_tribe_event'                  => true,
-            'read_tribe_event'                  => true,
-            'delete_tribe_event'                => true,
-            'delete_tribe_events'               => true,
-            'edit_tribe_events'                 => true,
-            'edit_others_tribe_events'          => true,
-            'delete_others_tribe_events'        => true,
-            'publish_tribe_events'              => true,
-            'edit_published_tribe_events'       => true,
-            'delete_published_tribe_events'     => true,
-            'delete_private_tribe_events'       => true,
-            'edit_private_tribe_events'         => true,
-            'read_private_tribe_events'         => true,
-
-            'edit_tribe_venue'                  => true,
-            'read_tribe_venue'                  => true,
-            'delete_tribe_venue'                => true,
-            'delete_tribe_venues'               => true,
-            'edit_tribe_venues'                 => true,
-            'edit_others_tribe_venues'          => true,
-            'delete_others_tribe_venues'        => true,
-            'publish_tribe_venues'              => true,
-            'edit_published_tribe_venues'       => true,
-            'delete_published_tribe_venues'     => true,
-            'delete_private_tribe_venues'       => true,
-            'edit_private_tribe_venues'         => true,
-            'read_private_tribe_venues'         => true,
-
-            'edit_tribe_organizer'              => true,
-            'read_tribe_organizer'              => true,
-            'delete_tribe_organizer'            => true,
-            'delete_tribe_organizers'           => true,
-            'edit_tribe_organizers'             => true,
-            'edit_others_tribe_organizers'      => true,
-            'delete_others_tribe_organizers'    => true,
-            'publish_tribe_organizers'          => true,
-            'edit_published_tribe_organizers'   => true,
-            'delete_published_tribe_organizers' => true,
-            'delete_private_tribe_organizers'   => true,
-            'edit_private_tribe_organizers'     => true,
-            'read_private_tribe_organizers'     => true,
-        ));
-    }
-
     // Cadastrador de Concursos
     if (!get_role( 'cadastrador_concursos' )) {
         add_role('cadastrador_concursos', __('Cadastrador de Concursos'), array(
