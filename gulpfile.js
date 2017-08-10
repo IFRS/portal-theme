@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 var gulp         = require('gulp');
 var gutil        = require('gulp-util');
 var del          = require('del');
@@ -17,7 +15,6 @@ var livereload   = require('gulp-livereload');
 var webpack      = require('webpack');
 var path         = require('path');
 var es           = require('event-stream');
-var critical     = require('critical');
 var runSequence  = require('run-sequence');
 
 var dist = [
@@ -60,88 +57,7 @@ gulp.task('sass', function() {
     .pipe(livereload());
 });
 
-gulp.task('critical', ['sass'], function() {
-    gutil.log('[critical]', 'URL: ' + process.env.CRITICAL_URL)
-    return crit = critical.generate({
-        // Inline the generated critical-path CSS
-        // - true generates HTML
-        // - false generates CSS
-        inline: false,
-
-        // Your base directory
-        base: path.join(path.resolve(__dirname), '.'),
-
-        // HTML source
-        // html: '<html>...</html>',
-
-        // HTML source file
-        src: process.env.CRITICAL_URL,
-
-        // Your CSS Files (optional)
-        css: ['css/vendor.css', 'css/app.css'],
-
-        // Viewport width
-        // width: 1920,
-
-        // Viewport height
-        // height: 1080,
-
-        // Multiple viewport sizes
-        dimensions: [{
-            width: 1920,
-            height: 1080
-        }, {
-            width: 1366,
-            height: 768
-        }, {
-            width: 1280,
-            height: 1024
-        }, {
-            width: 1280,
-            height: 800
-        }, {
-            width: 1024,
-            height: 768
-        }, {
-            width: 800,
-            height: 600
-        }, {
-            width: 320,
-            height: 568
-        }],
-
-        // Target for final HTML output.
-        // use some CSS file when the inline option is not set
-        dest: 'css/critical.css',
-
-        // Minify critical-path CSS when inlining
-        minify: false,
-
-        // Extract inlined styles from referenced stylesheets
-        extract: true,
-
-        // Complete Timeout for Operation
-        // timeout: 30000,
-
-        // Prefix for asset directory
-        // pathPrefix: '/MySubfolderDocrot',
-
-        // ignore CSS rules
-        // ignore: ['font-face'],
-
-        // overwrite default options
-        // ignoreOptions: {}
-
-        // Penthouse
-        penthouse: {
-            blockJSRequests: false
-        }
-    }).error(function (err) {
-        throw new gutil.PluginError('critical', err);
-    });
-});
-
-gulp.task('css', ['critical'], function() {
+gulp.task('css', ['sass'], function() {
     return gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
