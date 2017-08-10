@@ -1,0 +1,11 @@
+.alignleft {
+    @extend .pull-left;
+}
+
+.alignright {
+    @extend .pull-right;
+}
+
+.aligncenter {
+    @extend .center-block;
+}
