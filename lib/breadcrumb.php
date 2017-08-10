@@ -27,8 +27,6 @@ function portal_breadcrumb() {
                 echo get_category_parents($parentCat, true, $sep);
             }
             echo $before . single_cat_title('', false) . $after;
-        } elseif (tribe_is_month() && !is_tax()) {
-            echo $before . 'Calend&aacute;rio de Eventos' . $after;
         } elseif (is_search()) {
             echo $before . 'Resultado da pesquisa por: "' . get_search_query() . '"' . $after;
         } elseif (is_tax('concurso_status')) {
