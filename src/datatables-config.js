@@ -42,7 +42,8 @@ $(function() {
     $('.table-editais').DataTable({
         order:      [0, 'desc'],
         searching:  false,
-        paging:     false,
+        paging:     true,
+        pageLength: 25,
         info:       false,
         bAutoWidth: false,
         language: {
