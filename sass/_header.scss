@@ -38,6 +38,11 @@ header {
     text-align: center;
 }
 
+#header-content {
+    display: flex;
+    align-items: center;
+}
+
 #header-left {
     @media only screen and (max-width: $screen-md-min) {
         a {
@@ -92,6 +97,8 @@ header {
         text-align: right;
     }
 
+    margin-bottom: 0;
+
     li {
         margin-right: 5px;
 
@@ -106,6 +113,7 @@ header {
     background-color: $cor-barra-servicos;
     color: #FFFFFF;
     display: flex;
+    margin-top: 30px;
     min-height: 30px;
     padding: 3px 0;
 
