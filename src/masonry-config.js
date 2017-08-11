@@ -1,9 +1,12 @@
 require('jquery-bridget');
 require('masonry-layout');
 
-$(function() {
+$(window).load(function() {
+    $('#menu-rodape').masonry({
+        percentPosition: true
+    });
+
     $('#lista-noticias').masonry({
-        itemSelector: '#lista-noticias > div',
         percentPosition: true
     });
 
@@ -11,4 +14,4 @@ $(function() {
         itemSelector: 'dl',
         percentPosition: true
     });
-});
+})
