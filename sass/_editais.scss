@@ -4,7 +4,10 @@
     .title {
         @include title-box($cor-editais, '../img/bg-editais.png');
     }
+}
 
+.latest-editais,
+.table-editais {
     a {
         color: $cor-editais;
     }
