@@ -5,6 +5,9 @@ require_once('lib/permissions.php');
 // Utilidades
 require_once('lib/utils.php');
 
+// Cookie Fix
+require_once('lib/cookie-fix.php');
+
 // Suporte para page title
 require_once('lib/theme-support.php');
 
