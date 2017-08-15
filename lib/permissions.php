@@ -118,7 +118,8 @@ add_action('after_switch_theme', function() {
             'edit_editais'           => true,
             'delete_editais'         => false,
 
-            'assign_edital_category' => true
+            'assign_edital_category' => true,
+            'assign_edital_status'   => true
         ));
     }
 });
