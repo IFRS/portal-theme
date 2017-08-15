@@ -33,6 +33,6 @@
     "respond.js": "^1.4.2",
     "run-sequence": "^2.1.0",
     "slicknav": "^1.0.8",
-    "webpack": "^3.5.2"
+    "webpack": "^3.5.4"
   }
 }
