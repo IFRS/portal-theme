@@ -4,6 +4,8 @@ _e('Editais');
 
 if (is_tax('edital_category')) {
     printf(__(' na categoria %s'), single_term_title('', false));
+} else if (is_tax('edital_status')) {
+    printf(__(' com o status %s'), single_term_title('', false));
 }
 
 if (is_search() && get_search_query()) : ?>

@@ -73,19 +73,11 @@
     </div>
     <div class="col-xs-12 col-md-3">
         <aside>
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="title-box"><?php _e('Dados do Edital'); ?></h3>
-                    <p><strong><?php _e('Data de Publica&ccedil;&atilde;o:'); ?></strong>&nbsp;<?php echo date_i18n( get_option( 'date_format' ), rwmb_meta( 'edital_date' ) ); ?></p>
-                    <p><strong><?php _e('&Uacute;ltima Modifica&ccedil;&atilde;o:'); ?></strong>&nbsp;<?php the_modified_date(); ?></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="title-box"><?php _e('Categorias do Edital'); ?></h3>
-                    <p><?php echo get_the_term_list( get_the_ID(), 'edital_category', '', '<br>', '' ); ?></p>
-                </div>
-            </div>
+            <h3 class="title-box"><?php _e('Dados do Edital'); ?></h3>
+            <p><strong><?php _e('Data de Publica&ccedil;&atilde;o:'); ?></strong>&nbsp;<?php echo date_i18n( get_option( 'date_format' ), rwmb_meta( 'edital_date' ) ); ?></p>
+            <p><strong><?php _e('&Uacute;ltima Modifica&ccedil;&atilde;o:'); ?></strong>&nbsp;<?php the_modified_date(); ?></p>
+            <p><strong><?php _e('Categorias:'); ?></strong>&nbsp;<?php echo get_the_term_list( get_the_ID(), 'edital_category', '', ', ', '' ); ?></p>
+            <p><strong><?php _e('Status:'); ?></strong>&nbsp;<?php echo get_the_term_list( get_the_ID(), 'edital_status', '', ', ', '' ); ?></p>
         </aside>
     </div>
 </div>

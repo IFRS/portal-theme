@@ -18,6 +18,7 @@
     <div class="col-xs-12 col-md-3">
         <aside>
             <?php get_template_part('partials/editais/edital-category'); ?>
+            <?php get_template_part('partials/editais/edital-status'); ?>
             <?php get_template_part('partials/search-local'); ?>
             <?php if (is_tax('edital_category')) : ?>
                 <br>
