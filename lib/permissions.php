@@ -81,8 +81,9 @@ add_action('after_switch_theme', function() {
             'manage_files'           => true,
 
             'create_concursos'       => true,
+            'publish_concursos'      => true,
             'edit_concursos'         => true,
-            'manage_concursos'       => false,
+            'delete_concursos'       => false,
 
             'assign_concurso_status' => true
         ));
@@ -96,8 +97,9 @@ add_action('after_switch_theme', function() {
             'manage_files'            => true,
 
             'create_documentos'       => true,
+            'publish_documentos'      => true,
             'edit_documentos'         => true,
-            'manage_documentos'       => false,
+            'delete_documentos'       => false,
 
             'assign_documento_type'   => true,
             'assign_documento_origin' => true
@@ -112,8 +114,9 @@ add_action('after_switch_theme', function() {
             'manage_files'           => true,
 
             'create_editais'         => true,
+            'publish_editais'        => true,
             'edit_editais'           => true,
-            'manage_editais'         => false,
+            'delete_editais'         => false,
 
             'assign_edital_category' => true
         ));
