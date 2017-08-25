@@ -3,7 +3,7 @@
     <div class="input-group">
         <input type="search" value="<?php echo get_search_query(); ?>" name="s" id="search-field" class="search-field form-control" placeholder="Buscar no portal..." required>
         <span class="input-group-btn">
-            <button type="submit" class="search-submit btn btn-default" title="Buscar em todo o Portal"><span class="glyphicon glyphicon-search"></span></button>
+            <button type="submit" class="search-submit btn btn-default" title="Buscar em todo o Portal" value="Buscar"><span class="glyphicon glyphicon-search"></span></button>
         </span>
     </div>
 </form>
