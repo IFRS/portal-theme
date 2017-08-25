@@ -29,9 +29,21 @@
         return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Editais Complementares'];
     }, rwmb_meta('concurso_editais_complementares' ));
 
+    $concurso_files['listas'] = array_map(function($arr){
+        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Listas'];
+    }, rwmb_meta('concurso_listas_files' ));
+
     $concurso_files['provas'] = array_map(function($arr){
         return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Provas'];
     }, rwmb_meta('concurso_provas_files' ));
+
+    $concurso_files['gabaritos'] = array_map(function($arr){
+        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Gabaritos'];
+    }, rwmb_meta('concurso_gabaritos_files' ));
+
+    $concurso_files['recursos'] = array_map(function($arr){
+        return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Recursos'];
+    }, rwmb_meta('concurso_recursos_files' ));
 
     $concurso_files['resultados'] = array_map(function($arr){
         return $arr + ['date' => get_the_modified_date('U', $arr['ID']), 'group' => 'Resultados'];
@@ -51,7 +63,10 @@
             <?php if (!empty($concurso_files['anexos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-anexos" aria-controls="tab-anexos" role="tab" data-toggle="tab">Anexos</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['cronograma'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-cronograma" aria-controls="tab-cronograma" role="tab" data-toggle="tab">Cronograma</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['editais_complementares'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-editais_complementares" aria-controls="tab-editais_complementares" role="tab" data-toggle="tab">Editais Complementares</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['listas'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-listas" aria-controls="tab-listas" role="tab" data-toggle="tab">Listas</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['provas'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-provas" aria-controls="tab-provas" role="tab" data-toggle="tab">Provas</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['gabaritos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-gabaritos" aria-controls="tab-gabaritos" role="tab" data-toggle="tab">Gabaritos</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['recursos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-recursos" aria-controls="tab-recursos" role="tab" data-toggle="tab">Recursos</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['resultados'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-resultados" aria-controls="tab-resultados" role="tab" data-toggle="tab">Resultados</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['nomeia'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-nomeia" aria-controls="tab-nomeia" role="tab" data-toggle="tab">Nomeações</a></li><?php endif; ?>
         </ul>
