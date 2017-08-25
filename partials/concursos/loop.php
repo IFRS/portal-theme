@@ -1,4 +1,3 @@
-<hr>
 <div class="panel-group" id="accordion-concursos" role="tablist" aria-multiselectable="true">
 <?php while (have_posts()) : the_post(); ?>
     <div class="panel panel-concurso">

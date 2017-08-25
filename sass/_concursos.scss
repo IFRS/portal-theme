@@ -37,6 +37,39 @@
     }
 
     .concurso-arquivos {
+        .tab-list {
+            list-style: none;
+            padding-left: 0;
+            li {
+                margin-bottom: $grid-gutter-width;
+                a {
+                    align-items: center;
+                    background: $cor-concursos-tab;
+                    border-radius: 4px;
+                    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+                    display: flex;
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    height: 80px;
+                    justify-content: center;
+                    padding: 10px;
+                    text-align: center;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:active,
+                    &:visited {
+                        text-decoration: none;
+                    }
+                }
+
+                &.active {
+                    a {
+                        background: $cor-concursos-tab-active;
+                    }
+                }
+            }
+        }
         .dataTables_info {
             font-size: 0.9em;
         }

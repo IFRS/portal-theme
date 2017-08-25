@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col-xs-12 col-md-9" id="concursos">
         <h2 class="title"><?php get_template_part('partials/concursos/title'); ?></h2>
-        <p><!-- TODO: Texto explicativo sobre os concursos. --></p>
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/concursos/loop'); ?>
         <?php else : ?>
