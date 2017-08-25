@@ -91,6 +91,7 @@
         p {
             overflow: hidden;
             text-overflow: ellipsis;
+            display: block;
             display: -webkit-box;
             line-height: 21px;     /* fallback */
             max-height: 84px;      /* fallback */
