@@ -74,12 +74,18 @@
     </div>
 </div>
 
+<?php if (is_active_sidebar('widget-atalhos')) : ?>
 <div class="row">
     <div class="col-xs-12">
         <h2 class="title-box"><?php _e('Acesso R&aacute;pido'); ?></h2>
-        <?php get_template_part('partials/menus/externo'); ?>
+        <nav>
+            <ul class="barra" id="menu-externo">
+                <?php if (!dynamic_sidebar('widget-atalhos')) : endif; ?>
+            </ul>
+        </nav>
     </div>
 </div>
+<?php endif; ?>
 
 <hr class="banner-separator">
 

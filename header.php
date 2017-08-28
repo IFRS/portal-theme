@@ -46,11 +46,17 @@
                             <?php get_search_form(); ?>
                         </div>
                     </div>
+                <?php if (is_active_sidebar('widget-social')) : ?>
                     <div class="row">
                         <div class="col-xs-12">
-                            <?php get_template_part('partials/menus/social'); ?>
+                            <nav>
+                                <ul class="barra" id="menu-social">
+                                    <?php if (!dynamic_sidebar('widget-social')) : endif; ?>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
+                <?php endif; ?>
                 </div>
             </div>
         </div>

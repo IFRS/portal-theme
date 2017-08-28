@@ -1,9 +1,18 @@
 <?php
 function portal_widgets_init() {
 	register_sidebar(array(
+		'name'          => 'Widget Social',
+		'id'            => 'widget-social',
+		'description'   => __('Área no cabeçalho para as Redes Sociais.', 'ifrs-portal-theme'),
+		'before_widget' => '<li id="%1$s" class="widget widget-social %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
+	register_sidebar(array(
 		'name'          => 'Widget Navegação',
 		'id'            => 'widget-nav',
-		'description'   => 'Área acima do Menu de Relevância.',
+		'description'   => __('Área acima do Menu de Relevância.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="widget widget-nav visible-md visible-lg %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
@@ -12,7 +21,7 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Widget Home',
 		'id'            => 'widget-home',
-		'description'   => 'Área ao lado da notícia destaque na página inicial.',
+		'description'   => __('Área ao lado da notícia destaque na página inicial.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-home %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<span class="sr-only">',
@@ -21,7 +30,7 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Widget Agenda',
 		'id'            => 'widget-agenda',
-		'description'   => 'Área abaixo das notícias, ao lado dos Editais, na página inicial.',
+		'description'   => __('Área abaixo das notícias, ao lado dos Editais, na página inicial.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-agenda %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h2>',
@@ -30,7 +39,7 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Widget Galeria',
 		'id'            => 'widget-gallery',
-		'description'   => 'Área abaixo dos Eventos e Editais na página inicial.',
+		'description'   => __('Área abaixo dos Eventos e Editais na página inicial.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-gallery %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h2>',
@@ -39,16 +48,25 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Widget Home Lateral',
 		'id'            => 'widget-home-side',
-		'description'   => 'Área ao lado da Galeria, acima do Facebook/Twitter na página inicial.',
+		'description'   => __('Área ao lado da Galeria, acima do Facebook/Twitter na página inicial.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-home-side %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
+		'name'          => 'Widget Atalhos',
+		'id'            => 'widget-atalhos',
+		'description'   => __('Área de atalhos para acesso rápido na página inicial.', 'ifrs-portal-theme'),
+		'before_widget' => '<li id="%1$s" class="widget widget-atalhos %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
+	register_sidebar(array(
 		'name'          => 'Widget Banners',
 		'id'            => 'widget-banners',
-		'description'   => 'Área mais abaixo na página inicial, antes do rodapé.',
+		'description'   => __('Área mais abaixo na página inicial, antes do rodapé.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="widget widget-home-banner %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
