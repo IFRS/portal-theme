@@ -3,9 +3,7 @@ function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
-    wp_enqueue_style('css-vendor', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/vendor.css' : '/css/vendor.min.css'), array(), null, 'all');
-
-    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array('css-vendor'), null, 'all');
+    wp_enqueue_style('css-app', get_stylesheet_directory_uri().(WP_DEBUG ? '/css/app.css' : '/css/app.min.css'), array(), null, 'all');
 }
 
 function portal_load_scripts() {
