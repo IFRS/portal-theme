@@ -1,9 +1,0 @@
-.widget-agenda {
-    >h2 {
-        @include title-box($cor-agenda, '../img/bg-agenda.png');
-    }
-
-    a {
-        color: $cor-agenda;
-    }
-}

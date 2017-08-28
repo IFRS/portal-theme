@@ -22,6 +22,16 @@
     }
 }
 
+.widget-agenda {
+    >h2 {
+        @include title-box($cor-agenda, '../img/bg-agenda.png');
+    }
+
+    a {
+        color: $cor-agenda;
+    }
+}
+
 .widget-gallery {
     h2 {
         @include title-box($cor-galeria, '../img/bg-galeria.png');
