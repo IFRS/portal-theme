@@ -55,11 +55,10 @@
 
 .noticia-destaque {
     .noticia-imagem {
-        margin-bottom: 0;
-        margin-right: 10px;
-
         @media screen and (min-width: $screen-md-min) {
             float: left;
+            margin-bottom: 0;
+            margin-right: 10px;
             max-width: 40%;
         }
     }
