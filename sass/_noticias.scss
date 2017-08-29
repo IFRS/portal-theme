@@ -1,54 +1,6 @@
-.noticia-destaque {
-    .noticia-imagem {
-        margin-bottom: 0;
-        margin-right: 10px;
-
-        @media screen and (min-width: $screen-md-min) {
-            float: left;
-            max-width: 40%;
-        }
-    }
-
-    .noticia-cartola {
-        color: $cor-secundaria-azul-claro;
-        font-size: 12px;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .noticia-data {
-        color: $cor-secundaria-azul-claro;
-        font-size: 12px;
-        margin-bottom: 5px;
-    }
-
-    .noticia-titulo {
-        color: #172938;
-        font-size: 26px;
-        font-weight: bold;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 10px;
-
-        > a {
-            color: #172938;
-        }
-    }
-
-    .noticia-resumo {
-        color: #172938;
-        font-size: 16px;
-        line-height: 21px;
-
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            line-height: 21px;     /* fallback */
-            max-height: 63px;      /* fallback */ /* number of lines * line-height */
-            -webkit-line-clamp: 3; /* number of lines to show */
-            -webkit-box-orient: vertical;
-        }
+#lista-noticias {
+    > div {
+        margin-bottom: $grid-gutter-width;
     }
 }
 
@@ -101,8 +53,34 @@
     }
 }
 
-#lista-noticias {
-    > div {
-        margin-bottom: $grid-gutter-width;
+.noticia-destaque {
+    .noticia-imagem {
+        margin-bottom: 0;
+        margin-right: 10px;
+
+        @media screen and (min-width: $screen-md-min) {
+            float: left;
+            max-width: 40%;
+        }
+    }
+
+    .noticia-titulo {
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .noticia-resumo {
+        font-size: 16px;
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 21px;     /* fallback */
+            max-height: 63px;      /* fallback */ /* number of lines * line-height */
+            -webkit-line-clamp: 3; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
     }
 }

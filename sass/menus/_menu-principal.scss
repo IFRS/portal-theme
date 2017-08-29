@@ -1,99 +1,5 @@
 .slicknav_menu {
     display: none;
-}
-
-@media screen and (max-width: $screen-md-min) {
-    #menu-relevancia,
-    #menu-principal {
-        display: none;
-    }
-
-    .slicknav_menu {
-        display: block;
-    }
-}
-
-#menu-campi {
-    @media (min-width: $screen-sm-min) {
-        font-size: 1.1em;
-        padding: 10px;
-    }
-
-    @media (min-width: $screen-md-min) {
-        padding: 10px;
-    }
-
-    background-color: $menu-campi-fundo;
-    border-radius: 4px;
-    font-size: 1.1em;
-    list-style: none;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-
-    @media screen and (min-width: $screen-md-min) {
-        &:after {
-            content: '';
-            position: absolute;
-            border-style: solid;
-            border-width: 15px 25px 15px 0;
-            border-color: transparent $menu-campi-fundo;
-            display: block;
-            width: 0;
-            z-index: 1;
-            margin-top: -15px;
-            left: -10px;
-            top: 50%;
-        }
-    }
-
-    li {
-        border-right: 1px solid #ccc;
-        display: inline-block;
-        margin-bottom: 5px;
-        padding: 0 10px;
-
-        &:last-child {
-            border-right: none;
-        }
-
-        a {
-            color: $cor-barra-servicos;
-        }
-    }
-}
-
-#menu-relevancia {
-    list-style: none;
-    margin: 0;
-    margin-bottom: 45px;
-    padding: 0;
-
-    > li {
-        align-items: center;
-        border-top: 1px solid $menu-border;
-        display: flex;
-        font-size: 14px;
-        min-height: 30px;
-
-        > a {
-            color: #03316F;
-            display: block;
-        }
-
-        &:last-child {
-            border-bottom: 1px solid $menu-border;
-        }
-
-        &.current-menu-item {
-            a {
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-.slicknav_menu {
     .glyphicon {
         display: none;
     }
@@ -199,14 +105,12 @@
     }
 }
 
-#menu-externo {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: $screen-md-min) {
+    #menu-principal {
+        display: none;
+    }
 
-    li {
-        display: inline-block;
-        margin-bottom: 10px;
-        padding: 0 10px 0 0;
+    .slicknav_menu {
+        display: block;
     }
 }

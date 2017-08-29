@@ -1,0 +1,36 @@
+main {
+    >.row {
+        margin-bottom: $grid-gutter-width;
+    }
+}
+
+aside {
+    .row {
+        margin-bottom: $grid-gutter-width / 2;
+    }
+}
+
+ol.breadcrumb {
+    font-size: 10px;
+    margin-bottom: $grid-gutter-width;
+    text-transform: uppercase;
+    a {
+        color: #2C66CE;
+    }
+}
+
+.help-block {
+    font-size: 0.9em;
+}
+
+.alignleft {
+    @extend .pull-left;
+}
+
+.alignright {
+    @extend .pull-right;
+}
+
+.aligncenter {
+    @extend .center-block;
+}

@@ -24,7 +24,7 @@
         <?php if ($query->current_post == 0) : ?>
             <!-- Notícia Destaque -->
             <div class="col-xs-12 col-md-7 col-md-pull-5">
-                <article class="noticia-destaque">
+                <article class="noticia noticia-destaque">
                       <?php get_template_part('partials/noticias/item-front-page'); ?>
                 </article>
             </div>
@@ -79,7 +79,7 @@
     <div class="col-xs-12">
         <h2 class="title-box"><?php _e('Acesso R&aacute;pido'); ?></h2>
         <nav>
-            <ul class="barra" id="menu-externo">
+            <ul class="area-atalhos">
                 <?php if (!dynamic_sidebar('widget-atalhos')) : endif; ?>
             </ul>
         </nav>

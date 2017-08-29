@@ -92,22 +92,6 @@ header {
     }
 }
 
-#menu-social {
-    @media only screen and (min-width: $screen-md-min) {
-        text-align: right;
-    }
-
-    margin-bottom: 0;
-
-    li {
-        margin-right: 5px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
 #barra-servicos {
     align-items: center;
     background-color: $cor-barra-servicos;

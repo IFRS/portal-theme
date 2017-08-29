@@ -50,7 +50,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <nav>
-                                <ul class="barra" id="menu-social">
+                                <ul class="barra area-social">
                                     <?php if (!dynamic_sidebar('widget-social')) : endif; ?>
                                 </ul>
                             </nav>

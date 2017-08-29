@@ -7,24 +7,22 @@
 @import '../node_modules/jquery-fancybox/source/scss/jquery.fancybox';
 @import '../node_modules/datatables.net-bs/css/dataTables.bootstrap';
 
-@import 'mixins';
+@import 'mixins/title-box';
+@import 'mixins/link-todos';
 
+@import 'base';
+
+@import 'barra-brasil';
 @import 'responsive-images-fade';
-@import 'barra-brasil-fix';
 
 @import 'headings';
-@import 'aside';
-@import 'forms';
-@import 'lists';
 
 @import 'header';
-@import 'menu';
+@import 'menus/menu-relevancia';
+@import 'menus/menu-principal';
+@import 'menus/menu-campi';
 @import 'widgets';
 
-@import 'breadcrumb';
-@import 'share-buttons';
-
-@import 'main';
 @import 'front-page';
 @import 'noticias';
 @import 'carousel';
@@ -38,7 +36,7 @@
 @import 'concursos';
 @import 'documentos';
 
-@import 'footer';
-@import 'footer-brasil';
+@import 'share-buttons';
+@import 'side-list';
 
-@import 'wp';
+@import 'footer';

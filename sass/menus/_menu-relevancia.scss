@@ -1,0 +1,35 @@
+#menu-relevancia {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 45px;
+    padding: 0;
+
+    > li {
+        align-items: center;
+        border-top: 1px solid $menu-border;
+        display: flex;
+        font-size: 14px;
+        min-height: 30px;
+
+        > a {
+            color: #03316F;
+            display: block;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $menu-border;
+        }
+
+        &.current-menu-item {
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md-min) {
+    #menu-relevancia {
+        display: none;
+    }
+}
