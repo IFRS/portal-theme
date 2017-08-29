@@ -12,14 +12,14 @@ $(function() {
         e.preventDefault();
     });
 
-    $('.collapse').on('show.bs.collapse', function(e) {
+    $('.menu-collapse .collapse').on('show.bs.collapse', function(e) {
         var collapse = $(e.target);
         collapse.prev('a').removeClass('collapsed');
         collapse.prev('a').attr('aria-expanded', 'true');
         collapse.prev('a').children('span.sr-only').first().text(' (Ocultar submenus)');
     });
 
-    $('.collapse').on('hide.bs.collapse', function(e) {
+    $('.menu-collapse .collapse').on('hide.bs.collapse', function(e) {
         var collapse = $(e.target);
         collapse.prev('a').addClass('collapsed');
         collapse.prev('a').attr('aria-expanded', 'false');
