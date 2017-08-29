@@ -117,16 +117,15 @@ header {
     padding-left: 0;
 
     li {
+        border-right: 1px solid #cccccc;
         display: inline-block;
-
-        + li:before {
-            $nbsp: "\00a0";
-            padding: 0 10px;
-            content: "|#{$nbsp}";
-        }
+        margin-right: 10px;
+        padding-right: 10px;
 
         &:last-child {
+            border: none;
             margin-right: 0;
+            padding-right: 0;
         }
     }
 }
