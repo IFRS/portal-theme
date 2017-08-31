@@ -24,17 +24,10 @@
     }
 
     .edital-date-time {
-        font-size: 0.95em;
-        font-weight: lighter;
+        font-size: 0.9em;
 
         .glyphicon {
             color: $cor-editais;
-        }
-    }
-
-    .edital-body {
-        @media (min-width: $screen-sm-min) {
-            border-left: 1px solid $cor-editais;
         }
     }
 
@@ -44,7 +37,7 @@
     }
 
     .edital-title {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 }
 
