@@ -6,7 +6,7 @@ function portal_widgets_init() {
 		'description'   => __('Área no cabeçalho para as Redes Sociais.', 'ifrs-portal-theme'),
 		'before_widget' => '<li id="%1$s" class="widget widget-social %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
@@ -60,7 +60,7 @@ function portal_widgets_init() {
 		'description'   => __('Área de atalhos para acesso rápido na página inicial.', 'ifrs-portal-theme'),
 		'before_widget' => '<li id="%1$s" class="widget widget-atalhos %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
