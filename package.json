@@ -32,7 +32,6 @@
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
     "run-sequence": "^2.1.0",
-    "slicknav": "^1.0.8",
     "webpack": "^3.5.5"
   }
 }
