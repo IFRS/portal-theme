@@ -1,4 +1,8 @@
 #menu-campi {
+    @media screen and (max-width: $screen-md-min) {
+        margin-top: $grid-gutter-width;
+    }
+
     @media (min-width: $screen-sm-min) {
         font-size: 1.1em;
         padding: 10px;

@@ -1,10 +1,3 @@
-.slicknav_menu {
-    display: none;
-    .glyphicon {
-        display: none;
-    }
-}
-
 #menu-principal {
     list-style: none;
     padding: 0;
@@ -107,10 +100,10 @@
 
 @media screen and (max-width: $screen-md-min) {
     #menu-principal {
-        display: none;
-    }
-
-    .slicknav_menu {
-        display: block;
+        > li {
+            > a {
+                margin-top: 0;
+            }
+        }
     }
 }

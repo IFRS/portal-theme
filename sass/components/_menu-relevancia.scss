@@ -30,6 +30,12 @@
 
 @media screen and (max-width: $screen-md-min) {
     #menu-relevancia {
-        display: none;
+        margin-bottom: 15px;
+
+        > li {
+            &:first-child {
+                border: none;
+            }
+        }
     }
 }
