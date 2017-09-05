@@ -1,0 +1,11 @@
+#menu-atalhos {
+    li {
+        .badge {
+            font-size: 10px;
+        }
+    }
+
+    @media only screen and (min-width: $screen-md-min) {
+        text-align: left;
+    }
+}

@@ -26,10 +26,8 @@
             }
         }
     }
-}
 
-@media screen and (max-width: $screen-md-min) {
-    #menu-relevancia {
+    @media screen and (max-width: $screen-md-min) {
         margin-bottom: 15px;
 
         > li {

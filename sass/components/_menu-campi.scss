@@ -1,17 +1,4 @@
 #menu-campi {
-    @media screen and (max-width: $screen-md-min) {
-        margin-top: $grid-gutter-width;
-    }
-
-    @media (min-width: $screen-sm-min) {
-        font-size: 1.1em;
-        padding: 10px;
-    }
-
-    @media (min-width: $screen-md-min) {
-        padding: 10px;
-    }
-
     background-color: $menu-campi-fundo;
     border-radius: 4px;
     font-size: 1.1em;
@@ -19,22 +6,6 @@
     margin: 0;
     padding: 10px;
     text-align: center;
-
-    @media screen and (min-width: $screen-md-min) {
-        &:after {
-            content: '';
-            position: absolute;
-            border-style: solid;
-            border-width: 15px 25px 15px 0;
-            border-color: transparent $menu-campi-fundo;
-            display: block;
-            width: 0;
-            z-index: 1;
-            margin-top: -15px;
-            left: -10px;
-            top: 50%;
-        }
-    }
 
     li {
         border-right: 1px solid #ccc;
@@ -48,6 +19,33 @@
 
         a {
             color: $cor-barra-servicos;
+        }
+    }
+
+    @media screen and (max-width: $screen-md-min) {
+        margin-top: $grid-gutter-width;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+        padding: 10px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 15px 25px 15px 0;
+            border-color: transparent $menu-campi-fundo;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-top: -15px;
+            left: -10px;
+            top: 50%;
         }
     }
 }

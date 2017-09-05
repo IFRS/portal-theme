@@ -96,10 +96,8 @@
             }
         }
     }
-}
 
-@media screen and (max-width: $screen-md-min) {
-    #menu-principal {
+    @media screen and (max-width: $screen-md-min) {
         > li {
             > a {
                 margin-top: 0;

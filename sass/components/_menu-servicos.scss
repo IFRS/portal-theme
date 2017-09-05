@@ -1,0 +1,23 @@
+#menu-servicos {
+    font-size: 12px;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+        border-right: 1px solid #cccccc;
+        display: inline-block;
+        margin-right: 10px;
+        padding-right: 10px;
+
+        &:last-child {
+            border: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        text-align: right;
+    }
+}
