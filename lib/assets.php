@@ -17,7 +17,7 @@ function portal_load_scripts() {
     wp_enqueue_script( 'ie', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), null, false );
     wp_script_add_data( 'ie', 'conditional', 'lt IE 9' );
 
-    wp_enqueue_script('app', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/app.js' : '/js/app.min.js'), array(), null, true);
+    wp_enqueue_script('js-portal', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), null, true);
 
     if (!WP_DEBUG) {
         wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true );

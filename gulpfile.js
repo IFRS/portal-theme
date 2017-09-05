@@ -68,8 +68,8 @@ gulp.task('css', ['sass'], function() {
 gulp.task('webpack', function(callback) {
     webpack({
         entry: {
-            ie: './src/_ie.js',
-            app: './src/_app.js'
+            ie: './src/ie.js',
+            portal: './src/portal.js'
         },
         output: {
             path: path.resolve(__dirname, 'js'),
