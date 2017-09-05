@@ -14,8 +14,8 @@ function portal_load_scripts() {
         wp_deregister_script('jquery');
     }
 
-    wp_enqueue_script( 'ie', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), null, false );
-    wp_script_add_data( 'ie', 'conditional', 'lt IE 9' );
+    wp_enqueue_script( 'js-ie', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), null, false );
+    wp_script_add_data( 'js-ie', 'conditional', 'lt IE 9' );
 
     wp_enqueue_script('js-portal', get_stylesheet_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), null, true);
 
