@@ -19,15 +19,13 @@
                 <?php while ($last_editais->have_posts()) : $last_editais->the_post(); ?>
                     <div class="row">
                         <div class="col-xs-12">
-                            <p>
-                                <span class="edital-date-time">
-                                    <span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php echo get_the_modified_date('d/m/Y'); ?>
-                                    &agrave;s
-                                    <?php echo get_the_modified_time('G\hi'); ?>
-                                </span>
-                                &bull;
-                                <span class="edital-category"><?php echo get_the_terms(get_the_ID(), 'edital_category')[0]->name; ?></span>
+                            <p class="edital-date-time">
+                                <span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php echo get_the_modified_date('d/m/Y'); ?>
+                                &agrave;s
+                                <?php echo get_the_modified_time('G\hi'); ?>
                             </p>
+                            &bull;
+                            <?php echo get_the_term_list(get_the_ID(), 'edital_category', '<ul class="edital-categories"><li>', ',&nbsp;</li><li>', '</li></ul>'); ?>
                             <h3 class="edital-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         </div>
                     </div>

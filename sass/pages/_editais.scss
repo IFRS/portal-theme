@@ -24,16 +24,30 @@
     }
 
     .edital-date-time {
-        font-size: 0.9em;
+        display: inline-block;
+        font-size: 0.85em;
+        margin-bottom: 5px;
 
         .glyphicon {
             color: $cor-editais;
         }
     }
 
-    .edital-category {
-        margin-bottom: 0;
+    .edital-categories {
+        display: inline-block;
+        font-size: 0.9em;
         font-weight: bold;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #000000;
+            }
+        }
     }
 
     .edital-title {
