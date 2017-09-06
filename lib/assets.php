@@ -24,7 +24,7 @@ function portal_load_scripts() {
     }
 
     if (WP_DEBUG) {
-        wp_enqueue_script( 'livereload-config', get_template_directory_uri().'/src/livereload-config.js', array(), null, true );
+        wp_enqueue_script( 'livereload', get_template_directory_uri().'/src/livereload.js', array(), null, true );
     }
 }
 
