@@ -9,7 +9,7 @@ $(function() {
 
     $('.table-documentos').DataTable({
         order:      [0, 'desc'],
-        searching:  false,
+        searching:  true,
         paging:     true,
         pageLength: 25,
         info:       false,
@@ -25,7 +25,7 @@ $(function() {
             "sLoadingRecords": "Carregando...",
             "sProcessing":     "Processando...",
             "sZeroRecords":    "Nenhum Documento encontrado",
-            "sSearch":         "Pesquisar na lista de Documentos",
+            "sSearch":         "Buscar:",
             "oPaginate": {
                 "sNext":     "Próximo",
                 "sPrevious": "Anterior",
@@ -41,7 +41,7 @@ $(function() {
 
     $('.table-editais').DataTable({
         order:      [0, 'desc'],
-        searching:  false,
+        searching:  true,
         paging:     true,
         pageLength: 25,
         info:       false,
@@ -57,7 +57,7 @@ $(function() {
             "sLoadingRecords": "Carregando...",
             "sProcessing":     "Processando...",
             "sZeroRecords":    "Nenhum Edital encontrado",
-            "sSearch":         "Pesquisar na lista de Editais",
+            "sSearch":         "Buscar:",
             "oPaginate": {
                 "sNext":     "Próximo",
                 "sPrevious": "Anterior",

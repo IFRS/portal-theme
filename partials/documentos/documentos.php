@@ -27,11 +27,6 @@
                     get_template_part('partials/documentos/filter');
                 }
             ?>
-            <?php
-                if (!is_year() && !is_month()) {
-                    get_template_part('partials/search-local');
-                }
-            ?>
             <?php if (is_year() || is_month() || is_tax('documento_type')) : ?>
                 <br>
                 <a href="<?php echo get_post_type_archive_link( 'documento' ); ?>" class="btn btn-default btn-block"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<?php _e('Todos os Documentos', 'ifrs-portal-theme'); ?></a>
