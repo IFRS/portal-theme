@@ -4,6 +4,7 @@
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.13",
     "datatables.net": "^1.10.16",
     "datatables.net-bs": "^1.10.16",
     "datatables.net-plugins": "^1.10.15",
@@ -12,8 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.1.7",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-livereload": "^3.8.1",
+    "gulp-imagemin": "^3.4.0",
     "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-rsync": "0.0.7",
@@ -23,15 +23,15 @@
     "jquery": "^1.12.4",
     "jquery-bridget": "^2.0.1",
     "jquery-fancybox": "^3.1.0",
-    "lazysizes": "^4.0.0-rc3",
+    "lazysizes": "^4.0.0-rc4",
     "masonry-layout": "^4.2.0",
     "moment": "^2.18.1",
-    "npm-font-open-sans": "^1.0.3",
+    "npm-font-open-sans": "^1.1.0",
     "picturefill": "^3.0.2",
     "pixrem": "^3.0.2",
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
-    "run-sequence": "^2.1.0",
-    "webpack": "^3.5.5"
+    "run-sequence": "^2.2.0",
+    "webpack": "^3.6.0"
   }
 }

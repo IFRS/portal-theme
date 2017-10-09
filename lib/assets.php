@@ -22,10 +22,6 @@ function portal_load_scripts() {
     if (!WP_DEBUG) {
         wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true );
     }
-
-    if (WP_DEBUG) {
-        wp_enqueue_script( 'livereload', get_template_directory_uri().'/src/livereload.js', array(), null, true );
-    }
 }
 
 add_action( 'wp_enqueue_scripts', 'portal_load_styles', 1 );
