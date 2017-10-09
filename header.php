@@ -24,7 +24,6 @@
 
     <!-- Cabeçalho -->
     <header>
-        <h1 class="sr-only"><?php bloginfo('name'); ?></h1>
         <div class="container">
             <div class="row" id="header-menus">
                 <div class="col-xs-12 col-md-6">
@@ -36,7 +35,7 @@
             </div>
             <div class="row" id="header-content">
                 <div class="col-xs-12 col-md-6" id="header-left">
-                <?php echo get_template_part('partials/header-main'); ?>
+                <?php echo get_template_part('partials/header-title'); ?>
                 </div>
                 <div class="col-xs-12 col-md-6" id="header-right">
                     <div class="row">
