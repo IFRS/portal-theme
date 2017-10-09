@@ -8,7 +8,7 @@ require_once('lib/utils.php');
 // Cookie Fix
 require_once('lib/cookie-fix.php');
 
-// Suporte para page title
+// Suporte para diversas funções
 require_once('lib/theme-support.php');
 
 // Títulos personalizados.
