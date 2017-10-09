@@ -36,9 +36,7 @@
             </div>
             <div class="row" id="header-content">
                 <div class="col-xs-12 col-md-6" id="header-left">
-                <?php if (get_header_image() != '') : ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" class="img-responsive"/></a>
-                <?php endif; ?>
+                <?php echo get_template_part('partials/header-main'); ?>
                 </div>
                 <div class="col-xs-12 col-md-6" id="header-right">
                     <div class="row">
