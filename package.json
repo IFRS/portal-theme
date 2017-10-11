@@ -9,6 +9,7 @@
     "datatables.net-bs": "^1.10.16",
     "datatables.net-plugins": "^1.10.15",
     "del": "^2.2.2",
+    "dotenv": "^4.0.0",
     "flexibility": "^2.0.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
