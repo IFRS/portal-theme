@@ -48,8 +48,12 @@ gulp.task('default', function() {
     gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
-gulp.task('build', ['clean'], function(callback) {
-    runSequence(['css', 'js', 'assets'], callback);
+gulp.task('build', ['clean'], function(done) {
+    if (gutil.env.production) {
+        runSequence(['css', 'js', 'assets', 'images'], 'dist', done);
+    } else {
+        runSequence(['sass', 'webpack', 'assets'], done);
+    }
 });
 
 gulp.task('clean', function() {
@@ -142,10 +146,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest('img/'));
 });
 
-gulp.task('copy', function() {
+gulp.task('dist', function() {
     return gulp.src(dist)
     .pipe(gulp.dest('dist/'));
-});
-gulp.task('dist', function(done) {
-    runSequence('build', 'copy', done);
 });
