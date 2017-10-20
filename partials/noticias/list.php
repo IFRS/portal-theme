@@ -6,6 +6,8 @@
                 echo get_the_title(get_option( 'page_for_posts' ));
             } elseif (is_category()) {
                 echo single_cat_title(__('Notícias da categoria&nbsp;'), false);
+            } elseif (is_tag()) {
+                echo single_tag_title(__('Notícias com a tag&nbsp;'), false);
             }
         ?>
         </h2>
