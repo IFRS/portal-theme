@@ -25,15 +25,15 @@
     "jquery": "^1.12.4",
     "jquery-bridget": "^2.0.1",
     "jquery-fancybox": "^3.1.0",
-    "lazysizes": "^4.0.0-rc4",
+    "lazysizes": "^4.0.0",
     "masonry-layout": "^4.2.0",
-    "moment": "^2.19.0",
+    "moment": "^2.19.1",
     "npm-font-open-sans": "^1.1.0",
     "picturefill": "^3.0.2",
     "pixrem": "^3.0.2",
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
     "run-sequence": "^2.2.0",
-    "webpack": "^3.7.1"
+    "webpack": "^3.8.1"
   }
 }
