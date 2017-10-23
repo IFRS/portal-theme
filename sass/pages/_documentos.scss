@@ -1,14 +1,62 @@
 #documentos,
-#documento {
+#documento,
+.latest-documentos {
     .title {
         @include title-box($cor-documentos, '../img/bg-documentos.png');
     }
 }
 
+.latest-documentos,
 .table-documentos {
     a {
         color: $cor-documentos;
     }
+}
+
+.latest-documentos {
+    >.row {
+        margin-bottom: 10px;
+    }
+
+    article {
+        border-bottom: 2px solid $cor-primaria-cinza;
+        margin-bottom: $grid-gutter-width / 2;
+    }
+
+    .documento-date-time {
+        display: inline-block;
+        font-size: 0.85em;
+        margin-bottom: 5px;
+
+        .glyphicon {
+            color: $cor-editais;
+        }
+    }
+
+    .documentos-type {
+        display: inline-block;
+        font-size: 0.9em;
+        font-weight: bold;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #000000;
+            }
+        }
+    }
+
+    .documento-title {
+        font-size: 1.3em;
+    }
+}
+
+.link-todos-documentos {
+    @include link-todos($cor-documentos);
 }
 
 .documento {
