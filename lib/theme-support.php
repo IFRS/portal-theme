@@ -15,8 +15,8 @@ function portal_theme_features()  {
     // Habilita a personalização da imagem de cabeçalho
     add_theme_support('custom-header', array(
         'default-image'          => get_template_directory_uri() . '/img/header-default.png',
-        'width'                  => 350,
-        'height'                 => 120,
+        'width'                  => 585,
+        'height'                 => 110,
         'flex-width'             => true,
         'flex-height'            => false,
         'uploads'                => true,
