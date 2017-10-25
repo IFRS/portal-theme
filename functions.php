@@ -1,6 +1,6 @@
 <?php
-// Permissões
-require_once('lib/permissions.php');
+// Restrições para usuários
+require_once('lib/restrictions.php');
 
 // Utilidades
 require_once('lib/utils.php');
@@ -11,13 +11,13 @@ require_once('lib/cookie-fix.php');
 // Suporte para diversas funções
 require_once('lib/theme-support.php');
 
-// Títulos personalizados.
+// Títulos personalizados
 require_once('lib/custom-title.php');
 
-// Widget de texto executa shortcodes.
+// Widget de texto executa shortcodes
 require_once('lib/widget-text-shortcode.php');
 
-// Colar somente como texto puro no editor.
+// Colar somente como texto puro no editor
 require_once('lib/paste-as-plain-text.php');
 
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
