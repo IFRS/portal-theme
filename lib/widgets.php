@@ -28,15 +28,6 @@ function portal_widgets_init() {
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
-		'name'          => 'Widget Agenda',
-		'id'            => 'widget-agenda',
-		'description'   => __('Área abaixo das notícias, ao lado dos Editais, na página inicial.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-agenda %2$s">',
-		'after_widget'  => '</div></div></div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	));
-	register_sidebar(array(
 		'name'          => 'Widget Galeria',
 		'id'            => 'widget-gallery',
 		'description'   => __('Área abaixo dos Eventos e Editais na página inicial.', 'ifrs-portal-theme'),
