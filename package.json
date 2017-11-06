@@ -25,7 +25,7 @@
     "jquery": "^1.12.4",
     "jquery-bridget": "^2.0.1",
     "jquery-fancybox": "^3.1.0",
-    "lazysizes": "^4.0.0",
+    "lazysizes": "^4.0.1",
     "masonry-layout": "^4.2.0",
     "moment": "^2.19.1",
     "npm-font-open-sans": "^1.1.0",
