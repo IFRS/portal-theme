@@ -47,6 +47,9 @@ require_once('lib/custom-queries.php');
 // Custom TinyMCE
 require_once('lib/custom-tinymce.php');
 
+// Permitir tag iframe
+require_once('lib/allow-iframe.php');
+
 // Configurações da Galeria
 require_once('lib/gallery.php');
 
