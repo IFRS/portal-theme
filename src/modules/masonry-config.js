@@ -1,7 +1,7 @@
 require('jquery-bridget');
 require('masonry-layout');
 
-$(window).load(function() {
+$(window).on('load', function() {
     $('#menu-rodape').masonry({
         percentPosition: true
     });
@@ -14,4 +14,4 @@ $(window).load(function() {
         itemSelector: 'dl',
         percentPosition: true
     });
-})
+});
