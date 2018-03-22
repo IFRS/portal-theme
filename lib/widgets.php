@@ -13,7 +13,7 @@ function portal_widgets_init() {
 		'name'          => 'Widget Navegação',
 		'id'            => 'widget-nav',
 		'description'   => __('Área acima do Menu de Relevância.', 'ifrs-portal-theme'),
-		'before_widget' => '<div id="%1$s" class="widget widget-nav visible-md visible-lg %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget widget-nav %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
