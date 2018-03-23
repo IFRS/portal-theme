@@ -46,8 +46,10 @@ header {
 }
 
 #header-content {
-    display: flex;
-    align-items: center;
+    @media only screen and (min-width: $screen-md-min) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 #header-left {
