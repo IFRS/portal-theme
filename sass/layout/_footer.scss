@@ -1,12 +1,34 @@
 footer {
     background-color: $cor-rodape;
     margin-top: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
     padding-top: 30px;
+}
+
+#footer-sitemap {
+    background-color: $cor-sitemap;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 90%;
+    margin-top: 100px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    a {
+        color: #dddddd;
+    }
+
+    @media only screen and (min-width: $screen-md-min) {
+        .row {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
 #footer-bottom {
     background-color: #FFFFFF;
+
     p {
         padding-top: 10px;
         text-align: center;
