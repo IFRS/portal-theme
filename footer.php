@@ -43,13 +43,13 @@
                 <div class="col-xs-12">
                     <p>
                         <!-- Wordpress -->
-                        <a href="http://br.wordpress.org/" target="blank">Desenvolvido com o CMS de c&oacute;digo aberto Wordpress<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <span class="glyphicon glyphicon-new-window"></span>
+                        <a href="https://br.wordpress.org/" target="blank">Desenvolvido com o CMS de c&oacute;digo aberto Wordpress<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <span class="glyphicon glyphicon-new-window"></span>
                         &mdash;
                         <!-- Código-fonte -->
                         <a href="https://github.com/IFRS/portal-theme" target="blank">C&oacute;digo-fonte deste tema sob a licen&ccedil;a GPLv3<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <span class="glyphicon glyphicon-new-window"></span>
                         &mdash;
                         <!-- Creative Commons -->
-                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/cc-by-nc-sa-4.png" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" /></a> <span class="glyphicon glyphicon-new-window"></span>
+                        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/cc-by-nc-sa-4.png" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" /></a> <span class="glyphicon glyphicon-new-window"></span>
                     </p>
                 </div>
             </div>

@@ -1,12 +1,12 @@
 # IFRS Portal Theme
 
-Tema [Wordpress](https://wordpress.org/) para o Portal Institucional do [Instituto Federal do Rio Grande do Sul](http://ifrs.edu.br/).
+Tema [Wordpress](https://wordpress.org/) para o Portal Institucional do [Instituto Federal do Rio Grande do Sul](https://ifrs.edu.br/).
 
 ## Uso
 
 Para a construção desse projeto são necessárias as seguintes ferramentas:
 -   [NodeJs](https://nodejs.org/) com [NPM](https://www.npmjs.com/)
--   [Gulp CLI](http://gulpjs.com/)
+-   [Gulp CLI](https://gulpjs.com/)
 
 Após, é preciso instalar as dependências:
 
@@ -48,6 +48,6 @@ limpar o projeto:
 
 ## Licença
 
-Esse código é distribuído sob a licença [GNU GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.txt).
+Esse código é distribuído sob a licença [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.txt).
 
 A documentação, as imagens e demais mídias são distribuídas sob a licença [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
