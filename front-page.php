@@ -29,7 +29,7 @@
             <!-- Notícia Destaque -->
             <div class="col-xs-12 col-md-7 col-md-pull-5">
                 <article class="noticia noticia-destaque">
-                      <?php get_template_part('partials/noticias/item-front-page'); ?>
+                      <?php get_template_part('partials/noticias/item'); ?>
                 </article>
             </div>
          </div> <!-- /.row  -->
@@ -40,14 +40,14 @@
             <!-- Notícia Normal -->
             <div class="col-xs-12 col-sm-6 col-md-3">
                 <article class="noticia">
-                    <?php get_template_part('partials/noticias/item-front-page'); ?>
+                    <?php get_template_part('partials/noticias/item'); ?>
                 </article>
             </div>
         <?php endif; ?>
     <?php endwhile; ?>
 </div>
 
-<hr class="separador-noticia"/>
+<hr class="separador-noticia">
 
 <div class="row">
     <div class="col-xs-12">
