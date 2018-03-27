@@ -11,9 +11,23 @@
 </div>
 
 <?php
+    $escopos = get_terms(array(
+        'taxonomy' => 'escopo',
+        'hide_empty' => false,
+        'fields' => 'ids'
+    ));
+
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 5
+        'posts_per_page' => 5,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'escopo',
+                'field' => 'term_id',
+                'terms' => $escopos,
+                'operator' => 'NOT IN'
+            )
+        )
     );
 
     $query = new WP_Query($args);
