@@ -41,6 +41,8 @@ function portal_breadcrumb() {
         } elseif (is_tax('edital_status')) {
             echo '<li><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
+        } elseif (is_tax('escopo')) {
+            echo $before . single_term_title('Not&iacute;cias para ', false) . $after;
         } elseif (is_day()) {
             echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                 'Y'

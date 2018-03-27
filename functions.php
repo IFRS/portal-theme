@@ -55,3 +55,7 @@ require_once('lib/gallery.php');
 
 // Remove all "version" text from output
 require_once('lib/remove-version.php');
+
+// Taxonomias
+require_once('lib/taxonomies/escopo.php');
+
