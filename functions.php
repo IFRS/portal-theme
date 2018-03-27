@@ -59,3 +59,5 @@ require_once('lib/remove-version.php');
 // Taxonomias
 require_once('lib/taxonomies/escopo.php');
 
+// Shortcodes
+require_once('lib/shortcodes/noticias-escopo.php');
