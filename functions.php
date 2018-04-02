@@ -50,6 +50,9 @@ require_once('lib/custom-tinymce.php');
 // Permitir tag iframe
 require_once('lib/allow-iframe.php');
 
+// Tamanho do excerpt
+require_once('lib/excerpt-length.php');
+
 // Configurações da Galeria
 require_once('lib/gallery.php');
 
