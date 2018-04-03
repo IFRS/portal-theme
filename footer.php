@@ -31,7 +31,7 @@
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>
                 <div class="col-xs-12 col-md-3 col-md-offset-3 col-lg-2 col-lg-offset-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/marca-governo.png" alt="Governo Federal" class="img-responsive center-block">
+                    <a href="http://brasil.gov.br/"><img src="<?php echo get_template_directory_uri(); ?>/img/marca-governo.png" alt="Governo Federal" class="img-responsive center-block"></a>
                 </div>
             </div>
         </div>
