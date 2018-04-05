@@ -10,7 +10,7 @@
                     <h2 class="page-title"><?php the_title(); ?></h2>
                 </div>
             </div>
-            <?php get_template_part('partials/menus/subpage-menu'); ?>
+            <?php get_template_part('partials/menus/subpages'); ?>
             <div class="row">
                 <div class="col-xs-12">
                     <div class="page-content">
