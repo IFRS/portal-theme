@@ -21,29 +21,38 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Widget Home',
 		'id'            => 'widget-home',
-		'description'   => __('Área ao lado da notícia destaque na página inicial.', 'ifrs-portal-theme'),
+		'description'   => __('Área principal para banners em destaque.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-home %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
-		'name'          => 'Widget Galeria',
-		'id'            => 'widget-gallery',
-		'description'   => __('Área abaixo dos Eventos e Editais na página inicial.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-gallery %2$s">',
+		'name'          => 'Widget Home Lateral',
+		'id'            => 'widget-home-side',
+		'description'   => __('Área lateral abaixo das notícias, para banners ou outros conteúdos.', 'ifrs-portal-theme'),
+		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-home-side %2$s">',
+		'after_widget'  => '</div></div></div>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
+	register_sidebar(array(
+		'name'          => 'Widget Documentos',
+		'id'            => 'widget-docs',
+		'description'   => __('Área lateral abaixo das notícias, para os documentos.', 'ifrs-portal-theme'),
+		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-docs %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
-		'name'          => 'Widget Home Lateral',
-		'id'            => 'widget-home-side',
-		'description'   => __('Área ao lado da Galeria, acima do Facebook/Twitter na página inicial.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-home-side %2$s">',
+		'name'          => 'Widget Galeria',
+		'id'            => 'widget-gallery',
+		'description'   => __('Área central na página inicial, para imagens ou fotos.', 'ifrs-portal-theme'),
+		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-gallery %2$s">',
 		'after_widget'  => '</div></div></div>',
-		'before_title'  => '<span class="sr-only">',
-		'after_title'   => '</span>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
 		'name'          => 'Widget Atalhos',
