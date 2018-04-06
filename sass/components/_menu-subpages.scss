@@ -1,0 +1,14 @@
+.nav-subpages {
+    > li {
+        color: #ffffff;
+        margin-bottom: 3px;
+        > a {
+            background-color: $cor-primaria-azul;
+            color: #ffffff;
+            &:hover,
+            &:active {
+                background-color: lighten($cor-primaria-azul, 5%);
+            }
+        }
+    }
+}
