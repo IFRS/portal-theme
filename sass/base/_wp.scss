@@ -9,3 +9,8 @@
 .aligncenter {
     @extend .center-block;
 }
+
+.wp-caption-text {
+    font-size: 85%;
+    font-style: italic;
+}
