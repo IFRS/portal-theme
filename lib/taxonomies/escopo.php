@@ -24,7 +24,7 @@ if ( ! function_exists( 'escopo_taxonomy' ) ) {
             'items_list_navigation'      => __( 'Lista de Navegação de Escopos', 'ifrs-portal-theme' ),
         );
         $rewrite = array(
-            'slug'                       => 'noticias',
+            'slug'                       => 'noticias/escopos',
             'with_front'                 => true,
             'hierarchical'               => true,
         );
