@@ -5,7 +5,7 @@ function portal_breadcrumb() {
     $sep       = '';
     $after     = '</li>';
 
-    if (!is_home() && !is_front_page() || is_paged()) {
+    if (!is_front_page() || is_paged()) {
 		echo '<div class="container" id="breadcrumb"><div class="row"><div class="col-xs-12">';
 		echo '<ol class="breadcrumb">';
 		echo __('Voc&ecirc; est&aacute; em: ');
@@ -17,7 +17,9 @@ function portal_breadcrumb() {
 
         echo '<li><a href="' . $homeLink . '">' . $nomesite . '</a> '.$sep. '</li> ';
 
-        if (is_category()) {
+        if (is_home()) {
+            echo $before . get_the_title(get_option( 'page_for_posts' )) . $after;
+        } elseif (is_category()) {
             global $wp_query;
             $cat_obj   = $wp_query->get_queried_object();
             $thisCat   = $cat_obj->term_id;
