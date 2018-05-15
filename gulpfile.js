@@ -1,5 +1,5 @@
+var argv         = require('minimist')(process.argv.slice(2));
 var gulp         = require('gulp');
-var gutil        = require('gulp-util');
 var del          = require('del');
 var rename       = require('gulp-rename');
 var sass         = require('gulp-sass');
@@ -8,18 +8,16 @@ var pixrem       = require('pixrem');
 var autoprefixer = require('autoprefixer');
 var flexibility  = require('postcss-flexibility');
 var cssmin       = require('gulp-cssmin');
-var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var webpack      = require('webpack');
+var PluginError  = require('plugin-error');
 var path         = require('path');
-var es           = require('event-stream');
-var runSequence  = require('run-sequence');
 var browserSync  = require('browser-sync').create();
 
 require('dotenv').config();
 
-var dist = [
+const DIST = [
     '**',
     '!.**',
     '!dist{,/**}',
@@ -31,31 +29,6 @@ var dist = [
     '!package-lock.json'
 ];
 
-gulp.task('default', function() {
-    browserSync.init({
-        ui: false,
-        notify: false,
-        online: false,
-        open: false,
-        host: process.env.BROWSERSYNC_URL,
-        proxy: process.env.BROWSERSYNC_URL,
-    });
-
-    gulp.watch('sass/**/*.scss', ['sass']);
-
-    gulp.watch('src/**/*.js', ['webpack']);
-
-    gulp.watch('**/*.php').on('change', browserSync.reload);
-});
-
-gulp.task('build', ['clean'], function(done) {
-    if (gutil.env.production) {
-        runSequence(['css', 'js', 'assets', 'images'], 'dist', done);
-    } else {
-        runSequence(['sass', 'webpack', 'assets'], done);
-    }
-});
-
 gulp.task('clean', function() {
     return del(['css/', 'js/', 'fonts/', 'img/vendor/', 'dist/']);
 });
@@ -66,6 +39,7 @@ gulp.task('sass', function() {
         pixrem(),
         autoprefixer({browsers: ['> 1%', 'last 3 versions', 'ie 8-10', 'not ie <= 7']})
     ];
+
     return gulp.src('sass/*.scss')
     .pipe(sass({
         includePaths: 'sass',
@@ -76,13 +50,13 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('css', ['sass'], function() {
+gulp.task('css', gulp.series('sass', function() {
     return gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
-});
+}));
 
 gulp.task('webpack', function(done) {
     webpack({
@@ -107,16 +81,17 @@ gulp.task('webpack', function(done) {
             })
         ],
     }, function(err, stats) {
-        if (err) throw new gutil.PluginError('webpack', err);
-        gutil.log('[webpack]', stats.toString({
-            colors: true
-        }));
+        if (err) throw new PluginError('webpack', {
+            message: stats.toString({
+                colors: true
+            })
+        });
         browserSync.reload();
         done();
     });
 });
 
-gulp.task('js', ['webpack'], function() {
+gulp.task('js', gulp.series('webpack', function() {
     return gulp.src(['js/*.js', '!js/*.min.js'])
     .pipe(uglify({
         ie8: true,
@@ -125,7 +100,7 @@ gulp.task('js', ['webpack'], function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream());
-});
+}));
 
 gulp.task('assets', function() {
     var open_sans = gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
@@ -137,7 +112,7 @@ gulp.task('assets', function() {
     var fancybox = gulp.src('node_modules/jquery-fancybox/source/img/**/*')
     .pipe(gulp.dest('img/vendor/'));
 
-    return es.concat(open_sans, bootstrap, fancybox);
+    return open_sans, bootstrap, fancybox;
 });
 
 gulp.task('images', function() {
@@ -147,6 +122,25 @@ gulp.task('images', function() {
 });
 
 gulp.task('dist', function() {
-    return gulp.src(dist)
+    return gulp.src(DIST)
     .pipe(gulp.dest('dist/'));
 });
+
+gulp.task('default', function() {
+    browserSync.init({
+        ui: false,
+        notify: false,
+        online: false,
+        open: false,
+        host: argv.URL || 'localhost',
+        proxy: argv.URL || 'localhost',
+    });
+
+    gulp.watch('sass/**/*.scss', gulp.series('sass'));
+
+    gulp.watch('src/**/*.js', gulp.series('webpack'));
+
+    gulp.watch('**/*.php').on('change', browserSync.reload);
+});
+
+gulp.task('build', gulp.series('clean', (argv.production) ? gulp.series(gulp.parallel('css', 'js', 'assets', 'images'), 'dist') : gulp.parallel('sass', 'webpack', 'assets')));
