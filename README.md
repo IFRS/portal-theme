@@ -1,6 +1,6 @@
 # IFRS Portal Theme
 
-Tema [Wordpress](https://wordpress.org/) para o Portal Institucional do [Instituto Federal do Rio Grande do Sul](https://ifrs.edu.br/).
+Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Instituto Federal do Rio Grande do Sul](https://ifrs.edu.br/).
 
 ## Uso
 
@@ -12,11 +12,15 @@ Após, é preciso instalar as dependências:
 
 `npm install`
 
-E para compilar/construir o tema:
+Para compilar/construir o tema no ambiente de desenvolvimento:
 
-`gulp` ou `gulp build`
+`gulp build`
 
-O Gulp deste projeto possui tarefas separadas para...
+ou, para produção:
+
+`gulp build --production`
+
+Esse projeto possui tarefas separadas para...
 
 somente compilar os estilos:
 
