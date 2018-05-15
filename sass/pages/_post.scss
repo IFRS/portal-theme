@@ -52,6 +52,10 @@
             margin-top: ($line-height-computed / 2);
             margin-bottom: ($line-height-computed / 3);
         }
+
+        table {
+            @extend .table;
+        }
     }
 
     .post-to-tags-separator {
