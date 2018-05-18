@@ -36,7 +36,12 @@
                 <div class="col-xs-12">
                     <div class="post-content">
                         <?php if (has_post_thumbnail()) : ?>
-                            <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0]; ?>"><?php the_post_thumbnail('full', array('class' => 'post-thumb')); ?></a>
+                            <div class="wp-caption post-thumb">
+                                <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0]; ?>"><?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?></a>
+                                <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+                                    <p class="wp-caption-text"><?php echo $caption; ?></p>
+                                <?php endif; ?>
+                            </div>
                         <?php endif; ?>
                         <?php the_content(); ?>
                     </div>
