@@ -34,10 +34,10 @@
                 </div>
             </div>
             <div class="row" id="header-content">
-                <div class="col-xs-12 col-md-6" id="header-left">
+                <div class="col-xs-12 col-md-8" id="header-left">
                 <?php echo get_template_part('partials/header-title'); ?>
                 </div>
-                <div class="col-xs-12 col-md-6" id="header-right">
+                <div class="col-xs-12 col-md-4" id="header-right">
                     <div class="row">
                         <div class="col-xs-12">
                             <?php get_search_form(); ?>
