@@ -33,17 +33,6 @@
         color: #172938;
         font-size: 14px;
         line-height: 21px;
-
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: block;
-            display: -webkit-box;
-            line-height: 21px;     /* fallback */
-            max-height: 84px;      /* fallback */
-            -webkit-line-clamp: 4; /* number of lines to show */
-            -webkit-box-orient: vertical;
-        }
     }
 }
 
@@ -65,15 +54,5 @@
 
     .noticia-resumo {
         font-size: 16px;
-
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            line-height: 21px;     /* fallback */
-            max-height: 84px;      /* fallback */ /* number of lines * line-height */
-            -webkit-line-clamp: 4; /* number of lines to show */
-            -webkit-box-orient: vertical;
-        }
     }
 }
