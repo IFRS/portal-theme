@@ -14,9 +14,6 @@ require_once('lib/theme-support.php');
 // Títulos personalizados
 require_once('lib/custom-title.php');
 
-// Colar somente como texto puro no editor
-require_once('lib/paste-as-plain-text.php');
-
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
 require_once('lib/depth-limit.php');
 
