@@ -44,7 +44,8 @@ gulp.task('sass', function() {
     return gulp.src('sass/*.scss')
     .pipe(sass({
         includePaths: 'sass',
-        outputStyle: 'expanded'
+        outputStyle: 'expanded',
+        precision: 8
     }).on('error', sass.logError))
     .pipe(postcss(postCSSplugins))
     .pipe((argv.debug) ? debug({title: 'SASS:'}) : through2.obj())
