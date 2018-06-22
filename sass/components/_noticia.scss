@@ -1,9 +1,11 @@
 .noticia {
-    .noticia-imagem {
+    $n: &;
+
+    &__img {
         margin-bottom: 15px;
     }
 
-    .noticia-titulo {
+    &__titulo {
         color: #172938;
         font-size: 16px;
         font-weight: bold;
@@ -16,43 +18,43 @@
         }
     }
 
-    .noticia-cartola {
+    &__cartola {
         color: $cor-secundaria-azul-claro;
         font-size: 12px;
         font-weight: bold;
         margin-bottom: 5px;
     }
 
-    .noticia-data {
+    &__data {
         color: $cor-secundaria-azul-claro;
         font-size: 12px;
         margin-bottom: 5px;
     }
 
-    .noticia-resumo {
+    &__resumo {
         color: #172938;
         font-size: 14px;
         line-height: 21px;
     }
-}
 
-.noticia-destaque {
-    .noticia-imagem {
-        @media screen and (min-width: $screen-md-min) {
-            float: left;
-            margin-bottom: 0;
-            margin-right: 10px;
-            max-width: 40%;
+    &_destaque {
+        #{$n}__img {
+            @media screen and (min-width: $screen-md-min) {
+                float: left;
+                margin-bottom: 0;
+                margin-right: 10px;
+                max-width: 40%;
+            }
         }
-    }
 
-    .noticia-titulo {
-        font-size: 26px;
-        line-height: 30px;
-        margin-bottom: 5px;
-    }
+        #{$n}__titulo {
+            font-size: 26px;
+            line-height: 30px;
+            margin-bottom: 5px;
+        }
 
-    .noticia-resumo {
-        font-size: 16px;
+        #{$n}__resumo {
+            font-size: 16px;
+        }
     }
 }

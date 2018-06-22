@@ -13,6 +13,10 @@
     }
 }
 
+@mixin widget() {
+    margin-bottom: $grid-gutter-width / 2;
+}
+
 @mixin title-box($color: $cor-primaria-verde, $image-url: '') {
     background-color: $cor-primaria-cinza;
     border-top: 5px solid $color;

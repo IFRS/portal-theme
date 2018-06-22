@@ -1,34 +1,6 @@
-.widget {
-    margin-bottom: $grid-gutter-width / 2;
-}
-
-.widget-nav {
-    img {
-        @extend .center-block;
-        @extend .img-responsive;
-    }
-}
-
-.widget-home {
-    img {
-        @extend .center-block;
-        @extend .img-responsive;
-    }
-}
-
 .widget-home-side {
     img {
         @extend .center-block;
-    }
-}
-
-.widget-agenda {
-    >h2 {
-        @include title-box($cor-agenda, '../img/bg-agenda.png');
-    }
-
-    a {
-        color: $cor-agenda;
     }
 }
 

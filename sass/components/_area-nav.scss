@@ -1,0 +1,8 @@
+.area-nav {
+    &__widget {
+        img {
+            @extend .center-block;
+            @extend .img-responsive;
+        }
+    }
+}

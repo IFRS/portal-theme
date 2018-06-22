@@ -1,12 +1,14 @@
-<?php if (!dynamic_sidebar('widget-nav')) : endif; ?>
+<div class="area-nav">
+    <?php if (!dynamic_sidebar('widget-nav')) : endif; ?>
+</div>
 
 <a href="#" id="menu-navbar-toggle" class="btn btn-primary btn-lg visible-sm visible-xs"><span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;<span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</a>
 <nav class="menu-navbar collapse in">
     <?php
         wp_nav_menu(
             array(
-                'menu_class'        => '',
-                'menu_id'           => 'menu-relevancia',
+                'menu_class'        => 'menu-relevancia',
+                'menu_id'           => false,
                 'container'         => false,
                 'container_class'   => false,
                 'container_id'      => false,
@@ -17,8 +19,8 @@
 
         wp_nav_menu(
             array(
-                'menu_class'        => 'menu-collapse',
-                'menu_id'           => 'menu-principal',
+                'menu_class'        => 'menu-collapse menu-principal',
+                'menu_id'           => false,
                 'container'         => false,
                 'container_class'   => false,
                 'container_id'      => false,

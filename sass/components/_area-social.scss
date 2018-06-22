@@ -1,11 +1,13 @@
 .area-social {
+    @include widget();
+
     margin-bottom: 0;
 
     @media only screen and (min-width: $screen-md-min) {
         text-align: right;
     }
 
-    &__item {
+    &__widget {
         margin-right: 5px;
 
         &:last-child {
