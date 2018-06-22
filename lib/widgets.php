@@ -76,7 +76,7 @@ function portal_widgets_init() {
 		'name'          => 'Área Rodapé',
 		'id'            => 'widget-footer',
 		'description'   => __('Área no rodapé, após o mapa do site.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget widget-footer %2$s">',
+		'before_widget' => '<div class="row"><div class="col-xs-12"><div id="%1$s" class="widget area-rodape__item %2$s">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
