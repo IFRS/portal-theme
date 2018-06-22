@@ -1,8 +1,8 @@
 <?php
 wp_nav_menu(
     array(
-        'menu_class'        => 'barra',
-        'menu_id'           => 'menu-acessibilidade',
+        'menu_class'        => 'menu-acessibilidade',
+        'menu_id'           => '',
         'container'         => 'nav',
         'container_class'   => '',
         'container_id'      => '',

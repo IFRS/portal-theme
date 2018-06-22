@@ -1,16 +1,111 @@
-.alignleft {
-    @extend .pull-left;
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    @extend .clearfix;
+}
+
+.aligncenter,
+div.aligncenter {
+    @extend .center-block;
 }
 
 .alignright {
     @extend .pull-right;
 }
 
-.aligncenter {
-    @extend .center-block;
+.alignleft {
+    @extend .pull-left;
 }
 
-.wp-caption-text {
-    font-size: 85%;
-    font-style: italic;
+a {
+    img {
+        &.alignright {
+            @extend .pull-right;
+            margin: 5px 0 20px 20px;
+        }
+
+        &.alignnone {
+            @extend .clearfix;
+        }
+
+        &.alignleft {
+            @extend .pull-left;
+            margin: 5px 20px 20px 0;
+        }
+
+        &.aligncenter {
+            @extend .center-block;
+        }
+    }
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+
+    &.alignnone {
+        margin: 5px 20px 20px 0;
+    }
+
+    &.alignleft {
+        margin: 5px 20px 20px 0;
+    }
+
+    &.alignright {
+        margin: 5px 0 20px 20px;
+    }
+
+    img {
+        border: 0 none;
+        height: auto;
+        margin: 0;
+        max-width: 98.5%;
+        padding: 0;
+        width: auto;
+    }
+
+    p {
+        &.wp-caption-text {
+            font-size: 85%;
+            font-style: italic;
+            line-height: 17px;
+            margin: 0;
+            padding: 0 4px 5px;
+        }
+    }
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+    &:focus {
+        background-color: #eee;
+        clip: auto !important;
+        clip-path: none;
+        color: #444;
+        display: block;
+        font-size: 1em;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+        /* Above WP toolbar. */
+    }
 }

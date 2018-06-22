@@ -23,9 +23,9 @@
     <?php echo get_template_part('partials/barrabrasil'); ?>
 
     <!-- Cabeçalho -->
-    <header>
+    <header class="header">
         <div class="container">
-            <div class="row" id="header-menus">
+            <div class="row header__menus">
                 <div class="col-xs-12 col-md-6">
                     <?php get_template_part('partials/menus/atalhos'); ?>
                 </div>
@@ -33,31 +33,33 @@
                     <?php get_template_part('partials/menus/acessibilidade'); ?>
                 </div>
             </div>
-            <div class="row" id="header-content">
-                <div class="col-xs-12 col-md-8" id="header-left">
-                <?php echo get_template_part('partials/header-title'); ?>
+            <div class="row header__content">
+                <div class="col-xs-12 col-md-8 header__title">
+                    <?php echo get_template_part('partials/header-title'); ?>
                 </div>
-                <div class="col-xs-12 col-md-4" id="header-right">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <?php get_search_form(); ?>
+                <div class="col-xs-12 col-md-4">
+                    <div class="header__aside">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <?php get_search_form(); ?>
+                            </div>
                         </div>
+                        <?php if (is_active_sidebar('widget-social')) : ?>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <nav>
+                                        <ul class="area-social">
+                                            <?php if (!dynamic_sidebar('widget-social')) : endif; ?>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                <?php if (is_active_sidebar('widget-social')) : ?>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <nav>
-                                <ul class="barra area-social">
-                                    <?php if (!dynamic_sidebar('widget-social')) : endif; ?>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                <?php endif; ?>
                 </div>
             </div>
         </div>
-        <div id="barra-servicos">
+        <div class="header__barra-servicos">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">

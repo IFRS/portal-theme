@@ -1,9 +1,48 @@
-header {
+.header {
     background-color: $cor-primaria-cinza;
     // background: linear-gradient(#F0F2F1, $cor-primaria-cinza); // Padrão do Governo
     @include gradient-vertical(#FFFFFF, $cor-primaria-cinza);
     margin-bottom: $grid-gutter-width;
     padding-top: 15px;
+
+    &__menus {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media only screen and (min-width: $screen-md-min) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @media only screen and (max-width: $screen-md-min) {
+            margin-bottom: $grid-gutter-width;
+        }
+    }
+
+    &__aside {
+        margin-bottom: 17px;
+        text-align: center;
+
+        @media only screen and (min-width: $screen-md-min) {
+            text-align: right;
+        }
+    }
+
+    &__barra-servicos {
+        align-items: center;
+        background-color: $cor-barra-servicos;
+        color: #FFFFFF;
+        display: flex;
+        margin-top: 30px;
+        min-height: 30px;
+        padding: 3px 0;
+    }
 
     a {
         color: $cor-primaria-verde;
@@ -12,78 +51,13 @@ header {
             color: $cor-primaria-verde;
         }
     }
+}
 
-    .barra {
-        font-size: 10px;
-        list-style: none;
-        padding-left: 0;
-
-        li {
-            display: inline;
-            margin-right: 10px;
-
-            &:last-child {
-                margin-right: 0;
-            }
+.title {
+    &__logo {
+        @media only screen and (max-width: $screen-md-min) {
+            text-align: center;
+            margin: 0 auto;
         }
-    }
-
-    .search-form {
-        margin-bottom: 15px;
-    }
-
-    .title-mec {
-        font-size: 14px;
-        margin-bottom: 0;
-        margin-top: 17px;
-        text-transform: uppercase;
-    }
-}
-
-#header-menus {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-#header-content {
-    @media only screen and (min-width: $screen-md-min) {
-        display: flex;
-        align-items: center;
-    }
-}
-
-#header-left {
-    @media only screen and (max-width: $screen-md-min) {
-        a {
-            > img {
-                text-align: center;
-                margin: 0 auto;
-            }
-        }
-    }
-
-    margin-bottom: 30px;
-}
-
-#header-right {
-    @media only screen and (min-width: $screen-md-min) {
-        text-align: right;
-    }
-
-    margin-bottom: 17px;
-    text-align: center;
-}
-
-#barra-servicos {
-    align-items: center;
-    background-color: $cor-barra-servicos;
-    color: #FFFFFF;
-    display: flex;
-    margin-top: 30px;
-    min-height: 30px;
-    padding: 3px 0;
-
-    a {
-        color: #FFFFFF;
     }
 }

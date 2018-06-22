@@ -83,19 +83,3 @@
         padding: 0 10px 0 0;
     }
 }
-
-.area-social {
-    @media only screen and (min-width: $screen-md-min) {
-        text-align: right;
-    }
-
-    margin-bottom: 0;
-
-    li {
-        margin-right: 5px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}

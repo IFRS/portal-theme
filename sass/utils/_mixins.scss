@@ -1,3 +1,18 @@
+@mixin menu-barra() {
+    font-size: 10px;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        display: inline;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
 @mixin title-box($color: $cor-primaria-verde, $image-url: '') {
     background-color: $cor-primaria-cinza;
     border-top: 5px solid $color;

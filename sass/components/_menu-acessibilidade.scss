@@ -1,14 +1,16 @@
-#menu-acessibilidade {
+.menu-acessibilidade {
+    @include menu-barra();
+
     margin-top: 10px;
     text-transform: uppercase;
-
-    a {
-        text-decoration: underline;
-        text-decoration-style: dotted;
-    }
 
     @media only screen and (min-width: $screen-md-min) {
         margin-top: 0;
         text-align: right;
+    }
+
+    a {
+        text-decoration: underline;
+        text-decoration-style: dotted;
     }
 }

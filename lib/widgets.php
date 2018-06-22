@@ -4,7 +4,7 @@ function portal_widgets_init() {
 		'name'          => 'Área Social',
 		'id'            => 'widget-social',
 		'description'   => __('Área no cabeçalho para as Redes Sociais.', 'ifrs-portal-theme'),
-		'before_widget' => '<li id="%1$s" class="widget widget-social %2$s">',
+		'before_widget' => '<li id="%1$s" class="widget area-social__item %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<span class="hidden">',
 		'after_title'   => '</span>',

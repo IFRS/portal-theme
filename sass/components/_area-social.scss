@@ -1,0 +1,15 @@
+.area-social {
+    margin-bottom: 0;
+
+    @media only screen and (min-width: $screen-md-min) {
+        text-align: right;
+    }
+
+    &__item {
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
