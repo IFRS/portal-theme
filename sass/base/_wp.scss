@@ -109,3 +109,51 @@ a {
         /* Above WP toolbar. */
     }
 }
+
+/* Content gallery */
+.gallery {
+    @extend .row;
+
+    img {
+        @extend .img-responsive;
+    }
+
+    &-caption {
+        color: #666;
+        font-size: 0.8em;
+    }
+
+    &-columns-1 {
+        &-item {
+            @extend .col-xs-12;
+        }
+    }
+
+    &-columns-2 {
+        &-item {
+            @extend .col-xs-12;
+            @extend .col-md-6;
+        }
+    }
+
+    &-columns-3 {
+        &-item {
+            @extend .col-xs-12;
+            @extend .col-md-4;
+        }
+    }
+
+    &-columns-4 {
+        &-item {
+            @extend .col-xs-12;
+            @extend .col-md-3;
+        }
+    }
+
+    &-columns-6 {
+        &-item {
+            @extend .col-xs-12;
+            @extend .col-md-2;
+        }
+    }
+}
