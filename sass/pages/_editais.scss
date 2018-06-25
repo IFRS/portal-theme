@@ -1,60 +1,12 @@
 #editais,
-#edital,
-.latest-editais {
+#edital {
     .title {
         @include title-box($cor-editais, '../img/bg-editais.png');
     }
 }
 
-.latest-editais,
 .table-editais {
     a {
         color: $cor-editais;
     }
-}
-
-.latest-editais {
-    >.row {
-        margin-bottom: 10px;
-    }
-
-    article {
-        border-bottom: 2px solid $cor-primaria-cinza;
-        margin-bottom: $grid-gutter-width / 2;
-    }
-
-    .edital-date-time {
-        display: inline-block;
-        font-size: 0.85em;
-        margin-bottom: 5px;
-
-        .glyphicon {
-            color: $cor-editais;
-        }
-    }
-
-    .edital-categories {
-        display: inline-block;
-        font-size: 0.9em;
-        font-weight: bold;
-        list-style: none;
-        margin-bottom: 0;
-        padding-left: 0;
-
-        li {
-            display: inline-block;
-
-            a {
-                color: #000000;
-            }
-        }
-    }
-
-    .edital-title {
-        font-size: 1.3em;
-    }
-}
-
-.link-todos-editais {
-    @include link-todos($cor-editais);
 }

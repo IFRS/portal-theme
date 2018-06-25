@@ -1,0 +1,9 @@
+.area-home-side {
+    &__widget {
+        @include widget();
+
+        img {
+            @extend .center-block;
+        }
+    }
+}

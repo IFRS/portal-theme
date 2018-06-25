@@ -1,0 +1,44 @@
+.ultimos-editais {
+    &__edital {
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        @include title-box($cor-editais, '../img/bg-editais.png');
+    }
+
+    &__edital-datetime {
+        display: inline-block;
+        font-size: 0.85em;
+        margin-bottom: 5px;
+
+        .glyphicon {
+            color: $cor-editais;
+        }
+    }
+
+    &__edital-categories {
+        display: inline-block;
+        font-size: 0.9em;
+        font-weight: bold;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #000000;
+            }
+        }
+    }
+
+    &__edital-title {
+        font-size: 1.3em;
+    }
+
+    a {
+        color: $cor-editais;
+    }
+}

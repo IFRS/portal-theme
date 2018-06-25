@@ -78,10 +78,14 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-8">
-        <?php if (!dynamic_sidebar('widget-gallery')) : endif; ?>
+        <div class="area-gallery">
+            <?php if (!dynamic_sidebar('widget-gallery')) : endif; ?>
+        </div>
     </div>
     <div class="col-xs-12 col-md-4">
-        <?php if (!dynamic_sidebar('widget-home-side')) : endif; ?>
+        <div class="area-home-side">
+            <?php if (!dynamic_sidebar('widget-home-side')) : endif; ?>
+        </div>
     </div>
 </div>
 
@@ -98,11 +102,12 @@
 </div>
 <?php endif; ?>
 
-<hr class="banner-separator">
-
 <div class="row">
     <div class="col-xs-12">
-        <?php if (!dynamic_sidebar('widget-banners')) : endif; ?>
+        <div class="area-banners">
+            <hr class="area-banners__separator">
+            <?php if (!dynamic_sidebar('widget-banners')) : endif; ?>
+        </div>
     </div>
 </div>
 
