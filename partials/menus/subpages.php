@@ -18,5 +18,5 @@
         <?php endforeach; ?>
     </ul>
 <?php else : ?>
-    <hr>
+    <hr class="page__separator">
 <?php endif; ?>
