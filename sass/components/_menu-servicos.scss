@@ -18,6 +18,12 @@
 
         a {
             color: #FFFFFF;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #FFFFFF;
+            }
         }
     }
 
