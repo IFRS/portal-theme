@@ -1,0 +1,101 @@
+/*
+ Copyright Crunchify
+ http://crunchify.me/1VIxAsz
+*/
+
+.crunchify-social {
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: $screen-md-min) {
+        text-align: right;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        padding: 2px 8px 4px 8px !important;
+        color: white;
+        font-size: 12px;
+        border-radius: 2px;
+        margin-right: 2px;
+        cursor: pointer;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+        -webkit-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+        margin-top: 2px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            text-decoration: none;
+            color: white;
+        }
+
+        &_twitter {
+            background: #00aced;
+
+            &:hover,
+            &:active {
+                background: #0084b4;
+            }
+        }
+
+        &_facebook {
+            background: #3B5997;
+
+            &:hover,
+            &:active {
+                background: #2d4372;
+            }
+        }
+
+        &_googleplus {
+            background: #D64937;
+
+            &:hover,
+            &:active {
+                background: #b53525;
+            }
+        }
+
+        &_pinterest {
+            background: #bd081c;
+
+            &:hover,
+            &:active {
+                background: #a40003;
+            }
+        }
+
+        &_linkedin {
+            background: #0074A1;
+
+            &:hover,
+            &:active {
+                background: #006288;
+            }
+        }
+
+        &_whatsapp {
+            background: #43d854;
+
+            @media screen and (min-width: $screen-md-min) {
+                display: none !important;
+            }
+
+            &:hover,
+            &:active {
+                background: #009688;
+            }
+        }
+    }
+}
