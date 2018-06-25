@@ -1,5 +1,10 @@
-#lista-noticias {
-    > div {
-        margin-bottom: $grid-gutter-width;
+.lista-noticias {
+    &__title {
+        @include title-box();
+    }
+    &__content {
+        .noticia {
+            margin-bottom: $grid-gutter-width;
+        }
     }
 }

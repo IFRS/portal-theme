@@ -2,11 +2,11 @@ require('jquery-bridget');
 require('masonry-layout');
 
 $(window).on('load', function() {
-    $('#menu-rodape').masonry({
+    $('.menu-rodape').masonry({
         percentPosition: true
     });
 
-    $('#lista-noticias').masonry({
+    $('.lista-noticias__content').masonry({
         percentPosition: true
     });
 
