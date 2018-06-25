@@ -1,19 +1,23 @@
-.nav-subpages {
+.menu-subpages {
     margin-top: 5px;
-    > li {
+
+    &__item {
         color: #ffffff;
         margin-bottom: 3px;
-        > a {
-            background-color: $cor-primaria-azul;
-            color: #ffffff;
-            &:hover,
-            &:active {
-                background-color: lighten($cor-primaria-azul, 5%);
-            }
-            &:focus {
-                background-color: #ffffff;
-                color: $cor-primaria-azul;
-            }
+    }
+
+    &__link {
+        background-color: $cor-primaria-azul;
+        color: #ffffff;
+
+        &:hover,
+        &:active {
+            background-color: lighten($cor-primaria-azul, 5%);
+        }
+
+        &:focus {
+            background-color: #ffffff;
+            color: $cor-primaria-azul;
         }
     }
 }
