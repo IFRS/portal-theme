@@ -1,5 +1,11 @@
+.serach-results {
+    &__title {
+        @include title-box();
+    }
+}
+
 .search-result {
-    .search-result-link {
+    &__link {
         color: $cor-secundaria-verde;
         font-size: 12px;
     }

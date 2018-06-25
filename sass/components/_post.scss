@@ -1,12 +1,12 @@
 .post {
-    .post-category {
+    &__category {
         font-size: 16px;
         text-transform: uppercase;
         font-weight: bold;
         margin: 0;
     }
 
-    .post-title {
+    &__title {
         color: #172938;
         line-height: 37px;
         font-size: 34px;
@@ -14,17 +14,17 @@
         margin-top: 30px;
     }
 
-    hr {
+    &__separator {
         margin: 0;
         margin-bottom: 10px;
     }
 
-    .post-date {
+    &__date {
         color: $cor-secundaria-azul-claro;
         font-size: 12px;
     }
 
-    .post-thumb {
+    &__thumb {
         width: 50%;
         height: auto;
         float: left;
@@ -32,7 +32,7 @@
         margin-bottom: 15px;
     }
 
-    .post-content {
+    &__content {
         margin-bottom: 45px;
         margin-top: 20px;
         font-size: 15px;
@@ -58,43 +58,20 @@
         }
     }
 
-    .post-to-tags-separator {
+    &__tags-separator {
         border-color: $cor-primaria-verde;
         border-width: 3px;
     }
 
-    .post-tags {
+    &__tags {
         font-size: 11px;
         list-style: none;
         margin: 0;
         padding: 0;
-
-        li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-    }
-}
-
-.latest-posts {
-    margin-top: 30px;
-
-    h2 {
-        font-size: 20px;
-        margin: 0;
     }
 
-    .latest-post-title {
-        font-size: 16px;
-        line-height: 18px;
-        margin-top: 15px;
-
-        a {
-            color: #172938;
-        }
-    }
-
-    .latest-post-date {
-        font-size: 11px;
+    &__tag {
+        display: inline-block;
+        margin-right: 10px;
     }
 }

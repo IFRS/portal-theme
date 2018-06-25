@@ -7,16 +7,16 @@
         <article class="page">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 class="page-title"><?php the_title(); ?></h2>
+                    <h2 class="page__title"><?php the_title(); ?></h2>
                 </div>
             </div>
             <?php get_template_part('partials/menus/subpages'); ?>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="page-content">
+                    <div class="page__content">
                         <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail('full', array('class' => 'page-thumb'));
+                                the_post_thumbnail('full', array('class' => 'page__thumb'));
                             }
                         ?>
                         <?php the_content(); ?>

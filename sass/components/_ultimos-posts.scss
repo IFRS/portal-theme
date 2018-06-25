@@ -1,0 +1,23 @@
+.ultimos-posts {
+    margin-top: 30px;
+
+    &__title {
+        @include title-box();
+        font-size: 20px;
+        margin: 0;
+    }
+
+    &__post-title {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 15px;
+
+        a {
+            color: #172938;
+        }
+    }
+
+    &__post-date {
+        font-size: 11px;
+    }
+}

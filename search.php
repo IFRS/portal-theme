@@ -7,7 +7,7 @@
 <?php else : ?>
     <div class="row">
         <div class="col-xs-12">
-            <h2 class="title-box"><?php printf('Resultados da busca por &quot;%s&quot;', get_search_query()); ?></h2>
+            <h2 class="search-results__title"><?php printf('Resultados da busca por &quot;%s&quot;', get_search_query()); ?></h2>
         </div>
     </div>
     <?php while (have_posts()) : the_post(); ?>

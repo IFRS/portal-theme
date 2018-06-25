@@ -1,5 +1,5 @@
 .page {
-    .page-title {
+    &__title {
         color: #172938;
         line-height: 37px;
         font-size: 34px;
@@ -7,12 +7,7 @@
         margin-top: 0;
     }
 
-    hr {
-        margin: 0;
-        margin-bottom: 10px;
-    }
-
-    .page-thumb {
+    &__thumb {
         width: 50%;
         height: auto;
         float: left;
@@ -20,7 +15,7 @@
         margin-bottom: 15px;
     }
 
-    .page-content {
+    &__content {
         margin-bottom: 45px;
         margin-top: 20px;
         font-size: 15px;
