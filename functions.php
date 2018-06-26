@@ -1,63 +1,63 @@
 <?php
 // Restrições para usuários
-require_once('lib/restrictions.php');
+require_once('inc/restrictions.php');
 
 // Utilidades
-require_once('lib/utils.php');
+require_once('inc/utils.php');
 
 // Cookie Fix
-require_once('lib/cookie-fix.php');
+require_once('inc/cookie-fix.php');
 
 // Suporte para diversas funções
-require_once('lib/theme-support.php');
+require_once('inc/theme-support.php');
 
 // Títulos personalizados
-require_once('lib/custom-title.php');
+require_once('inc/custom-title.php');
 
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
-require_once('lib/depth-limit.php');
+require_once('inc/depth-limit.php');
 
 // Registra os menus
-require_once('lib/menus.php');
+require_once('inc/menus.php');
 
 // Breadcrumb
-require_once('lib/breadcrumb.php');
+require_once('inc/breadcrumb.php');
 
 // Script Condicional
-require_once('lib/script-conditional.php');
+require_once('inc/script-conditional.php');
 
 // Scripts & Styles
-require_once('lib/assets.php');
+require_once('inc/assets.php');
 
 // Paginação personalizada
-require_once('lib/pagination.php');
+require_once('inc/pagination.php');
 
 // Filtro para buscas vazias
-require_once('lib/empty-search-filter.php');
+require_once('inc/empty-search-filter.php');
 
 // Widgets
-require_once('lib/widgets.php');
+require_once('inc/widgets.php');
 
 // Queries personalizadas em determinados templates
-require_once('lib/custom-queries.php');
+require_once('inc/custom-queries.php');
 
 // Custom TinyMCE
-require_once('lib/custom-tinymce.php');
+require_once('inc/custom-tinymce.php');
 
 // Permitir tag iframe
-require_once('lib/allow-iframe.php');
+require_once('inc/allow-iframe.php');
 
 // Tamanho do excerpt
-require_once('lib/excerpt-length.php');
+require_once('inc/excerpt-length.php');
 
 // Configurações da Galeria
-require_once('lib/gallery.php');
+require_once('inc/gallery.php');
 
 // Remove all "version" text from output
-require_once('lib/remove-version.php');
+require_once('inc/remove-version.php');
 
 // Taxonomias
-require_once('lib/taxonomies/escopo.php');
+require_once('inc/taxonomies/escopo.php');
 
 // Shortcodes
-require_once('lib/shortcodes/noticias-escopo.php');
+require_once('inc/shortcodes/noticias-escopo.php');
