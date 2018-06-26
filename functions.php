@@ -61,3 +61,6 @@ require_once('inc/taxonomies/escopo.php');
 
 // Shortcodes
 require_once('inc/shortcodes/noticias-escopo.php');
+
+// Cartola
+require_once('inc/cartola.php');
