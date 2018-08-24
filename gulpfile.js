@@ -9,12 +9,10 @@ const postcss      = require('gulp-postcss');
 const rename       = require('gulp-rename');
 const sass         = require('gulp-sass');
 const uglify       = require('gulp-uglify');
-const merge2       = require('merge2');
 const argv         = require('minimist')(process.argv.slice(2));
 const path         = require('path');
 const pixrem       = require('pixrem');
 const PluginError  = require('plugin-error');
-const flexibility  = require('postcss-flexibility');
 const through2     = require('through2');
 const webpack      = require('webpack');
 
@@ -107,21 +105,25 @@ gulp.task('scripts', gulp.series('webpack', function js() {
     .pipe(browserSync.stream());
 }));
 
-gulp.task('assets', function() {
-    var open_sans = gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
+gulp.task('assets_opensans', function() {
+    return gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
     .pipe((argv.debug) ? debug({title: 'Assets OpenSans:'}) : through2.obj())
     .pipe(gulp.dest('fonts/opensans/'));
+});
 
-    var bootstrap = gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*')
+gulp.task('assets_bootstrap', function() {
+    return gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*')
     .pipe((argv.debug) ? debug({title: 'Assets Bootstrap:'}) : through2.obj())
     .pipe(gulp.dest('fonts/'));
+});
 
-    var fancybox = gulp.src('node_modules/jquery-fancybox/source/img/**/*')
+gulp.task('assets_fancybox', function() {
+    return gulp.src('node_modules/jquery-fancybox/source/img/**/*')
     .pipe((argv.debug) ? debug({title: 'Assets Fancybox:'}) : through2.obj())
     .pipe(gulp.dest('img/vendor/'));
-
-    return merge2(open_sans, bootstrap, fancybox);
 });
+
+gulp.task('assets', gulp.parallel('assets_opensans', 'assets_bootstrap', 'assets_fancybox'));
 
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
@@ -136,9 +138,15 @@ gulp.task('dist', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', function() {
+if (argv.production) {
+    gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts', 'assets', 'images'), 'dist'));
+} else {
+    gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'webpack', 'assets')));
+}
+
+gulp.task('default', gulp.series('build', function watch() {
     browserSync.init({
-        ui: false,
+        ghostMode: false,
         notify: false,
         online: false,
         open: false,
@@ -151,10 +159,4 @@ gulp.task('default', function() {
     gulp.watch('src/**/*.js', gulp.series('webpack'));
 
     gulp.watch('**/*.php').on('change', browserSync.reload);
-});
-
-if (argv.production) {
-    gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts', 'assets', 'images'), 'dist'));
-} else {
-    gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'webpack', 'assets')));
-}
+}));
