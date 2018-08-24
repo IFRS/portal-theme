@@ -1,4 +1,3 @@
-require('jquery');
 require('bootstrap');
 
 require('./modules/datatables-config');
