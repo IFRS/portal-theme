@@ -27,7 +27,7 @@
         }
     }
 
-    @media (min-width: $screen-sm-min) {
+    @include media-breakpoint-up(md) {
         text-align: right;
     }
 }

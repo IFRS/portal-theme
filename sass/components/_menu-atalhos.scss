@@ -1,7 +1,7 @@
 .menu-atalhos {
     @include menu-barra();
 
-    @media only screen and (min-width: $screen-md-min) {
+    @include media-breakpoint-up(lg) {
         text-align: left;
     }
 

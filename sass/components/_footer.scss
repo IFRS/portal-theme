@@ -18,7 +18,7 @@
             color: #dddddd;
         }
 
-        @media only screen and (min-width: $screen-md-min) {
+        @include media-breakpoint-up(lg) {
             .row {
                 display: flex;
                 align-items: center;

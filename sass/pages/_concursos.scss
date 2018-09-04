@@ -10,7 +10,6 @@
 }
 
 .panel-concurso {
-    @include panel-variant(none, $panel-default-text, transparent, none);
     .panel-heading {
         h3 {
             margin-top: 10px;

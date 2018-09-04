@@ -3,7 +3,7 @@
         @include widget();
 
         img {
-            @extend .center-block;
+            @extend .mx-auto;
         }
     }
 }

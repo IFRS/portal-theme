@@ -4,7 +4,7 @@
     margin-top: 10px;
     text-transform: uppercase;
 
-    @media only screen and (min-width: $screen-md-min) {
+    @include media-breakpoint-up(lg) {
         margin-top: 0;
         text-align: right;
     }

@@ -1,6 +1,5 @@
 .carousel {
     .carousel-control {
-        @include reset-filter();
         background-image: none !important;
         outline: 0;
     }

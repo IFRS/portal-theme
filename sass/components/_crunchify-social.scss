@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
 
-    @media screen and (min-width: $screen-md-min) {
+    @include media-breakpoint-up(lg) {
         text-align: right;
     }
 
@@ -88,7 +88,7 @@
         &_whatsapp {
             background: #43d854;
 
-            @media screen and (min-width: $screen-md-min) {
+            @include media-breakpoint-up(md) {
                 display: none !important;
             }
 

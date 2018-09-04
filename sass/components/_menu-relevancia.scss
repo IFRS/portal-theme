@@ -27,7 +27,7 @@
         }
     }
 
-    @media screen and (max-width: $screen-md-min) {
+    @include media-breakpoint-down(lg) {
         margin-bottom: 15px;
 
         > li {
