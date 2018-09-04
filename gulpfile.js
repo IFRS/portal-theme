@@ -1,20 +1,33 @@
+const argv         = require('minimist')(process.argv.slice(2));
 const autoprefixer = require('autoprefixer');
 const browserSync  = require('browser-sync').create();
-const del          = require('del');
-const gulp         = require('gulp');
 const cssmin       = require('gulp-cssmin');
 const debug        = require('gulp-debug');
+const del          = require('del');
+const gulp         = require('gulp');
 const imagemin     = require('gulp-imagemin');
-const postcss      = require('gulp-postcss');
-const rename       = require('gulp-rename');
-const sass         = require('gulp-sass');
-const uglify       = require('gulp-uglify');
-const argv         = require('minimist')(process.argv.slice(2));
 const path         = require('path');
 const pixrem       = require('pixrem');
 const PluginError  = require('plugin-error');
+const postcss      = require('gulp-postcss');
+const rename       = require('gulp-rename');
+const sass         = require('gulp-sass');
 const through2     = require('through2');
+const uglify       = require('gulp-uglify');
 const webpack      = require('webpack');
+
+const browserslist = [
+    'last 3 versions',
+    '>= 1%',
+    'Chrome >= 45',
+    'Firefox >= 38',
+    'Edge >= 12',
+    'Explorer >= 10',
+    'iOS >= 9',
+    'Safari >= 9',
+    'Android >= 4.4',
+    'Opera >= 30'
+];
 
 const dist = [
     '**',
@@ -36,7 +49,7 @@ gulp.task('sass', function() {
     var postCSSplugins = [
         require('postcss-flexibility'),
         pixrem(),
-        autoprefixer({browsers: ['> 1%', 'last 3 versions', 'ie 8-10', 'not ie <= 7']})
+        autoprefixer({browsers: browserslist})
     ];
 
     return gulp.src('sass/*.scss')
