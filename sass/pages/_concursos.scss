@@ -20,13 +20,12 @@
             padding-right: 15px;
             &:after {
                 /* symbol for "opening" panels */
-                @extend %fa-icon;
                 @extend .fas;
                 content: fa-content($fa-var-caret-down);
                 float: right;
                 color: #fff;
                 background-color: $cor-concursos;
-                padding: 3px;
+                padding: 3px 5px;
                 border-radius: 4px;
             }
             &.collapsed:after {

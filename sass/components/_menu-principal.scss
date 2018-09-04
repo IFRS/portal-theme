@@ -31,12 +31,11 @@
 
             &:after {
                 /* symbol for "opening" panels */
-                @extend %fa-icon;
                 @extend .fas;
                 content: fa-content($fa-var-angle-down);
                 float: right;
+                font-size: 1.1rem;
                 padding: 0 2px 0 0;
-                font-weight: normal;
                 margin-right: -16px;
             }
 

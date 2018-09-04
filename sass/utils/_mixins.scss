@@ -40,14 +40,12 @@
     text-transform: uppercase;
 
     &:after {
-        @extend %fa-icon;
         @extend .fas;
         content: fa-content($fa-var-angle-right);
         color: #fff;
         background-color: $cor;
-        padding: 3px;
+        padding: 3px 5px;
         border-radius: 4px;
         margin-left: 5px;
-        font-size: 0.8em;
     }
 }
