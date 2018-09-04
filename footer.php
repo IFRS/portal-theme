@@ -30,7 +30,7 @@
                 <div class="col-12 col-lg-6 area-rodape">
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>
-                <div class="col-12 col-lg-3 col-lg-offset-3 col-xl-2 col-xl-offset-4">
+                <div class="col-12 col-lg-3 offset-lg-3 col-xl-2 offset-xl-4">
                     <a href="http://www.acessoainformacao.gov.br/"><img src="<?php echo get_template_directory_uri(); ?>/img/acesso-info.png" alt="Acesso &agrave; Informa&ccedil;&atilde;o" class="img-fluid mx-auto"></a>
                 </div>
             </div>
