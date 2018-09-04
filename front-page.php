@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
     <?php
         if (is_front_page()) {
             get_template_part('partials/menus/campi');
@@ -35,7 +35,7 @@
 
 <div class="row">
     <!-- Banners -->
-    <div class="col-xs-12 col-md-5 col-md-push-7">
+    <div class="col-12 col-lg-5 col-lg-push-7">
         <div class="area-home">
             <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
         </div>
@@ -43,7 +43,7 @@
     <?php while ($query->have_posts() && $query->current_post < 4) : $query->the_post(); ?>
         <?php if ($query->current_post == 0) : ?>
             <!-- Notícia Destaque -->
-            <div class="col-xs-12 col-md-7 col-md-pull-5">
+            <div class="col--12 col-lg-7 col-lg-pull-5">
                 <article class="noticia noticia_destaque">
                     <?php get_template_part('partials/noticias/item'); ?>
                 </article>
@@ -54,35 +54,35 @@
                 <div class="row">
             <?php endif; ?>
             <!-- Notícia Normal -->
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-12 col-md-6 col-lg-3">
                 <article class="noticia">
                     <?php get_template_part('partials/noticias/item'); ?>
                 </article>
             </div>
         <?php endif; ?>
     <?php endwhile; ?>
-    <div class="col-xs-12">
+    <div class="col-12">
         <?php wp_reset_query(); ?>
         <div class="acesso-todas-noticias">
             <hr class="acesso-todas-noticias__separador">
-            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="pull-right acesso-todas-noticias__link"><?php _e('Acesse mais notícias'); ?></a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="float-right acesso-todas-noticias__link"><?php _e('Acesse mais notícias'); ?></a>
         </div>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
         <?php get_template_part('partials/editais/latest'); ?>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12 col-md-8">
+    <div class="col-12 col-lg-8">
         <div class="area-gallery">
             <?php if (!dynamic_sidebar('widget-gallery')) : endif; ?>
         </div>
     </div>
-    <div class="col-xs-12 col-md-4">
+    <div class="col-12 col-lg-4">
         <div class="area-home-side">
             <?php if (!dynamic_sidebar('widget-home-side')) : endif; ?>
         </div>
@@ -91,7 +91,7 @@
 
 <?php if (is_active_sidebar('widget-atalhos')) : ?>
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
         <h2 class="title-box"><?php _e('Acesso R&aacute;pido'); ?></h2>
         <nav>
             <ul class="area-atalhos">
@@ -103,7 +103,7 @@
 <?php endif; ?>
 
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
         <div class="area-banners">
             <hr class="area-banners__separator">
             <?php if (!dynamic_sidebar('widget-banners')) : endif; ?>

@@ -3,16 +3,16 @@
 <?php the_post(); ?>
 
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
         <article class="page">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <h2 class="page__title"><?php the_title(); ?></h2>
                 </div>
             </div>
             <?php get_template_part('partials/menus/subpages'); ?>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <div class="page__content">
                         <?php
                             if (has_post_thumbnail()) {
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <?php get_template_part('partials/share-buttons'); ?>
                 </div>
             </div>

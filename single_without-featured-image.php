@@ -9,10 +9,10 @@
 <?php the_post(); ?>
 
 <div class="row">
-    <div class="col-xs-12 col-md-9">
+    <div class="col-12 col-lg-9">
         <article class="post">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <?php
                         $categories = get_the_category();
                         $cat_name = $categories[0]->cat_name;
@@ -21,25 +21,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <h2 class="post__title"><?php the_title(); ?></h2>
                 </div>
             </div>
             <hr>
             <div class="row">
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-12 col-md-6">
                     <small class="post__date">
-                        <span class="glyphicon glyphicon-calendar"></span>&nbsp;publicado em <?php the_time('d'); ?> de <?php the_time('F'); ?> de <?php the_time('Y'); ?>
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i></span>&nbsp;publicado em <?php the_time('d'); ?> de <?php the_time('F'); ?> de <?php the_time('Y'); ?>
                         <br>
-                        <?php if (get_the_modified_time() != get_the_time()) : ?><span class="glyphicon glyphicon-calendar"></span>&nbsp;&uacute;ltima modifica&ccedil;&atilde;o em <?php the_modified_time('d'); ?> de <?php the_modified_time('F'); ?> de <?php the_modified_time('Y'); ?> <?php endif; ?>
+                        <?php if (get_the_modified_time() != get_the_time()) : ?><i class="fas fa-calendar-alt" aria-hidden="true"></i></span>&nbsp;&uacute;ltima modifica&ccedil;&atilde;o em <?php the_modified_time('d'); ?> de <?php the_modified_time('F'); ?> de <?php the_modified_time('Y'); ?> <?php endif; ?>
                     </small>
                 </div>
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-12 col-md-6">
                     <?php get_template_part('partials/share', 'buttons'); ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <div class="post__content">
                         <?php the_content(); ?>
                     </div>
@@ -49,7 +49,7 @@
             <?php if (!empty($tags)) : ?>
                 <hr class="post__tags-separator">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-12">
                         <ul class="post__tags">
                             <?php foreach ($tags as $tag) : ?>
                                 <li class="post__tag"><a class="btn btn-default btn-sm" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a></li>
@@ -60,7 +60,7 @@
             <?php endif; ?>
         </article>
     </div>
-    <div class="col-xs-12 col-md-3">
+    <div class="col-12 col-lg-3">
         <?php get_template_part('partials/noticias/latest'); ?>
     </div>
 </div>
