@@ -33,7 +33,7 @@
                 /* symbol for "opening" panels */
                 @extend %fa-icon;
                 @extend .fas;
-                content: fa-content($fa-angle-down);
+                content: fa-content($fa-var-angle-down);
                 float: right;
                 padding: 0 2px 0 0;
                 font-weight: normal;
@@ -42,7 +42,7 @@
 
             &.collapsed:after {
                 /* symbol for "collapsed" panels */
-                content: fa-content($fa-angle-right);
+                content: fa-content($fa-var-angle-right);
             }
         }
     }

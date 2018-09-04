@@ -22,7 +22,7 @@
                 /* symbol for "opening" panels */
                 @extend %fa-icon;
                 @extend .fas;
-                content: fa-content($fa-caret-down);
+                content: fa-content($fa-var-caret-down);
                 float: right;
                 color: #fff;
                 background-color: $cor-concursos;
@@ -31,7 +31,7 @@
             }
             &.collapsed:after {
                 /* symbol for "collapsed" panels */
-                content: fa-content($fa-caret-right);
+                content: fa-content($fa-var-caret-right);
             }
         }
     }
