@@ -1,5 +1,5 @@
 require('datatables.net');
-require('datatables.net-bs');
+require('datatables.net-bs4');
 require('moment');
 require('datatables.net-plugins/sorting/datetime-moment');
 
