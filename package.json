@@ -2,7 +2,7 @@
   "name": "ifrs-portal-theme",
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^9.1.3",
+    "autoprefixer": "^9.1.5",
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.24.7",
     "datatables.net": "^1.10.19",
@@ -33,6 +33,6 @@
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
     "through2": "^2.0.3",
-    "webpack": "^4.17.1"
+    "webpack": "^4.17.2"
   }
 }
