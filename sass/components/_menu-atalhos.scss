@@ -5,6 +5,10 @@
         text-align: left;
     }
 
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
     li {
         .badge {
             font-size: 10px;
