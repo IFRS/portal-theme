@@ -125,7 +125,7 @@ gulp.task('assets_opensans', function() {
     .pipe(gulp.dest('fonts/opensans/'));
 });
 
-gulp.task('assets_opensans', function() {
+gulp.task('assets_fontawesome', function() {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**/fa-solid*')
     .pipe((argv.debug) ? debug({title: 'Assets FontAwesome:'}) : through2.obj())
     .pipe(gulp.dest('fonts/fa/'));
@@ -137,7 +137,7 @@ gulp.task('assets_fancybox', function() {
     .pipe(gulp.dest('img/vendor/'));
 });
 
-gulp.task('assets', gulp.parallel('assets_opensans', 'assets_fancybox'));
+gulp.task('assets', gulp.parallel('assets_opensans', 'assets_fontawesome', 'assets_fancybox'));
 
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
