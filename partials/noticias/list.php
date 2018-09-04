@@ -1,6 +1,6 @@
 <div class="lista-noticias">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
             <h2 class="lista-noticias__title">
             <?php
                 if (is_home()) {
@@ -21,7 +21,7 @@
 
     <div class="row lista-noticias__content">
     <?php while (have_posts()) : the_post(); ?>
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-12 col-md-6 col-lg-3">
             <article class="noticia">
                 <?php get_template_part('partials/noticias/item'); ?>
             </article>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
             <nav class="text-center">
                 <?php echo portal_pagination(); ?>
             </nav>

@@ -1,8 +1,8 @@
 <h3 class="text-center"><?php _e('Filtros'); ?></h3>
 
 <div id="documento-filter-accordion">
-    <div class="panel">
-        <div class="btn-group btn-group-justified" role="group" aria-label="Filtros">
+    <div class="card card-body">
+        <div class="btn-group d-flex" role="group" aria-label="Filtros">
             <a id="toggleYearly" class="btn btn-primary" role="button" data-toggle="collapse" data-parent="#documento-filter-accordion" href="#collapseYearly" aria-expanded="true" aria-controls="collapseYearly">
                 <?php _e('por Ano'); ?>
             </a>

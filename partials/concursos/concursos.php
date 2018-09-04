@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-12 col-md-9" id="concursos">
+    <div class="col-12 col-lg-9" id="concursos">
         <h2 class="title"><?php get_template_part('partials/concursos/title'); ?></h2>
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/concursos/loop'); ?>
@@ -15,7 +15,7 @@
                 <?php endif; ?>
         <?php endif; ?>
     </div>
-    <div class="col-xs-12 col-md-3">
+    <div class="col-12 col-lg-3">
         <aside>
             <?php get_template_part('partials/concursos/concurso-status'); ?>
             <?php get_template_part('partials/search-local'); ?>

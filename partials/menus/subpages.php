@@ -14,7 +14,7 @@
             <li><a href="<?php echo get_page_link($parent); ?>" title="Retornar ao nível anterior"><span class="glyphicon glyphicon-arrow-up"></span></a></li>
         <?php endif; ?> -->
         <?php foreach ($children as $child): ?>
-            <li class="menu-subpages__item"><a class="menu-subpages__link" href="<?php echo get_page_link($child->ID); ?>"><?php echo $child->post_title; ?></a></li>
+            <li class="nav-item menu-subpages__item"><a class="nav-link menu-subpages__link" href="<?php echo get_page_link($child->ID); ?>"><?php echo $child->post_title; ?></a></li>
         <?php endforeach; ?>
     </ul>
 <?php else : ?>

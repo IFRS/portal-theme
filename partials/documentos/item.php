@@ -1,13 +1,13 @@
 <div class="row">
-    <div class="col-xs-12 col-md-9">
+    <div class="col-12 col-lg-9">
         <article id="documento">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <h2 class="title"><?php the_title(); ?></h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <?php the_content(); ?>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                     }, rwmb_meta('documento_anexos' ))
                 );
             ?>
-                <div class="col-xs-12">
+                <div class="col-12">
                     <div class="table-responsive">
                         <table class="table table-striped table-arquivos">
                             <thead>
@@ -52,15 +52,15 @@
             </div>
         </article>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-12">
                 <?php get_template_part('partials/share-buttons'); ?>
             </div>
         </div>
     </div>
-    <div class="col-xs-12 col-md-3">
+    <div class="col-12 col-lg-3">
         <aside>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <h3 class="title-box"><?php _e('Dados do Documento'); ?></h3>
                     <p>
                         <strong>Tipo</strong>
@@ -76,7 +76,7 @@
                         </p>
                     <?php endif; ?>
                     <p>
-                        <strong>Publicação</strong>
+                        <strong>Publica&ccedil;&atilde;o</strong>
                         <br>
                         <?php echo get_the_date(); ?> <?php _e('às'); ?> <?php echo get_the_time('G\hi'); ?>
                     </p>

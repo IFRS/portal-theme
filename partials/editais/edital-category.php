@@ -9,7 +9,7 @@ $terms = wp_list_categories(array(
 
 
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
         <h3 class="title-box"><?php _e('Categorias'); ?></h3>
         <ul class="side-list">
             <?php echo $terms; ?>

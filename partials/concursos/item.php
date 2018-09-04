@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
         <?php the_content(); ?>
     </div>
 </div>
@@ -57,7 +57,7 @@
 ?>
 
 <?php if ( !empty( $concurso_files ) ) : ?>
-    <div class="col-xs-12 concurso-arquivos">
+    <div class="col-12 concurso-arquivos">
         <ul class="tab-list row" role="tablist">
             <?php if (!empty($concurso_files['edital'])) : ?><li class="active col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-edital" aria-controls="tab-edital" role="tab" data-toggle="tab">Edital</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['anexos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-anexos" aria-controls="tab-anexos" role="tab" data-toggle="tab">Anexos</a></li><?php endif; ?>

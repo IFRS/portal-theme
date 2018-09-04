@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-12 col-md-9" id="editais">
+    <div class="col-12 col-lg-9" id="editais">
         <h2 class="title"><?php get_template_part('partials/editais/title'); ?></h2>
         <p><?php _e('Neste espaço, é possível acessar editais publicados pelos diferentes setores da Reitoria do IFRS. A lista de documentos está organizada por ordem de publicação ou atualização. Os mais atuais aparecem primeiro. É possível, também, consultar por categorias. Basta clicar, no menu à direita, no setor responsável pelo edital procurado. Em alguns casos, há ainda categorias relacionadas ao setor, para facilitar as buscas.', 'ifrs-portal-theme'); ?></p>
         <p><?php _e('Editais antigos podem ser buscados no site anterior do IFRS, na página do setor ao qual o edital está vinculado.', 'ifrs-portal-theme'); ?></p>
@@ -22,13 +22,13 @@
                 <?php endif; ?>
         <?php endif; ?>
     </div>
-    <div class="col-xs-12 col-md-3">
+    <div class="col-12 col-lg-3">
         <aside>
             <?php get_template_part('partials/editais/edital-category'); ?>
             <?php get_template_part('partials/editais/edital-status'); ?>
             <?php if (is_tax('edital_category')) : ?>
                 <br>
-                <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="btn btn-default btn-block"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<?php _e('Todos os Editais', 'ifrs-portal-theme'); ?></a>
+                <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="btn btn-default btn-block"><i class="fas fa-angle-left"></i>&nbsp;<?php _e('Todos os Editais', 'ifrs-portal-theme'); ?></a>
             <?php endif; ?>
         </aside>
     </div>
