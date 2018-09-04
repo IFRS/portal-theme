@@ -1,21 +1,21 @@
 <?php
 function portal_breadcrumb() {
     $home      = 'Home';
-    $before    = '<li class="active">';
+    $before    = '<li class="breadcrumb-item active" aria-current="page">';
     $sep       = '';
     $after     = '</li>';
 
     if (!is_front_page() || is_paged()) {
-		echo '<div class="container" id="breadcrumb"><div class="row"><div class="col-xs-12">';
-		echo '<ol class="breadcrumb">';
-		echo __('Voc&ecirc; est&aacute; em: ');
+		echo '<div class="container" id="breadcrumb"><div class="row"><div class="col">';
+		echo '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
+		echo __('Voc&ecirc; est&aacute; em:&nbsp;');
 
         global $post;
         $homeLink = home_url();
 		$siteprincipal = get_home_url('1','/');
         $nomesite = get_bloginfo('name');
 
-        echo '<li><a href="' . $homeLink . '">' . $nomesite . '</a> '.$sep. '</li> ';
+        echo '<li class="breadcrumb-item"><a href="' . $homeLink . '">' . $nomesite . '</a> '.$sep. '</li> ';
 
         if (is_home()) {
             echo $before . get_the_title(get_option( 'page_for_posts' )) . $after;
@@ -32,29 +32,29 @@ function portal_breadcrumb() {
         } elseif (is_search()) {
             echo $before . 'Resultado da pesquisa por: "' . get_search_query() . '"' . $after;
         } elseif (is_tax('concurso_status')) {
-            echo '<li><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
         } elseif (is_tax('documento_type') || is_tax('documento_origin')) {
-            echo '<li><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
         } elseif (is_tax('edital_category')) {
-            echo '<li><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
         } elseif (is_tax('edital_status')) {
-            echo '<li><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
         } elseif (is_tax('escopo')) {
             echo $before . single_term_title('Not&iacute;cias para ', false) . $after;
         } elseif (is_day()) {
-            echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
+            echo '<li class="breadcrumb-item"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                 'Y'
             ) . '</a></li> ';
-            echo '<li><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time(
+            echo '<li class="breadcrumb-item"><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time(
                 'F'
             ) . '</a></li> ';
             echo $before . get_the_time('d') . $after;
         } elseif (is_month()) {
-            echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
+            echo '<li class="breadcrumb-item"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                 'Y'
             ) . '</a></li> ';
             echo $before . get_the_time('F') . $after;
@@ -64,12 +64,12 @@ function portal_breadcrumb() {
             if (get_post_type() != 'post') {
                 $post_type = get_post_type_object(get_post_type());
                 $slug      = $post_type->rewrite;
-                echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->name . '</a></li> ';
+                echo '<li class="breadcrumb-item"><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->name . '</a></li> ';
                 echo $before . get_the_title() . $after;
             } else {
                 $cat = get_the_category();
                 $cat = $cat[0];
-                echo '<li>'.get_category_parents($cat, true, $sep).'</li>';
+                echo '<li class="breadcrumb-item">'.get_category_parents($cat, true, $sep).'</li>';
                 echo $before . get_the_title() . $after;
             }
         } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
@@ -79,7 +79,7 @@ function portal_breadcrumb() {
             $cat    = get_the_category($parent->ID);
             $cat    = $cat[0];
             echo get_category_parents($cat, true, $sep);
-            echo '<li><a href="' . get_permalink(
+            echo '<li class="breadcrumb-item"><a href="' . get_permalink(
                 $parent
             ) . '">' . $parent->post_title . '</a></li> ';
             echo $before . get_the_title() . $after;
@@ -91,7 +91,7 @@ function portal_breadcrumb() {
             $breadcrumbs = array();
             while ($parent_id) {
                 $page          = get_page($parent_id);
-                $breadcrumbs[] = '<li><a href="' . get_permalink($page->ID) . '">' . get_the_title(
+                $breadcrumbs[] = '<li class="breadcrumb-item"><a href="' . get_permalink($page->ID) . '">' . get_the_title(
                     $page->ID
                 ) . '</a>' . $sep . '</li>';
                 $parent_id     = $page->post_parent;
@@ -111,7 +111,7 @@ function portal_breadcrumb() {
             echo $before . 'Erro 404' . $after;
         }
 
-        echo '</ol>';
+        echo '</nav></ol>';
 		echo '</div></div></div>';
     }
 }
