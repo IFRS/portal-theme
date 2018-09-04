@@ -35,7 +35,7 @@
 
 <div class="row">
     <!-- Banners -->
-    <div class="col-12 col-lg-5 col-lg-push-7">
+    <div class="col-12 col-lg-5 order-last">
         <div class="area-home">
             <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
         </div>
@@ -43,7 +43,7 @@
     <?php while ($query->have_posts() && $query->current_post < 4) : $query->the_post(); ?>
         <?php if ($query->current_post == 0) : ?>
             <!-- Notícia Destaque -->
-            <div class="col--12 col-lg-7 col-lg-pull-5">
+            <div class="col-12 col-lg-7 order-first">
                 <article class="noticia noticia_destaque">
                     <?php get_template_part('partials/noticias/item'); ?>
                 </article>
