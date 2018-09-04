@@ -40,8 +40,9 @@
     text-transform: uppercase;
 
     &:after {
-        font-family: 'Glyphicons Halflings';
-        content: "\e080";
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-angle-right);
         color: #fff;
         background-color: $cor;
         padding: 3px;

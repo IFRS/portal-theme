@@ -20,8 +20,9 @@
             padding-right: 15px;
             &:after {
                 /* symbol for "opening" panels */
-                font-family: 'Glyphicons Halflings';
-                content: "\e114";
+                @extend %fa-icon;
+                @extend .fas;
+                content: fa-content($fa-caret-down);
                 float: right;
                 color: #fff;
                 background-color: $cor-concursos;
@@ -30,7 +31,7 @@
             }
             &.collapsed:after {
                 /* symbol for "collapsed" panels */
-                content: "\e080";
+                content: fa-content($fa-caret-right);
             }
         }
     }

@@ -125,6 +125,12 @@ gulp.task('assets_opensans', function() {
     .pipe(gulp.dest('fonts/opensans/'));
 });
 
+gulp.task('assets_opensans', function() {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**/fa-solid*')
+    .pipe((argv.debug) ? debug({title: 'Assets FontAwesome:'}) : through2.obj())
+    .pipe(gulp.dest('fonts/fa/'));
+});
+
 gulp.task('assets_fancybox', function() {
     return gulp.src('node_modules/jquery-fancybox/source/img/**/*')
     .pipe((argv.debug) ? debug({title: 'Assets Fancybox:'}) : through2.obj())

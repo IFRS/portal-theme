@@ -31,8 +31,9 @@
 
             &:after {
                 /* symbol for "opening" panels */
-                font-family: 'Glyphicons Halflings';
-                content: "\e259";
+                @extend %fa-icon;
+                @extend .fas;
+                content: fa-content($fa-angle-down);
                 float: right;
                 padding: 0 2px 0 0;
                 font-weight: normal;
@@ -41,7 +42,7 @@
 
             &.collapsed:after {
                 /* symbol for "collapsed" panels */
-                content: "\e258";
+                content: fa-content($fa-angle-right);
             }
         }
     }
