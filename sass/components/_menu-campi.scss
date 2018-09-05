@@ -1,7 +1,6 @@
 .menu-campi {
     background-color: $menu-campi-fundo;
     border-radius: 4px;
-    font-size: 1.1em;
     list-style: none;
     margin: 0;
     padding: 10px;
@@ -27,7 +26,6 @@
     }
 
     @include media-breakpoint-up(md) {
-        font-size: 1.1em;
         padding: 10px;
     }
 
