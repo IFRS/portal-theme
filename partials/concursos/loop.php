@@ -4,10 +4,10 @@
         <div class="card-header" role="tab" id="heading-<?php the_ID(); ?>">
         <?php $status = get_the_terms(get_the_ID(), 'concurso_status'); ?>
         <?php if ($status && is_post_type_archive('concurso')) : ?>
-            <span class="label label-primary"><?php echo $status[0]->name; ?></span>
+            <span class="badge badge-info p-2"><?php echo $status[0]->name; ?></span>
         <?php endif; ?>
             <h3>
-                <a href="#collapse-<?php the_ID(); ?>" class="btn btn-link accordion-toggle" role="button" data-toggle="collapse" data-target="#collapse-<?php the_ID(); ?>" aria-expanded="true" aria-controls="collapse-<?php the_ID(); ?>">
+                <a href="#collapse-<?php the_ID(); ?>" class="accordion-toggle" role="button" data-toggle="collapse" data-target="#collapse-<?php the_ID(); ?>" aria-expanded="true" aria-controls="collapse-<?php the_ID(); ?>">
                     <?php the_title(); ?>
                 </a>
             </h3>

@@ -58,22 +58,22 @@
 
 <?php if ( !empty( $concurso_files ) ) : ?>
     <div class="col-12 concurso-arquivos">
-        <ul class="tab-list row" role="tablist">
-            <?php if (!empty($concurso_files['edital'])) : ?><li class="active col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-edital" aria-controls="tab-edital" role="tab" data-toggle="tab">Edital</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['anexos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-anexos" aria-controls="tab-anexos" role="tab" data-toggle="tab">Anexos</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['cronograma'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-cronograma" aria-controls="tab-cronograma" role="tab" data-toggle="tab">Cronograma</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['editais_complementares'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-editais_complementares" aria-controls="tab-editais_complementares" role="tab" data-toggle="tab">Editais Complementares</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['listas'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-listas" aria-controls="tab-listas" role="tab" data-toggle="tab">Listas</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['provas'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-provas" aria-controls="tab-provas" role="tab" data-toggle="tab">Provas</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['gabaritos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-gabaritos" aria-controls="tab-gabaritos" role="tab" data-toggle="tab">Gabaritos</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['recursos'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-recursos" aria-controls="tab-recursos" role="tab" data-toggle="tab">Recursos</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['resultados'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-resultados" aria-controls="tab-resultados" role="tab" data-toggle="tab">Resultados</a></li><?php endif; ?>
-            <?php if (!empty($concurso_files['nomeia'])) : ?><li class="col-xs-12 col-sm-4 col-lg-3" role="presentation"><a href="#tab-<?php the_ID(); ?>-nomeia" aria-controls="tab-nomeia" role="tab" data-toggle="tab">Nomeações</a></li><?php endif; ?>
+        <ul class="nav nav-pills" role="tablist">
+            <?php if (!empty($concurso_files['edital'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link active" href="#tab-<?php the_ID(); ?>-edital" aria-controls="tab-<?php the_ID(); ?>-edital" role="tab" data-toggle="tab">Edital</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['anexos'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-anexos" aria-controls="tab-<?php the_ID(); ?>-anexos" role="tab" data-toggle="tab">Anexos</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['cronograma'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-cronograma" aria-controls="tab-<?php the_ID(); ?>-cronograma" role="tab" data-toggle="tab">Cronograma</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['editais_complementares'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-editais_complementares" aria-controls="tab-<?php the_ID(); ?>-editais_complementares" role="tab" data-toggle="tab">Editais Complementares</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['listas'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-listas" aria-controls="tab-<?php the_ID(); ?>-listas" role="tab" data-toggle="tab">Listas</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['provas'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-provas" aria-controls="tab-<?php the_ID(); ?>-provas" role="tab" data-toggle="tab">Provas</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['gabaritos'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-gabaritos" aria-controls="tab-<?php the_ID(); ?>-gabaritos" role="tab" data-toggle="tab">Gabaritos</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['recursos'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-recursos" aria-controls="tab-<?php the_ID(); ?>-recursos" role="tab" data-toggle="tab">Recursos</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['resultados'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-resultados" aria-controls="tab-<?php the_ID(); ?>-resultados" role="tab" data-toggle="tab">Resultados</a></li><?php endif; ?>
+            <?php if (!empty($concurso_files['nomeia'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-nomeia" aria-controls="tab-<?php the_ID(); ?>-nomeia" role="tab" data-toggle="tab">Nomea&ccedil;&otilde;es</a></li><?php endif; ?>
         </ul>
         <div class="tab-content">
         <?php foreach ($concurso_files as $grupo => $files) : ?>
             <?php if (!empty($files)) : ?>
-                <div role="tabpanel" class="tab-pane fade<?php echo ($grupo == 'edital') ? ' in active' : ''; ?>" id="tab-<?php the_ID(); ?>-<?php echo $grupo; ?>">
+                <div role="tabpanel" class="tab-pane fade<?php echo ($grupo == 'edital') ? ' show active' : ''; ?>" id="tab-<?php the_ID(); ?>-<?php echo $grupo; ?>">
                     <div class="table-responsive">
                         <table class="table table-striped table-arquivos">
                             <thead>

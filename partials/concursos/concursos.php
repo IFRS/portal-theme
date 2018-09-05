@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-12 col-lg-9" id="concursos">
-        <h2 class="title"><?php get_template_part('partials/concursos/title'); ?></h2>
+    <div class="col-12 col-lg-9 concursos">
+        <h2 class="concursos__title"><?php get_template_part('partials/concursos/title'); ?></h2>
         <?php if (have_posts()) : ?>
             <?php get_template_part('partials/concursos/loop'); ?>
         <?php else : ?>

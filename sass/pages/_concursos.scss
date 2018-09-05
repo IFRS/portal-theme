@@ -1,4 +1,3 @@
-#concursos,
 #concurso {
     .title {
         @include title-box($cor-concursos, '../img/bg-concursos.png');
@@ -9,66 +8,50 @@
     }
 }
 
+.concursos {
+    &__title {
+        @include title-box($cor-concursos, '../img/bg-concursos.png');
+    }
+}
+
 .card-concurso {
     .card-header {
         h3 {
+            font-size: 1.1rem;
             margin-top: 10px;
         }
 
         .accordion-toggle {
             display: block;
             padding-right: 15px;
+
             &:after {
                 /* symbol for "opening" panels */
                 @extend .fas;
-                content: fa-content($fa-var-caret-down);
-                float: right;
+                content: fa-content($fa-var-angle-down);
+                border-radius: 4px;
                 color: #fff;
                 background-color: $cor-concursos;
-                padding: 3px 5px;
-                border-radius: 4px;
+                float: right;
+                min-width: 21px;
+                padding: 2px 5px;
+                text-align: center;
             }
+
             &.collapsed:after {
                 /* symbol for "collapsed" panels */
-                content: fa-content($fa-var-caret-right);
+                content: fa-content($fa-var-angle-right);
             }
         }
     }
 
-    .concurso-arquivos {
-        .tab-list {
-            list-style: none;
-            padding-left: 0;
-            li {
-                margin-bottom: $grid-gutter-width;
-                a {
-                    align-items: center;
-                    background: $cor-concursos-tab;
-                    border-radius: 4px;
-                    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
-                    display: flex;
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                    height: 80px;
-                    justify-content: center;
-                    padding: 10px;
-                    text-align: center;
-                    text-decoration: none;
-
-                    &:hover,
-                    &:active,
-                    &:visited {
-                        text-decoration: none;
-                    }
-                }
-
-                &.active {
-                    a {
-                        background: $cor-concursos-tab-active;
-                    }
-                }
-            }
+    .card-body {
+        a {
+            color: $cor-concursos;
         }
+    }
+
+    .concurso-arquivos {
         .dataTables_info {
             font-size: 0.9rem;
         }
