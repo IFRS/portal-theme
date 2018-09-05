@@ -1,4 +1,5 @@
 .area-social {
+    @include menu-barra();
     @include widget();
 
     margin-bottom: 0;
