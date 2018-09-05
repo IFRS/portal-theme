@@ -24,5 +24,31 @@ function portal_load_scripts() {
     }
 }
 
-add_action( 'wp_enqueue_scripts', 'portal_load_styles', 1 );
-add_action( 'wp_enqueue_scripts', 'portal_load_scripts', 1 );
+function add_defer_attribute($tag, $handle) {
+    $scripts_to_defer = array('js-barra-brasil');
+
+    foreach ($scripts_to_defer as $defer_script) {
+        if ($defer_script === $handle) {
+            return str_replace(' src', ' defer="defer" src', $tag);
+        }
+    }
+
+    return $tag;
+}
+
+function add_async_attribute($tag, $handle) {
+    $scripts_to_async = array();
+
+    foreach ($scripts_to_async as $async_script) {
+        if ($async_script === $handle) {
+            return str_replace(' src', ' async="async" src', $tag);
+        }
+    }
+
+    return $tag;
+}
+
+add_action('wp_enqueue_scripts', 'portal_load_styles', 1);
+add_action('wp_enqueue_scripts', 'portal_load_scripts', 1);
+add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
+add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
