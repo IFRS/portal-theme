@@ -37,7 +37,7 @@ $(function() {
             $(".menu-navbar").collapse('show');
         }
     });
-    $('#menu-navbar-toggle').on('click', function(e) {
+    $('.btn-menu-toggle').on('click', function(e) {
         $(".menu-navbar").collapse('toggle');
         e.preventDefault();
     });

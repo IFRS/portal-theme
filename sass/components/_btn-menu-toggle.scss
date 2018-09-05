@@ -1,0 +1,5 @@
+.btn-menu-toggle {
+    @include button-variant($cor-primaria-verde, $cor-primaria-verde);
+
+    margin-bottom: 15px;
+}

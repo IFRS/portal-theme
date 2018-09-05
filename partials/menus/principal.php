@@ -2,8 +2,8 @@
     <?php if (!dynamic_sidebar('widget-nav')) : endif; ?>
 </div>
 
-<a href="#" id="menu-navbar-toggle" class="btn btn-primary btn-lg visible-sm visible-xs"><span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;<span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</a>
-<nav class="menu-navbar collapse in">
+<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><i class="fas fa-bars"></i>&nbsp;<span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</button>
+<nav class="menu-navbar collapse show">
     <?php
         wp_nav_menu(
             array(
