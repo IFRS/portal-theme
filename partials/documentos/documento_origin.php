@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-12">
-        <h3 class="title-box"><?php _e('Origens'); ?></h3>
+        <h3><?php _e('Origens'); ?></h3>
         <ul class="side-list">
         <?php
             wp_list_categories(array(

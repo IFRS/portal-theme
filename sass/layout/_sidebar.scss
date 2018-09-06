@@ -6,4 +6,8 @@ aside {
     .form-text {
         font-size: 0.9rem;
     }
+
+    h3 {
+        @include title-box();
+    }
 }
