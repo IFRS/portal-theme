@@ -7,7 +7,7 @@
             <span class="badge badge-info p-2"><?php echo $status[0]->name; ?></span>
         <?php endif; ?>
             <h3>
-                <a href="#collapse-<?php the_ID(); ?>" class="accordion-toggle" role="button" data-toggle="collapse" data-target="#collapse-<?php the_ID(); ?>" aria-expanded="true" aria-controls="collapse-<?php the_ID(); ?>">
+                <a href="#collapse-<?php the_ID(); ?>" class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-target="#collapse-<?php the_ID(); ?>" aria-expanded="true" aria-controls="collapse-<?php the_ID(); ?>">
                     <?php the_title(); ?>
                 </a>
             </h3>

@@ -1,0 +1,52 @@
+.concursos {
+    &__title {
+        @include title-box($cor-concursos, '../img/bg-concursos.png');
+    }
+}
+
+.card-concurso {
+    .card-header {
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .accordion-toggle {
+            display: block;
+
+            &:after {
+                /* symbol for "opening" panels */
+                @extend .fas;
+                content: fa-content($fa-var-angle-down);
+                border-radius: 4px;
+                color: #fff;
+                background-color: $cor-concursos;
+                float: right;
+                min-width: 21px;
+                padding: 2px 5px;
+                text-align: center;
+            }
+
+            &.collapsed:after {
+                /* symbol for "collapsed" panels */
+                content: fa-content($fa-var-angle-right);
+            }
+        }
+    }
+
+    .card-body {
+        a {
+            color: $cor-concursos;
+        }
+    }
+
+    .concurso-arquivos {
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .dataTables_info {
+            font-size: 0.9rem;
+        }
+    }
+}
