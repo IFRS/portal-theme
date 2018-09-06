@@ -2,7 +2,7 @@
     <div class="col-12 col-lg-9">
         <article id="edital">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-12">
                     <h2 class="title"><?php the_title(); ?></h2>
                 </div>
             </div>
