@@ -8,7 +8,7 @@ function portal_breadcrumb() {
     if (!is_front_page() || is_paged()) {
 		echo '<div class="container" id="breadcrumb"><div class="row"><div class="col">';
 		echo '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
-		echo __('Voc&ecirc; est&aacute; em:&nbsp;');
+		echo '<li>'.__('Voc&ecirc; est&aacute; em:&nbsp;').'</li>';
 
         global $post;
         $homeLink = home_url();
