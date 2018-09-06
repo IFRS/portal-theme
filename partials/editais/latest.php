@@ -19,7 +19,7 @@
                 <div class="row ultimos-editais__edital">
                     <div class="col-12">
                         <p class="ultimos-editais__edital-datetime">
-                            <span class="glyphicon glyphicon-calendar"></span>&nbsp;<?php echo get_the_modified_date('d/m/Y'); ?>
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;<?php echo get_the_modified_date('d/m/Y'); ?>
                             &agrave;s
                             <?php echo get_the_modified_time('G\hi'); ?>
                         </p>
