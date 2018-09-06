@@ -34,15 +34,17 @@
                         <?php if (get_the_modified_time() != get_the_time()) : ?><i class="fas fa-calendar-alt" aria-hidden="true"></i></span>&nbsp;&uacute;ltima modifica&ccedil;&atilde;o em <?php the_modified_time('d'); ?> de <?php the_modified_time('F'); ?> de <?php the_modified_time('Y'); ?> <?php endif; ?>
                     </small>
                 </div>
-                <div class="col-12 col-md-6">
-                    <?php get_template_part('partials/share', 'buttons'); ?>
-                </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="post__content">
                         <?php the_content(); ?>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <?php get_template_part('partials/share-buttons'); ?>
                 </div>
             </div>
             <?php $tags = get_the_tags(); ?>
@@ -52,7 +54,7 @@
                     <div class="col-12">
                         <ul class="post__tags">
                             <?php foreach ($tags as $tag) : ?>
-                                <li class="post__tag"><a class="btn btn-default btn-sm" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a></li>
+                                <li class="post__tag"><a class="btn btn-outline-secondary btn-sm" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
