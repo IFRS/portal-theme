@@ -19,12 +19,14 @@
         </div>
     </div>
 
-    <div class="row lista-noticias__content">
+    <div class="card-columns lista-noticias__content">
     <?php while (have_posts()) : the_post(); ?>
-        <div class="col-12 col-md-6 col-lg-3">
-            <article class="noticia">
-                <?php get_template_part('partials/noticias/item'); ?>
-            </article>
+        <div class="card border-light">
+            <div class="card-body p-0">
+                <article class="noticia">
+                    <?php get_template_part('partials/noticias/item'); ?>
+                </article>
+            </div>
         </div>
     <?php endwhile; ?>
     </div>

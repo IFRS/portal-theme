@@ -2,7 +2,18 @@
     &__title {
         @include title-box();
     }
+
     &__content {
+        columns: 2;
+
+        @include media-breakpoint-up(md) {
+            columns: 3;
+        }
+
+        @include media-breakpoint-up(lg) {
+            columns: 4;
+        }
+
         .noticia {
             margin-bottom: $grid-gutter-width;
         }
