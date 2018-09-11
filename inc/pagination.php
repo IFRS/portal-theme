@@ -14,8 +14,8 @@ function portal_pagination() {
         'end_size'           => 1,
         'mid_size'           => 2,
         'prev_next'          => true,
-        'prev_text'          => '<span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Página Anterior',
-        'next_text'          => 'Próxima Página&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>',
+        'prev_text'          => 'P&aacute;gina Anterior',
+        'next_text'          => 'Pr&oacute;xima P&aacute;gina',
         'type'               => 'array',
         'add_args'           => false,
         'add_fragment'       => '',
@@ -30,9 +30,9 @@ function portal_pagination() {
         echo '<ul class="pagination">';
         foreach ( $pages as $page ) {
             if (strpos($page, 'current') !== false) {
-                echo "<li class='active'>$page</li>";
+                echo '<li class="page-item active">'.$page.'</li>';
             } else {
-                echo "<li>$page</li>";
+                echo '<li class="page-item">'.$page.'</li>';
             }
         }
         echo '</ul>';

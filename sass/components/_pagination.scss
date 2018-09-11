@@ -1,0 +1,5 @@
+.pagination {
+    .page-numbers {
+        @extend .page-link;
+    }
+}
