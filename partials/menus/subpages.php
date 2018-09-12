@@ -7,10 +7,12 @@
         )
     );
     $parent = wp_get_post_parent_id( get_the_ID() );
+    $ancestors = get_post_ancestors($post->ID);
+    $depth = count($ancestors);
 ?>
 <?php if (count($children) > 0) : ?>
     <ul class="nav menu-subpages">
-        <?php if ($parent) : ?>
+        <?php if ($parent && $depth >= 3) : ?>
             <li class="nav-item menu-subpages__item"><a class="nav-link menu-subpages__link" href="<?php echo get_page_link($parent); ?>" title="Subir ao nível anterior"><i class="fas fa-long-arrow-alt-left" aria-hidden="true"></i><span class="sr-only">Subir ao n&iacute;vel anterior</span></a></li>
         <?php endif; ?>
         <?php foreach ($children as $child): ?>
