@@ -4,7 +4,7 @@ $(function() {
     $('.menu-collapse .sub-menu').prev('a').attr('aria-expanded', 'false');
     $('.menu-collapse .sub-menu').prev('a').append('<span class="sr-only"> (Expandir submenus)</span>');
 
-    $('.menu-collapse .menu-item-has-children > a').on('click', function(e) {
+    $('.menu-collapse > .menu-item-has-children > a, .menu-collapse > .menu-item-has-children > .sub-menu > .menu-item-has-children > a').on('click', function(e) {
         $(this).nextAll('.collapse').collapse('toggle');
         e.preventDefault();
     });
@@ -24,7 +24,7 @@ $(function() {
     });
 
     // Abre todos os collapse até o item atual.
-    $('.current-menu-item').parents('.collapse').collapse('show');
+    $('.current-menu-item, .current-menu-parent').parents('.collapse').collapse('show');
 
     // Controla a exibição do menu em viewports pequenos.
     if ($(window).width() < 992) {

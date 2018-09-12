@@ -8,7 +8,7 @@
         }
     }
 
-    > li {
+    > .menu-item {
         > a {
             background: $menu-fundo-nivel-1-2;
             border-top: 4px solid $cor-primaria-verde;
@@ -25,7 +25,8 @@
         }
     }
 
-    .menu-item-has-children {
+    > .menu-item-has-children,
+    > .menu-item-has-children > .sub-menu > .menu-item-has-children {
         > a {
             padding-right: 15px;
 
@@ -46,11 +47,11 @@
         }
     }
 
-    .sub-menu {
+    > .menu-item-has-children > .sub-menu {
         list-style: none;
         padding: 0;
 
-        > li {
+        .menu-item {
             > a {
                 color: #172938;
                 display: block;
@@ -60,32 +61,41 @@
                 padding-top: 3px;
                 padding-bottom: 3px;
             }
+        }
 
-            &.current-menu-item {
-                > a {
-                    font-weight: bold;
-                }
+        .current-menu-item {
+            > a {
+                font-weight: bold;
+            }
+        }
+
+        > .menu-item-has-children {
+            border-bottom: 1px solid $menu-inner-border;
+
+            > a {
+                background-color: $menu-fundo-nivel-1-2;
+                border-top: 2px solid $menu-inner-border;
+                border-bottom: 1px solid $menu-inner-border;
+                color: #172938;
+                font-size: 14px;
+                font-weight: 600;
             }
 
-            &.menu-item-has-children {
-                border-bottom: 1px solid $menu-inner-border;
+            > .sub-menu {
+                list-style: none;
+                padding: 0;
 
-                > a {
-                    background-color: $menu-fundo-nivel-1-2;
-                    border-top: 2px solid $menu-inner-border;
-                    border-bottom: 1px solid $menu-inner-border;
-                    color: #172938;
-                    font-size: 14px;
-                    font-weight: 600;
-                }
-
-                .menu-item {
+                > .menu-item {
                     > a {
                         // background-color: #D9DADC;
                         border-bottom: 1px solid $menu-inner-border;
                         font-size: 13px;
                         padding-left: 20px;
                     }
+                }
+
+                .current-menu-parent {
+                    font-weight: bold;
                 }
 
                 +.menu-item-has-children {
@@ -98,7 +108,7 @@
     }
 
     @include media-breakpoint-down(lg) {
-        > li {
+        > .menu-item {
             > a {
                 margin-top: 0;
             }
