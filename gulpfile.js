@@ -60,7 +60,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('sass', function() {
-    var postCSSplugins = [
+    let postCSSplugins = [
         require('postcss-flexibility'),
         pixrem(),
         autoprefixer({browsers: browserslist})
