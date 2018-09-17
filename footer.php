@@ -4,6 +4,7 @@
         </div> <!-- /div.row -->
     </section> <!-- /section.container -->
 
+    <!-- Rodapé -->
     <a href="#inicio-rodape" id="inicio-rodape" class="sr-only">In&iacute;cio do rodap&eacute;</a>
     <footer class="footer">
         <div class="container">
