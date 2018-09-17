@@ -7,7 +7,7 @@ $(function () {
     $('#collapseYearly').on('hide.bs.collapse', function () {
         $('#toggleYearly').toggleClass('active');
     });
-    if ($('#collapseYearly').hasClass('in')) {
+    if ($('#collapseYearly').hasClass('show')) {
         $('#toggleYearly').toggleClass('active');
     }
 
@@ -17,7 +17,7 @@ $(function () {
     $('#collapseMonthly').on('hide.bs.collapse', function () {
         $('#toggleMonthly').toggleClass('active');
     });
-    if ($('#collapseMonthly').hasClass('in')) {
+    if ($('#collapseMonthly').hasClass('show')) {
         $('#toggleMonthly').toggleClass('active');
     }
 });
