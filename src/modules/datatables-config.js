@@ -1,11 +1,13 @@
-require('datatables.net');
+//require('datatables.net');
 require('datatables.net-bs4');
-require('moment');
+const moment = require('moment');
+require('moment/locale/pt-br');
+moment.locale('pt-br');
 require('datatables.net-plugins/sorting/datetime-moment');
 
 $(function() {
-    $.fn.dataTable.moment( 'DD/MM/YYYY', 'pt-BR' );
-    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-BR' );
+    $.fn.dataTable.moment( 'DD/MM/YYYY', 'pt-br' );
+    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-br' );
 
     $('.table-documentos').DataTable({
         order:      [0, 'desc'],

@@ -1,20 +1,22 @@
-const argv         = require('minimist')(process.argv.slice(2));
-const autoprefixer = require('autoprefixer');
-const browserSync  = require('browser-sync').create();
-const cssmin       = require('gulp-cssmin');
-const debug        = require('gulp-debug');
-const del          = require('del');
-const gulp         = require('gulp');
-const imagemin     = require('gulp-imagemin');
-const path         = require('path');
-const pixrem       = require('pixrem');
-const PluginError  = require('plugin-error');
-const postcss      = require('gulp-postcss');
-const rename       = require('gulp-rename');
-const sass         = require('gulp-sass');
-const through2     = require('through2');
-const uglify       = require('gulp-uglify');
-const webpack      = require('webpack');
+const argv                 = require('minimist')(process.argv.slice(2));
+const autoprefixer         = require('autoprefixer');
+const babel                = require('gulp-babel');
+const browserSync          = require('browser-sync').create();
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const cssmin               = require('gulp-cssmin');
+const debug                = require('gulp-debug');
+const del                  = require('del');
+const gulp                 = require('gulp');
+const imagemin             = require('gulp-imagemin');
+const path                 = require('path');
+const pixrem               = require('pixrem');
+const PluginError          = require('plugin-error');
+const postcss              = require('gulp-postcss');
+const rename               = require('gulp-rename');
+const sass                 = require('gulp-sass');
+const through2             = require('through2');
+const uglify               = require('gulp-uglify');
+const webpack              = require('webpack');
 
 const browserslist = [
     'last 3 versions',
@@ -40,6 +42,18 @@ const dist = [
     '!package.json',
     '!package-lock.json'
 ];
+
+const webpackMode = argv.production ? 'production' : 'development';
+
+var webpackPlugins = [];
+/* webpackPlugins.push(new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery',
+    Popper: 'popper'
+})); */
+webpackPlugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/));
+argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
+
 
 gulp.task('clean', function() {
     return del(['css/', 'js/', 'fonts/', 'img/vendor/', 'dist/']);
@@ -75,6 +89,7 @@ gulp.task('styles', gulp.series('sass', function css() {
 
 gulp.task('webpack', function(done) {
     webpack({
+        mode: webpackMode,
         entry: {
             ie: './src/ie.js',
             portal: './src/portal.js'
@@ -86,16 +101,13 @@ gulp.task('webpack', function(done) {
         resolve: {
             alias: {
                 jquery: 'jquery/src/jquery',
-                popper: 'popper.js/dist/umd/popper'
+                popper: 'popper.js'
             }
         },
-        plugins: [
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-                jQuery: 'jquery',
-                Popper: 'popper'
-            })
-        ],
+        optimization: {
+            minimize: false
+        },
+        plugins: webpackPlugins,
     }, function(err, stats) {
         if (err) throw new PluginError('webpack', {
             message: stats.toString({
@@ -109,6 +121,9 @@ gulp.task('webpack', function(done) {
 
 gulp.task('scripts', gulp.series('webpack', function js() {
     return gulp.src(['js/*.js', '!js/*.min.js'])
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
     .pipe(uglify({
         ie8: true,
         mangle: false,
