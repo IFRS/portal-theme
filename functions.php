@@ -64,3 +64,6 @@ require_once('inc/shortcodes/noticias-escopo.php');
 
 // Cartola
 require_once('inc/cartola.php');
+
+// Instagram Widget
+is_plugin_active('wp-instagram-widget/wp-instagram-widget.php') ? require_once('inc/instagram.php') : null;
