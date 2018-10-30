@@ -49,12 +49,6 @@
             @extend .btn-sm;
         }
 
-        &_googleplus {
-            @extend .btn;
-            @include button-variant($cor-googleplus, $cor-googleplus);
-            @extend .btn-sm;
-        }
-
         &_pinterest {
             @extend .btn;
             @include button-variant($cor-pinterest, $cor-pinterest);
