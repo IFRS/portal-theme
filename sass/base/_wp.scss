@@ -112,48 +112,40 @@ a {
 
 /* Content gallery */
 .gallery {
-    @extend .row;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 
+.gallery-item {
+    margin-bottom: 5px;
+    text-align: center;
+
+    a {
+        display: block;
+    }
+
+    .widget-area & {
+		margin-bottom: 5px;
+    }
+}
+
+.gallery-icon {
     img {
-        @extend .img-fluid;
+        margin: 0 auto;
+        display: block;
     }
+}
 
-    &-caption {
-        color: #666;
-        font-size: 0.8rem;
-    }
+.gallery-caption {
+    color: #666;
+    font-size: 0.7rem;
+}
 
-    &-columns-1 {
-        &-item {
-            @extend .col-12;
-        }
-    }
-
-    &-columns-2 {
-        &-item {
-            @extend .col-12;
-            @extend .col-lg-6;
-        }
-    }
-
-    &-columns-3 {
-        &-item {
-            @extend .col-12;
-            @extend .col-lg-4;
-        }
-    }
-
-    &-columns-4 {
-        &-item {
-            @extend .col-12;
-            @extend .col-lg-3;
-        }
-    }
-
-    &-columns-6 {
-        &-item {
-            @extend .col-12;
-            @extend .col-lg-2;
-        }
-    }
+@for $i from 1 through 9 {
+	.gallery-columns-#{$i} {
+		.gallery-item {
+			flex-basis: calc(#{percentage(1/$i)} - 5px);
+		}
+	}
 }
