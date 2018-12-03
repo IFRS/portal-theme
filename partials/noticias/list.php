@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="card-columns lista-noticias__content">
+    <div class="card-deck lista-noticias__content">
     <?php while (have_posts()) : the_post(); ?>
         <div class="card border-light">
             <div class="card-body p-0">

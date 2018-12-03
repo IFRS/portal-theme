@@ -1,17 +1,23 @@
+$cards-per-line: (
+    xs: 1,
+    sm: 2,
+    md: 3,
+    lg: 4,
+    xl: 5
+);
+
 .lista-noticias {
     &__title {
         @include title-box();
     }
 
     &__content {
-        columns: 2;
-
-        @include media-breakpoint-up(md) {
-            columns: 3;
-        }
-
-        @include media-breakpoint-up(lg) {
-            columns: 4;
+        @each $name, $breakpoint in $grid-breakpoints {
+            @media (min-width: $breakpoint) {
+                .card {
+                    flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+                }
+            }
         }
 
         .noticia {
