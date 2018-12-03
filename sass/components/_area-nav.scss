@@ -1,5 +1,9 @@
 .area-nav {
     &__widget {
+        @include media-breakpoint-down(lg) {
+            text-align: center;
+        }
+
         img {
             @extend .mx-auto;
             @extend .img-fluid;
