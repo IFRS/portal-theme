@@ -60,6 +60,7 @@ require_once('inc/remove-version.php');
 require_once('inc/taxonomies/escopo.php');
 
 // Shortcodes
+require_once('inc/shortcodes/bootstrap4.php');
 require_once('inc/shortcodes/noticias-escopo.php');
 
 // Cartola
