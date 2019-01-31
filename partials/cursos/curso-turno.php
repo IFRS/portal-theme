@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
-        <h3><?php _e('Turno'); ?></h3>
-        <ul class="side-list">
+        <h3 class="turnos__title"><?php _e('Turno'); ?></h3>
+        <ul class="turnos__list">
         <?php
             wp_list_categories(array(
                 'title_li' => '',
