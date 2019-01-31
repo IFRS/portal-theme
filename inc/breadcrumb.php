@@ -31,6 +31,15 @@ function portal_breadcrumb() {
             echo $before . single_cat_title('', false) . $after;
         } elseif (is_search()) {
             echo $before . 'Resultado da pesquisa por: "' . get_search_query() . '"' . $after;
+        } elseif (is_tax('curso_modalidade')) {
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+            echo $before . single_term_title('', false) . $after;
+        } elseif (is_tax('curso_nivel')) {
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+            echo $before . single_term_title('', false) . $after;
+        } elseif (is_tax('curso_turno')) {
+            echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+            echo $before . single_term_title('', false) . $after;
         } elseif (is_tax('concurso_status')) {
             echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
             echo $before . single_term_title('', false) . $after;
