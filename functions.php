@@ -67,4 +67,5 @@ require_once('inc/shortcodes/noticias-escopo.php');
 require_once('inc/cartola.php');
 
 // Instagram Widget
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 is_plugin_active('wp-instagram-widget/wp-instagram-widget.php') ? require_once('inc/instagram.php') : null;
