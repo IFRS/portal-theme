@@ -7,6 +7,7 @@
                 'title_li' => '',
                 'taxonomy' => 'curso_modalidade',
                 'hide_empty' => false,
+                'orderby' => 'term_order',
             ));
         ?>
         </ul>
