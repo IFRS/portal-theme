@@ -1,4 +1,4 @@
-<?php if (is_post_type_archive('curso') || is_tax('curso_modalidade')) : ?>
+<?php if (is_post_type_archive('curso') || is_tax('curso_modalidade') || is_tax('curso_turno')) : ?>
     <?php
         $niveis_pai = get_terms(array(
             'taxonomy' => 'curso_nivel',
