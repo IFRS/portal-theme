@@ -1,0 +1,66 @@
+.curso {
+    &__title {
+        @include title-box($cor-cursos, '../img/bg-cursos.png');
+    }
+
+    &__thumb {
+        width: 25%;
+        height: auto;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+.curso-aside {
+    margin-bottom: 20px;
+
+    &__title {
+        @include title-box($cor-cursos);
+    }
+
+    &__content {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+}
+
+.curso-info {
+    &__icon {
+        color: #666666;
+        float: left;
+        font-size: 1.5rem;
+        margin-right: 5px;
+        text-align: center;
+        width: 30px;
+    }
+
+    &__title {
+        color: $cor-primaria-verde;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $cor-primaria-verde;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+
+        a {
+            color: $cor-primaria-verde;
+        }
+    }
+}
+
+.curso-coordenador {
+    &__nome {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__titulacao {
+        font-size: 0.8rem;
+    }
+}
