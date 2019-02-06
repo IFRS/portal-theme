@@ -48,6 +48,10 @@
         font-size: 0.85rem;
         text-transform: uppercase;
 
+        &--lower {
+            text-transform: lowercase;
+        }
+
         a {
             color: $cor-primaria-verde;
         }
