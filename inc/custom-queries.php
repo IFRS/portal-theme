@@ -19,6 +19,12 @@ function portal_custom_queries( $query ) {
             $query->set('orderby', 'modified');
             $query->set('order', 'DESC');
         }
+        if ($query->is_post_type_archive('curso') || $query->is_tax('curso_modalidade') || $query->is_tax('curso_nivel') || $query->is_tax('curso_turno')) {
+            $query->set('posts_per_page', -1);
+            $query->set('nopaging', true);
+            $query->set('orderby', 'title');
+            $query->set('order', 'ASC');
+        }
     }
 }
 
