@@ -4,11 +4,68 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: stretch;
         padding-top: 15px;
     }
 
     a {
         color: $cor-cursos;
+    }
+}
+
+.curso {
+    align-self: auto;
+    flex: 0 0 100%;
+    padding: 0 10px 20px 0;
+
+    @include media-breakpoint-up(sm) {
+        flex-basis: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex-basis: 33.33%;
+    }
+
+    &__modalidade {
+        font-size: 14px;
+
+        a {
+            @extend .badge;
+            @include badge-variant($cor-cursos);
+        }
+    }
+
+    &__nivel {
+        font-size: 12px;
+        text-transform: uppercase;
+
+        a {
+            color: #666666;
+        }
+    }
+
+    &__title {
+        color: $cor-primaria-verde;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+
+        a {
+            color: $cor-primaria-verde;
+        }
+    }
+
+    &__turnos {
+        font-size: 12px;
+
+        a {
+            color: $cor-secundaria-azul-escuro;
+        }
     }
 }
 
