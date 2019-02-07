@@ -13,7 +13,11 @@
         </div>
         <div class="curso__estrutura">
             <h3 class="curso__estrutura-title"><?php _e('Estrutura F&iacute;sica', 'ifrs-portal-theme'); ?></h3>
-            <?php echo get_post_meta( get_the_ID(), '_curso_estrutura', true ); ?>
+            <?php echo wpautop(get_post_meta( get_the_ID(), '_curso_estrutura', true )); ?>
+        </div>
+        <div class="curso__arquivos">
+            <h3 class="curso__arquivos-title"><?php _e('Arquivos', 'ifrs-portal-theme'); ?></h3>
+            <?php echo wpautop(get_post_meta( get_the_ID(), '_curso_arquivos', true )); ?>
         </div>
     </div>
     <div class="col-12 col-lg-3">
