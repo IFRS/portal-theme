@@ -8,7 +8,8 @@
             <a href="<?php echo get_term_link($nivel); ?>"><?php echo $nivel->name; ?></a>
         </span>
     <?php endforeach; ?>
-    <h4 class="curso-item__title"><a href="<?php the_permalink(); ?>" class="curso-item__link"><?php the_title(); ?></a></h4>
+    <br>
     <?php if (!is_tax('curso_modalidade')) : ?><span class="curso-item__modalidade"><?php the_terms( get_the_ID(), 'curso_modalidade', '', ', ' ); ?> | </span><?php endif; ?>
     <span class="curso-item__turnos"><?php the_terms( get_the_ID(), 'curso_turno', '', ', ' ); ?></span>
+    <h4 class="curso-item__title"><a href="<?php the_permalink(); ?>" class="curso-item__link"><?php the_title(); ?></a></h4>
 </div>
