@@ -18,10 +18,10 @@ function ifrs_bs4_fix_shortcodes($content){
 add_filter('the_content', 'ifrs_bs4_fix_shortcodes');
 
 $shortcodes = array(
-	'accordion',
 	'alert',
 	'badge',
 	'card',
+	'collapsibles',
 	'collapse',
 	'column',
 	'img',
@@ -421,7 +421,7 @@ function ifrs_bs4_tab( $atts, $content = null ) {
 	);
 }
 
-function ifrs_bs4_accordion( $atts, $content = null ) {
+function ifrs_bs4_collapsibles( $atts, $content = null ) {
 	if ( isset($GLOBALS['collapsibles_count']) )
 		$GLOBALS['collapsibles_count']++;
 	else
