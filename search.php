@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 
 <?php if (!have_posts()) : ?>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="search-results__title"><?php printf('Busca por &quot;%s&quot;', get_search_query()); ?></h2>
+        </div>
+    </div>
     <div class="alert alert-warning">
         <p><?php _e('Nenhum resultado encontrado.'); ?></p>
     </div>
