@@ -3,6 +3,12 @@
         @include title-box($cor-cursos, '../img/bg-cursos.png');
     }
 
+    &__search {
+        .btn-search-cursos {
+            @include button-variant($cor-cursos, $cor-cursos);
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: row;

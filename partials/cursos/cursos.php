@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-12 col-lg-9" class="cursos">
         <h2 class="cursos__title"><?php get_template_part('partials/cursos/title'); ?></h2>
+        <div class="cursos__search"><?php get_template_part('partials/cursos/search'); ?></div>
         <div class="cursos__content">
             <?php if (have_posts()) : ?>
                 <?php get_template_part('partials/cursos/loop'); ?>
