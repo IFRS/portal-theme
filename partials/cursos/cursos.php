@@ -8,7 +8,7 @@
             <?php else : ?>
                 <?php if (is_search()) : ?>
                     <div class="alert alert-danger" role="alert">
-                        <p><?php __('N&atilde;o foram encontrados Cursos com os termos buscados.', 'ifrs-portal-theme'); ?></p>
+                        <p><?php _e('N&atilde;o foram encontrados Cursos com os termos buscados.', 'ifrs-portal-theme'); ?></p>
                     </div>
                 <?php else : ?>
                     <div class="alert alert-warning" role="alert">
