@@ -76,19 +76,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-12 col-lg-8">
-        <div class="area-gallery">
-            <?php if (!dynamic_sidebar('widget-gallery')) : endif; ?>
-        </div>
-    </div>
-    <div class="col-12 col-lg-4">
-        <div class="area-home-side">
-            <?php if (!dynamic_sidebar('widget-home-side')) : endif; ?>
-        </div>
-    </div>
-</div>
-
 <?php if (is_active_sidebar('widget-atalhos')) : ?>
 <div class="row">
     <div class="col-12">
@@ -101,6 +88,19 @@
     </div>
 </div>
 <?php endif; ?>
+
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="area-gallery">
+            <?php if (!dynamic_sidebar('widget-gallery')) : endif; ?>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4">
+        <div class="area-home-side">
+            <?php if (!dynamic_sidebar('widget-home-side')) : endif; ?>
+        </div>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-12">
