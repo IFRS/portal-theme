@@ -3,7 +3,7 @@ function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
-    wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array(), null, 'all');
+    wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array(), WP_DEBUG ? null : filemtime(get_stylesheet_directory() . '/css/portal.min.css'), 'all');
 }
 
 function portal_load_scripts() {
@@ -14,10 +14,10 @@ function portal_load_scripts() {
         wp_deregister_script('jquery');
     }
 
-    wp_enqueue_script( 'js-ie', get_template_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), null, false );
+    wp_enqueue_script( 'js-ie', get_template_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/ie.min.js'), false );
     wp_script_add_data( 'js-ie', 'conditional', 'lt IE 9' );
 
-    wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), null, true);
+    wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.min.js'), true);
 
     if (!WP_DEBUG) {
         wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true );
