@@ -28,6 +28,15 @@ function portal_widgets_init() {
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
+		'name'          => 'Carousel',
+		'id'            => 'widget-carousel',
+		'description'   => __('Área para conteúdo em forma de slider, geralmente imagens.', 'ifrs-portal-theme'),
+		'before_widget' => '<div id="%1$s" class="carousel-item %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
+	register_sidebar(array(
 		'name'          => 'Área Home Lateral',
 		'id'            => 'widget-home-side',
 		'description'   => __('Área lateral abaixo das notícias, para banners ou outros conteúdos.', 'ifrs-portal-theme'),

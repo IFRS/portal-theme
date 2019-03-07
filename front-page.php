@@ -38,6 +38,7 @@
     <div class="col-12 col-lg-5 order-last">
         <div class="area-home">
             <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
+            <?php get_template_part('partials/carousel'); ?>
         </div>
     </div>
     <?php while ($query->have_posts() && $query->current_post < 4) : $query->the_post(); ?>
