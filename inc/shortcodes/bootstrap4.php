@@ -535,7 +535,7 @@ function ifrs_bs4_collapse( $atts, $content = null ) {
 		'<div class="%1$s"%2$s>
 			<div class="card-header">
 				<h4 class="mb-0">
-					<button class="btn btn-link" type="button" data-toggle="collapse" data-target="%3$s">%4$s</a>
+					<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#%3$s">%4$s</a>
 				</h4>
 			</div>
 			<div id="%3$s" class="%5$s"%6$s>
