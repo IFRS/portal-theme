@@ -20,6 +20,8 @@ add_filter('the_content', 'ifrs_bs4_fix_shortcodes');
 $shortcodes = array(
 	'alert',
 	'badge',
+	'button',
+	'button-group',
 	'card',
 	'collapsibles',
 	'collapse',
@@ -231,6 +233,60 @@ function ifrs_bs4_badge( $atts, $content = null ) {
 
 	return sprintf(
 		'<span class="%s"%s>%s</span>',
+		esc_attr( trim($class) ),
+		( $data_props ) ? ' ' . $data_props : '',
+		do_shortcode( $content )
+	);
+}
+
+function ifrs_bs4_button( $atts, $content = null ) {
+	$atts = shortcode_atts( array(
+		"type"     => false,
+		"size"     => false,
+		"block"    => false,
+		"dropdown" => false,
+		"link"     => '',
+		"target"   => false,
+		"disabled" => false,
+		"active"   => false,
+		"xclass"   => false,
+		"title"    => false,
+		"data"     => false
+	), $atts );
+	$class  = 'btn';
+	$class .= ( $atts['type'] )     ? ' btn-' . $atts['type'] : ' btn-default';
+	$class .= ( $atts['size'] )     ? ' btn-' . $atts['size'] : '';
+	$class .= ( $atts['block'] == 'true' )    ? ' btn-block' : '';
+	$class .= ( $atts['dropdown']   == 'true' ) ? ' dropdown-toggle' : '';
+	$class .= ( $atts['disabled']   == 'true' ) ? ' disabled' : '';
+	$class .= ( $atts['active']     == 'true' )   ? ' active' : '';
+	$class .= ( $atts['xclass'] )   ? ' ' . $atts['xclass'] : '';
+	$data_props = $this->parse_data_attributes( $atts['data'] );
+	return sprintf(
+		'<a href="%s" class="%s"%s%s%s>%s</a>',
+		esc_url( $atts['link'] ),
+		esc_attr( trim($class) ),
+		( $atts['target'] )     ? sprintf( ' target="%s"', esc_attr( $atts['target'] ) ) : '',
+		( $atts['title'] )      ? sprintf( ' title="%s"',  esc_attr( $atts['title'] ) )  : '',
+		( $data_props ) ? ' ' . $data_props : '',
+		do_shortcode( $content )
+	);
+}
+
+function ifrs_bs4_button_group( $atts, $content = null ) {
+	$atts = shortcode_atts( array(
+			"size"      => false,
+			"vertical"  => false,
+			"xclass"    => false,
+			"data"      => false
+	), $atts );
+	$class  = 'btn-group';
+	$class .= ( $atts['size'] )         ? ' btn-group-' . $atts['size'] : '';
+	$class .= ( $atts['vertical']   == 'true' )     ? ' btn-group-vertical' : '';
+	$class .= ( $atts['xclass'] )       ? ' ' . $atts['xclass'] : '';
+	$data_props = $this->parse_data_attributes( $atts['data'] );
+	return sprintf(
+		'<div class="%s"%s>%s</div>',
 		esc_attr( trim($class) ),
 		( $data_props ) ? ' ' . $data_props : '',
 		do_shortcode( $content )
