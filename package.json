@@ -28,7 +28,6 @@
     "lazysizes": "^4.1.6",
     "minimist": "^1.2.0",
     "moment": "^2.24.0",
-    "npm-font-open-sans": "^1.1.0",
     "picturefill": "^3.0.3",
     "pixrem": "^5.0.0",
     "plugin-error": "^1.0.1",
