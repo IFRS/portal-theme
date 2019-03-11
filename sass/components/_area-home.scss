@@ -5,4 +5,12 @@
             @extend .img-fluid;
         }
     }
+
+    > div {
+        margin-bottom: $grid-gutter-width / 2;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
