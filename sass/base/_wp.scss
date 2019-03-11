@@ -132,8 +132,7 @@ a {
 
 .gallery-icon {
     img {
-        margin: 0 auto;
-        display: block;
+        @extend .img-fluid;
     }
 }
 
@@ -145,7 +144,7 @@ a {
 @for $i from 1 through 9 {
 	.gallery-columns-#{$i} {
 		.gallery-item {
-			flex-basis: calc(#{percentage(1/$i)} - 5px);
+			flex: 0 0 calc(#{percentage(1/$i)} - 5px);
 		}
 	}
 }
