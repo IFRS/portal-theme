@@ -14,6 +14,7 @@ const PluginError          = require('plugin-error');
 const postcss              = require('gulp-postcss');
 const rename               = require('gulp-rename');
 const sass                 = require('gulp-sass');
+const sourcemaps           = require('gulp-sourcemaps');
 const through2             = require('through2');
 const uglify               = require('gulp-uglify');
 const webpack              = require('webpack');
@@ -67,12 +68,14 @@ gulp.task('sass', function() {
     ];
 
     return gulp.src('sass/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
         includePaths: 'sass',
         outputStyle: 'expanded',
         precision: 8
     }).on('error', sass.logError))
     .pipe(postcss(postCSSplugins))
+    .pipe(sourcemaps.write('./'))
     .pipe((argv.debug) ? debug({title: 'SASS:'}) : through2.obj())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
