@@ -106,6 +106,15 @@ gulp.task('webpack', function(done) {
         },
         optimization: {
             minimize: false,
+            splitChunks: {
+                chunks: 'all',
+                cacheGroups: {
+                    vendors: false,
+                    default: {
+                        name: 'common',
+                    }
+                }
+            }
         },
         plugins: webpackPlugins,
     }, function(err, stats) {

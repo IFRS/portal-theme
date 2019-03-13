@@ -17,6 +17,7 @@ function portal_load_scripts() {
     wp_enqueue_script('js-ie', get_template_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/ie.min.js'), false);
     wp_script_add_data('js-ie', 'conditional', 'lt IE 9');
 
+    wp_enqueue_script('js-common', get_template_directory_uri().(WP_DEBUG ? '/js/common.js' : '/js/common.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/common.min.js'), true);
     wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.min.js'), true);
 
     if (
