@@ -47,11 +47,6 @@ const dist = [
 const webpackMode = argv.production ? 'production' : 'development';
 
 var webpackPlugins = [];
-/* webpackPlugins.push(new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: 'popper'
-})); */
 webpackPlugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/));
 argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
 
@@ -76,7 +71,7 @@ gulp.task('sass', function() {
     }).on('error', sass.logError))
     .pipe(postcss(postCSSplugins))
     .pipe(sourcemaps.write('./'))
-    .pipe((argv.debug) ? debug({title: 'SASS:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'SASS:'}) : through2.obj())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 });
@@ -85,7 +80,7 @@ gulp.task('styles', gulp.series('sass', function css() {
     return gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe((argv.debug) ? debug({title: 'CSS:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'CSS:'}) : through2.obj())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 }));
@@ -139,41 +134,35 @@ gulp.task('scripts', gulp.series('webpack', function js() {
         mangle: false,
     }))
     .pipe(rename({suffix: '.min'}))
-    .pipe((argv.debug) ? debug({title: 'JS:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'JS:'}) : through2.obj())
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream());
 }));
 
-gulp.task('assets_opensans', function() {
-    return gulp.src('node_modules/npm-font-open-sans/fonts/**/*')
-    .pipe((argv.debug) ? debug({title: 'Assets OpenSans:'}) : through2.obj())
-    .pipe(gulp.dest('fonts/opensans/'));
-});
-
 gulp.task('assets_fontawesome', function() {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**/fa-solid*')
-    .pipe((argv.debug) ? debug({title: 'Assets FontAwesome:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'Assets FontAwesome:'}) : through2.obj())
     .pipe(gulp.dest('fonts/fa/'));
 });
 
 gulp.task('assets_fancybox', function() {
     return gulp.src('node_modules/jquery-fancybox/source/img/**/*')
-    .pipe((argv.debug) ? debug({title: 'Assets Fancybox:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'Assets Fancybox:'}) : through2.obj())
     .pipe(gulp.dest('img/vendor/'));
 });
 
-gulp.task('assets', gulp.parallel('assets_opensans', 'assets_fontawesome', 'assets_fancybox'));
+gulp.task('assets', gulp.parallel('assets_fontawesome', 'assets_fancybox'));
 
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
     .pipe(imagemin())
-    .pipe((argv.debug) ? debug({title: 'Images:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'Images:'}) : through2.obj())
     .pipe(gulp.dest('img/'));
 });
 
 gulp.task('dist', function() {
     return gulp.src(dist)
-    .pipe((argv.debug) ? debug({title: 'Dist:'}) : through2.obj())
+    .pipe((argv.verbose) ? debug({title: 'Dist:'}) : through2.obj())
     .pipe(gulp.dest('dist/'));
 });
 
