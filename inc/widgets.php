@@ -1,6 +1,15 @@
 <?php
 function portal_widgets_init() {
 	register_sidebar(array(
+		'name'          => 'Carousel',
+		'id'            => 'widget-carousel',
+		'description'   => __('Área para conteúdo em forma de slider, geralmente imagens.', 'ifrs-portal-theme'),
+		'before_widget' => '<div id="%1$s" class="carousel-item %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<span class="sr-only">',
+		'after_title'   => '</span>',
+	));
+	register_sidebar(array(
 		'name'          => 'Área Social',
 		'id'            => 'widget-social',
 		'description'   => __('Área no cabeçalho para as Redes Sociais.', 'ifrs-portal-theme'),
@@ -24,15 +33,6 @@ function portal_widgets_init() {
 		'description'   => __('Área principal para banners em destaque.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="row"><div class="col-12"><div id="%1$s" class="area-home__widget %2$s">',
 		'after_widget'  => '</div></div></div>',
-		'before_title'  => '<span class="sr-only">',
-		'after_title'   => '</span>',
-	));
-	register_sidebar(array(
-		'name'          => 'Carousel',
-		'id'            => 'widget-carousel',
-		'description'   => __('Área para conteúdo em forma de slider, geralmente imagens.', 'ifrs-portal-theme'),
-		'before_widget' => '<div id="%1$s" class="carousel-item %2$s">',
-		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
