@@ -14,13 +14,23 @@ function portal_load_scripts() {
         wp_deregister_script('jquery');
     }
 
-    wp_enqueue_script( 'js-ie', get_template_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/ie.min.js'), false );
-    wp_script_add_data( 'js-ie', 'conditional', 'lt IE 9' );
+    wp_enqueue_script('js-ie', get_template_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/ie.min.js'), false);
+    wp_script_add_data('js-ie', 'conditional', 'lt IE 9');
 
     wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.min.js'), true);
 
+    if (
+        is_post_type_archive('concurso') ||
+        is_post_type_archive('documento') ||
+        is_post_type_archive('edital') ||
+        is_singular('documento') ||
+        is_singular('edital')
+    ) {
+        wp_enqueue_script('js-datatables', get_template_directory_uri().(WP_DEBUG ? '/js/datatables.js' : '/js/datatables.min.js'), array('js-portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.min.js'), true);
+    }
+
     if (!WP_DEBUG) {
-        wp_enqueue_script( 'js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true );
+        wp_enqueue_script('js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true);
     }
 }
 

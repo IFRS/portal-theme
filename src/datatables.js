@@ -1,4 +1,4 @@
-//require('datatables.net');
+window.$ = window.jQuery = require('jquery');
 require('datatables.net-bs4');
 const moment = require('moment');
 require('moment/locale/pt-br');

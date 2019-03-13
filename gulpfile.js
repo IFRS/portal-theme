@@ -96,7 +96,8 @@ gulp.task('webpack', function(done) {
         devtool: 'eval-source-map',
         entry: {
             ie: './src/ie.js',
-            portal: './src/portal.js'
+            portal: './src/portal.js',
+            datatables: './src/datatables.js'
         },
         output: {
             path: path.resolve(__dirname, 'js'),
