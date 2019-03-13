@@ -93,7 +93,7 @@ gulp.task('styles', gulp.series('sass', function css() {
 gulp.task('webpack', function(done) {
     webpack({
         mode: webpackMode,
-        devtool: 'eval-source-map',
+        devtool: 'source-maps',
         entry: {
             ie: './src/ie.js',
             portal: './src/portal.js',
@@ -110,7 +110,7 @@ gulp.task('webpack', function(done) {
             }
         },
         optimization: {
-            minimize: false
+            minimize: false,
         },
         plugins: webpackPlugins,
     }, function(err, stats) {
