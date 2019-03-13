@@ -1,10 +1,17 @@
 .area-atalhos {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    &__title {
+        @include title-box();
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
     &__widget {
         @include widget();
+
         display: inline-block;
         padding: 0 10px 0 0;
     }

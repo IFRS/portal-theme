@@ -80,12 +80,14 @@
 <?php if (is_active_sidebar('widget-atalhos')) : ?>
 <div class="row">
     <div class="col-12">
-        <h2 class="title-box"><?php _e('Acesso R&aacute;pido'); ?></h2>
-        <nav>
-            <ul class="area-atalhos">
-                <?php if (!dynamic_sidebar('widget-atalhos')) : endif; ?>
-            </ul>
-        </nav>
+        <div class="area-atalhos">
+            <h2 class="area-atalhos__title"><?php _e('Acesso R&aacute;pido'); ?></h2>
+            <nav>
+                <ul class="area-atalhos__list">
+                    <?php dynamic_sidebar('widget-atalhos'); ?>
+                </ul>
+            </nav>
+        </div>
     </div>
 </div>
 <?php endif; ?>
@@ -103,13 +105,15 @@
     </div>
 </div>
 
+<?php if (is_active_sidebar('widget-banners')) : ?>
 <div class="row">
     <div class="col-12">
         <div class="area-banners">
             <hr class="area-banners__separator">
-            <?php if (!dynamic_sidebar('widget-banners')) : endif; ?>
+            <?php dynamic_sidebar('widget-banners'); ?>
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <?php get_footer(); ?>
