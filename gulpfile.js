@@ -35,7 +35,9 @@ const browserslist = [
 const dist = [
     '**',
     '!.**',
+    '!css/*.map',
     '!dist{,/**}',
+    '!js/*.map',
     '!node_modules{,/**}',
     '!sass{,/**}',
     '!src{,/**}',
