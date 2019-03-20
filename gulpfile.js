@@ -142,7 +142,6 @@ gulp.task('scripts', gulp.series('webpack', function js() {
     }))
     .pipe(uglify({
         ie8: true,
-        mangle: false,
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe((argv.verbose) ? debug({title: 'JS:'}) : through2.obj())
