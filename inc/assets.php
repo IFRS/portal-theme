@@ -3,7 +3,9 @@ function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
-    wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array(), WP_DEBUG ? null : filemtime(get_stylesheet_directory() . '/css/portal.min.css'), 'all');
+    wp_enqueue_style('css-vendor', get_template_directory_uri().(WP_DEBUG ? '/css/vendor.css' : '/css/vendor.min.css'), array(), WP_DEBUG ? null : filemtime(get_stylesheet_directory() . '/css/vendor.min.css'), 'all');
+
+    wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array('css-vendor'), WP_DEBUG ? null : filemtime(get_stylesheet_directory() . '/css/portal.min.css'), 'all');
 }
 
 function portal_load_scripts() {
@@ -18,7 +20,7 @@ function portal_load_scripts() {
     wp_script_add_data('js-ie', 'conditional', 'lt IE 9');
 
     wp_enqueue_script('js-common', get_template_directory_uri().(WP_DEBUG ? '/js/common.js' : '/js/common.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/common.min.js'), true);
-    wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.min.js'), true);
+    wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array('js-common'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.min.js'), true);
 
     if (
         is_post_type_archive('concurso') ||
@@ -27,7 +29,7 @@ function portal_load_scripts() {
         is_singular('documento') ||
         is_singular('edital')
     ) {
-        wp_enqueue_script('js-datatables', get_template_directory_uri().(WP_DEBUG ? '/js/datatables.js' : '/js/datatables.min.js'), array('js-portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.min.js'), true);
+        wp_enqueue_script('js-datatables', get_template_directory_uri().(WP_DEBUG ? '/js/datatables.js' : '/js/datatables.min.js'), array('js-common', 'js-portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.min.js'), true);
     }
 
     if (!WP_DEBUG) {

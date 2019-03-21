@@ -4,6 +4,7 @@ const babel                = require('gulp-babel');
 const browserSync          = require('browser-sync').create();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const cssmin               = require('gulp-cssmin');
+const concat               = require('gulp-concat');
 const debug                = require('gulp-debug');
 const del                  = require('del');
 const gulp                 = require('gulp');
@@ -55,6 +56,12 @@ argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
 
 gulp.task('clean', function() {
     return del(['css/', 'js/', 'fonts/', 'img/vendor/', 'dist/']);
+});
+
+gulp.task('vendor-css', function() {
+    return gulp.src('./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css')
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('css/'));
 });
 
 gulp.task('sass', function() {
@@ -155,13 +162,7 @@ gulp.task('assets_fontawesome', function() {
     .pipe(gulp.dest('fonts/fa/'));
 });
 
-gulp.task('assets_fancybox', function() {
-    return gulp.src('node_modules/jquery-fancybox/source/img/**/*')
-    .pipe((argv.verbose) ? debug({title: 'Assets Fancybox:'}) : through2.obj())
-    .pipe(gulp.dest('img/vendor/'));
-});
-
-gulp.task('assets', gulp.parallel('assets_fontawesome', 'assets_fancybox'));
+gulp.task('assets', gulp.parallel('assets_fontawesome'));
 
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')

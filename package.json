@@ -4,6 +4,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.7.2",
     "autoprefixer": "^9.4.10",
     "bootstrap": "^4.3.1",
@@ -15,6 +16,7 @@
     "flexibility": "^2.0.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-debug": "^4.0.0",
     "gulp-imagemin": "^5.0.3",
@@ -25,7 +27,6 @@
     "gulp-uglify": "^3.0.2",
     "html5shiv": "^3.7.3",
     "jquery": "^3.3.1",
-    "jquery-fancybox": "^3.1.0",
     "lazysizes": "^4.1.6",
     "minimist": "^1.2.0",
     "moment": "^2.24.0",
