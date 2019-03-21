@@ -45,4 +45,9 @@
             @extend .table;
         }
     }
+
+    &__meta {
+        font-size: 0.8rem;
+        font-style: italic;
+    }
 }
