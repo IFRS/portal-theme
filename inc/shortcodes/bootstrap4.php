@@ -101,6 +101,8 @@ function ifrs_bs4_column( $atts, $content = null ) {
 		"lg"          => false,
 		"md"          => false,
 		"sm"          => false,
+		"xs"          => false,
+		"offset_xl"   => false,
 		"offset_lg"   => false,
 		"offset_md"   => false,
 		"offset_sm"   => false,
@@ -113,7 +115,7 @@ function ifrs_bs4_column( $atts, $content = null ) {
 	$class .= ( $atts['lg'] )			                                ? ' col-lg-' . $atts['lg'] : '';
 	$class .= ( $atts['md'] )                                           ? ' col-md-' . $atts['md'] : '';
 	$class .= ( $atts['sm'] )                                           ? ' col-sm-' . $atts['sm'] : '';
-	$class .= ( $atts['xs'] )                                           ? ' col-xs-' . $atts['xs'] : '';
+	$class .= ( $atts['xs'] )                                           ? ' col-' . $atts['xs'] : '';
 	$class .= ( $atts['offset_xl'] || $atts['offset_xl'] === "0" )      ? ' offset-xl-' . $atts['offset_xl'] : '';
 	$class .= ( $atts['offset_lg'] || $atts['offset_lg'] === "0" )      ? ' offset-lg-' . $atts['offset_lg'] : '';
 	$class .= ( $atts['offset_md'] || $atts['offset_md'] === "0" )      ? ' offset-md-' . $atts['offset_md'] : '';
