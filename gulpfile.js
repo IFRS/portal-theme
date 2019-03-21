@@ -85,7 +85,7 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('styles', gulp.series('sass', function css() {
+gulp.task('styles', gulp.series('vendor-css', 'sass', function css() {
     return gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
@@ -180,7 +180,7 @@ gulp.task('dist', function() {
 if (argv.production) {
     gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts', 'assets', 'images'), 'dist'));
 } else {
-    gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'webpack', 'assets')));
+    gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'webpack', 'assets')));
 }
 
 gulp.task('default', gulp.series('build', function watch() {
