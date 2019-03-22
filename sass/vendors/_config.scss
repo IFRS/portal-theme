@@ -1,15 +1,11 @@
 @import '../utils/vars';
 
-// Fonts
+// FontAwesome
 $fa-font-path:     '../fonts/fa';
 
 // Bootstrap
 $font-family-sans-serif:        "Open Sans", Arial, sans-serif;
 $link-color:                    $cor-primaria-azul;
 $breadcrumb-padding-horizontal: 0;
-/* $breadcrumb-bg:                 none; */
 $breadcrumb-color:              #172938;
 $breadcrumb-active-color:       #666;
-
-// Fancybox
-$image-path: '../img/vendor/';
