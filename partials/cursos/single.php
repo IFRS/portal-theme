@@ -71,7 +71,7 @@
                                     <?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_nome', true )); ?>
                                 <?php endif; ?>
                             </p>
-                            <span class="curso-coordenador__email"><a href="mailto:<?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_email', true )); ?>"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_email', true )); ?></a></span>
+                            <span class="curso-coordenador__email"><a href="mailto:<?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_email', true )); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_email', true )); ?></a></span>
                             <p class="curso-coordenador__titulacao"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_titulacao', true )); ?></p>
                         </div>
                     </div>
