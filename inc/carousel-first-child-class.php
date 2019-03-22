@@ -10,7 +10,7 @@ function ak_add_order_classes_for_widgets() {
         return;
     }
 
-    if (count($sidebars['widget-carousel']) > 0) {
+    if (!empty($sidebars['widget-carousel']) && count($sidebars['widget-carousel']) > 0) {
         $wp_registered_widgets[$sidebars['widget-carousel'][0]]['classname'] .= ' active';
     }
 }
