@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col">
                 <div class="curso-aside">
-                    <h3 class="curso-aside__title"><?php _e('Informa&ccedil;&otilde;es B&aacute;sicas', 'ifrs-portal-theme'); ?></h3>
+                    <h3 class="curso-aside__title"><?php _e('Informa&ccedil;&otilde;es', 'ifrs-portal-theme'); ?></h3>
                     <div class="curso-aside__content">
                         <div class="curso-info">
                             <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-user-graduate"></i></span>
@@ -52,16 +52,6 @@
                             <h4 class="curso-info__title"><?php _e('Dura&ccedil;&atilde;o', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_duracao', true )); ?> <span class="curso-info__text--lower">(<?php echo esc_html(get_post_meta( get_the_ID(), '_curso_carga_horaria', true )); ?>h)</span></p>
                         </div>
-                    </div>
-                </div>
-                <div class="curso-aside">
-                    <h3 class="curso-aside__title"><?php _e('Informa&ccedil;&otilde;es Legais', 'ifrs-portal-theme'); ?></h3>
-                    <div class="curso-aside__content">
-                        <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-file-signature"></i></span>
-                            <h4 class="curso-info__title"><?php _e('Autorização', 'ifrs-portal-theme'); ?></h4>
-                            <p class="curso-info__text"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_autorizacao', true )); ?></p>
-                        </div>
                         <div class="curso-info">
                             <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-star"></i></span>
                             <h4 class="curso-info__title"><?php _e('Nota do MEC', 'ifrs-portal-theme'); ?></h4>
@@ -73,7 +63,14 @@
                     <h3 class="curso-aside__title"><?php _e('Coordena&ccedil;&atilde;o', 'ifrs-portal-theme'); ?></h3>
                     <div class="curso-aside__content">
                         <div class="curso-coordenador">
-                            <p class="curso-coordenador__nome"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_nome', true )); ?></p>
+                            <p class="curso-coordenador__nome">
+                                <?php $lattes = get_post_meta( get_the_ID(), '_curso_coordenador_lattes', true ); ?>
+                                <?php if (!empty($lattes)) : ?>
+                                    <a href="<?php echo esc_url($lattes); ?>"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_nome', true )); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_nome', true )); ?>
+                                <?php endif; ?>
+                            </p>
                             <span class="curso-coordenador__email"><a href="mailto:<?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_email', true )); ?>"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_email', true )); ?></a></span>
                             <p class="curso-coordenador__titulacao"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_coordenador_titulacao', true )); ?></p>
                         </div>
