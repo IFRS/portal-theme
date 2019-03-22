@@ -40,12 +40,14 @@
         font-size: 0.85rem;
         font-weight: bold;
         margin: 0;
+        padding-left: 35px;
         text-transform: uppercase;
     }
 
     &__text {
         color: $cor-primaria-verde;
         font-size: 0.85rem;
+        padding-left: 35px;
         text-transform: uppercase;
 
         &--lower {
