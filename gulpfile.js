@@ -119,8 +119,10 @@ gulp.task('webpack', function(done) {
                 chunks: 'all',
                 cacheGroups: {
                     vendors: false,
-                    default: {
-                        name: 'common',
+                    commons: {
+                        name: "commons",
+                        chunks: "initial",
+                        minChunks: 2
                     }
                 }
             }

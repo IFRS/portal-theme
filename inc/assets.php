@@ -19,7 +19,7 @@ function portal_load_scripts() {
     wp_enqueue_script('js-ie', get_template_directory_uri().(WP_DEBUG ? '/js/ie.js' : '/js/ie.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/ie.min.js'), false);
     wp_script_add_data('js-ie', 'conditional', 'lt IE 9');
 
-    wp_enqueue_script('js-common', get_template_directory_uri().(WP_DEBUG ? '/js/common.js' : '/js/common.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/common.min.js'), true);
+    wp_enqueue_script('js-commons', get_template_directory_uri().(WP_DEBUG ? '/js/commons.js' : '/js/commons.min.js'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/commons.min.js'), true);
     wp_enqueue_script('js-portal', get_template_directory_uri().(WP_DEBUG ? '/js/portal.js' : '/js/portal.min.js'), array('js-common'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.min.js'), true);
 
     if (
@@ -33,7 +33,7 @@ function portal_load_scripts() {
     }
 
     if (!WP_DEBUG) {
-        wp_enqueue_script('js-barra-brasil', '//barra.brasil.gov.br/barra.js', array(), null, true);
+        wp_enqueue_script('js-barra-brasil', 'https://barra.brasil.gov.br/barra.js', array(), null, true);
     }
 }
 
