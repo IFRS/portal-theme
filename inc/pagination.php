@@ -27,7 +27,7 @@ function portal_pagination() {
 
     if ( is_array( $pages ) ) {
         $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-        echo '<ul class="pagination">';
+        echo '<ul class="pagination justify-content-center">';
         foreach ( $pages as $page ) {
             if (strpos($page, 'current') !== false) {
                 echo '<li class="page-item active">'.$page.'</li>';
