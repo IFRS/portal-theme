@@ -3,6 +3,11 @@ function portal_load_styles() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
+    if (!is_admin()) {
+        wp_dequeue_style( 'wp-block-library' );
+        wp_deregister_style( 'wp-block-library' );
+    }
+
     wp_enqueue_style('css-vendor', get_template_directory_uri().(WP_DEBUG ? '/css/vendor.css' : '/css/vendor.min.css'), array(), WP_DEBUG ? null : filemtime(get_stylesheet_directory() . '/css/vendor.min.css'), 'all');
 
     wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array('css-vendor'), WP_DEBUG ? null : filemtime(get_stylesheet_directory() . '/css/portal.min.css'), 'all');
