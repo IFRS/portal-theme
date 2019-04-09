@@ -1,6 +1,5 @@
 .menu-rodape {
     @extend .row;
-    display: block;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -10,6 +9,7 @@
         @extend .col-md-6;
         @extend .col-lg-4;
         @extend .col-xl-3;
+        align-self: flex-start;
         border-left: 1px dotted #80A887;
         display: inline-block;
         font-size: 18px;
@@ -17,7 +17,6 @@
         margin-bottom: 46px;
         padding-left: 10px;
         text-transform: uppercase;
-        vertical-align: top;
     }
 
     .sub-menu {
