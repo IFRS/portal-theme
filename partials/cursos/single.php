@@ -11,14 +11,61 @@
             ?>
             <?php the_content(); ?>
         </div>
-        <div class="curso__estrutura">
-            <h3 class="curso__estrutura-title"><?php _e('Estrutura F&iacute;sica', 'ifrs-portal-theme'); ?></h3>
-            <?php echo wpautop(get_post_meta( get_the_ID(), '_curso_estrutura', true )); ?>
+        <div class="row">
+            <div class="col">
+                <div class="curso__arquivos">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="curso__arquivos-title"><?php _e('Grade e Corpo Docente', 'ifrs-portal-theme'); ?></h3>
+                        </div>
+                        <div class="list-group list-group-flush" role="list">
+                            <?php $ppc = get_post_meta( get_the_ID(), '_curso_ppc', true ); ?>
+                            <?php if (!empty($ppc)) : ?>
+                                <a href="<?php echo esc_url($ppc); ?>" class="list-group-item list-group-item-action" role="listitem"><?php _e('Projeto Pedagógico do Curso (PPC)', 'ifrs-portal-theme'); ?></a>
+                            <?php endif; ?>
+
+                            <?php $matriz_curricular = get_post_meta( get_the_ID(), '_curso_matriz_curricular', true ); ?>
+                            <?php if (!empty($matriz_curricular)) : ?>
+                                <a href="<?php echo esc_url($matriz_curricular); ?>" class="list-group-item list-group-item-action" role="listitem"><?php _e('Matriz Curricular', 'ifrs-portal-theme'); ?></a>
+                            <?php endif; ?>
+
+                            <?php $representacao_grafica = get_post_meta( get_the_ID(), '_curso_representacao_grafica', true ); ?>
+                            <?php if (!empty($representacao_grafica)) : ?>
+                                <a href="<?php echo esc_url($representacao_grafica); ?>" class="list-group-item list-group-item-action" role="listitem"><?php _e('Representação Gráfica', 'ifrs-portal-theme'); ?></a>
+                            <?php endif; ?>
+
+                            <?php $corpo_docente = get_post_meta( get_the_ID(), '_curso_corpo_docente', true ); ?>
+                            <?php if (!empty($corpo_docente)) : ?>
+                                <a href="<?php echo esc_url($corpo_docente); ?>" class="list-group-item list-group-item-action" role="listitem"><?php _e('Corpo Docente', 'ifrs-portal-theme'); ?></a>
+                            <?php endif; ?>
+
+                            <?php $corpo_docente_componentes_curriculares = get_post_meta( get_the_ID(), '_curso_corpo_docente_componentes_curriculares', true ); ?>
+                            <?php if (!empty($corpo_docente_componentes_curriculares)) : ?>
+                                <a href="<?php echo esc_url($corpo_docente_componentes_curriculares); ?>" class="list-group-item list-group-item-action" role="listitem"><?php _e('Corpo Docente X Componentes Curriculares', 'ifrs-portal-theme'); ?></a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php $arquivos = get_post_meta( get_the_ID(), '_curso_arquivos', true ); ?>
+            <?php if (!empty($arquivos)) : ?>
+            <div class="col-12 col-md-6">
+                <div class="curso__arquivos">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="curso__arquivos-title"><?php _e('Demais Arquivos', 'ifrs-portal-theme'); ?></h3>
+                        </div>
+                        <div class="list-group list-group-flush" role="list">
+                            <?php foreach ($arquivos as $id => $arquivo) : ?>
+                                <a href="<?php echo esc_url($arquivo); ?>" class="list-group-item list-group-item-action" role="listitem"><?php echo get_the_title($id); ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
-        <div class="curso__arquivos">
-            <h3 class="curso__arquivos-title"><?php _e('Arquivos', 'ifrs-portal-theme'); ?></h3>
-            <?php echo wpautop(get_post_meta( get_the_ID(), '_curso_arquivos', true )); ?>
-        </div>
+
     </div>
     <div class="col-12 col-lg-3">
         <div class="row">
