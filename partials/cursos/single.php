@@ -13,10 +13,10 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="curso__arquivos">
-                    <div class="card">
+                <div class="curso-arquivos">
+                    <div class="card bg-light">
                         <div class="card-header">
-                            <h3 class="curso__arquivos-title"><?php _e('Grade e Corpo Docente', 'ifrs-portal-theme'); ?></h3>
+                            <h3 class="curso-arquivos__title"><?php _e('Grade e Corpo Docente', 'ifrs-portal-theme'); ?></h3>
                         </div>
                         <div class="list-group list-group-flush" role="list">
                             <?php $ppc = get_post_meta( get_the_ID(), '_curso_ppc', true ); ?>
@@ -50,10 +50,10 @@
             <?php $arquivos = get_post_meta( get_the_ID(), '_curso_arquivos', true ); ?>
             <?php if (!empty($arquivos)) : ?>
             <div class="col-12 col-md-6">
-                <div class="curso__arquivos">
-                    <div class="card">
+                <div class="curso-arquivos">
+                    <div class="card bg-light">
                         <div class="card-header">
-                            <h3 class="curso__arquivos-title"><?php _e('Demais Arquivos', 'ifrs-portal-theme'); ?></h3>
+                            <h3 class="curso-arquivos__title"><?php _e('Demais Arquivos', 'ifrs-portal-theme'); ?></h3>
                         </div>
                         <div class="list-group list-group-flush" role="list">
                             <?php foreach ($arquivos as $id => $arquivo) : ?>
