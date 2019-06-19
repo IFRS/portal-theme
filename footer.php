@@ -17,7 +17,7 @@
                             'menu_id'           => '',
                             'container'         => 'nav',
                             'container_class'   => '',
-                            'container_id'      => '',
+                            'container_id'      => 'sitemap',
                             'depth'             => 2,
                             'theme_location'    => 'principal',
                         )
