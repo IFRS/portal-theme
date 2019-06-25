@@ -1,5 +1,7 @@
 <?php the_post(); ?>
 
+<?php $niveis = get_the_terms(get_the_ID(), 'curso_nivel'); ?>
+
 <div class="row">
     <div class="col-12 col-lg-9">
         <h2 class="curso__title"><?php the_title(); ?></h2>
@@ -10,6 +12,10 @@
                 }
             ?>
             <?php the_content(); ?>
+            <h3><?php _e('Pré-requisitos', 'ifrs-portal-theme'); ?></h3>
+            <?php foreach ($niveis as $nivel) : ?>
+                <?php echo term_description($nivel->term_id, 'curso_nivel'); ?>
+            <?php endforeach; ?>
         </div>
         <div class="row">
             <div class="col">
@@ -82,7 +88,6 @@
                             <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
                             <h4 class="curso-info__title"><?php _e('Nível', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text">
-                                <?php $niveis = get_the_terms(get_the_ID(), 'curso_nivel'); ?>
                                 <?php foreach ($niveis as $nivel) : ?>
                                     <?php echo get_term_parents_list($nivel->term_id, 'curso_nivel', array('separator' => ' / ', 'inclusive' => false)); ?>
                                     <a href="<?php echo get_term_link($nivel); ?>"><?php echo $nivel->name; ?></a>
