@@ -12,7 +12,7 @@
     "datatables.net": "^1.10.19",
     "datatables.net-bs4": "^1.10.19",
     "datatables.net-plugins": "^1.10.19",
-    "del": "^4.1.1",
+    "del": "^5.0.0",
     "flexibility": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -37,7 +37,7 @@
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
     "through2": "^3.0.1",
-    "webpack": "^4.34.0",
+    "webpack": "^4.35.2",
     "webpack-bundle-analyzer": "^3.3.2"
   }
 }
