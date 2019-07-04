@@ -75,14 +75,3 @@
     }
 }
 
-.modalidades,
-.niveis,
-.turnos {
-    &__title {
-        @include title-box($cor-cursos);
-    }
-
-    &__list {
-        @include aside-list();
-    }
-}
