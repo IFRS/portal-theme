@@ -17,6 +17,7 @@
                 <?php echo term_description($nivel->term_id, 'curso_nivel'); ?>
             <?php endforeach; ?>
         </div>
+        <div class="clearfix"></div>
         <div class="row">
             <div class="col">
                 <div class="curso-arquivos">
