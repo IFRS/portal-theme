@@ -13,7 +13,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-around;
         align-content: flex-start;
         align-items: stretch;
         padding-top: 15px;
@@ -25,29 +25,40 @@
 }
 
 .curso-item {
-    align-self: auto;
+    align-self: flex-start;
     flex: 0 0 100%;
-    padding: 0 10px 20px 0;
+    margin-bottom: 15px;
 
     @include media-breakpoint-up(sm) {
-        flex-basis: 50%;
+        flex-basis: 47%;
+    }
+
+    @include media-breakpoint-up(md) {
+        flex-basis: 48%;
     }
 
     @include media-breakpoint-up(lg) {
-        flex-basis: 33.33%;
+        flex-basis: 32%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        flex-basis: 31%;
+    }
+
+    &:last-child {
+        justify-self: flex-start;
     }
 
     &__modalidade {
-        font-size: 14px;
+        @extend .badge;
+        @include badge-variant($cor-cursos);
 
-        a {
-            @extend .badge;
-            @include badge-variant($cor-cursos);
-        }
+        font-size: 0.75rem;
     }
 
     &__nivel {
-        font-size: 12px;
+        color: #666666;
+        font-size: 0.75rem;
         text-transform: uppercase;
 
         a {
@@ -57,7 +68,7 @@
 
     &__title {
         color: $cor-primaria-verde;
-        font-size: 18px;
+        font-size: 1.1rem;
         font-weight: bold;
         margin: 5px 0;
 
@@ -67,11 +78,10 @@
     }
 
     &__turnos {
-        font-size: 12px;
+        font-size: 0.8rem;
 
         a {
             color: $cor-secundaria-azul-escuro;
         }
     }
 }
-
