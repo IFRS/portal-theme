@@ -1,6 +1,11 @@
 <?php $niveis = get_the_terms(get_the_ID(), 'curso_nivel'); ?>
 
 <div class="card curso-item">
+    <div class="card-header">
+        <?php foreach (get_the_terms(get_the_ID(), 'curso_unidade') as $unidade) : ?>
+            <span class="curso-item__unidade"><?php echo $unidade->name; ?></span>
+        <?php endforeach; ?>
+    </div>
     <div class="card-body">
         <?php foreach (get_the_terms(get_the_ID(), 'curso_modalidade') as $modalidade) : ?>
             <span class="curso-item__modalidade"><?php echo $modalidade->name; ?></span>

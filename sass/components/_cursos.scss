@@ -49,6 +49,10 @@
         justify-self: flex-start;
     }
 
+    &__unidade {
+        font-size: 0.9rem;
+    }
+
     &__modalidade {
         @extend .badge;
         @include badge-variant($cor-cursos);
