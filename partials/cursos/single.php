@@ -86,6 +86,11 @@
                             <p class="curso-info__text"><?php the_terms( get_the_ID(), 'curso_modalidade', '', ', ' ); ?></p>
                         </div>
                         <div class="curso-info">
+                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+                            <h4 class="curso-info__title"><?php _e('Unidade', 'ifrs-portal-theme'); ?></h4>
+                            <p class="curso-info__text"><?php the_terms( get_the_ID(), 'curso_unidade', '', ', ' ); ?></p>
+                        </div>
+                        <div class="curso-info">
                             <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
                             <h4 class="curso-info__title"><?php _e('Nível', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text">
