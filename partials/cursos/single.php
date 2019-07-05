@@ -110,11 +110,14 @@
                             <h4 class="curso-info__title"><?php _e('Dura&ccedil;&atilde;o', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_duracao', true )); ?> <span class="curso-info__text--lower">(<?php echo esc_html(get_post_meta( get_the_ID(), '_curso_carga_horaria', true )); ?>h)</span></p>
                         </div>
-                        <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-star"></i></span>
-                            <h4 class="curso-info__title"><?php _e('Nota do MEC', 'ifrs-portal-theme'); ?></h4>
-                            <p class="curso-info__text"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_nota', true )); ?></p>
-                        </div>
+                        <?php $nota_mec = get_post_meta( get_the_ID(), '_curso_nota', true ); ?>
+                        <?php if (!empty($nota_mec)) : ?>
+                            <div class="curso-info">
+                                <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-star"></i></span>
+                                <h4 class="curso-info__title"><?php _e('Nota do MEC', 'ifrs-portal-theme'); ?></h4>
+                                <p class="curso-info__text"><?php echo esc_html($nota_mec); ?></p>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="curso-aside">
