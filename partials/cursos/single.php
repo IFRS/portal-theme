@@ -114,7 +114,7 @@
                         <?php if (!empty($nota_mec)) : ?>
                             <div class="curso-info">
                                 <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-star"></i></span>
-                                <h4 class="curso-info__title"><?php _e('Nota do MEC', 'ifrs-portal-theme'); ?></h4>
+                                <h4 class="curso-info__title"><?php _e('Avalia&ccedil;&atilde;o do Curso', 'ifrs-portal-theme'); ?></h4>
                                 <p class="curso-info__text"><?php echo esc_html($nota_mec); ?></p>
                             </div>
                         <?php endif; ?>
