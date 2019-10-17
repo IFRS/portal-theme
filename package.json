@@ -1,6 +1,20 @@
 {
   "name": "ifrs-portal-theme",
   "private": true,
+  "browserslist": [
+    "last 5 versions",
+    ">= 1%",
+    "Chrome >= 45",
+    "Firefox >= 38",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30",
+    "ie 8-10",
+    "not ie <= 7"
+  ],
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
