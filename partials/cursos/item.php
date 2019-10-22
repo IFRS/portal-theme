@@ -7,9 +7,6 @@
         <?php endforeach; ?>
     </div>
     <div class="card-body">
-        <?php foreach (get_the_terms(get_the_ID(), 'curso_modalidade') as $modalidade) : ?>
-            <span class="curso-item__modalidade"><?php echo $modalidade->name; ?></span>
-        <?php endforeach; ?>
         <h2 class="card-title curso-item__title"><a href="<?php the_permalink(); ?>" class="curso-item__link"><?php the_title(); ?></a></h2>
         <p class="card-text">
             <?php foreach ($niveis as $nivel) : ?>
@@ -17,6 +14,9 @@
                     <?php echo get_term_parents_list($nivel->term_id, 'curso_nivel', array('separator' => ' / ', 'inclusive' => false, 'link' => false)); ?>
                     <?php echo $nivel->name; ?>
                 </span>
+            <?php endforeach; ?>
+            <?php foreach (get_the_terms(get_the_ID(), 'curso_modalidade') as $modalidade) : ?>
+                <span class="curso-item__modalidade"><?php echo $modalidade->name; ?></span>
             <?php endforeach; ?>
         </p>
     </div>

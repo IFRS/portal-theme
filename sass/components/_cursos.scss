@@ -50,10 +50,10 @@
     }
 
     &__modalidade {
-        @extend .badge;
-        @include badge-variant($cor-cursos);
-
-        font-size: 0.7rem;
+        color: $cor-cursos;
+        display: block;
+        font-size: 0.75rem;
+        margin-top: 5px;
     }
 
     &__nivel {
