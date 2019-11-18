@@ -27,10 +27,6 @@
         display: inline-block;
         font-size: 0.85rem;
         margin-bottom: 5px;
-
-        .fas {
-            color: $cor-editais;
-        }
     }
 
     .documentos-type {
@@ -63,12 +59,13 @@
     margin-bottom: $grid-gutter-width;
 
     .documento-date-time {
+        @include icon-calendar($cor-documentos);
+
+        background-position: left center;
+        background-size: 15px;
         font-size: 0.95rem;
         font-weight: lighter;
-
-        .fas {
-            color: $cor-documentos;
-        }
+        padding-left: 18px;
     }
 
     .documento-body {

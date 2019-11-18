@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-12">
                         <p class="documento-date-time">
-                            <i class="fas fa-calendar-alt"></i>&nbsp;<?php echo get_the_modified_date('d/m/Y'); ?>
+                            <?php echo get_the_modified_date('d/m/Y'); ?>
                             &agrave;s
                             <?php echo get_the_modified_time('G\hi'); ?>
                         </p>

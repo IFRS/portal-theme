@@ -15,12 +15,13 @@
             display: block;
 
             &:after {
-                /* symbol for "opening" panels */
-                @extend .fas;
-                content: fa-content($fa-var-angle-down);
-                border-radius: 4px;
-                color: #fff;
+                @include icon-chevron('down');
+
                 background-color: $cor-concursos;
+                background-position: center center;
+                border-radius: 4px;
+                color: #ffffff;
+                content: '';
                 float: right;
                 min-width: 21px;
                 padding: 2px 5px;
@@ -28,8 +29,7 @@
             }
 
             &.collapsed:after {
-                /* symbol for "collapsed" panels */
-                content: fa-content($fa-var-angle-right);
+                @include icon-chevron('right');
             }
         }
     }

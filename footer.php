@@ -42,13 +42,13 @@
                     <div class="col-12">
                         <p class="license__content">
                             <!-- Wordpress -->
-                            <a href="https://br.wordpress.org/" target="blank" class="license__link">Desenvolvido com o CMS de c&oacute;digo aberto Wordpress<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            <a href="https://br.wordpress.org/" target="blank" class="license__link">Desenvolvido com o CMS de c&oacute;digo aberto Wordpress<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a>
                             &mdash;
                             <!-- Código-fonte -->
-                            <a href="https://github.com/IFRS/portal-theme" target="blank" class="license__link">C&oacute;digo-fonte deste tema sob a licen&ccedil;a GPLv3<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            <a href="https://github.com/IFRS/portal-theme" target="blank" class="license__link">C&oacute;digo-fonte deste tema sob a licen&ccedil;a GPLv3<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a>
                             &mdash;
                             <!-- Creative Commons -->
-                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="license__link"><img src="<?php echo get_template_directory_uri(); ?>/img/cc-by-nc-sa-4.png" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" /></a> <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="license__link"><img src="<?php echo get_template_directory_uri(); ?>/img/cc-by-nc-sa-4.png" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" /></a>
                         </p>
                     </div>
                 </div>

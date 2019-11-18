@@ -2,7 +2,7 @@
     <?php if (!dynamic_sidebar('widget-nav')) : endif; ?>
 </div>
 
-<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><i class="fas fa-bars"></i>&nbsp;<span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</button>
+<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</button>
 <nav class="menu-navbar collapse show">
     <?php
         wp_nav_menu(

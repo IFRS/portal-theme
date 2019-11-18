@@ -28,7 +28,7 @@
             <?php get_template_part('partials/editais/edital-status'); ?>
             <?php if (is_tax('edital_category')) : ?>
                 <br>
-                <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="btn btn-outline-secondary btn-block"><i class="fas fa-angle-left"></i>&nbsp;<?php _e('Todos os Editais', 'ifrs-portal-theme'); ?></a>
+                <a href="<?php echo get_post_type_archive_link( 'edital' ); ?>" class="btn btn-outline-secondary btn-block"><?php _e('Todos os Editais', 'ifrs-portal-theme'); ?></a>
             <?php endif; ?>
         </aside>
     </div>

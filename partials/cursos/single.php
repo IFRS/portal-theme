@@ -81,17 +81,14 @@
                     <h3 class="curso-aside__title"><?php _e('Informa&ccedil;&otilde;es', 'ifrs-portal-theme'); ?></h3>
                     <div class="curso-aside__content">
                         <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-user-graduate"></i></span>
                             <h4 class="curso-info__title"><?php _e('Modalidade', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text"><?php the_terms( get_the_ID(), 'curso_modalidade', '', ', ' ); ?></p>
                         </div>
                         <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
                             <h4 class="curso-info__title"><?php _e('Unidade', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text"><?php the_terms( get_the_ID(), 'curso_unidade', '', ', ' ); ?></p>
                         </div>
                         <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
                             <h4 class="curso-info__title"><?php _e('Nível', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text">
                                 <?php foreach ($niveis as $nivel) : ?>
@@ -101,19 +98,16 @@
                             </p>
                         </div>
                         <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-cloud-sun"></i></span>
                             <h4 class="curso-info__title"><?php _e('Turnos', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text"><?php the_terms( get_the_ID(), 'curso_turno', '', ', ' ); ?></p>
                         </div>
                         <div class="curso-info">
-                            <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-clock"></i></span>
                             <h4 class="curso-info__title"><?php _e('Dura&ccedil;&atilde;o', 'ifrs-portal-theme'); ?></h4>
                             <p class="curso-info__text"><?php echo esc_html(get_post_meta( get_the_ID(), '_curso_duracao', true )); ?> <span class="curso-info__text--lower">(<?php echo esc_html(get_post_meta( get_the_ID(), '_curso_carga_horaria', true )); ?>h)</span></p>
                         </div>
                         <?php $nota_mec = get_post_meta( get_the_ID(), '_curso_nota', true ); ?>
                         <?php if (!empty($nota_mec)) : ?>
                             <div class="curso-info">
-                                <span class="curso-info__icon" aria-hidden="true"><i class="fas fa-star"></i></span>
                                 <h4 class="curso-info__title"><?php _e('Avalia&ccedil;&atilde;o do Curso', 'ifrs-portal-theme'); ?></h4>
                                 <p class="curso-info__text"><?php echo esc_html($nota_mec); ?></p>
                             </div>

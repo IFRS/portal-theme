@@ -23,9 +23,9 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <small class="post__date">
-                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;publicado em <?php the_time('d'); ?> de <?php the_time('F'); ?> de <?php the_time('Y'); ?>
+                    <span class="post__published">publicado em <?php the_time('d'); ?> de <?php the_time('F'); ?> de <?php the_time('Y'); ?></span>
                         <br>
-                        <?php if (get_the_modified_time() != get_the_time()) : ?><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;&uacute;ltima modifica&ccedil;&atilde;o em <?php the_modified_time('d'); ?> de <?php the_modified_time('F'); ?> de <?php the_modified_time('Y'); ?> <?php endif; ?>
+                        <?php if (get_the_modified_time() != get_the_time()) : ?><span class="post__updated">&uacute;ltima modifica&ccedil;&atilde;o em <?php the_modified_time('d'); ?> de <?php the_modified_time('F'); ?> de <?php the_modified_time('Y'); ?></span><?php endif; ?>
                     </small>
                 </div>
             </div>

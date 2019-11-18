@@ -25,6 +25,13 @@
         &:last-child {
             margin-right: 0;
         }
+
+        &--first {
+            @include icon-share(#000000);
+
+            background-size: 20px;
+            padding: 10px;
+        }
     }
 
     &__link {

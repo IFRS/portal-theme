@@ -8,13 +8,14 @@
     }
 
     &__edital-datetime {
+        @include icon-calendar($cor-editais);
+
+        background-position: left center;
+        background-size: 15px;
         display: inline-block;
         font-size: 0.85rem;
         margin-bottom: 5px;
-
-        .fas {
-            color: $cor-editais;
-        }
+        padding-left: 18px;
     }
 
     &__edital-categories {

@@ -151,14 +151,6 @@ gulp.task('scripts', gulp.series('webpack', function js() {
     .pipe(browserSync.stream());
 }));
 
-gulp.task('assets_fontawesome', function() {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**/fa-solid*')
-    .pipe((argv.verbose) ? debug({title: 'Assets FontAwesome:'}) : through2.obj())
-    .pipe(gulp.dest('fonts/fa/'));
-});
-
-gulp.task('assets', gulp.parallel('assets_fontawesome'));
-
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
     .pipe(imagemin())
@@ -173,9 +165,9 @@ gulp.task('dist', function() {
 });
 
 if (argv.production) {
-    gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts', 'assets', 'images'), 'dist'));
+    gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts', 'images'), 'dist'));
 } else {
-    gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'webpack', 'assets')));
+    gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'webpack')));
 }
 
 gulp.task('default', gulp.series('build', function watch() {

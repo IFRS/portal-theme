@@ -25,5 +25,12 @@
             background-color: #ffffff;
             color: $cor-primaria-azul;
         }
+
+        &--parent {
+            @include icon-parent-level();
+
+            background-size: 20px;
+            padding: 20px 20px;
+        }
     }
 }

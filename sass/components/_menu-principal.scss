@@ -31,9 +31,10 @@
             padding-right: 15px;
 
             &:after {
-                /* symbol for "opening" panels */
-                @extend .fas;
-                content: fa-content($fa-var-angle-down);
+                @include icon-chevron('down');
+
+                content: '';
+                background-position: center center;
                 float: right;
                 font-size: 1.1rem;
                 padding: 0 2px 0 0;
@@ -41,8 +42,7 @@
             }
 
             &.collapsed:after {
-                /* symbol for "collapsed" panels */
-                content: fa-content($fa-var-angle-right);
+                @include icon-chevron('right');
             }
         }
     }

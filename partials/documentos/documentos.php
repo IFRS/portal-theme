@@ -29,7 +29,7 @@
             ?>
             <?php if (is_year() || is_month() || is_tax('documento_type')) : ?>
                 <br>
-                <a href="<?php echo get_post_type_archive_link( 'documento' ); ?>" class="btn btn-default btn-block"><i class="fas fa-angle-left"></i>&nbsp;<?php _e('Todos os Documentos', 'ifrs-portal-theme'); ?></a>
+                <a href="<?php echo get_post_type_archive_link( 'documento' ); ?>" class="btn btn-default btn-block"><?php _e('Todos os Documentos', 'ifrs-portal-theme'); ?></a>
             <?php endif; ?>
         </aside>
     </div>

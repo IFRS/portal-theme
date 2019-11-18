@@ -1,5 +1,9 @@
 .btn-menu-toggle {
     @include button-variant($cor-primaria-verde, $cor-primaria-verde);
+    @include icon-hamburger();
 
+    background-position: 5px center;
+    background-size: 25%;
     margin-bottom: 15px;
+    padding-left: 30px;
 }

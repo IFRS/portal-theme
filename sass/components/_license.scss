@@ -9,5 +9,13 @@
 
     &__link {
         color: #000000;
+
+        &:after {
+            @include icon-external-link(#000000);
+
+            content: '';
+            margin-left: 5px;
+            padding-left: 15px;
+        }
     }
 }
