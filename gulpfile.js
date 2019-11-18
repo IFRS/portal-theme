@@ -5,7 +5,6 @@ const browserSync          = require('browser-sync').create();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const cssmin               = require('gulp-cssmin');
 const concat               = require('gulp-concat');
-const debug                = require('gulp-debug');
 const del                  = require('del');
 const gulp                 = require('gulp');
 const imagemin             = require('gulp-imagemin');
@@ -16,23 +15,8 @@ const postcss              = require('gulp-postcss');
 const rename               = require('gulp-rename');
 const sass                 = require('gulp-sass');
 const sourcemaps           = require('gulp-sourcemaps');
-const through2             = require('through2');
 const uglify               = require('gulp-uglify');
 const webpack              = require('webpack');
-
-const dist = [
-    '**',
-    '!.**',
-    '!css/*.map',
-    '!dist{,/**}',
-    '!js/*.map',
-    '!node_modules{,/**}',
-    '!sass{,/**}',
-    '!src{,/**}',
-    '!gulpfile.js',
-    '!package.json',
-    '!package-lock.json'
-];
 
 const webpackMode = argv.production ? 'production' : 'development';
 
@@ -67,7 +51,6 @@ gulp.task('sass', function() {
     }).on('error', sass.logError))
     .pipe(postcss(postCSSplugins))
     .pipe(sourcemaps.write('./'))
-    .pipe((argv.verbose) ? debug({title: 'SASS:'}) : through2.obj())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 });
@@ -76,7 +59,6 @@ gulp.task('styles', gulp.series('vendor-css', 'sass', function css() {
     return gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe((argv.verbose) ? debug({title: 'CSS:'}) : through2.obj())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 }));
@@ -146,7 +128,6 @@ gulp.task('scripts', gulp.series('webpack', function js() {
         ie8: true,
     }))
     .pipe(rename({suffix: '.min'}))
-    .pipe((argv.verbose) ? debug({title: 'JS:'}) : through2.obj())
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream());
 }));
@@ -154,13 +135,23 @@ gulp.task('scripts', gulp.series('webpack', function js() {
 gulp.task('images', function() {
     return gulp.src('img/*.{png,jpg,gif}')
     .pipe(imagemin())
-    .pipe((argv.verbose) ? debug({title: 'Images:'}) : through2.obj())
     .pipe(gulp.dest('img/'));
 });
 
 gulp.task('dist', function() {
-    return gulp.src(dist)
-    .pipe((argv.verbose) ? debug({title: 'Dist:'}) : through2.obj())
+    return gulp.src([
+        '**',
+        '!.**',
+        '!css/*.map',
+        '!dist{,/**}',
+        '!js/*.map',
+        '!node_modules{,/**}',
+        '!sass{,/**}',
+        '!src{,/**}',
+        '!gulpfile.js',
+        '!package.json',
+        '!package-lock.json'
+    ])
     .pipe(gulp.dest('dist/'));
 });
 

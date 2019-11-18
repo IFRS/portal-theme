@@ -2,11 +2,10 @@
   "name": "ifrs-portal-theme",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "@fancyapps/fancybox": "^3.5.7",
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "autoprefixer": "^9.6.5",
+    "autoprefixer": "^9.7.1",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "datatables.net": "^1.10.20",
@@ -18,8 +17,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-debug": "^4.0.0",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^6.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
@@ -36,7 +34,6 @@
     "popper.js": "^1.16.0",
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
-    "through2": "^3.0.1",
     "webpack": "^4.41.2",
     "webpack-bundle-analyzer": "^3.6.0"
   }
