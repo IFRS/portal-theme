@@ -66,7 +66,3 @@ require_once('inc/taxonomies/escopo.php');
 // Shortcodes
 require_once('inc/shortcodes/bootstrap4.php');
 require_once('inc/shortcodes/noticias-escopo.php');
-
-// Instagram Widget
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-is_plugin_active('wp-instagram-widget/wp-instagram-widget.php') ? require_once('inc/instagram.php') : null;
