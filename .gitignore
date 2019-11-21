@@ -10,11 +10,5 @@
 # JS
 /js/
 
-# Fonts
-/fonts/
-
-# Vendor Images
-/img/vendor/
-
 # Build
 /dist/
