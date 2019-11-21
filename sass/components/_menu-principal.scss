@@ -31,18 +31,17 @@
             padding-right: 15px;
 
             &:after {
-                @include icon-chevron('down');
+                @include icon-chevron('down', $cor-primaria-verde);
 
                 content: '';
-                background-position: center center;
                 float: right;
                 font-size: 1.1rem;
-                padding: 0 2px 0 0;
                 margin-right: -16px;
+                padding: 8px;
             }
 
             &.collapsed:after {
-                @include icon-chevron('right');
+                @include icon-chevron('right', $cor-primaria-verde);
             }
         }
     }
