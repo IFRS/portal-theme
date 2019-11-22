@@ -42,9 +42,6 @@ require_once('inc/empty-search-filter.php');
 require_once('inc/widgets.php');
 require_once('inc/carousel-first-child-class.php');
 
-// Queries personalizadas em determinados templates
-require_once('inc/custom-queries.php');
-
 // Custom TinyMCE
 require_once('inc/custom-tinymce.php');
 
