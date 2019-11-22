@@ -18,13 +18,13 @@
                 @include icon-chevron('down');
 
                 background-color: $cor-concursos;
-                background-position: center center;
+                background-size: 18px;
                 border-radius: 4px;
                 color: #ffffff;
                 content: '';
                 float: right;
                 min-width: 21px;
-                padding: 2px 5px;
+                padding: 12px;
                 text-align: center;
             }
 
