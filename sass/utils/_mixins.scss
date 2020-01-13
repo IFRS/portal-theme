@@ -74,6 +74,20 @@
     }
 }
 
+@mixin trim($numLines: 1) {
+    @if $numLines > 1 {
+        display: -webkit-box;
+        -webkit-line-clamp: $numLines;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    } @else {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
 @mixin icon-calendar($stroke: #ffffff) {
     background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22#{str-replace(inspect($stroke), '#', '%23')}%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22arcs%22%20stroke-width%3D%223%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%3Crect%20width%3D%2218%22%20height%3D%2218%22%20x%3D%223%22%20y%3D%224%22%20rx%3D%222%22%20ry%3D%222%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M16%202v4M8%202v4M3%2010h18%22%2F%3E%0A%3C%2Fsvg%3E");
     background-position: center center;
