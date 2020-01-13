@@ -35,6 +35,10 @@
         color: #172938;
         font-size: 14px;
         line-height: 21px;
+
+        p {
+            @include trim(5);
+        }
     }
 
     &_destaque {
