@@ -1,8 +1,20 @@
 .noticia {
     $n: &;
 
-    &__img {
+    &__img-wrapper {
         margin-bottom: 15px;
+        position: relative;
+        padding-top: 75%;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
     }
 
     &__titulo {
@@ -42,13 +54,25 @@
     }
 
     &_destaque {
-        #{$n}__img {
+        #{$n}__img-wrapper {
             @include media-breakpoint-up(lg) {
                 float: left;
                 margin-bottom: 0;
                 margin-right: 10px;
-                max-width: 40%;
+                width: 40%;
             }
+
+            position: relative;
+            padding-top: 30%;
+        }
+        #{$n}__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
         }
 
         #{$n}__titulo {
