@@ -64,7 +64,7 @@
             <?php else : ?>
                 <?php if ($query->current_post == 4) : ?>
                     <!-- Notícias Simplificadas -->
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-3 noticias-simples">
                 <?php endif; ?>
                 <?php if ($query->current_post < 7) : ?>
                     <article class="noticia noticia_simples">
