@@ -48,9 +48,9 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Área Documentos',
 		'id'            => 'widget-docs',
-		'description'   => __('Área lateral abaixo das notícias, para os documentos.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-12"><div id="%1$s" class="area-docs__widget %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'description'   => __('Área abaixo das notícias, para os documentos.', 'ifrs-portal-theme'),
+		'before_widget' => '<div id="%1$s" class="area-docs__widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	));
