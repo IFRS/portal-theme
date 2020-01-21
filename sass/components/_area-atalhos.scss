@@ -13,6 +13,11 @@
         @include widget();
 
         display: inline-block;
-        padding: 0 10px 0 0;
+        margin-left: 6px;
+        margin-right: 6px;
+
+        a {
+            display: block;
+        }
     }
 }
