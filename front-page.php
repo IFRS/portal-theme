@@ -84,11 +84,15 @@
     </div>
 </div>
 
+<?php if (is_active_sidebar('widget-docs')) : ?>
 <div class="row">
     <div class="col-12">
-        <?php get_template_part('partials/editais/latest'); ?>
+        <div class="area-docs">
+            <?php dynamic_sidebar('widget-docs'); ?>
+        </div>
     </div>
 </div>
+<?php endif; ?>
 
 <?php if (is_active_sidebar('widget-atalhos')) : ?>
 <div class="row">
