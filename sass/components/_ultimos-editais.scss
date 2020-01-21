@@ -3,10 +3,6 @@
         margin-bottom: 10px;
     }
 
-    &__title {
-        @include title-box($cor-editais, '../img/bg-editais.png');
-    }
-
     &__edital-datetime {
         @include icon-calendar($cor-editais);
 
@@ -37,6 +33,10 @@
 
     &__edital-title {
         font-size: 1.3rem;
+    }
+
+    h2 {
+        @include title-box($cor-editais, '../img/bg-editais.png');
     }
 
     a {
