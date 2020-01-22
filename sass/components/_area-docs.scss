@@ -1,9 +1,26 @@
 .area-docs {
-    @extend .row;
+    display: flex;
+    flex-wrap: wrap;
 
     &__widget {
-        @extend .col-12;
-        @extend .col-lg-6;
         @include widget();
+
+        flex: 1 0 100%;
+
+        @include media-breakpoint-up(lg) {
+            flex: 1 0 50%;
+
+            &:nth-child(odd) {
+                padding-right: $grid-gutter-width / 2;
+            }
+
+            &:nth-child(even) {
+                padding-left: $grid-gutter-width / 2;
+            }
+
+            &:last-child() {
+                padding-right: 0;
+            }
+        }
     }
 }
