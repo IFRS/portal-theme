@@ -1,4 +1,6 @@
 .acesso-todos-documentos {
+    @include clearfix();
+
     &__separador {
         border-color: $cor-documentos;
         border-width: 2px;

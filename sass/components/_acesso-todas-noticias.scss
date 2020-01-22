@@ -1,4 +1,6 @@
 .acesso-todas-noticias {
+    @include clearfix();
+
     &__separador {
         border-color: $cor-primaria-verde;
         border-width: 2px;

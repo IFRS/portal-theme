@@ -1,4 +1,6 @@
 .acesso-todos-editais {
+    @include clearfix();
+
     &__separador {
         border-color: $cor-editais;
         border-width: 2px;
