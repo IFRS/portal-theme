@@ -1,0 +1,45 @@
+.ultimos-documentos {
+    &__documento {
+        margin-bottom: 10px;
+    }
+
+    &__documento-datetime {
+        @include icon-calendar($cor-documentos);
+
+        background-position: left center;
+        background-size: 15px;
+        display: inline-block;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        padding-left: 18px;
+    }
+
+    &__documento-types {
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: bold;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #000000;
+            }
+        }
+    }
+
+    &__documento-title {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        @include title-box($cor-documentos, '../img/bg-documentos.png');
+    }
+
+    a {
+        color: $cor-documentos;
+    }
+}
