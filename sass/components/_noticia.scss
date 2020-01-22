@@ -56,15 +56,15 @@
 
     &_destaque {
         #{$n}__img-wrapper {
+            position: relative;
+
             @include media-breakpoint-up(lg) {
                 float: left;
                 margin-bottom: 0;
                 margin-right: 10px;
+                padding-top: 30%;
                 width: 40%;
             }
-
-            position: relative;
-            padding-top: 30%;
         }
         #{$n}__img {
             position: absolute;
