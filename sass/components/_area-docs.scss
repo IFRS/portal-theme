@@ -1,0 +1,9 @@
+.area-docs {
+    @extend .row;
+
+    &__widget {
+        @extend .col-12;
+        @extend .col-lg-6;
+        @include widget();
+    }
+}
