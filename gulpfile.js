@@ -18,6 +18,8 @@ const sourcemaps           = require('gulp-sourcemaps');
 const uglify               = require('gulp-uglify');
 const webpack              = require('webpack');
 
+const proxyURL = argv.URL || argv.url || 'localhost';
+
 const webpackMode = argv.production ? 'production' : 'development';
 
 var webpackPlugins = [];
@@ -167,8 +169,8 @@ gulp.task('default', gulp.series('build', function watch() {
         notify: false,
         online: false,
         open: false,
-        host: argv.URL || 'localhost',
-        proxy: argv.URL || 'localhost',
+        host: proxyURL,
+        proxy: proxyURL,
     });
 
     gulp.watch('sass/**/*.scss', gulp.series('sass'));
