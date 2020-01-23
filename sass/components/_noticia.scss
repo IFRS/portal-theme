@@ -25,6 +25,7 @@
         line-height: 21px;
         margin-top: 0;
         margin-bottom: 15px;
+        min-height: 63px;
 
         > a {
             color: #172938;
@@ -47,10 +48,11 @@
     &__resumo {
         color: #172938;
         font-size: 14px;
+        hyphens: auto;
         line-height: 21px;
 
         p {
-            @include trim(5);
+            @include trim(4);
         }
     }
 
@@ -84,6 +86,10 @@
 
         #{$n}__resumo {
             font-size: 16px;
+            p {
+                display: inline;
+                line-clamp: initial;
+            }
         }
     }
 
@@ -92,6 +98,7 @@
 
         #{$n}__titulo {
             margin-bottom: 5px;
+            min-height: auto;
         }
     }
 }
