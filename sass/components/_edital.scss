@@ -1,0 +1,9 @@
+.edital {
+    &__title {
+        @include title-box($cor-editais, '../img/bg-editais.png');
+    }
+
+    &__dados-title {
+        @include title-box($cor-editais);
+    }
+}

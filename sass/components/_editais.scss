@@ -1,0 +1,11 @@
+.editais {
+    &__title {
+        @include title-box($cor-editais, '../img/bg-editais.png');
+    }
+
+    &__table {
+        a {
+            color: $cor-editais;
+        }
+    }
+}
