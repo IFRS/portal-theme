@@ -34,6 +34,10 @@
         }
     }
 
+    &__title {
+        @include title-box($cor-concursos, '../img/bg-concursos.png');
+    }
+
     &__arquivos {
         .nav {
             margin-bottom: 20px;
