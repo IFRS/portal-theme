@@ -1,9 +1,0 @@
-#concurso {
-    .title {
-        @include title-box($cor-concursos, '../img/bg-concursos.png');
-    }
-
-    a {
-        color: $cor-concursos;
-    }
-}

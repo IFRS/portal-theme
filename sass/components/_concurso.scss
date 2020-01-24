@@ -1,0 +1,46 @@
+.concurso {
+    .card-header {
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .accordion-toggle {
+            display: block;
+
+            &:after {
+                @include icon-chevron('down');
+
+                background-color: $cor-concursos;
+                background-size: 18px;
+                border-radius: 4px;
+                color: #ffffff;
+                content: '';
+                float: right;
+                min-width: 21px;
+                padding: 12px;
+                text-align: center;
+            }
+
+            &.collapsed:after {
+                @include icon-chevron('right');
+            }
+        }
+    }
+
+    .card-body {
+        a {
+            color: $cor-concursos;
+        }
+    }
+
+    &__arquivos {
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .dataTables_info {
+            font-size: 0.9rem;
+        }
+    }
+}
