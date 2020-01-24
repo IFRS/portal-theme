@@ -1,0 +1,9 @@
+.documento {
+    &__title {
+        @include title-box($cor-editais, '../img/bg-documentos.png');
+    }
+
+    &__dados-title {
+        @include title-box($cor-editais);
+    }
+}

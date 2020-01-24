@@ -1,0 +1,11 @@
+.documentos {
+    &__title {
+        @include title-box($cor-documentos, '../img/bg-documentos.png');
+    }
+
+    &__table {
+        a {
+            color: $cor-documentos;
+        }
+    }
+}
