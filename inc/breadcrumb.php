@@ -75,16 +75,19 @@ function portal_breadcrumb() {
                 echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
                 echo $before . 'Turnos' . $after;
                 echo $before . single_term_title('', false) . $after;
-            } elseif (is_tax('concurso_status')) {
+            } elseif (is_tax('concurso_status') && !isset($_POST['concurso_status'])) {
                 echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
-            } elseif (is_tax('documento_type') || is_tax('documento_origin')) {
+            } elseif (is_tax('documento_type') && !isset($_POST['documento_type'])) {
                 echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
-            } elseif (is_tax('edital_category')) {
+            } elseif (is_tax('documento_origin') && !isset($_POST['documento_origin'])) {
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
+                echo $before . single_term_title('', false) . $after;
+            } elseif (is_tax('edital_category') && !isset($_POST['edital_category'])) {
                 echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
-            } elseif (is_tax('edital_status')) {
+            } elseif (is_tax('edital_status') && !isset($_POST['edital_status'])) {
                 echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
             } else {
@@ -119,13 +122,13 @@ function portal_breadcrumb() {
             }
             echo $before . get_the_title() . $after;
         } elseif (is_tag()) {
-            echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+            echo $before . 'Posts com a tag "' . single_tag_title('', false) . '"' . $after;
         } elseif (is_author()) {
             global $author;
             $userdata = get_userdata($author);
             echo $before . ' ' . $userdata->display_name . $after;
         } elseif (is_404()) {
-            echo $before . 'Erro 404' . $after;
+            echo $before . 'Página não encontrada - Erro 404' . $after;
         }
 
         echo '</nav></ol>';
