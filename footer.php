@@ -32,7 +32,7 @@
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>
                 <div class="col-12 col-lg-3 offset-lg-3 col-xl-2 offset-xl-4">
-                    <a href="http://www.acessoainformacao.gov.br/"><img src="<?php echo get_template_directory_uri(); ?>/img/acesso-info.png" alt="Acesso &agrave; Informa&ccedil;&atilde;o" class="img-fluid mx-auto"></a>
+                    <a href="http://www.acessoainformacao.gov.br/"><img data-src="<?php echo get_template_directory_uri(); ?>/img/acesso-info.png" alt="Acesso &agrave; Informa&ccedil;&atilde;o" class="lazyload img-fluid mx-auto"></a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                             <a href="https://github.com/IFRS/portal-theme" target="blank" class="license__link">C&oacute;digo-fonte deste tema sob a licen&ccedil;a GPLv3<span class="sr-only"> (abre uma nova p&aacute;gina)</span></a>
                             &mdash;
                             <!-- Creative Commons -->
-                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="license__link"><img src="<?php echo get_template_directory_uri(); ?>/img/cc-by-nc-sa-4.png" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" /></a>
+                            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="license__link"><img data-src="<?php echo get_template_directory_uri(); ?>/img/cc-by-nc-sa-4.png" class="lazyload" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" /></a>
                         </p>
                     </div>
                 </div>
