@@ -54,6 +54,9 @@ require_once('inc/excerpt-length.php');
 // Configurações da Galeria
 require_once('inc/gallery.php');
 
+// LazyLoad
+require_once('inc/lazyload.php');
+
 // Remove all "version" text from output
 require_once('inc/remove-version.php');
 
