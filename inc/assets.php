@@ -31,6 +31,7 @@ function portal_load_scripts() {
         is_post_type_archive('concurso') ||
         is_post_type_archive('documento') ||
         is_post_type_archive('edital') ||
+        is_singular('concurso') ||
         is_singular('documento') ||
         is_singular('edital')
     ) {
