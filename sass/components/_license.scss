@@ -2,9 +2,10 @@
     background-color: #FFFFFF;
 
     &__content {
-        padding-top: 10px;
-        text-align: center;
         font-size: 0.8rem;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
     }
 
     &__link {
