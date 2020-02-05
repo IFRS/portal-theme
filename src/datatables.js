@@ -8,7 +8,7 @@ $(function() {
     $.fn.dataTable.moment( 'DD/MM/YYYY', 'pt-br' );
     $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-br' );
 
-    $('.table-documentos').DataTable({
+    $('.documentos__table').DataTable({
         order:      [0, 'desc'],
         searching:  true,
         paging:     true,
@@ -40,7 +40,7 @@ $(function() {
         }
     });
 
-    $('.table-editais').DataTable({
+    $('.editais__table').DataTable({
         order:      [0, 'desc'],
         searching:  true,
         paging:     true,
@@ -72,7 +72,7 @@ $(function() {
         }
     });
 
-    $('.table-arquivos').DataTable({
+    $('.concurso__table, .documento__table, .edital__table').DataTable({
         order:      [0, 'desc'],
         searching:  false,
         paging:     false,
