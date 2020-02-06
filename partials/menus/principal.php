@@ -1,6 +1,8 @@
+<?php if (is_active_sidebar('widget-nav')) : ?>
 <div class="area-nav">
-    <?php if (!dynamic_sidebar('widget-nav')) : endif; ?>
+    <?php dynamic_sidebar('widget-nav'); ?>
 </div>
+<?php endif; ?>
 
 <button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</button>
 <nav class="menu-navbar collapse show">
