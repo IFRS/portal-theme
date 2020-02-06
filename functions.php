@@ -57,6 +57,9 @@ require_once('inc/gallery.php');
 // LazyLoad
 require_once('inc/lazyload.php');
 
+// Disable emoji
+require_once('inc/disable-emoji.php');
+
 // Remove all "version" text from output
 require_once('inc/remove-version.php');
 
