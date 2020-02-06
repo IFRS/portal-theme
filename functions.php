@@ -29,9 +29,6 @@ require_once('inc/menus.php');
 // Breadcrumb
 require_once('inc/breadcrumb.php');
 
-// Script Condicional
-require_once('inc/script-conditional.php');
-
 // Scripts & Styles
 require_once('inc/assets.php');
 

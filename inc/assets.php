@@ -67,6 +67,16 @@ function add_async_attribute($tag, $handle) {
     return $tag;
 }
 
+/**
+ * Adding extra data to scripts
+**/
+if ( ! function_exists( 'wp_script_add_data' ) ) {
+    function wp_script_add_data( $handle, $key, $value ) {
+        global $wp_scripts;
+        return $wp_scripts->add_data( $handle, $key, $value );
+    }
+}
+
 add_action('wp_enqueue_scripts', 'portal_load_styles', 1);
 add_action('wp_enqueue_scripts', 'portal_load_scripts', 1);
 add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
