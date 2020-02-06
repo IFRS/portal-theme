@@ -5,7 +5,9 @@ $(function() {
     $('.menu-collapse .sub-menu').prev('a').append('<span class="sr-only"> (Expandir submenus)</span>');
 
     $('.menu-collapse > .menu-item-has-children > a, .menu-collapse > .menu-item-has-children > .sub-menu > .menu-item-has-children > a').on('click', function(e) {
-        $(this).nextAll('.collapse').collapse('toggle');
+        $(this).nextAll('.collapse').each(function() {
+            $(this).collapse('toggle');
+        });
         e.preventDefault();
     });
 
@@ -24,21 +26,33 @@ $(function() {
     });
 
     // Abre todos os collapse até o item atual.
-    $('.current-menu-item, .current-menu-parent').parents('.collapse').collapse('show');
+    $('.current-menu-item, .current-menu-parent').parents('.collapse').each(function() {
+        $(this).each(function() {
+            $(this).collapse('show');
+        });
+    });
 
     // Controla a exibição do menu em viewports pequenos.
     if ($(window).width() < 992) {
-        $(".menu-navbar").collapse('hide');
+        $(".menu-navbar").each(function() {
+            $(this).collapse('hide');
+        });
     }
     $(window).resize(function() {
         if ($(window).width() < 992) {
-            $(".menu-navbar").collapse('hide');
+            $(".menu-navbar").each(function() {
+                $(this).collapse('hide');
+            });
         } else {
-            $(".menu-navbar").collapse('show');
+            $(".menu-navbar").each(function() {
+                $(this).collapse('show');
+            });
         }
     });
     $('.btn-menu-toggle').on('click', function(e) {
-        $(".menu-navbar").collapse('toggle');
+        $(".menu-navbar").each(function() {
+            $(this).collapse('toggle');
+        });
         e.preventDefault();
     });
 });
