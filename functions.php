@@ -57,6 +57,9 @@ require_once('inc/gallery.php');
 // LazyLoad
 require_once('inc/lazyload.php');
 
+// Tables
+require_once('inc/tables.php');
+
 // Disable emoji
 require_once('inc/disable-emoji.php');
 
