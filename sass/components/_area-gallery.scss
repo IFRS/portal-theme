@@ -5,30 +5,5 @@
 
     &__widget {
         @include widget();
-
-        .instagram-pics {
-            list-style: none;
-            padding: 0;
-
-            li {
-                @extend .col-6;
-                @extend .col-md-4;
-                @extend .col-lg-3;
-                display: inline-block;
-                padding: 0;
-
-                img {
-                    @extend .img-fluid;
-                }
-            }
-        }
-
-        .clear {
-            a {
-                @extend .float-right;
-                @include link-todos($cor-galeria);
-                margin-top: 10px;
-            }
-        }
     }
 }
