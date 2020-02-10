@@ -29,6 +29,7 @@ function portal_pagination() {
         $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
         echo '<ul class="pagination justify-content-center">';
         foreach ( $pages as $page ) {
+            $page = str_replace('page-numbers', 'page-link', $page);
             if (strpos($page, 'current') !== false) {
                 echo '<li class="page-item active">'.$page.'</li>';
             } else {
