@@ -45,33 +45,28 @@
         }
 
         &_twitter {
-            @extend .btn;
             @include button-variant($cor-twitter, $cor-twitter);
-            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height, $btn-border-radius-sm);
         }
 
         &_facebook {
-            @extend .btn;
             @include button-variant($cor-facebook, $cor-facebook);
-            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height, $btn-border-radius-sm);
         }
 
         &_pinterest {
-            @extend .btn;
             @include button-variant($cor-pinterest, $cor-pinterest);
-            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height, $btn-border-radius-sm);
         }
 
         &_linkedin {
-            @extend .btn;
             @include button-variant($cor-linkedin, $cor-linkedin);
-            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height, $btn-border-radius-sm);
         }
 
         &_whatsapp {
-            @extend .btn;
             @include button-variant($cor-whatsapp, $cor-whatsapp);
-            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height, $btn-border-radius-sm);
 
             @include media-breakpoint-up(md) {
                 display: none;
