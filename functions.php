@@ -48,8 +48,8 @@ require_once('inc/custom-tinymce.php');
 // Permitir tag iframe
 require_once('inc/allow-iframe.php');
 
-// Tamanho do excerpt
-require_once('inc/excerpt-length.php');
+// Customização do resumo dos posts
+require_once('inc/excerpt.php');
 
 // Configurações da Galeria
 require_once('inc/gallery.php');
