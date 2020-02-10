@@ -3,7 +3,7 @@
         @include widget();
 
         img {
-            @extend .mx-auto;
+            margin: 0 auto;
         }
     }
 }

@@ -47,31 +47,31 @@
         &_twitter {
             @extend .btn;
             @include button-variant($cor-twitter, $cor-twitter);
-            @extend .btn-sm;
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
         }
 
         &_facebook {
             @extend .btn;
             @include button-variant($cor-facebook, $cor-facebook);
-            @extend .btn-sm;
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
         }
 
         &_pinterest {
             @extend .btn;
             @include button-variant($cor-pinterest, $cor-pinterest);
-            @extend .btn-sm;
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
         }
 
         &_linkedin {
             @extend .btn;
             @include button-variant($cor-linkedin, $cor-linkedin);
-            @extend .btn-sm;
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
         }
 
         &_whatsapp {
             @extend .btn;
             @include button-variant($cor-whatsapp, $cor-whatsapp);
-            @extend .btn-sm;
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 
             @include media-breakpoint-up(md) {
                 display: none;

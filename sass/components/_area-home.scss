@@ -1,8 +1,8 @@
 .area-home {
     &__widget {
         img {
-            @extend .mx-auto;
-            @extend .img-fluid;
+            @include img-fluid();
+            margin: 0 auto;
         }
     }
 

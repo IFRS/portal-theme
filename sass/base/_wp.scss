@@ -1,22 +1,22 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
-    @extend .clearfix;
+    @include clearfix();
 }
 
 .aligncenter {
-    @extend .mx-auto;
+    margin: 0 auto;
 }
 
 .alignright {
-    @extend .float-right;
+    @include float-right();
 
     margin-bottom: 10px;
     margin-left: 10px;
 }
 
 .alignleft {
-    @extend .float-left;
+    @include float-left();
 
     margin-right: 10px;
     margin-bottom: 10px;
@@ -25,21 +25,21 @@
 a {
     img {
         &.alignnone {
-            @extend .clearfix;
+            @include clearfix();
         }
 
         &.aligncenter {
-            @extend .mx-auto;
             display: block;
+            margin: 0 auto;
         }
 
         &.alignright {
-            @extend .float-right;
+            @include float-right();
             margin: 5px 0 20px 20px;
         }
 
         &.alignleft {
-            @extend .float-left;
+            @include float-left();
             margin: 5px 20px 20px 0;
         }
     }
@@ -138,7 +138,7 @@ a {
 
 .gallery-icon {
     img {
-        @extend .img-fluid;
+        @include img-fluid()
     }
 }
 
