@@ -8,8 +8,8 @@ require_once('inc/utils.php');
 // Cookie Fix
 require_once('inc/cookie-fix.php');
 
-// Preconnect
-require_once('inc/preconnect.php');
+// Preconnect, Prefetch, Preload, etc...
+require_once('inc/resource-hints.php');
 
 // Suporte para diversas funções
 require_once('inc/theme-support.php');
