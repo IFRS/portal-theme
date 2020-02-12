@@ -52,7 +52,7 @@
 
         .menu-item {
             > a {
-                color: #172938;
+                color: $cor-texto;
                 display: block;
                 font-size: 14px;
                 min-height: 30px;
@@ -75,7 +75,7 @@
                 background-color: $menu-fundo-nivel-1-2;
                 border-top: 2px solid $menu-inner-border;
                 border-bottom: 1px solid $menu-inner-border;
-                color: #172938;
+                color: $cor-texto;
                 font-size: 14px;
                 font-weight: bold;
             }

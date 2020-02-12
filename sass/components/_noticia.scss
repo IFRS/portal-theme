@@ -22,7 +22,7 @@
     }
 
     &__titulo {
-        color: #172938;
+        color: $cor-texto;
         font-size: 16px;
         font-weight: bold;
         hyphens: auto;
@@ -32,7 +32,7 @@
         min-height: 63px;
 
         > a {
-            color: #172938;
+            color: $cor-texto;
         }
     }
 
@@ -50,7 +50,7 @@
     }
 
     &__resumo {
-        color: #172938;
+        color: $cor-texto;
         font-size: 14px;
         hyphens: auto;
         line-height: 21px;

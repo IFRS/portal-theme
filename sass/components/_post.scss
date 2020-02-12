@@ -7,7 +7,7 @@
     }
 
     &__title {
-        color: #172938;
+        color: $cor-texto;
         line-height: 37px;
         font-size: 34px;
         margin-bottom: 30px;
@@ -46,7 +46,7 @@
         margin-top: 20px;
         font-size: 15px;
         line-height: 21px;
-        color: #172938;
+        color: $cor-texto;
 
         h1, .h1,
         h2, .h2,
