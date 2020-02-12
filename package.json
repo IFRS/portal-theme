@@ -34,7 +34,7 @@
     "popper.js": "^1.16.1",
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
-    "webpack": "^4.41.5",
+    "webpack": "^4.41.6",
     "webpack-bundle-analyzer": "^3.6.0"
   }
 }
