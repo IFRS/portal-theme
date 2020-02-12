@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>">
+<a href="<?php the_permalink(); ?>" class="noticia__link">
     <div class="noticia__img-wrapper">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid noticia__img')); ?>
@@ -6,8 +6,8 @@
             <img data-src="<?php echo get_template_directory_uri(); ?>/img/noticia-placeholder.jpg" alt="<?php the_title(); ?>" class="lazyload img-fluid noticia__img" aria-hidden="true"/>
         <?php endif; ?>
     </div>
+    <h2 class="noticia__titulo"><?php the_title(); ?></h2>
 </a>
-<h2 class="noticia__titulo"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 <?php
     $categories = get_the_category();
     $cat_name = $categories[0]->cat_name;

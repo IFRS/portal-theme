@@ -1,6 +1,10 @@
 .noticia {
     $n: &;
 
+    &__link {
+        display: block;
+    }
+
     &__img-wrapper {
         margin-bottom: 15px;
         position: relative;
