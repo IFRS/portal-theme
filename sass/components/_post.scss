@@ -61,6 +61,10 @@
             margin-top: 10px;
             margin-bottom: 7px;
         }
+
+        a {
+            @include link-bg-grow($cor-primaria-azul);
+        }
     }
 
     &__tags-separator {

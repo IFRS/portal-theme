@@ -52,6 +52,22 @@
     }
 }
 
+@mixin link-bg-grow($cor-fundo, $cor-texto: #ffffff) {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$cor-fundo}",endColorstr="#{$cor-fundo}",GradientType=1); /*IE7-*/
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$cor-fundo}",endColorstr="#{$cor-fundo}",GradientType=1)'; /*IE8+*/
+    background-image: linear-gradient(120deg, $cor-fundo 50%, $cor-fundo 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: bottom;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-size: 100% 90%;
+        color: $cor-texto;
+        text-decoration: none;
+    }
+}
+
 @mixin aside-list() {
     list-style: square;
     list-style-image: url('../img/list-style.png');
