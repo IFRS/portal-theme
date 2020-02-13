@@ -23,6 +23,9 @@ require_once('inc/custom-title.php');
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
 require_once('inc/depth-limit.php');
 
+// Desabilita a geração de links para páginas de anexo
+require_once('inc/disable-attachment-link.php');
+
 // Registra os menus
 require_once('inc/menus.php');
 
