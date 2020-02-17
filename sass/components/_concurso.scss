@@ -28,12 +28,6 @@
         }
     }
 
-    .card-body {
-        a {
-            color: $cor-concursos;
-        }
-    }
-
     &__title {
         @include title-box($cor-concursos, '../img/bg-concursos.png');
     }

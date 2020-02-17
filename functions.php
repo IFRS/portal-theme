@@ -38,6 +38,9 @@ require_once('inc/assets.php');
 // Paginação personalizada
 require_once('inc/pagination.php');
 
+// Share Buttons
+require_once('inc/share.php');
+
 // Filtro para buscas vazias
 require_once('inc/empty-search-filter.php');
 

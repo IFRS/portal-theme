@@ -41,7 +41,7 @@
             margin-bottom: 7px;
         }
 
-        a {
+        a:not(.btn) {
             @include link-bg-grow($cor-primaria-azul);
         }
     }

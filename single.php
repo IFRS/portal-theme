@@ -44,11 +44,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <?php get_template_part('partials/share-buttons'); ?>
-                </div>
-            </div>
             <?php $tags = get_the_tags(); ?>
             <?php if (!empty($tags)) : ?>
                 <hr class="post__tags-separator">

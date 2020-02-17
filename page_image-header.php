@@ -27,11 +27,6 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <?php get_template_part('partials/share-buttons'); ?>
-        </div>
-    </div>
 </article>
 
 <?php get_footer(); ?>
