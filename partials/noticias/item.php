@@ -10,13 +10,11 @@
 </a>
 <?php
     $categories = get_the_category();
-    $cat_name = $categories[0]->cat_name;
-    $cat_ID = $categories[0]->term_id;
 ?>
 <p class="noticia__meta">
-<?php if (!is_category()) : ?>
+<?php if (!is_category() && !empty($categories)) : ?>
     <span class="noticia__cartola">
-        <a href="<?php echo get_category_link($cat_ID); ?>"><?php echo $cat_name; ?></a>
+        <a href="<?php echo get_category_link($categories[0]->term_id); ?>"><?php echo $categories[0]->cat_name; ?></a>
     </span>
     -
 <?php endif; ?>
