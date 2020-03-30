@@ -68,28 +68,6 @@
     }
 }
 
-@mixin aside-list() {
-    list-style: square;
-    list-style-image: url('../img/list-style.png');
-    padding-left: 20px;
-
-    li {
-        &.current-cat {
-            > a {
-                font-weight: bold;
-            }
-        }
-
-        > ul {
-            padding-left: 15px;
-        }
-    }
-
-    .children {
-        list-style-image: url('../img/sublist-style.png');
-    }
-}
-
 @mixin trim($numLines: 1) {
     @if $numLines > 1 {
         display: -webkit-box;
