@@ -1,6 +1,6 @@
 /*
- Copyright Crunchify
- http://crunchify.me/1VIxAsz
+ * Copyright Crunchify
+ * http://crunchify.me/1VIxAsz
 */
 
 .crunchify-social {
@@ -9,7 +9,7 @@
     justify-content: center;
     list-style: none;
     margin: 15px 0;
-    padding: 0;
+    padding: 15px 0 0 0;
 
     @include media-breakpoint-up(lg) {
         text-align: right;
