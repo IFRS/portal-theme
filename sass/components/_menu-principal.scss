@@ -73,11 +73,15 @@
 
             > a {
                 background-color: $menu-fundo-nivel-1-2;
-                border-top: 2px solid $menu-inner-border;
+                border-top: 1px solid $menu-inner-border;
                 border-bottom: 1px solid $menu-inner-border;
                 color: $cor-texto;
                 font-size: 14px;
                 font-weight: bold;
+
+                &.collapsed {
+                    border-bottom: none;
+                }
             }
 
             > .sub-menu {
