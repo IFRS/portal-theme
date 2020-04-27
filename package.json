@@ -3,9 +3,9 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@fancyapps/fancybox": "^3.5.7",
-    "autoprefixer": "^9.7.5",
+    "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "datatables.net": "^1.10.20",
@@ -20,11 +20,11 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "html5shiv": "^3.7.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lazysizes": "^5.2.0",
     "minimist": "^1.2.5",
     "moment": "^2.24.0",
@@ -34,7 +34,7 @@
     "popper.js": "^1.16.1",
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
-    "webpack": "^4.42.1",
-    "webpack-bundle-analyzer": "^3.6.1"
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0"
   }
 }
