@@ -78,3 +78,4 @@ require_once('inc/taxonomies/escopo.php');
 // Shortcodes
 require_once('inc/shortcodes/bootstrap4.php');
 require_once('inc/shortcodes/noticias-escopo.php');
+require_once('inc/shortcodes/posts-by-category.php');

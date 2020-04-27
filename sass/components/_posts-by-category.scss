@@ -1,0 +1,11 @@
+.posts-by-category {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+
+    &__item {
+        background: url('../img/list-style.png') no-repeat left center;
+        margin-bottom: 5px;
+        padding-left: 15px;
+    }
+}
