@@ -54,6 +54,9 @@ require_once('inc/custom-tinymce.php');
 // Permitir tag iframe
 require_once('inc/allow-iframe.php');
 
+// Vídeos do YouTube responsivos
+require_once('inc/responsive-youtube-embed.php');
+
 // Customização do resumo dos posts
 require_once('inc/excerpt.php');
 
