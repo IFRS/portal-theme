@@ -10,5 +10,7 @@
 
     &__link {
         @include link-todos($cor-documentos);
+
+        float: right;
     }
 }

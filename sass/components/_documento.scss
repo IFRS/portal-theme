@@ -1,6 +1,26 @@
 .documento {
+    @include make-row();
+
+    &__main {
+        @include make-col-ready();
+        @include make-col(12);
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(9);
+        }
+    }
+
     &__title {
         @include title-box($cor-editais, '../img/bg-documentos.png');
+    }
+
+    &__dados {
+        @include make-col-ready();
+        @include make-col(12);
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(3);
+        }
     }
 
     &__dados-title {

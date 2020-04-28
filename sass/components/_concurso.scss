@@ -1,4 +1,18 @@
 .concurso {
+    &__title {
+        @include title-box($cor-concursos, '../img/bg-concursos.png');
+    }
+
+    &__arquivos {
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .dataTables_info {
+            font-size: 0.9rem;
+        }
+    }
+
     .card-header {
         h3 {
             font-size: 1.1rem;
@@ -25,20 +39,6 @@
             &.collapsed:after {
                 @include icon-chevron('right');
             }
-        }
-    }
-
-    &__title {
-        @include title-box($cor-concursos, '../img/bg-concursos.png');
-    }
-
-    &__arquivos {
-        .nav {
-            margin-bottom: 20px;
-        }
-
-        .dataTables_info {
-            font-size: 0.9rem;
         }
     }
 }
