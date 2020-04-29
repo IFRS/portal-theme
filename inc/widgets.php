@@ -40,8 +40,8 @@ function portal_widgets_init() {
 		'name'          => 'Área Home Lateral',
 		'id'            => 'widget-home-side',
 		'description'   => __('Área lateral abaixo das notícias, para banners ou outros conteúdos.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-12"><div id="%1$s" class="area-home-side__widget %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'before_widget' => '<div id="%1$s" class="area-home-side__widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
@@ -58,8 +58,8 @@ function portal_widgets_init() {
 		'name'          => 'Área Galeria',
 		'id'            => 'widget-gallery',
 		'description'   => __('Área central na página inicial, para imagens ou fotos.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-12"><div id="%1$s" class="area-gallery__widget %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'before_widget' => '<div id="%1$s" class="area-gallery__widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="area-gallery__widget-title">',
 		'after_title'   => '</h2>',
 	));
@@ -85,8 +85,8 @@ function portal_widgets_init() {
 		'name'          => 'Área Rodapé',
 		'id'            => 'widget-footer',
 		'description'   => __('Área no rodapé, após o mapa do site.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-12"><div id="%1$s" class="area-rodape__widget %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'before_widget' => '<div id="%1$s" class="area-rodape__widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));

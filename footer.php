@@ -25,9 +25,7 @@
                 ?>
                 </div>
             </div>
-        </div>
-        <div class="container footer__info">
-            <div class="row">
+            <div class="row footer__info">
                 <div class="col-12 col-lg-6 area-rodape">
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>

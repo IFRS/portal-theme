@@ -5,20 +5,12 @@
 <div class="row">
     <div class="col-12 col-lg-9">
         <article class="post">
-            <div class="row">
-                <div class="col-12">
-                    <?php
-                        $categories = get_the_category();
-                        $cat_name = $categories[0]->cat_name;
-                    ?>
-                    <p class="post__category"><?php echo $cat_name; ?></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="post__title"><?php the_title(); ?></h2>
-                </div>
-            </div>
+            <?php
+                $categories = get_the_category();
+                $cat_name = $categories[0]->cat_name;
+            ?>
+            <p class="post__category"><?php echo $cat_name; ?></p>
+            <h2 class="post__title"><?php the_title(); ?></h2>
             <hr class="post__separator">
             <div class="row">
                 <div class="col-12 col-md-6">
@@ -29,33 +21,25 @@
                     </small>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="post__content">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <div class="wp-caption post__thumb">
-                                <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0]; ?>"><?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?></a>
-                                <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-                                    <p class="wp-caption-text"><?php echo $caption; ?></p>
-                                <?php endif; ?>
-                            </div>
+            <div class="post__content">
+                <?php if (has_post_thumbnail()) : ?>
+                    <div class="wp-caption post__thumb">
+                        <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0]; ?>"><?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?></a>
+                        <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+                            <p class="wp-caption-text"><?php echo $caption; ?></p>
                         <?php endif; ?>
-                        <?php the_content(); ?>
                     </div>
-                </div>
+                <?php endif; ?>
+                <?php the_content(); ?>
             </div>
             <?php $tags = get_the_tags(); ?>
             <?php if (!empty($tags)) : ?>
                 <hr class="post__tags-separator">
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="post__tags">
-                            <?php foreach ($tags as $tag) : ?>
-                                <li class="post__tag"><a class="btn btn-outline-secondary btn-sm" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="post__tags">
+                    <?php foreach ($tags as $tag) : ?>
+                        <li class="post__tag"><a class="btn btn-outline-secondary btn-sm" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
             <?php endif; ?>
         </article>
     </div>
