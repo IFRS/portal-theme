@@ -23,7 +23,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "html5shiv": "^3.7.3",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "lazysizes": "^5.2.0",
     "minimist": "^1.2.5",
     "moment": "^2.24.0",
