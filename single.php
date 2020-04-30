@@ -23,9 +23,10 @@
             </div>
             <div class="post__content">
                 <?php if (has_post_thumbnail()) : ?>
-                    <div class="wp-caption post__thumb">
+                    <?php $caption = get_post(get_post_thumbnail_id())->post_excerpt; ?>
+                    <div class="post__thumb<?php echo ($caption) ? ' wp-caption' : ''; ?>">
                         <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )[0]; ?>"><?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?></a>
-                        <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+                        <?php if ($caption) : ?>
                             <p class="wp-caption-text"><?php echo $caption; ?></p>
                         <?php endif; ?>
                     </div>
