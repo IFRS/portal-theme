@@ -13,11 +13,15 @@
     }
 
     &__thumb {
-        width: 50%;
-        height: auto;
-        float: left;
-        margin-right: 30px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            height: auto;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
     }
 
     &__content {
