@@ -46,9 +46,9 @@ gulp.task('sass', function() {
     return gulp.src('sass/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-        includePaths: 'sass',
+        includePaths: ['sass', 'node_modules'],
         outputStyle: 'expanded',
-        precision: 8
+        precision: 6
     }).on('error', sass.logError))
     .pipe(postcss(postCSSplugins))
     .pipe(sourcemaps.write('./'))
