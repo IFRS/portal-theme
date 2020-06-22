@@ -33,22 +33,24 @@ $(function() {
     });
 
     // Controla a exibição do menu em viewports pequenos.
-    if ($(window).width() < 992) {
-        $(".menu-navbar").each(function() {
-            $(this).collapse('hide');
-        });
-    }
-    $(window).resize(function() {
+    function menu_resize_control() {
         if ($(window).width() < 992) {
-            $(".menu-navbar").each(function() {
-                $(this).collapse('hide');
-            });
+            $(".menu-navbar").collapse('hide');
         } else {
-            $(".menu-navbar").each(function() {
-                $(this).collapse('show');
-            });
+            $(".menu-navbar").collapse('show');
         }
+    }
+
+    menu_resize_control();
+
+    var width_control = $(window).width();
+    $(window).resize(function() {
+        if ($(window).width() === width_control) {
+            return;
+        }
+        menu_resize_control();
     });
+
     $('.btn-menu-toggle').on('click', function(e) {
         $(".menu-navbar").each(function() {
             $(this).collapse('toggle');
