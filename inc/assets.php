@@ -79,5 +79,5 @@ if ( ! function_exists( 'wp_script_add_data' ) ) {
 
 add_action('wp_enqueue_scripts', 'portal_load_styles', 1);
 add_action('wp_enqueue_scripts', 'portal_load_scripts', 1);
-add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
-add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+add_filter('script_loader_tag', 'add_defer_attribute', 2, 2);
+add_filter('script_loader_tag', 'add_async_attribute', 2, 2);
