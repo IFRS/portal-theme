@@ -2,14 +2,14 @@
   "name": "ifrs-portal-theme",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "@fancyapps/fancybox": "^3.5.7",
-    "autoprefixer": "^9.7.6",
-    "bootstrap": "^4.4.1",
+    "autoprefixer": "^9.8.2",
+    "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
-    "datatables.net": "^1.10.20",
-    "datatables.net-bs4": "^1.10.20",
+    "datatables.net": "^1.10.21",
+    "datatables.net-bs4": "^1.10.21",
     "datatables.net-plugins": "^1.10.20",
     "del": "^5.1.0",
     "flexibility": "^2.0.1",
@@ -24,9 +24,9 @@
     "gulp-uglify": "^3.0.2",
     "html5shiv": "^3.7.3",
     "jquery": "^3.5.1",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.2",
     "minimist": "^1.2.5",
-    "moment": "^2.25.3",
+    "moment": "^2.27.0",
     "picturefill": "^3.0.3",
     "pixrem": "^5.0.0",
     "plugin-error": "^1.0.1",
@@ -34,6 +34,6 @@
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
     "webpack": "^4.43.0",
-    "webpack-bundle-analyzer": "^3.7.0"
+    "webpack-bundle-analyzer": "^3.8.0"
   }
 }
