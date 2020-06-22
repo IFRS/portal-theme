@@ -13,7 +13,7 @@ add_action('the_content', function($content) {
     $facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$crunchifyURL;
     $twitterURL = 'https://twitter.com/intent/tweet?text='.$crunchifyTitle.'&amp;url='.$crunchifyURL;
     $linkedinURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$crunchifyURL.'&amp;title='.$crunchifyTitle;
-    $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$crunchifyURL.'&amp;media='.$crunchifyThumbnail[0].'&amp;description='.$crunchifyTitle;
+    $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$crunchifyURL.'&amp;media='.(is_array($crunchifyThumbnail) ? $crunchifyThumbnail[0] : '').'&amp;description='.$crunchifyTitle;
     $whatsappURL = 'whatsapp://send?text='.$crunchifyTitle . ' ' . $crunchifyURL;
 
     ob_start();
