@@ -4,7 +4,7 @@
 </div>
 <?php endif; ?>
 
-<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Esconder/Mostrar&nbsp;</span>Menu</button>
+<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Esconder/Mostrar</span>&nbsp;Menu</button>
 <nav class="menu-navbar collapse show">
     <?php
         wp_nav_menu(
