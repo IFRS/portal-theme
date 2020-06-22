@@ -1,5 +1,15 @@
 <?php
-function portal_load_styles() {
+/**
+ * Adding extra data to scripts
+**/
+if ( ! function_exists( 'wp_script_add_data' ) ) {
+    function wp_script_add_data( $handle, $key, $value ) {
+        global $wp_scripts;
+        return $wp_scripts->add_data( $handle, $key, $value );
+    }
+}
+
+add_action('wp_enqueue_scripts', function() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
@@ -11,9 +21,8 @@ function portal_load_styles() {
     wp_enqueue_style('css-vendor', get_template_directory_uri().(WP_DEBUG ? '/css/vendor.css' : '/css/vendor.min.css'), array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/vendor.min.css'), 'all');
 
     wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array('css-vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/portal.min.css'), 'all');
-}
-
-function portal_load_scripts() {
+}, 1);
+add_action('wp_enqueue_scripts', function() {
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
     /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
 
@@ -41,9 +50,8 @@ function portal_load_scripts() {
     if (!WP_DEBUG) {
         wp_enqueue_script('js-barra-brasil', 'https://barra.brasil.gov.br/barra.js', array(), null, true);
     }
-}
-
-function add_defer_attribute($tag, $handle) {
+}, 1);
+add_filter('script_loader_tag', function($tag, $handle) {
     $scripts_to_defer = array('js-barra-brasil');
 
     foreach ($scripts_to_defer as $defer_script) {
@@ -53,9 +61,8 @@ function add_defer_attribute($tag, $handle) {
     }
 
     return $tag;
-}
-
-function add_async_attribute($tag, $handle) {
+}, 2, 2);
+add_filter('script_loader_tag', function($tag, $handle) {
     $scripts_to_async = array();
 
     foreach ($scripts_to_async as $async_script) {
@@ -65,19 +72,4 @@ function add_async_attribute($tag, $handle) {
     }
 
     return $tag;
-}
-
-/**
- * Adding extra data to scripts
-**/
-if ( ! function_exists( 'wp_script_add_data' ) ) {
-    function wp_script_add_data( $handle, $key, $value ) {
-        global $wp_scripts;
-        return $wp_scripts->add_data( $handle, $key, $value );
-    }
-}
-
-add_action('wp_enqueue_scripts', 'portal_load_styles', 1);
-add_action('wp_enqueue_scripts', 'portal_load_scripts', 1);
-add_filter('script_loader_tag', 'add_defer_attribute', 2, 2);
-add_filter('script_loader_tag', 'add_async_attribute', 2, 2);
+}, 2, 2);

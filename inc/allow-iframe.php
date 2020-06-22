@@ -1,5 +1,5 @@
 <?php
-function esw_author_cap_filter( $allowedposttags ) {
+add_filter( 'wp_kses_allowed_html', function( $allowedposttags ) {
     if ( !current_user_can( 'administrator' ) ) {
         return $allowedposttags;
     }
@@ -20,5 +20,4 @@ function esw_author_cap_filter( $allowedposttags ) {
     );
 
     return $allowedposttags;
-}
-add_filter( 'wp_kses_allowed_html', 'esw_author_cap_filter', 1, 1 );
+}, 1, 1 );
