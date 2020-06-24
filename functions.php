@@ -8,9 +8,6 @@ require_once('inc/utils.php');
 // Cookie Fix
 require_once('inc/cookie-fix.php');
 
-// Preconnect, Prefetch, Preload, etc...
-require_once('inc/resource-hints.php');
-
 // Suporte para diversas funções
 require_once('inc/theme-support.php');
 
@@ -26,14 +23,20 @@ require_once('inc/depth-limit.php');
 // Desabilita a geração de links para páginas de anexo
 require_once('inc/disable-attachment-link.php');
 
+// Preconnect, Prefetch, Preload, etc...
+require_once('inc/resource-hints.php');
+
+// Fonts
+require_once('inc/fonts.php');
+
+// Scripts & Styles
+require_once('inc/assets.php');
+
 // Registra os menus
 require_once('inc/menus.php');
 
 // Breadcrumb
 require_once('inc/breadcrumb.php');
-
-// Scripts & Styles
-require_once('inc/assets.php');
 
 // Paginação personalizada
 require_once('inc/pagination.php');
