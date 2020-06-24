@@ -1,14 +1,4 @@
 <?php
-/**
- * Adding extra data to scripts
-**/
-if ( ! function_exists( 'wp_script_add_data' ) ) {
-    function wp_script_add_data( $handle, $key, $value ) {
-        global $wp_scripts;
-        return $wp_scripts->add_data( $handle, $key, $value );
-    }
-}
-
 add_action('wp_enqueue_scripts', function() {
     /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
     /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
@@ -22,6 +12,7 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_style('css-portal', get_template_directory_uri().(WP_DEBUG ? '/css/portal.css' : '/css/portal.min.css'), array('css-vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/portal.min.css'), 'all');
 }, 1);
+
 add_action('wp_enqueue_scripts', function() {
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
     /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
@@ -51,6 +42,7 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_script('js-barra-brasil', 'https://barra.brasil.gov.br/barra.js', array(), null, true);
     }
 }, 1);
+
 add_filter('script_loader_tag', function($tag, $handle) {
     $scripts_to_defer = array('js-barra-brasil');
 
@@ -62,6 +54,7 @@ add_filter('script_loader_tag', function($tag, $handle) {
 
     return $tag;
 }, 2, 2);
+
 add_filter('script_loader_tag', function($tag, $handle) {
     $scripts_to_async = array();
 
