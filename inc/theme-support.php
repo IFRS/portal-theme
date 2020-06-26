@@ -1,5 +1,5 @@
 <?php
-function portal_theme_features()  {
+add_action('after_setup_theme', function()  {
     // Habilita títulos automáticos
     add_theme_support('title-tag');
 
@@ -35,5 +35,8 @@ function portal_theme_features()  {
 
     // Habilita o suporte para links automáticos de Feed
     add_theme_support('automatic-feed-links');
-}
-add_action('after_setup_theme', 'portal_theme_features');
+
+    // Remove suporte a cores personalizadas nos blocos
+    add_theme_support('editor-color-palette');
+	add_theme_support('disable-custom-colors');
+});
