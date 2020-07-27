@@ -416,7 +416,7 @@ function ifrs_bs4_tabs( $atts, $content = null ) {
 			}
 
 			$tabs[] = sprintf(
-				'<li class="%s"><a href="#%s" class="nav-link%s" data-toggle="tab">%s</a></li>',
+				'<li class="%s"><button href="#%s" class="btn btn-link nav-link%s" data-toggle="tab">%s</button></li>',
 				esc_attr( trim($class) ),
 				sanitize_html_class($tab_id),
 				( !empty($tab["tab"]["active"]) || ($GLOBALS['tabs_default_active'] && $i == 0) ) ? ' active' : '',
