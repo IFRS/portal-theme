@@ -3,7 +3,7 @@ const autoprefixer         = require('autoprefixer');
 const babel                = require('gulp-babel');
 const browserSync          = require('browser-sync').create();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const cssmin               = require('gulp-cssmin');
+const csso                 = require('gulp-csso');
 const concat               = require('gulp-concat');
 const del                  = require('del');
 const gulp                 = require('gulp');
@@ -11,7 +11,6 @@ const path                 = require('path');
 const pixrem               = require('pixrem');
 const PluginError          = require('plugin-error');
 const postcss              = require('gulp-postcss');
-const rename               = require('gulp-rename');
 const sass                 = require('gulp-sass');
 const sourcemaps           = require('gulp-sourcemaps');
 const uglify               = require('gulp-uglify');
@@ -26,8 +25,8 @@ webpackPlugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/));
 argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
 
 
-gulp.task('clean', function() {
-    return del(['css/', 'js/', 'dist/']);
+gulp.task('clean', async function() {
+    return await del(['css/', 'js/', 'dist/']);
 });
 
 gulp.task('vendor-css', function() {
@@ -57,9 +56,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('styles', gulp.series('vendor-css', 'sass', function css() {
-    return gulp.src(['css/*.css', '!css/*.min.css'])
-    .pipe(cssmin())
-    .pipe(rename({suffix: '.min'}))
+    return gulp.src(['css/*.css'])
+    .pipe(csso())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 }));
@@ -116,7 +114,7 @@ gulp.task('webpack', function(done) {
 });
 
 gulp.task('scripts', gulp.series('webpack', function js() {
-    return gulp.src(['js/*.js', '!js/*.min.js'])
+    return gulp.src(['js/*.js'])
     .pipe(babel({
         presets: [
             [
@@ -128,7 +126,6 @@ gulp.task('scripts', gulp.series('webpack', function js() {
     .pipe(uglify({
         ie8: true,
     }))
-    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream());
 }));
