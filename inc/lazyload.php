@@ -21,13 +21,19 @@ function ifrs_add_lazyload($content) {
         $node->setAttribute('data-sizes', 'auto');
 
         $oldsrc = $node->getAttribute('src');
-        $node->setAttribute('data-src', $oldsrc);
-        $node->removeAttribute('src');
+
+        if ($oldsrc) {
+            $node->setAttribute('data-src', $oldsrc);
+            $node->removeAttribute('src');
+        }
 
         $oldsrcset = $node->getAttribute('srcset');
-        $node->setAttribute('data-srcset', $oldsrcset);
-        $newsrcset = '';
-        $node->setAttribute('srcset', $newsrcset);
+
+        if ($oldsrcset) {
+            $node->setAttribute('data-srcset', $oldsrcset);
+            $newsrcset = '';
+            $node->setAttribute('srcset', $newsrcset);
+        }
 
         $node->setAttribute('loading', 'lazy');
     }

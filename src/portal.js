@@ -1,6 +1,7 @@
 require('bootstrap');
 
 require('lazysizes');
+require('lazysizes/plugins/native-loading/ls.native-loading');
 
 require('./modules/picturefill-config');
 require('./modules/menu');
