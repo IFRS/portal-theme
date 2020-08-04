@@ -34,19 +34,24 @@
 }
 
 .curso-info {
+    &__icon {
+        float: left;
+        width: 32px;
+    }
+
     &__title {
         color: $cor-primaria-verde;
         font-size: 0.85rem;
         font-weight: bold;
         margin: 0;
-        padding-left: 35px;
+        padding-left: 38px;
         text-transform: uppercase;
     }
 
     &__text {
         color: $cor-primaria-verde;
         font-size: 0.85rem;
-        padding-left: 35px;
+        padding-left: 38px;
         text-transform: uppercase;
 
         &--lower {
