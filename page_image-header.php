@@ -15,7 +15,7 @@
     <?php else : ?>
         <h2 class="page__title"><?php the_title(); ?></h2>
     <?php endif; ?>
-    <?php get_template_part('partials/menus/subpages'); ?>
+    <?php get_template_part('partials/subpages/subpages'); ?>
     <div class="page__content">
         <?php the_content(); ?>
     </div>
