@@ -45,8 +45,15 @@
             margin-bottom: 7px;
         }
 
-        a:not(.btn):not(.noticia__link):not(.acesso-todas-noticias__link) {
-            @include link-bg-grow($cor-primaria-azul);
+        p,
+        span,
+        li,
+        blockquote,
+        dd,
+        dt {
+            a:not(.btn) {
+                @include link-bg-grow($cor-primaria-azul);
+            }
         }
     }
 
