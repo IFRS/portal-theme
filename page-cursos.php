@@ -2,7 +2,7 @@
 
 <?php the_post(); ?>
 
-<article class="ursos">
+<article class="cursos">
     <h2 class="cursos__title"><?php the_title(); ?></h2>
     <?php the_content(); ?>
 </article>
