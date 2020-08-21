@@ -1,4 +1,6 @@
 .area-nav {
+    margin-bottom: 10px;
+
     &__widget {
         @include media-breakpoint-down(lg) {
             text-align: center;
