@@ -20,7 +20,7 @@
             min-height: 47px; // As bordas contam como tamanho do elemento, por isso não é 42px como diz o guia.
             margin-top: 30px;
             padding-left: 7px;
-            padding-top: 3px;
+            padding-top: 5px;
             padding-bottom: 3px;
         }
     }
@@ -31,17 +31,17 @@
             padding-right: 15px;
 
             &:after {
-                @include icon-chevron('down', $cor-primaria-verde);
+                @include icon-chevron('up', $cor-primaria-verde);
 
                 content: '';
                 float: right;
                 font-size: 1.1rem;
-                margin-right: -16px;
+                margin-right: -15px;
                 padding: 8px;
             }
 
             &.collapsed:after {
-                @include icon-chevron('right', $cor-primaria-verde);
+                @include icon-chevron('down', $cor-primaria-verde);
             }
         }
     }
