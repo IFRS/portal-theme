@@ -1,6 +1,8 @@
 .area-atalhos {
     &__title {
         @include title-box();
+
+        color: $cor-primaria-verde;
     }
 
     &__list {
