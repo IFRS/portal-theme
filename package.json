@@ -2,8 +2,8 @@
   "name": "ifrs-portal-theme",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "@fancyapps/fancybox": "^3.5.7",
     "autoprefixer": "^9.8.6",
     "bootstrap": "^4.5.2",
