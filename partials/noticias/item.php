@@ -20,6 +20,6 @@
 <?php endif; ?>
     <span class="noticia__data"><?php echo get_the_date(); ?></span>
 </p>
-<div class="noticia__resumo">
+<div class="noticia__resumo clearfix">
     <?php the_excerpt(); ?>
 </div>
