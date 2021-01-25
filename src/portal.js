@@ -6,4 +6,4 @@ require('lazysizes/plugins/native-loading/ls.native-loading');
 require('./modules/picturefill-config');
 require('./modules/menu');
 require('./modules/fancybox-config');
-require('./modules/atalhos-tooltip');
+require('./modules/tooltips');

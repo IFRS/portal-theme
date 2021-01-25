@@ -7,4 +7,8 @@ $(function () {
         });
         $(e).children('img').first().removeAttr('title');
     });
+
+    $('.creditos > a[data-toggle="tooltip"]').each(function (i, e) {
+        $(e).tooltip();
+    });
 });
