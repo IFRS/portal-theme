@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Definição de metaboxes para page
  */
