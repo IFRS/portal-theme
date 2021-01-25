@@ -96,7 +96,7 @@ gulp.task('webpack', function(done) {
                     commons: {
                         name: "commons",
                         chunks: "initial",
-                        minChunks: 2
+                        minChunks: 1
                     }
                 }
             }
