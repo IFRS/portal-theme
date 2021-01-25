@@ -4,26 +4,26 @@
     text-align: center;
 
     > * {
-        display: block;
+        display: inline-block;
+        margin-bottom: 10px;
         opacity: 0.75;
 
         &:hover {
             text-decoration: none;
         }
 
-        & + * {
-            margin-top: 10px;
-        }
-    }
-
-    > a {
         &:after {
             @include icon-external-link(#ffffff);
 
             background-size: 10px;
             content: '';
-            margin-left: 5px;
+            margin-left: 3px;
             padding-left: 15px;
+            vertical-align: middle;
+        }
+
+        & + * {
+            margin-left: 15px;
         }
     }
 }
