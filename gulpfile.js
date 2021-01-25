@@ -65,7 +65,7 @@ gulp.task('styles', gulp.series('vendor-css', 'sass', function css() {
 gulp.task('webpack', function(done) {
     webpack({
         mode: webpackMode,
-        devtool: 'source-maps',
+        devtool: 'source-map',
         entry: {
             ie: './src/ie.js',
             portal: './src/portal.js',
@@ -104,7 +104,12 @@ gulp.task('webpack', function(done) {
         plugins: webpackPlugins,
     }, function(err, stats) {
         if (err) throw new PluginError('webpack', {
-            message: stats.toString({
+            message: err.toString({
+                colors: true
+            })
+        });
+        if (stats.hasErrors()) throw new PluginError('webpack', {
+            message: stats.errors.toString({
                 colors: true
             })
         });
