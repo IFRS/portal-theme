@@ -11,7 +11,6 @@
     <meta name="keywords" content="<?php _e('ifrs, portal, site, institucional, faculdade, universidade, ensino, pesquisa, extensão, cursos'); ?>">
     <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918">
     <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
-    <?php echo get_template_part('partials/title'); ?>
     <!-- Favicons -->
     <?php echo get_template_part('partials/favicons'); ?>
     <!-- CSS, JS & etc. -->
