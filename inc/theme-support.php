@@ -1,5 +1,22 @@
 <?php
 add_action('after_setup_theme', function()  {
+    // Remove Gutenberg custom options
+    add_theme_support('editor-color-palette');
+    add_theme_support('editor-gradient-presets');
+    add_theme_support('disable-custom-colors');
+    add_theme_support('disable-custom-gradients');
+    add_theme_support('disable-custom-font-sizes');
+    add_theme_support('custom-units', array());
+
+    // Add theme support for Automatic Feed Links
+    add_theme_support('automatic-feed-links');
+
+    // Habilita imagens de destaque em posts
+    add_theme_support('post-thumbnails');
+
+    // Add theme support for Responsive Embeds
+    add_theme_support('responsive-embeds');
+
     // Habilita títulos automáticos
     add_theme_support('title-tag');
 
@@ -29,14 +46,4 @@ add_action('after_setup_theme', function()  {
         'video'                  => true,
         'video-active-callback'  => '',
     ));
-
-    // Habilita imagens de destaque em posts
-    add_theme_support('post-thumbnails');
-
-    // Habilita o suporte para links automáticos de Feed
-    add_theme_support('automatic-feed-links');
-
-    // Remove suporte a cores personalizadas nos blocos
-    add_theme_support('editor-color-palette');
-	add_theme_support('disable-custom-colors');
 });
