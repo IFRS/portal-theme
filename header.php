@@ -9,11 +9,12 @@
     <meta name="author" content="<?php _e('Departamento de Comunicação do Instituto Federal do Rio Grande do Sul'); ?>">
     <meta name="description" content="<?php _e('O IFRS é uma instituição federal de ensino público e gratuito. Atua com uma estrutura multicampi para promover a educação profissional e tecnológica de excelência e impulsionar o desenvolvimento sustentável das regiões.'); ?>">
     <meta name="keywords" content="<?php _e('ifrs, portal, site, institucional, faculdade, universidade, ensino, pesquisa, extensão, cursos'); ?>">
+    <?php if (!has_site_icon()) echo get_template_part('partials/favicons'); ?>
+    <!-- Contexto Barra Brasil -->
     <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918">
+    <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
-    <!-- Favicons -->
-    <?php echo get_template_part('partials/favicons'); ?>
-    <!-- CSS, JS & etc. -->
+    <!-- WP -->
     <?php wp_head(); ?>
 </head>
 
