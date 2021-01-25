@@ -46,18 +46,13 @@ add_action('wp_enqueue_scripts', function() {
 
 add_filter('script_loader_tag', function($tag, $handle) {
     $scripts_to_defer = array('js-barra-brasil');
+    $scripts_to_async = array();
 
     foreach ($scripts_to_defer as $defer_script) {
         if ($defer_script === $handle) {
             return str_replace(' src', ' defer="defer" src', $tag);
         }
     }
-
-    return $tag;
-}, 2, 2);
-
-add_filter('script_loader_tag', function($tag, $handle) {
-    $scripts_to_async = array();
 
     foreach ($scripts_to_async as $async_script) {
         if ($async_script === $handle) {
