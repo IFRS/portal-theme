@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 117 49">
+  <defs>
+    <style>
+      .a {font:700 11px Open Sans,sans-serif}
+    </style>
+  </defs>
+  <circle cx="22" cy="23" r="22" fill="#f6a800"/>
+  <path stroke="#f6a800" stroke-linejoin="round" stroke-width="4" d="M4 43l3-6 4 3z"/>
+  <circle cx="22" cy="11" r="4.5" fill="#00692c"/>
+  <text x="48" y="22" fill="#fff">
+    <tspan y="18" class="a">Acesso à</tspan><tspan x="48" y="31" class="a">Informação</tspan>
+  </text>
+  <path stroke="#00692c" stroke-linecap="round" stroke-width="9" d="M22 23v13"/>
+</svg>
