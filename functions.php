@@ -2,9 +2,6 @@
 // Restrições para usuários
 require_once('inc/restrictions.php');
 
-// Utilidades
-require_once('inc/utils.php');
-
 // Cookie Fix
 require_once('inc/cookie-fix.php');
 
