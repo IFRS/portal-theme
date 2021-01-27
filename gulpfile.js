@@ -21,7 +21,12 @@ const proxyURL = argv.URL || argv.url || 'localhost';
 const webpackMode = argv.production ? 'production' : 'development';
 
 var webpackPlugins = [];
-webpackPlugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/));
+webpackPlugins.push(new webpack.IgnorePlugin(
+    {
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/
+    }
+));
 argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
 
 
@@ -87,19 +92,18 @@ gulp.task('webpack', function(done) {
         plugins: [
             new webpack.ProvidePlugin({
                 $: 'jquery',
-                jQuery: 'jquery'
+                jQuery: 'jquery',
             })
         ],
         optimization: {
             minimize: false,
             splitChunks: {
-                chunks: 'all',
                 cacheGroups: {
                     vendors: false,
                     commons: {
                         name: "commons",
-                        chunks: "initial",
-                        minChunks: 1
+                        chunks: "all",
+                        minChunks: 2
                     }
                 }
             }
@@ -112,7 +116,7 @@ gulp.task('webpack', function(done) {
             })
         });
         if (stats.hasErrors()) throw new PluginError('webpack', {
-            message: stats.errors.toString({
+            message: stats.toString({
                 colors: true
             })
         });
