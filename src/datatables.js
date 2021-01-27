@@ -1,3 +1,4 @@
+require('bootstrap');
 require('datatables.net-bs4');
 const moment = require('moment');
 require('moment/locale/pt-br');
