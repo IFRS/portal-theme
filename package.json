@@ -32,7 +32,7 @@
     "postcss": "^8.2.4",
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
-    "webpack": "^5.17.0",
+    "webpack": "^5.18.0",
     "webpack-bundle-analyzer": "^4.4.0"
   }
 }
