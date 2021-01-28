@@ -16,20 +16,6 @@ const sourcemaps           = require('gulp-sourcemaps');
 const uglify               = require('gulp-uglify');
 const webpack              = require('webpack');
 
-const proxyURL = argv.URL || argv.url || 'localhost';
-
-const webpackMode = argv.production ? 'production' : 'development';
-
-var webpackPlugins = [];
-webpackPlugins.push(new webpack.IgnorePlugin(
-    {
-        resourceRegExp: /^\.\/locale$/,
-        contextRegExp: /moment$/
-    }
-));
-argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
-
-
 gulp.task('clean', async function() {
     return await del(['css/', 'js/', 'dist/']);
 });
@@ -70,6 +56,10 @@ gulp.task('styles', gulp.series('vendor-css', 'sass', function css() {
     .pipe(browserSync.stream());
 }));
 
+const webpackMode = argv.production ? 'production' : 'development';
+let webpackPlugins = [];
+argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
+
 gulp.task('webpack', function(done) {
     webpack({
         mode: webpackMode,
@@ -92,7 +82,12 @@ gulp.task('webpack', function(done) {
         plugins: [
             new webpack.ProvidePlugin({
                 $: 'jquery',
-            })
+            }),
+            new webpack.IgnorePlugin({
+                resourceRegExp: /^\.\/locale$/,
+                contextRegExp: /moment$/,
+            }),
+            ...webpackPlugins
         ],
         optimization: {
             minimize: false,
@@ -107,7 +102,6 @@ gulp.task('webpack', function(done) {
                 }
             }
         },
-        plugins: webpackPlugins,
     }, function(err, stats) {
         if (err) throw new PluginError('webpack', {
             message: err.toString({
@@ -155,7 +149,7 @@ gulp.task('dist', function() {
         '!package.json',
         '!package-lock.json'
     ])
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/ifrs-portal-theme/'));
 });
 
 if (argv.production) {
@@ -163,6 +157,8 @@ if (argv.production) {
 } else {
     gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'webpack')));
 }
+
+const proxyURL = argv.URL || argv.url || 'localhost';
 
 gulp.task('default', gulp.series('build', function watch() {
     browserSync.init({
