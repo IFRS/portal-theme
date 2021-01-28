@@ -77,7 +77,7 @@ gulp.task('webpack', function(done) {
         entry: {
             ie: './src/ie.js',
             portal: './src/portal.js',
-            datatables: './src/datatables.js'
+            datatables: './src/datatables.js',
         },
         output: {
             path: path.resolve(__dirname, 'js'),
@@ -86,13 +86,12 @@ gulp.task('webpack', function(done) {
         resolve: {
             alias: {
                 jquery: 'jquery/src/jquery',
-                bootstrap: 'bootstrap/dist/js/bootstrap.bundle'
+                bootstrap: 'bootstrap/dist/js/bootstrap.bundle',
             }
         },
         plugins: [
             new webpack.ProvidePlugin({
                 $: 'jquery',
-                jQuery: 'jquery',
             })
         ],
         optimization: {
@@ -103,7 +102,7 @@ gulp.task('webpack', function(done) {
                     commons: {
                         name: "commons",
                         chunks: "all",
-                        minChunks: 2
+                        minChunks: 2,
                     }
                 }
             }
