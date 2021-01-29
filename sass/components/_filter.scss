@@ -1,10 +1,38 @@
 .filter {
+    margin-bottom: 15px;
+    border-bottom: 1px solid $gray-400;
+    border-top: 1px solid $gray-400;
+
+    &__btn {
+        @include icon-chevron('down', $gray-700);
+
+        background-position: right 0.75rem center;
+        background-size: 14px;
+        display: block;
+        padding-right: 1rem;
+        position: relative;
+        text-align: left;
+        width: 100%;
+
+        &[aria-expanded="true"] {
+            @include icon-chevron('up', $gray-700);
+
+            background-position: right 0.75rem center;
+            background-color: $gray-100
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
     &__form {
+        background: $gray-100;
+        padding: 0.75rem;
+
         legend {
             font-weight: bold;
             font-size: 1.1rem;
-            text-align: center;
-            margin-top: 1rem;
         }
 
         .btn-group {
