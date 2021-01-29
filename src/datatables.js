@@ -14,8 +14,8 @@ $(function() {
         order:      [0, 'desc'],
         searching:  true,
         paging:     true,
-        pageLength: 25,
-        info:       false,
+        pageLength: 10,
+        info:       true,
         bAutoWidth: false,
         language: {
             "sEmptyTable":     "Nenhum Documento encontrado",
@@ -46,8 +46,8 @@ $(function() {
         order:      [0, 'desc'],
         searching:  true,
         paging:     true,
-        pageLength: 25,
-        info:       false,
+        pageLength: 10,
+        info:       true,
         bAutoWidth: false,
         language: {
             "sEmptyTable":     "Nenhum Edital encontrado",
