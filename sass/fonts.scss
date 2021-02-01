@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Open Sans';
-  font-display: swap;
+  font-display: fallback;
   font-weight: normal;
   font-style: normal;
   src: url('../opensans/Regular/OpenSans-Regular.eot');
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  font-display: swap;
+  font-display: fallback;
   font-weight: normal;
   font-style: italic;
   src: url('../opensans/Italic/OpenSans-Italic.eot');
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  font-display: swap;
+  font-display: fallback;
   font-weight: bold;
   font-style: normal;
   src: url('../opensans/Bold/OpenSans-Bold.eot');
@@ -39,7 +39,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  font-display: swap;
+  font-display: fallback;
   font-weight: bold;
   font-style: italic;
   src: url('../opensans/BoldItalic/OpenSans-BoldItalic.eot');
