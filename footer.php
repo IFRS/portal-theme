@@ -30,7 +30,7 @@
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>
                 <div class="col-12 col-md-5 offset-md-1 col-lg-3 offset-lg-3">
-                    <a href="https://www.gov.br/acessoainformacao" class="d-block px-sm-5 px-md-0"><img data-src="<?php echo get_template_directory_uri(); ?>/img/acesso-info.svg" alt="Acesso &agrave; Informa&ccedil;&atilde;o" class="lazyload mx-auto"></a>
+                    <a href="https://www.gov.br/acessoainformacao" class="d-block px-sm-5 px-md-0"><img data-src="<?php echo esc_url(get_template_directory_uri()); ?>/img/acesso-info.svg" alt="Acesso &agrave; Informa&ccedil;&atilde;o" class="lazyload mx-auto"></a>
                     <div class="creditos">
                         <!-- Wordpress -->
                         <a href="https://br.wordpress.org/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Desenvolvido com Wordpress">

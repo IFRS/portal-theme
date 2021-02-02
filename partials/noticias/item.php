@@ -3,7 +3,7 @@
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid noticia__img')); ?>
         <?php else : ?>
-            <img data-src="<?php echo get_template_directory_uri(); ?>/img/noticia-placeholder.jpg" alt="<?php the_title(); ?>" class="lazyload img-fluid noticia__img" aria-hidden="true"/>
+            <img data-src="<?php echo esc_url(get_template_directory_uri()); ?>/img/noticia-placeholder.jpg" alt="<?php the_title(); ?>" class="lazyload img-fluid noticia__img" aria-hidden="true"/>
         <?php endif; ?>
     </div>
     <h2 class="noticia__titulo"><?php the_title(); ?></h2>
