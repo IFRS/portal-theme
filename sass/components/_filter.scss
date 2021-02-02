@@ -38,5 +38,9 @@
         .btn-group {
             margin-top: 1rem;
         }
+
+        fieldset + fieldset {
+            margin-top: 10px;
+        }
     }
 }
