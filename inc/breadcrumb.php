@@ -8,7 +8,7 @@ function portal_breadcrumb() {
     if (!is_front_page() || is_paged()) {
 		echo '<div class="container" id="breadcrumb"><div class="row"><div class="col">';
 		echo '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
-		echo '<li>'.__('Voc&ecirc; est&aacute; em:&nbsp;').'</li>';
+		echo '<li>'.__('Voc&ecirc; est&aacute; em:&nbsp;', 'ifrs-portal-theme').'</li>';
 
         global $post;
         $homeLink = home_url();
@@ -60,35 +60,35 @@ function portal_breadcrumb() {
             }
         } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
             if (is_tax('curso_modalidade') && !isset($_POST['curso_modalidade'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . 'Modalidades' . $after;
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('curso_unidade') && !isset($_POST['curso_unidade'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . 'Unidades' . $after;
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('curso_nivel') && !isset($_POST['curso_nivel'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . 'N&iacute;veis' . $after;
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('curso_turno') && !isset($_POST['curso_turno'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'curso' ) . '">' . __('Cursos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . 'Turnos' . $after;
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('concurso_status') && !isset($_POST['concurso_status'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'concurso' ) . '">' . __('Concursos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('documento_type') && !isset($_POST['documento_type'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('documento_origin') && !isset($_POST['documento_origin'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'documento' ) . '">' . __('Documentos', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('edital_category') && !isset($_POST['edital_category'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
             } elseif (is_tax('edital_status') && !isset($_POST['edital_status'])) {
-                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais') . '</a></li>';
+                echo '<li class="breadcrumb-item"><a href="' . get_post_type_archive_link( 'edital' ) . '">' . __('Editais', 'ifrs-portal-theme') . '</a></li>';
                 echo $before . single_term_title('', false) . $after;
             } else {
                 echo $before . post_type_archive_title('', false) . $after;

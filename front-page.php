@@ -79,7 +79,7 @@
     <div class="col-12">
         <div class="acesso-todas-noticias">
             <hr class="acesso-todas-noticias__separador">
-            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="float-right acesso-todas-noticias__link"><?php _e('Acesse mais notícias'); ?></a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="float-right acesso-todas-noticias__link"><?php _e('Acesse mais notícias', 'ifrs-portal-theme'); ?></a>
         </div>
     </div>
 </div>
@@ -98,7 +98,7 @@
 <div class="row">
     <div class="col-12">
         <div class="area-atalhos">
-            <h2 class="area-atalhos__title"><?php _e('Acesso R&aacute;pido'); ?></h2>
+            <h2 class="area-atalhos__title"><?php _e('Acesso R&aacute;pido', 'ifrs-portal-theme'); ?></h2>
             <nav>
                 <ul class="area-atalhos__list">
                     <?php dynamic_sidebar('widget-atalhos'); ?>

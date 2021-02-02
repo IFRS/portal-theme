@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="alert alert-warning">
-        <p><?php _e('Nenhum resultado encontrado.'); ?></p>
+        <p><?php _e('Nenhum resultado encontrado.', 'ifrs-portal-theme'); ?></p>
     </div>
 <?php else : ?>
     <div class="row">
