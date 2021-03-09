@@ -14,12 +14,22 @@
     &__widget {
         @include widget();
 
-        display: inline-block;
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
         margin-left: 6px;
         margin-right: 6px;
+        width: 80px;
 
         a {
             display: block;
         }
+    }
+
+    &__widget-title {
+        color: $cor-primaria-verde;
+        font-size: 0.8rem;
+        order: 1;
+        text-align: center;
     }
 }

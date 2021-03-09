@@ -69,8 +69,8 @@ function portal_widgets_init() {
 		'description'   => __('Área de atalhos para acesso rápido na página inicial.', 'ifrs-portal-theme'),
 		'before_widget' => '<li id="%1$s" class="area-atalhos__widget %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<span class="sr-only">',
-		'after_title'   => '</span>',
+		'before_title'  => '<h3 class="area-atalhos__widget-title">',
+		'after_title'   => '</h3>',
 	));
 	register_sidebar(array(
 		'name'          => 'Área Banners',

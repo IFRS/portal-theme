@@ -1,6 +1,6 @@
 $(function () {
     $('.area-atalhos__widget > a').each(function (i, e) {
-        texto = $(e).prev('span').html();
+        texto = $(e).prev('h3').html();
         $(e).tooltip({
             placement: 'top',
             title: texto
