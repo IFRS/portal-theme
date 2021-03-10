@@ -1,5 +1,5 @@
 .menu-campi {
-    background-color: $menu-campi-fundo;
+    background-color: $cor-primaria-cinza;
     border-radius: 4px;
     list-style: none;
     margin: 0;
@@ -7,22 +7,17 @@
     text-align: center;
 
     li {
-        border-right: 1px solid #ccc;
         display: inline-block;
-        margin-bottom: 5px;
+        margin: 3px 0;
         padding: 0 10px;
-
-        &:last-child {
-            border-right: none;
-        }
 
         a {
             color: $cor-barra-servicos;
         }
-    }
 
-    @include media-breakpoint-down(lg) {
-        margin-top: $grid-gutter-width;
+        & + li {
+            border-left: 1px solid #ccc;
+        }
     }
 
     @include media-breakpoint-up(md) {
@@ -37,7 +32,7 @@
             position: absolute;
             border-style: solid;
             border-width: 15px 25px 15px 0;
-            border-color: transparent $menu-campi-fundo;
+            border-color: transparent $cor-primaria-cinza;
             display: block;
             width: 0;
             z-index: 1;
