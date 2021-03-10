@@ -22,8 +22,8 @@ function portal_widgets_init() {
 		'name'          => 'Área Navegação',
 		'id'            => 'widget-nav',
 		'description'   => __('Área acima do Menu de Relevância.', 'ifrs-portal-theme'),
-		'before_widget' => '<div id="%1$s" class="area-nav__widget %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<li id="%1$s" class="area-nav__widget %2$s">',
+		'after_widget'  => '</li>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));

@@ -1,11 +1,15 @@
-<?php if (is_active_sidebar('widget-nav')) : ?>
-<div class="area-nav">
-    <?php dynamic_sidebar('widget-nav'); ?>
-</div>
-<?php endif; ?>
+<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Mostrar</span>&nbsp;Menu</button>
+<nav class="menu-navbar collapse fade show">
+    <button type="button" class="btn btn-link menu-navbar__close d-none" aria-label="Fechar Menu">
+        <span aria-hidden="true">&times;</span>
+    </button>
 
-<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Esconder/Mostrar</span>&nbsp;Menu</button>
-<nav class="menu-navbar collapse show">
+    <?php if (is_active_sidebar('widget-nav')) : ?>
+    <ul class="area-nav">
+        <?php dynamic_sidebar('widget-nav'); ?>
+    </ul>
+    <?php endif; ?>
+
     <?php
         wp_nav_menu(
             array(
