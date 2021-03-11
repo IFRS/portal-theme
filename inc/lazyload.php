@@ -1,5 +1,5 @@
 <?php
-// Lazyload Converter
+// Lazyload Images
 function ifrs_add_lazyload($content) {
     $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
     $dom = new DOMDocument();
@@ -36,6 +36,7 @@ function ifrs_add_lazyload($content) {
         }
 
         $node->setAttribute('loading', 'lazy');
+        $node->setAttribute('decoding', 'async');
     }
 
     $newHtml = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
@@ -57,4 +58,4 @@ add_action( 'dynamic_sidebar_after', function() {
     echo ifrs_add_lazyload($content);
 
     unset($content);
-}, 1000 );
+}, 999 );
