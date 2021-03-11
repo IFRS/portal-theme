@@ -4,8 +4,8 @@ function portal_widgets_init() {
 		'name'          => 'Carousel',
 		'id'            => 'widget-carousel',
 		'description'   => __('Área para conteúdo em forma de slider, geralmente imagens.', 'ifrs-portal-theme'),
-		'before_widget' => '<div id="%1$s" class="carousel-item %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<div class="col-12 col-md-4"><div id="%1$s" class="carousel-item %2$s">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
@@ -31,8 +31,8 @@ function portal_widgets_init() {
 		'name'          => 'Área Home',
 		'id'            => 'widget-home',
 		'description'   => __('Área principal para banners em destaque.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="row"><div class="col-12"><div id="%1$s" class="area-home__widget %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'before_widget' => '<div class="col-12 col-md-4"><div id="%1$s" class="area-home__widget %2$s">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));

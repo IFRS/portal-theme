@@ -33,49 +33,52 @@
     $query = new WP_Query($args);
 ?>
 
+<?php if ($query->have_posts()) : $query->the_post(); ?>
+    <!-- Notícia Destaque -->
+    <div class="row">
+        <div class="col-12">
+            <article class="noticia noticia_destaque">
+                <?php get_template_part('partials/noticias/item'); ?>
+            </article>
+        </div>
+    </div>
+<?php endif; ?>
+
+<?php if (is_active_sidebar('widget-home')) : ?>
+    <!-- Banners -->
+    <div class="area-home">
+        <hr/>
+        <div class="row align-items-center">
+            <?php dynamic_sidebar('widget-home'); ?>
+            <?php get_template_part('partials/carousel'); ?>
+        </div>
+        <hr/>
+    </div>
+<?php endif; ?>
+
 <div class="row">
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-        <?php if ($query->current_post == 0) : ?>
-            <!-- Banners -->
-            <div class="col-12 col-lg-5 order-last">
-                <div class="area-home">
-                    <?php if (!dynamic_sidebar('widget-home')) : endif; ?>
-                    <?php get_template_part('partials/carousel'); ?>
-                </div>
-            </div>
-            <!-- Notícia Destaque -->
-            <div class="col-12 col-lg-7 order-first">
-                <article class="noticia noticia_destaque">
+        <?php if ($query->current_post < 4) : ?>
+            <!-- Notícia Normal -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="noticia">
                     <?php get_template_part('partials/noticias/item'); ?>
                 </article>
             </div>
-            </div> <!-- /.row -->
         <?php else : ?>
-            <?php if ($query->current_post == 1) : ?>
-                <div class="row">
+            <?php if ($query->current_post == 4) : ?>
+                <!-- Notícias Simplificadas -->
+                <div class="col-12 col-md-6 col-lg-3 noticias-simples">
             <?php endif; ?>
-            <?php if ($query->current_post < 4) : ?>
-                <!-- Notícia Normal -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <article class="noticia">
-                        <?php get_template_part('partials/noticias/item'); ?>
-                    </article>
-                </div>
-            <?php else : ?>
-                <?php if ($query->current_post == 4) : ?>
-                    <!-- Notícias Simplificadas -->
-                    <div class="col-12 col-md-6 col-lg-3 noticias-simples">
-                <?php endif; ?>
-                <?php if ($query->current_post < 7) : ?>
-                    <article class="noticia noticia_simples">
-                        <?php get_template_part('partials/noticias/item-simple'); ?>
-                    </article>
-                <?php endif; ?>
+            <?php if ($query->current_post < 7) : ?>
+                <article class="noticia noticia_simples">
+                    <?php get_template_part('partials/noticias/item-simple'); ?>
+                </article>
             <?php endif; ?>
         <?php endif; ?>
     <?php endwhile; ?>
-    </div>
     <?php wp_reset_query(); ?>
+    </div> <!-- /.noticias-simples -->
     <div class="col-12">
         <div class="acesso-todas-noticias">
             <hr class="acesso-todas-noticias__separador">

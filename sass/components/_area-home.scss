@@ -1,16 +1,16 @@
 .area-home {
+    margin-bottom: $grid-gutter-width;
+
     &__widget {
+        margin: 10px 0;
+        text-align: center;
+
+        > a {
+            display: block;
+        }
+
         img {
             @include img-fluid();
-            margin: 0 auto;
-        }
-    }
-
-    > div {
-        margin-bottom: $grid-gutter-width / 2;
-
-        &:last-child {
-            margin-bottom: 0;
         }
     }
 }
