@@ -14,6 +14,9 @@ require_once('inc/content-width.php');
 // Remoção de thumbnails medium_large
 require_once('inc/disable-medium_large.php');
 
+// Thumbnails no feed RSS
+require_once('inc/feed-thumbnail.php');
+
 // Títulos personalizados
 require_once('inc/custom-title.php');
 
