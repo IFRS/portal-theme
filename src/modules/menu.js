@@ -73,12 +73,16 @@ $(function() {
     });
 
     // Eventos
-    $(".menu-navbar").on('show.bs.collapse', function() {
-        $('body').css({
-            'overflow': 'hidden',
-        });
+    $(".menu-navbar").on('show.bs.collapse', function(e) {
+        if (e.target === this) {
+            $('body').css({
+                'overflow': 'hidden',
+            });
+        }
     });
-    $(".menu-navbar").on('hide.bs.collapse', function() {
-        $('body').removeAttr('style');
+    $(".menu-navbar").on('hide.bs.collapse', function(e) {
+        if (e.target === this) {
+            $('body').removeAttr('style');
+        }
     });
 });
