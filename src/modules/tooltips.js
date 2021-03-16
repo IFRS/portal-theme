@@ -8,6 +8,8 @@ $(function () {
         $(e).children('img').first().removeAttr('title');
     });
 
+    $('.footer__lai').tooltip();
+
     $('.creditos > a[data-toggle="tooltip"]').each(function (i, e) {
         $(e).tooltip();
     });
