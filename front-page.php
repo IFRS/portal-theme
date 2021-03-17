@@ -50,7 +50,6 @@
         <hr/>
         <div class="row align-items-center">
             <?php dynamic_sidebar('widget-home'); ?>
-            <?php get_template_part('partials/carousel'); ?>
         </div>
         <hr/>
     </div>
