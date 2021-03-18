@@ -48,7 +48,7 @@
     <!-- Banners -->
     <div class="area-home">
         <hr/>
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-around">
             <?php dynamic_sidebar('widget-home'); ?>
         </div>
         <hr/>
