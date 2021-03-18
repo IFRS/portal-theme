@@ -25,7 +25,6 @@
         color: $cor-texto;
         font-size: 16px;
         font-weight: bold;
-        hyphens: auto;
         line-height: 21px;
         margin-top: 0;
         margin-bottom: 15px;
@@ -47,6 +46,10 @@
         color: $cor-secundaria-azul-claro;
         font-size: 12px;
         margin-bottom: 5px;
+
+        &[data-toggle="tooltip"] {
+            cursor: help;
+        }
     }
 
     &__resumo {
