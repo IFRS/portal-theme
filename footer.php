@@ -30,8 +30,8 @@
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>
                 <div class="col-12 col-md-5 offset-md-1 col-lg-3 offset-lg-3">
-                    <a href="https://www.gov.br/acessoainformacao" class="footer__lai d-block px-sm-5 px-md-0" rel="noopener" data-toggle="tooltip" data-placement="top" title="Site governamental sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o (LAI)">
-                        <img data-src="<?php echo esc_url(get_template_directory_uri()); ?>/img/acesso-info.svg" alt="Site governamental sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o (abre uma nova p&aacute;gina)" class="lazyload mx-auto">
+                    <a href="https://www.gov.br/acessoainformacao" class="footer__lai d-block px-sm-5 px-md-0" rel="noopener" data-toggle="tooltip" data-placement="top" title="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o">
+                        <img data-src="<?php echo esc_url(get_template_directory_uri()); ?>/img/acesso-info.svg" alt="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o (abre uma nova p&aacute;gina)" class="lazyload mx-auto">
                     </a>
                     <div class="creditos">
                         <!-- Wordpress -->
