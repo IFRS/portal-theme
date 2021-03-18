@@ -1,4 +1,8 @@
 $(function () {
+    $('.noticia__data[data-toggle="tooltip"').each(function (i, e) {
+        $(e).tooltip();
+    });
+
     $('.area-atalhos__widget > a').each(function (i, e) {
         texto = $(e).prev('h3').html();
         $(e).tooltip({

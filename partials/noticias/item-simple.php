@@ -9,5 +9,5 @@
     </span>
     -
 <?php endif; ?>
-    <span class="noticia__data"><?php echo get_the_date(); ?></span>
+    <span class="noticia__data" data-toggle="tooltip" data-placement="right" title="atualizado em <?php echo get_the_modified_date(); ?>"><?php echo get_the_date(); ?></span>
 </p>
