@@ -114,6 +114,7 @@ a {
 
 /* Content gallery */
 .gallery {
+    clear: both;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -124,6 +125,7 @@ a {
     text-align: center;
 
     a {
+        background-image: none !important;
         display: block;
     }
 
