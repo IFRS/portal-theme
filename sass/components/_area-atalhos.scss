@@ -17,18 +17,22 @@
         display: inline-flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        margin-left: 6px;
-        margin-right: 6px;
+        margin-bottom: 12px;
+        vertical-align: bottom;
         width: 80px;
 
         a {
             display: block;
         }
+
+        + .area-atalhos__widget {
+            margin-left: 12px;
+        }
     }
 
     &__widget-title {
         color: $cor-primaria-verde;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         order: 1;
         text-align: center;
     }
