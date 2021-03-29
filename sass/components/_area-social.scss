@@ -9,10 +9,12 @@
     }
 
     &__widget {
-        margin-right: 5px;
-
         &:last-child {
             margin-right: 0;
+        }
+
+        a {
+            display: inline-block;
         }
     }
 }
