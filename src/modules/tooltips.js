@@ -1,4 +1,13 @@
 $(function () {
+    $('.area-social__widget > a').each(function (i, e) {
+        texto = $(e).prev('span').html();
+        $(e).tooltip({
+            placement: 'bottom',
+            title: texto
+        });
+        $(e).children('img').first().removeAttr('title');
+    });
+
     $('.noticia__data[data-toggle="tooltip"').each(function (i, e) {
         $(e).tooltip();
     });
