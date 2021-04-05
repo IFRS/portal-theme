@@ -35,16 +35,18 @@
         }
     }
 
+    &__meta {
+        font-size: 0.75rem;
+    }
+
     &__cartola {
         color: $cor-secundaria-azul-claro;
-        font-size: 12px;
         font-weight: bold;
         margin-bottom: 5px;
     }
 
     &__data {
         color: $cor-secundaria-azul-claro;
-        font-size: 12px;
         margin-bottom: 5px;
 
         &[data-toggle="tooltip"] {
