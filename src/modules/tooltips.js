@@ -8,7 +8,11 @@ $(function () {
         $(e).children('img').first().removeAttr('title');
     });
 
-    $('.noticia__data[data-toggle="tooltip"').each(function (i, e) {
+    $('.noticia__data[data-toggle="tooltip"]').each(function (i, e) {
+        $(e).tooltip();
+    });
+
+    $('.crunchify-social__link[data-toggle="tooltip"]').each(function (i, e) {
         $(e).tooltip();
     });
 
