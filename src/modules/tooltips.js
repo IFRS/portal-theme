@@ -25,7 +25,7 @@ $(function () {
         $(e).children('img').first().removeAttr('title');
     });
 
-    $('.footer__lai').tooltip();
+    $('.footer__lai[data-toggle="tooltip"]').tooltip();
 
     $('.creditos > a[data-toggle="tooltip"]').each(function (i, e) {
         $(e).tooltip();
