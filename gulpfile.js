@@ -102,7 +102,7 @@ gulp.task('webpack', function(done) {
                 }
             }
         },
-    }, function(err, stats) {
+    }, (err, stats) => {
         if (err) throw new PluginError('webpack', {
             message: err.toString({
                 colors: true
@@ -113,6 +113,11 @@ gulp.task('webpack', function(done) {
                 colors: true
             })
         });
+        if (stats) {
+            console.log(stats.toString({
+                colors: true
+            }));
+        }
         browserSync.reload();
         done();
     });
