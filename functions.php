@@ -55,7 +55,6 @@ require_once('inc/empty-search-filter.php');
 
 // Widgets
 require_once('inc/widgets.php');
-require_once('inc/carousel-first-child-class.php');
 
 // Custom TinyMCE
 require_once('inc/custom-tinymce.php');

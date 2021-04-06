@@ -1,10 +1,10 @@
 <?php
-function portal_widgets_init() {
+add_action( 'widgets_init', function() {
 	register_sidebar(array(
-		'name'          => 'Carousel',
-		'id'            => 'widget-carousel',
-		'description'   => __('Área para conteúdo em forma de slider, geralmente imagens.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="col-12 col-md-4"><div id="%1$s" class="carousel-item %2$s">',
+		'name'          => 'Área Home',
+		'id'            => 'widget-home',
+		'description'   => __('Área principal para banners em destaque.', 'ifrs-portal-theme'),
+		'before_widget' => '<div class="col-12 col-md-6 col-lg-4"><div id="%1$s" class="area-home__widget %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
@@ -28,18 +28,9 @@ function portal_widgets_init() {
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
-		'name'          => 'Área Home',
-		'id'            => 'widget-home',
-		'description'   => __('Área principal para banners em destaque.', 'ifrs-portal-theme'),
-		'before_widget' => '<div class="col-12 col-md-6 col-lg-4"><div id="%1$s" class="area-home__widget %2$s">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<span class="sr-only">',
-		'after_title'   => '</span>',
-	));
-	register_sidebar(array(
 		'name'          => 'Área Home Lateral',
 		'id'            => 'widget-home-side',
-		'description'   => __('Área lateral abaixo das notícias, para banners ou outros conteúdos.', 'ifrs-portal-theme'),
+		'description'   => __('Área lateral abaixo das notícias, para banners, vídeos ou outros conteúdos.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="area-home-side__widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
@@ -75,7 +66,7 @@ function portal_widgets_init() {
 	register_sidebar(array(
 		'name'          => 'Área Banners',
 		'id'            => 'widget-banners',
-		'description'   => __('Área mais abaixo na página inicial, antes do rodapé.', 'ifrs-portal-theme'),
+		'description'   => __('Área mais abaixo na página inicial, antes do rodapé, para banners mais permanentes.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="widget area-banners__widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="sr-only">',
@@ -90,5 +81,4 @@ function portal_widgets_init() {
 		'before_title'  => '<span class="sr-only">',
 		'after_title'   => '</span>',
 	));
-}
-add_action( 'widgets_init', 'portal_widgets_init' );
+} );
