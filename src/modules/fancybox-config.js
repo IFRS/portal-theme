@@ -1,7 +1,7 @@
 require('@fancyapps/fancybox');
 
 $(function() {
-    $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.png'],a[href$='.gif']").attr('data-fancybox', 'gallery').each(function() {
+    $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']").attr('data-fancybox', 'gallery').each(function() {
         let caption = $(this).parent().next('.gallery-caption').text();
 
         if (!caption) {
