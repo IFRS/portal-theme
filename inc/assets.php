@@ -11,9 +11,7 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('vendor', get_template_directory_uri(). '/css/vendor.css', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/vendor.css'), 'all');
 
     wp_enqueue_style('portal', get_template_directory_uri(). '/css/portal.css', array('vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/portal.css'), 'all');
-}, 1);
 
-add_action('wp_enqueue_scripts', function() {
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
     /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
 
@@ -24,6 +22,7 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_script('portal', get_template_directory_uri(). '/js/portal.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.js'), true);
 
+    /* Conditionals */
     if (
         is_post_type_archive('concurso') ||
         is_post_type_archive('documento') ||
@@ -32,6 +31,7 @@ add_action('wp_enqueue_scripts', function() {
         is_singular('documento') ||
         is_singular('edital')
     ) {
+        wp_enqueue_style('datatables', get_template_directory_uri(). '/css/datatables.css', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/datatables.css'), 'all');
         wp_enqueue_script('datatables', get_template_directory_uri(). '/js/datatables.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.js'), true);
     }
 

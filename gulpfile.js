@@ -23,7 +23,7 @@ gulp.task('clean', async function() {
 gulp.task('vendor-css', function() {
     return gulp.src([
         './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-        './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
+        // './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
     ])
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('css/'));
@@ -49,7 +49,16 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('styles', gulp.series('vendor-css', 'sass', function css() {
+gulp.task('datatables-css', gulp.series('sass', function datatables() {
+    return gulp.src([
+        './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
+        './css/datatables.css',
+    ])
+    .pipe(concat('datatables.css'))
+    .pipe(gulp.dest('css/'));
+}));
+
+gulp.task('styles', gulp.series('vendor-css', 'sass', 'datatables-css', function css() {
     return gulp.src(['css/*.css'])
     .pipe(csso())
     .pipe(gulp.dest('css/'))
@@ -160,7 +169,7 @@ gulp.task('dist', function() {
 if (argv.production) {
     gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts'), 'dist'));
 } else {
-    gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'webpack')));
+    gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'datatables-css', 'webpack')));
 }
 
 const proxyURL = argv.URL || argv.url || 'localhost';
