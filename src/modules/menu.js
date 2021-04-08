@@ -35,15 +35,15 @@ $(function() {
     // Controla a exibição do menu em viewports pequenos.
     function menu_resize_control() {
         if ($(window).width() < 992) {
-            $(".menu-navbar").collapse('hide');
-            $(".menu-navbar").on('hidden.bs.collapse', function() {
-                $(".menu-navbar").addClass('menu-navbar--overlay');
-                $(".menu-navbar__close").removeClass('d-none');
+            $('.menu-navbar').collapse('hide');
+            $('.menu-navbar').on('hidden.bs.collapse', function() {
+                $('.menu-navbar').addClass('menu-navbar--overlay');
+                $('.menu-navbar__close').removeClass('d-none');
             });
         } else {
-            $(".menu-navbar").collapse('show');
-            $(".menu-navbar").removeClass('menu-navbar--overlay');
-            $(".menu-navbar__close").addClass('d-none');
+            $('.menu-navbar').collapse('show');
+            $('.menu-navbar').removeClass('menu-navbar--overlay');
+            $('.menu-navbar__close').addClass('d-none');
             $('body').removeAttr('style');
         }
     }
@@ -60,27 +60,27 @@ $(function() {
 
     // Botões
     $('.btn-menu-toggle').on('click', function(e) {
-        $(".menu-navbar").each(function() {
-            $(this).collapse('toggle');
+        $('.menu-navbar').each(function() {
+            $(this).collapse('show');
         });
         e.preventDefault();
     });
     $('.menu-navbar__close').on('click', function(e) {
-        $(".menu-navbar").each(function() {
-            $(this).collapse('toggle');
+        $('.menu-navbar').each(function() {
+            $(this).collapse('hide');
         });
        e.preventDefault();
     });
 
     // Eventos
-    $(".menu-navbar").on('show.bs.collapse', function(e) {
+    $('.menu-navbar').on('show.bs.collapse', function(e) {
         if (e.target === this) {
             $('body').css({
                 'overflow': 'hidden',
             });
         }
     });
-    $(".menu-navbar").on('hide.bs.collapse', function(e) {
+    $('.menu-navbar').on('hide.bs.collapse', function(e) {
         if (e.target === this) {
             $('body').removeAttr('style');
         }
