@@ -12,6 +12,10 @@
 
     &__title {
         @include title-box($cor-editais, '../img/bg-editais.png');
+
+        small {
+            font-size: 70%;
+        }
     }
 
     &__dados {
