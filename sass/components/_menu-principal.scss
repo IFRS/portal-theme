@@ -14,12 +14,12 @@
             border-top: 4px solid $cor-primaria-verde;
             color: #00500F;
             display: block;
-            font-size: 12px;
+            font-size: 0.75rem;
             font-weight: bold;
             text-transform: uppercase;
             min-height: 47px; // As bordas contam como tamanho do elemento, por isso não é 42px como diz o guia.
             margin-top: 30px;
-            padding-left: 7px;
+            padding-left: 6px;
             padding-top: 5px;
             padding-bottom: 3px;
         }
@@ -54,11 +54,10 @@
             > a {
                 color: $cor-texto;
                 display: block;
-                font-size: 14px;
-                min-height: 30px;
-                padding-left: 10px;
-                padding-top: 3px;
-                padding-bottom: 3px;
+                font-size: 0.9rem;
+                padding-left: 8px;
+                padding-top: 8px;
+                padding-bottom: 8px;
             }
         }
 
@@ -76,7 +75,7 @@
                 border-top: 1px solid $menu-inner-border;
                 border-bottom: 1px solid $menu-inner-border;
                 color: $cor-texto;
-                font-size: 14px;
+                font-size: 0.9rem;
                 font-weight: bold;
 
                 &.collapsed {
@@ -92,8 +91,8 @@
                     > a {
                         // background-color: #D9DADC;
                         border-bottom: 1px solid $menu-inner-border;
-                        font-size: 13px;
-                        padding-left: 20px;
+                        font-size: 0.8rem;
+                        padding-left: 16px;
                     }
                 }
 
