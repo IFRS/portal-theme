@@ -42,7 +42,7 @@ add_action('wp_enqueue_scripts', function() {
 
 add_filter('script_loader_tag', function($tag, $handle) {
     $scripts_to_defer = array('barra-brasil');
-    $scripts_to_async = array();
+    $scripts_to_async = array('datatables');
 
     foreach ($scripts_to_defer as $defer_script) {
         if ($defer_script === $handle) {
