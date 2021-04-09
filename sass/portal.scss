@@ -1,9 +1,6 @@
-@import 'vendor/config';
+@import 'commons';
 
 /* Bootstrap */
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/root';
 @import 'bootstrap/scss/reboot';
 @import 'bootstrap/scss/type';
@@ -39,10 +36,6 @@
 @import 'bootstrap/scss/utilities';
 @import 'bootstrap/scss/print';
 
-@import 'util/vars';
-@import 'util/functions';
-@import 'util/mixins';
-
 @import 'base/headings';
 @import 'base/lazyload';
 @import 'base/wp';
@@ -50,52 +43,21 @@
 @import 'layout/main';
 @import 'layout/sidebar';
 
-@import 'components/acesso-todas-noticias';
-@import 'components/acesso-todos-documentos';
-@import 'components/acesso-todos-editais';
-@import 'components/area-atalhos';
-@import 'components/area-banners';
-@import 'components/area-docs';
-@import 'components/area-gallery';
-@import 'components/area-home-side';
-@import 'components/area-home';
 @import 'components/area-nav';
 @import 'components/area-social';
 @import 'components/barra-brasil';
 @import 'components/breadcrumb';
 @import 'components/btn-menu-toggle';
-@import 'components/concurso';
-@import 'components/concursos';
 @import 'components/creditos';
-@import 'components/crunchify-social';
-@import 'components/curso';
-@import 'components/cursos';
 @import 'components/custom-list';
-@import 'components/documento';
-@import 'components/documentos';
-@import 'components/editais';
-@import 'components/edital';
-@import 'components/filter';
 @import 'components/footer';
 @import 'components/header';
-@import 'components/lista-noticias';
 @import 'components/menu-acessibilidade';
 @import 'components/menu-atalhos';
-@import 'components/menu-campi';
 @import 'components/menu-navbar';
 @import 'components/menu-principal';
 @import 'components/menu-relevancia';
 @import 'components/menu-rodape';
 @import 'components/menu-servicos';
-@import 'components/menu-subpages';
-@import 'components/noticia';
-@import 'components/noticias-simples';
-@import 'components/page';
-@import 'components/post';
-@import 'components/posts-by-category';
-@import 'components/search';
 @import 'components/searchform';
 @import 'components/title';
-@import 'components/ultimos-documentos';
-@import 'components/ultimos-editais';
-@import 'components/ultimos-posts';

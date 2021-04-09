@@ -3,6 +3,10 @@
  * Thanks to Crunchify
  * http://crunchify.me/1VIxAsz
  */
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('share');
+}, 10);
+
 add_action('the_content', function($content) {
     $crunchifyURL = urlencode(get_permalink());
 

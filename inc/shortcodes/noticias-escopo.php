@@ -1,5 +1,7 @@
 <?php
 function noticias_escopo_shortcode($atts, $escopo = '') {
+    wp_enqueue_style('home');
+
     $escopo = get_term_by( 'slug', $escopo, 'escopo' );
 
     $args = array(

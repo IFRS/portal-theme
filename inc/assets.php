@@ -12,6 +12,17 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_style('portal', get_template_directory_uri(). '/css/portal.css', array('vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/portal.css'), 'all');
 
+    wp_register_style('front-page', get_template_directory_uri(). '/css/page_front-page.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_front-page.css'), 'all');
+    wp_register_style('home', get_template_directory_uri(). '/css/page_home.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_home.css'), 'all');
+    wp_register_style('search', get_template_directory_uri(). '/css/page_search.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_search.css'), 'all');
+    wp_register_style('single', get_template_directory_uri(). '/css/page_single.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_single.css'), 'all');
+    wp_register_style('page', get_template_directory_uri(). '/css/page_page.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_page.css'), 'all');
+    wp_register_style('concursos', get_template_directory_uri(). '/css/page_concursos.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_concursos.css'), 'all');
+    wp_register_style('documentos', get_template_directory_uri(). '/css/page_documentos.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_documentos.css'), 'all');
+    wp_register_style('editais', get_template_directory_uri(). '/css/page_editais.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_editais.css'), 'all');
+    wp_register_style('cursos', get_template_directory_uri(). '/css/page_cursos.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_cursos.css'), 'all');
+    wp_register_style('share', get_template_directory_uri(). '/css/share.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/share.css'), 'all');
+
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
     /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
 
@@ -23,6 +34,42 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('portal', get_template_directory_uri(). '/js/portal.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.js'), true);
 
     /* Conditionals */
+    if (is_front_page()) {
+        wp_enqueue_style('front-page');
+    }
+
+    if (is_home() || is_category() || is_tag() || is_tax('escopo')) {
+        wp_enqueue_style('home');
+    }
+
+    if (is_search()) {
+        wp_enqueue_style('search');
+    }
+
+    if (is_single()) {
+        wp_enqueue_style('single');
+    }
+
+    if (is_page()) {
+        wp_enqueue_style('page');
+    }
+
+    if (is_post_type_archive('concurso') || is_singular('concurso')) {
+        wp_enqueue_style('concursos');
+    }
+
+    if (is_post_type_archive('documento') || is_singular('documento')) {
+        wp_enqueue_style('documentos');
+    }
+
+    if (is_post_type_archive('edital') || is_singular('edital')) {
+        wp_enqueue_style('editais');
+    }
+
+    if (is_post_type_archive('curso') || is_singular('curso')) {
+        wp_enqueue_style('cursos');
+    }
+
     if (
         is_post_type_archive('concurso') ||
         is_post_type_archive('documento') ||
