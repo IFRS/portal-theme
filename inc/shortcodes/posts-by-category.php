@@ -1,5 +1,7 @@
 <?php
 add_shortcode( 'posts-by-category', function($atts, $link_text = '') {
+    wp_enqueue_style('posts-by-category');
+
     // Attributes
     $atts = shortcode_atts(
         array(
