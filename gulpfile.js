@@ -20,15 +20,6 @@ gulp.task('clean', async function() {
     return await del(['css/', 'js/', 'dist/']);
 });
 
-gulp.task('vendor-css', function() {
-    return gulp.src([
-        './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-        // './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
-    ])
-    .pipe(concat('vendor.css'))
-    .pipe(gulp.dest('css/'));
-});
-
 gulp.task('sass', function() {
     let postCSSplugins = [
         require('postcss-flexibility'),
@@ -58,7 +49,15 @@ gulp.task('datatables-css', gulp.series('sass', function datatables() {
     .pipe(gulp.dest('css/'));
 }));
 
-gulp.task('styles', gulp.series('vendor-css', 'sass', 'datatables-css', function css() {
+gulp.task('vendor-css', gulp.parallel('datatables-css', function vendor() {
+    return gulp.src([
+        './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+    ])
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('css/'));
+}));
+
+gulp.task('styles', gulp.series('sass', 'vendor-css', function css() {
     return gulp.src(['css/*.css'])
     .pipe(csso())
     .pipe(gulp.dest('css/'))
@@ -169,7 +168,7 @@ gulp.task('dist', function() {
 if (argv.production) {
     gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts'), 'dist'));
 } else {
-    gulp.task('build', gulp.series('clean', gulp.parallel('vendor-css', 'sass', 'datatables-css', 'webpack')));
+    gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'vendor-css', 'webpack')));
 }
 
 const proxyURL = argv.URL || argv.url || 'localhost';
