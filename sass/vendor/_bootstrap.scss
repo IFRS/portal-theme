@@ -1,8 +1,13 @@
+/* Bootstrap */
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
 @import 'util/vars';
 
 // Bootstrap
-$font-family-sans-serif:        "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font-family-base:              "Open Sans", #{$font-family-sans-serif};
 $link-color:                    $cor-primaria-azul;
 $breadcrumb-padding-horizontal: 0;
 $breadcrumb-color:              $cor-texto;
-$breadcrumb-active-color:       #666666;
+$breadcrumb-active-color:       $gray-700;
