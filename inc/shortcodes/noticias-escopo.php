@@ -1,5 +1,5 @@
 <?php
-function noticias_escopo_shortcode($atts, $escopo = '') {
+add_shortcode( 'noticias-escopo', function($atts, $escopo = '') {
     wp_enqueue_style('home');
 
     $escopo = get_term_by( 'slug', $escopo, 'escopo' );
@@ -42,6 +42,4 @@ function noticias_escopo_shortcode($atts, $escopo = '') {
     </div>
 <?php
     return ob_get_clean();
-}
-
-add_shortcode( 'noticias-escopo', 'noticias_escopo_shortcode' );
+} );
