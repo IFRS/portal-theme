@@ -183,7 +183,7 @@ gulp.task('default', gulp.series('build', function watch() {
         proxy: proxyURL,
     });
 
-    gulp.watch('sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('sass/**/*.scss', gulp.series('sass', 'vendor-css'));
 
     gulp.watch('src/**/*.js', gulp.series('webpack'));
 
