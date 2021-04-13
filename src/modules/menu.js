@@ -36,10 +36,8 @@ $(function() {
     function menu_resize_control() {
         if ($(window).width() < 992) {
             $('.menu-navbar').collapse('hide');
-            $('.menu-navbar').on('hidden.bs.collapse', function() {
-                $('.menu-navbar').addClass('menu-navbar--overlay');
-                $('.menu-navbar__close').removeClass('d-none');
-            });
+            $('.menu-navbar').addClass('menu-navbar--overlay');
+            $('.menu-navbar__close').removeClass('d-none');
         } else {
             $('.menu-navbar').collapse('show');
             $('.menu-navbar').removeClass('menu-navbar--overlay');
@@ -52,10 +50,13 @@ $(function() {
 
     var width_control = $(window).width();
     $(window).resize(function() {
-        if ($(window).width() === width_control) {
-            return;
-        }
-        menu_resize_control();
+        clearTimeout(window.resizedFinished);
+        window.resizedFinished = setTimeout(function() {
+            if ($(window).width() === width_control) {
+                return;
+            }
+            menu_resize_control();
+        }, 250);
     });
 
     // Botões
