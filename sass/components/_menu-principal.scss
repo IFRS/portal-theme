@@ -58,6 +58,11 @@
                 padding-left: 8px;
                 padding-top: 8px;
                 padding-bottom: 8px;
+
+                @include media-breakpoint-up(lg) {
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                }
             }
         }
 
@@ -109,7 +114,7 @@
         }
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         > .menu-item {
             > a {
                 margin-top: 0;
