@@ -111,6 +111,7 @@
 </div>
 <?php endif; ?>
 
+<?php if (is_active_sidebar('widget-gallery') || is_active_sidebar('widget-home-side')) : ?>
 <div class="row">
     <div class="col-12 col-lg-8">
         <div class="area-gallery">
@@ -123,6 +124,7 @@
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <?php if (is_active_sidebar('widget-banners')) : ?>
 <div class="row">
