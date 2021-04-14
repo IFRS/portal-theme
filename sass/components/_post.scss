@@ -66,6 +66,10 @@
             margin-bottom: 7px;
         }
 
+        img {
+            @include img-fluid();
+        }
+
         a:not(.btn) {
             @include link-bg-grow($cor-primaria-azul);
         }
