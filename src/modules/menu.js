@@ -38,11 +38,18 @@ $(function() {
             $('.menu-navbar').collapse('hide');
             $('.menu-navbar').addClass('menu-navbar--overlay');
             $('.menu-navbar__close').removeClass('d-none');
+
+            $('.nav-campi').collapse('hide');
+            $('.menu-campi__toggle').removeClass('d-none');
         } else {
+            $('body').removeAttr('style');
+
             $('.menu-navbar').collapse('show');
             $('.menu-navbar').removeClass('menu-navbar--overlay');
             $('.menu-navbar__close').addClass('d-none');
-            $('body').removeAttr('style');
+
+            $('.nav-campi').collapse('show');
+            $('.menu-campi__toggle').addClass('d-none');
         }
     }
 
