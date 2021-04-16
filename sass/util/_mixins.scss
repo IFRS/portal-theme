@@ -34,12 +34,16 @@
     }
 }
 
-@mixin link-todos($cor) {
+@mixin link-todos($cor: $cor-primaria-verde) {
     color: $cor;
     font-size: 14px;
     text-transform: uppercase;
 
-    &:after {
+    &:hover {
+        color: $cor;
+    }
+
+    &::after {
         @include icon-chevron('right');
 
         content: '';
