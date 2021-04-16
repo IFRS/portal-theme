@@ -12,5 +12,9 @@
     a {
         text-decoration: underline;
         text-decoration-style: dotted;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
