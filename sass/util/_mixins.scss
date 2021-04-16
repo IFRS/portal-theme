@@ -56,7 +56,7 @@
     @supports (--css: variables) {
         text-decoration: none;
 
-        background: linear-gradient($cor-fundo 0 0) 50% calc(-2px - 100%) /var(--d, 0%) 200% no-repeat;
+        background: linear-gradient($cor-fundo 0 0) 50% calc(-2px - 100%) / var(--d, 0%) 200% no-repeat;
         transition: 0.2s, background-size 0.2s 0.2s;
 
         &:hover {
@@ -64,6 +64,20 @@
             background-position: 50% 0%;
             color: $cor-texto;
             transition: 0.2s, background-position 0.2s 0.2s, color 0.2s 0.2s;
+        }
+    }
+}
+
+@mixin link-underline-grow() {
+    @supports (--css: variables) {
+        background:
+            linear-gradient(currentColor 0 0)
+            bottom / var(--d, 0) 1px
+            no-repeat;
+            transition:0.5s;
+        &:hover {
+            --d: 100%;
+            text-decoration: none;
         }
     }
 }

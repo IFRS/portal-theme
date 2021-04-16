@@ -26,6 +26,8 @@
         }
 
         a {
+            @include link-underline-grow();
+
             color: $cor-barra-servicos;
         }
     }

@@ -10,8 +10,8 @@
     }
 
     li {
-        .badge {
-            font-size: 10px;
+        a {
+            @include link-underline-grow();
         }
     }
 }
