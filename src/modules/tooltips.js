@@ -1,11 +1,33 @@
 $(function () {
-    $('.area-social__widget > a').each(function (i, e) {
-        texto = $(e).prev('span').html();
-        $(e).tooltip({
+    $('.area-social__widget > a > img').on('lazyloaded', function(e) {
+        let link = $(e.target).parent();
+        console.log(link);
+        let texto = link.prev('span').html();
+        link.tooltip({
             placement: 'bottom',
+            title: texto,
+        });
+        $(e.target).removeAttr('title');
+    });
+
+    $('.area-atalhos__widget > a > img').on('lazyloaded', function(e) {
+        let link = $(e.target).parent();
+        let texto = link.prev('h3').html();
+        link.tooltip({
+            placement: 'top',
             title: texto
         });
-        $(e).children('img').first().removeAttr('title');
+        $(e.target).removeAttr('title');
+    });
+
+    $('.creditos > a[data-toggle="tooltip"] > img').on('lazyloaded', function(e) {
+        let link = $(e.target).parent();
+        link.tooltip();
+    });
+
+    $('.footer__lai[data-toggle="tooltip"] > img').on('lazyloaded', function(e) {
+        let link = $(e.target).parent();
+        link.tooltip();
     });
 
     $('.noticia__data[data-toggle="tooltip"]').each(function (i, e) {
@@ -13,21 +35,6 @@ $(function () {
     });
 
     $('.crunchify-social__link[data-toggle="tooltip"]').each(function (i, e) {
-        $(e).tooltip();
-    });
-
-    $('.area-atalhos__widget > a').each(function (i, e) {
-        texto = $(e).prev('h3').html();
-        $(e).tooltip({
-            placement: 'top',
-            title: texto
-        });
-        $(e).children('img').first().removeAttr('title');
-    });
-
-    $('.footer__lai[data-toggle="tooltip"]').tooltip();
-
-    $('.creditos > a[data-toggle="tooltip"]').each(function (i, e) {
         $(e).tooltip();
     });
 });
