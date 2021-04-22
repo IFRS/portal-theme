@@ -56,11 +56,7 @@
         </div>
         <div class="header__barra-servicos">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <?php get_template_part('partials/menus/servicos'); ?>
-                    </div>
-                </div>
+                <?php get_template_part('partials/menus/servicos'); ?>
             </div>
         </div>
     </header>
