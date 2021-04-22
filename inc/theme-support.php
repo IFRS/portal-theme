@@ -20,30 +20,13 @@ add_action('after_setup_theme', function()  {
     // Add theme support for Responsive Embeds
     add_theme_support('responsive-embeds');
 
-    // Registra a imagem padrão para o cabeçalho
-    register_default_headers(array(
-        'default-image' => array(
-            'url'           => '%s/img/header-default.png',
-            'thumbnail_url' => '%s/img/header-default-thumb.png',
-            'description'   => __('Imagem de Cabeçalho Padrão', 'ifrs-portal-theme')
-        ),
-    ));
-
-    // Habilita a personalização da imagem de cabeçalho
-    add_theme_support('custom-header', array(
-        'default-image'          => get_template_directory_uri() . '/img/header-default.png',
-        'width'                  => 585,
-        'height'                 => 110,
-        'flex-width'             => true,
-        'flex-height'            => false,
-        'uploads'                => true,
-        'random-default'         => false,
-        'header-text'            => false,
-        'default-text-color'     => '',
-        'wp-head-callback'       => '',
-        'admin-head-callback'    => '',
-        'admin-preview-callback' => '',
-        'video'                  => true,
-        'video-active-callback'  => '',
+    // Adiciona a possibilidade de logo personalizado
+    add_theme_support('custom-logo', array(
+        'height'               => 110,
+        'width'                => 570,
+        'flex-height'          => false,
+        'flex-width'           => true,
+        'header-text'          => array(),
+        'unlink-homepage-logo' => false,
     ));
 });
