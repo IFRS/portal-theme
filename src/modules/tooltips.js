@@ -1,5 +1,5 @@
 $(function () {
-    $('.area-social__widget > a > img').on('load', function(e) {
+    $('.area-social__widget > a > img').on('lazyloaded', function(e) {
         let link = $(e.target).parent();
         console.log(link);
         let texto = link.prev('span').html();
@@ -10,22 +10,22 @@ $(function () {
         $(e.target).removeAttr('title');
     });
 
-    $('.area-atalhos__widget > a > img').on('load', function(e) {
+    $('.area-atalhos__widget > a > img').on('lazyloaded', function(e) {
         let link = $(e.target).parent();
         let texto = link.prev('h3').html();
         link.tooltip({
             placement: 'top',
-            title: texto,
+            title: texto
         });
         $(e.target).removeAttr('title');
     });
 
-    $('.creditos > a[data-toggle="tooltip"] > img').on('load', function(e) {
+    $('.creditos > a[data-toggle="tooltip"] > img').on('lazyloaded', function(e) {
         let link = $(e.target).parent();
         link.tooltip();
     });
 
-    $('.footer__lai[data-toggle="tooltip"] > img').on('load', function(e) {
+    $('.footer__lai[data-toggle="tooltip"] > img').on('lazyloaded', function(e) {
         let link = $(e.target).parent();
         link.tooltip();
     });
