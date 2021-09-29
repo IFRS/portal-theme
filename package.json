@@ -8,7 +8,7 @@
     "autoprefixer": "^10.2.5",
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.26.14",
-    "datatables.net": "^1.10.24",
+    "datatables.net": "^1.11.3",
     "datatables.net-bs4": "^1.10.24",
     "datatables.net-plugins": "^1.10.24",
     "del": "^6.0.0",
