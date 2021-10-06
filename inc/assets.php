@@ -95,7 +95,8 @@ add_action('wp_enqueue_scripts', function() {
         is_tax('curso_modalidade') ||
         is_tax('curso_nivel') ||
         is_tax('curso_turno') ||
-        is_tax('curso_unidade')
+        is_tax('curso_unidade') ||
+        is_page( 'cursos' )
     ) {
         wp_enqueue_style('cursos');
     }
