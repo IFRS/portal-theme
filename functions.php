@@ -83,6 +83,9 @@ require_once('inc/disable-emoji.php');
 // Remove all "version" text from output
 require_once('inc/remove-version.php');
 
+// Banner Especial
+require_once('inc/banner-especial.php');
+
 // Metaboxes
 require_once('inc/pages-metaboxes.php');
 
