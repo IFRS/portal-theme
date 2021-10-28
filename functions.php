@@ -8,9 +8,6 @@ require_once('inc/cookie-fix.php');
 // Suporte para diversas funções
 require_once('inc/theme-support.php');
 
-// Content Width
-require_once('inc/content-width.php');
-
 // Remoção de thumbnails medium_large
 require_once('inc/disable-medium_large.php');
 

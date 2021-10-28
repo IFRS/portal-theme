@@ -1,4 +1,8 @@
 <?php
+if ( ! isset( $content_width ) ) {
+	$content_width = 680;
+}
+
 add_action('after_setup_theme', function()  {
     // Remove Gutenberg custom options
     add_theme_support('editor-color-palette');
