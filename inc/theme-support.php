@@ -30,7 +30,7 @@ add_action('after_setup_theme', function()  {
         'width'                => 570,
         'flex-height'          => false,
         'flex-width'           => true,
-        'header-text'          => array(),
+        'header-text'          => array('title-link', 'title-img', 'title-campus'),
         'unlink-homepage-logo' => false,
     ));
 });
