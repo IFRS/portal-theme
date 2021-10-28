@@ -27,7 +27,7 @@ add_action('after_setup_theme', function()  {
     // Adiciona a possibilidade de logo personalizado
     add_theme_support('custom-logo', array(
         'height'               => 110,
-        'width'                => 570,
+        'width'                => 760,
         'flex-height'          => false,
         'flex-width'           => true,
         'header-text'          => array('title-link', 'title-img', 'title-campus'),
