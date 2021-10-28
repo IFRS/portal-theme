@@ -18,15 +18,16 @@
         flex-direction: column;
         flex-wrap: nowrap;
         margin-bottom: 12px;
+        margin-right: 12px;
         vertical-align: top;
         width: 80px;
 
-        a {
-            display: block;
+        &:last-child {
+            margin-right: 0;
         }
 
-        + .area-atalhos__widget {
-            margin-left: 12px;
+        a {
+            display: block;
         }
     }
 
