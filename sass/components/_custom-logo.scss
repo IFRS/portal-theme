@@ -1,0 +1,7 @@
+.custom-logo {
+    @extend .img-fluid;
+
+    &-link {
+        display: block;
+    }
+}
