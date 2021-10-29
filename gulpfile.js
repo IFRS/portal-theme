@@ -73,6 +73,7 @@ gulp.task('webpack', function(done) {
         mode: webpackMode,
         devtool: 'source-map',
         entry: {
+            ielt9: './src/ie-lt9.js',
             ie: './src/ie.js',
             portal: './src/portal.js',
             datatables: './src/datatables.js',
