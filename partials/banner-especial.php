@@ -1,6 +1,6 @@
 <?php
     $banner_enabled = cmb2_get_option( 'banner_especial_options', 'banner_especial_enable' );
-    $banner_img = wp_get_attachment_image( cmb2_get_option( 'banner_especial_options', 'banner_especial_img_id' ), 'full' );
+    $banner_img = wp_get_attachment_image( cmb2_get_option( 'banner_especial_options', 'banner_especial_img_id' ), 'full', false, array( 'class' => 'img-fluid' ) );
     $banner_url = cmb2_get_option( 'banner_especial_options', 'banner_especial_url' );
 ?>
 <?php if (!empty($banner_enabled) && !empty($banner_img)) : ?>
