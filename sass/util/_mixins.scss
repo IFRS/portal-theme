@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin menu-barra() {
     font-size: 10px;
     list-style: none;
@@ -14,7 +16,7 @@
 }
 
 @mixin widget() {
-    margin-bottom: $grid-gutter-width / 2;
+    margin-bottom: math.div($grid-gutter-width, 2);
 }
 
 @mixin title-box($color: $cor-primaria-verde, $image-url: '') {

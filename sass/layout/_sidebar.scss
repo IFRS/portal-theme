@@ -1,6 +1,8 @@
+@use 'sass:math';
+
 aside {
     .row {
-        margin-bottom: $grid-gutter-width / 2;
+        margin-bottom: math.div($grid-gutter-width, 2);
     }
 
     .form-text {
