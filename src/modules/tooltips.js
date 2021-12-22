@@ -1,7 +1,6 @@
 $(function () {
     $('.area-social__widget > a > img').on('lazyloaded', function(e) {
         let link = $(e.target).parent();
-        console.log(link);
         let texto = link.prev('span').html();
         link.tooltip({
             placement: 'bottom',
