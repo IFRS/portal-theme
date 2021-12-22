@@ -112,10 +112,6 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_style('datatables', get_template_directory_uri(). '/css/datatables.css', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/datatables.css'), 'all');
         wp_enqueue_script('datatables', get_template_directory_uri(). '/js/datatables.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.js'), true);
     }
-
-    if (!WP_DEBUG) {
-        wp_enqueue_script('barra-brasil', 'https://barra.brasil.gov.br/barra.js', array(), null, true);
-    }
 }, 1);
 
 add_filter('script_loader_tag', function($tag, $handle) {
