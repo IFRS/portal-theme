@@ -74,7 +74,7 @@ $(function() {
     });
 
     $('.concurso__table, .documento__table, .edital__table').DataTable({
-        order:      [0, 'desc'],
+        order: [],
         searching:  false,
         paging:     false,
         info:       false,
