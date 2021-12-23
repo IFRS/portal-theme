@@ -1,16 +1,15 @@
 .footer {
     background-color: $cor-rodape;
-    margin-top: 20px;
-    padding: 30px 0;
+    margin-top: 1.25rem;
+    padding: 2rem 0;
 
     &__info {
         background-color: $cor-rodape-info;
-        border-radius: 4px;
+        border-radius: $border-radius;
         color: #FFFFFF;
         font-size: 90%;
-        margin-top: 30px;
-        padding-bottom: 15px;
-        padding-top: 15px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
 
         a {
             color: #dddddd;

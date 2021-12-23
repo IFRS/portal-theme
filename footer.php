@@ -8,23 +8,6 @@
     <a href="#inicio-rodape" id="inicio-rodape" class="sr-only">In&iacute;cio do rodap&eacute;</a>
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                <?php
-                    wp_nav_menu(
-                        array(
-                            'menu_class'        => 'menu-rodape',
-                            'menu_id'           => '',
-                            'container'         => 'nav',
-                            'container_class'   => '',
-                            'container_id'      => 'sitemap',
-                            'depth'             => 2,
-                            'theme_location'    => 'principal',
-                        )
-                    );
-                ?>
-                </div>
-            </div>
             <div class="row footer__info">
                 <div class="col-12 col-md-6 col-lg-6 area-rodape">
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
