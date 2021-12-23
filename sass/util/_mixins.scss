@@ -94,11 +94,12 @@
         -webkit-line-clamp: $numLines;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        text-overflow: ellipsis;
     } @else {
         display: block;
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        overflow: hidden;
     }
 }
 

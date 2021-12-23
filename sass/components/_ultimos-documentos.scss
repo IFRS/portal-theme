@@ -32,6 +32,10 @@
     }
 
     &__documento-title {
+        @include media-breakpoint-up(lg) {
+            @include trim(3);
+        }
+
         font-size: 1.15rem;
     }
 
