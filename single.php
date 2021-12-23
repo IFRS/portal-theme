@@ -16,7 +16,10 @@
                 <div class="col-12 col-md-6">
                     <small class="post__date">
                         <span class="post__published">publicado em <?php the_time('d'); ?> de <?php the_time('F'); ?> de <?php the_time('Y'); ?></span>
-                        <br>
+                    </small>
+                </div>
+                <div class="col-12 col-md-6">
+                    <small class="post__date">
                         <?php if (get_the_modified_time() != get_the_time()) : ?><span class="post__updated">&uacute;ltima modifica&ccedil;&atilde;o em <?php the_modified_time('d'); ?> de <?php the_modified_time('F'); ?> de <?php the_modified_time('Y'); ?></span><?php endif; ?>
                     </small>
                 </div>
