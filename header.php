@@ -70,7 +70,6 @@
                 <?php get_template_part('partials/menus/principal'); ?>
                 <a href="#fim-menu" id="fim-menu" class="sr-only">Fim da navega&ccedil;&atilde;o</a>
             </div>
-            <div class="col-12 col-lg-10">
+            <main role="main" class="col-12 col-lg-10">
                 <!-- Conteúdo -->
-                <main role="main">
-                    <a href="#inicio-conteudo" id="inicio-conteudo" class="sr-only">In&iacute;cio do conte&uacute;do</a>
+                <a href="#inicio-conteudo" id="inicio-conteudo" class="sr-only">In&iacute;cio do conte&uacute;do</a>
