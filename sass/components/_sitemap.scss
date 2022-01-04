@@ -1,0 +1,5 @@
+.sitemap {
+    @include media-breakpoint-up(md) {
+        column-count: 2;
+    }
+}

@@ -57,4 +57,4 @@ add_action('the_content', function($content) {
     </ul>
 <?php
     return $content . ob_get_clean();
-});
+}, 999);
