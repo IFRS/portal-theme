@@ -2,4 +2,8 @@
     @include media-breakpoint-up(md) {
         column-count: 2;
     }
+
+    .children {
+        break-inside: avoid-column;
+    }
 }
