@@ -7,3 +7,4 @@ require('./modules/picturefill-config');
 require('./modules/menu');
 require('./modules/fancybox-config');
 require('./modules/tooltips');
+require('./modules/vlibras');

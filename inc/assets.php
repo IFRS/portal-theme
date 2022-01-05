@@ -42,6 +42,10 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_script('portal', get_template_directory_uri(). '/js/portal.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.js'), true);
 
+    if (!WP_DEBUG) {
+        wp_enqueue_script('vlibras', 'https://vlibras.gov.br/app/vlibras-plugin.js', array(), null, true);
+    }
+
     /* Conditionals */
     if (is_front_page()) {
         wp_enqueue_style('front-page');
@@ -115,7 +119,7 @@ add_action('wp_enqueue_scripts', function() {
 }, 1);
 
 add_filter('script_loader_tag', function($tag, $handle) {
-    $scripts_to_defer = array('barra-brasil');
+    $scripts_to_defer = array('vlibras');
     $scripts_to_async = array('datatables');
 
     foreach ($scripts_to_defer as $defer_script) {
