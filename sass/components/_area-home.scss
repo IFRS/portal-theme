@@ -11,6 +11,9 @@
 
         img {
             @include img-fluid();
+
+            aspect-ratio: 2 / 1;
+            object-fit: contain;
         }
     }
 }
