@@ -1,6 +1,26 @@
 .noticia {
     $n: &;
 
+    @include media-breakpoint-only(md) {
+        &:nth-child(n+3) {
+            margin-top: 2rem;
+
+            #{$n}__img {
+                display: none;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:nth-child(n+4) {
+            margin-top: 2rem;
+
+            #{$n}__img {
+                display: none;
+            }
+        }
+    }
+
     &__link {
         display: block;
     }

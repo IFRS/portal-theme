@@ -28,8 +28,8 @@
                 'field' => 'term_id',
                 'terms' => $escopos,
                 'operator' => 'NOT IN'
-            )
-        )
+            ),
+        ),
     );
 
     $query = new WP_Query($args);
@@ -59,27 +59,22 @@
 
 <div class="row">
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-        <?php if ($query->current_post < 4) : ?>
-            <!-- Notícia Normal -->
-            <div class="col-12 col-md-6 col-lg-3">
-                <article class="noticia">
-                    <?php get_template_part('partials/noticias/item'); ?>
-                </article>
-            </div>
-        <?php else : ?>
-            <?php if ($query->current_post == 4) : ?>
-                <!-- Notícias Simplificadas -->
-                <div class="col-12 col-md-6 col-lg-3 noticias-simples">
-            <?php endif; ?>
-            <?php if ($query->current_post < 7) : ?>
-                <article class="noticia noticia_simples">
-                    <?php get_template_part('partials/noticias/item-simple'); ?>
-                </article>
-            <?php endif; ?>
-        <?php endif; ?>
+        <?php if ($query->current_post > 6) break; ?>
+        <?php
+            $noticia_class = 'noticia col-12 col-md-6 col-lg-4';
+
+            if ($query->current_post === 4) {
+                $noticia_class .= ' d-none d-md-block d-lg-block';
+            } elseif ($query->current_post >= 5 ) {
+                $noticia_class .= ' d-none d-lg-block';
+            }
+        ?>
+        <!-- Notícia -->
+        <article class="<?php echo $noticia_class; ?>">
+            <?php get_template_part('partials/noticias/item'); ?>
+        </article>
     <?php endwhile; ?>
     <?php wp_reset_query(); ?>
-    </div> <!-- /.noticias-simples -->
     <div class="col-12">
         <div class="acesso-todas-noticias">
             <hr class="acesso-todas-noticias__separador">
