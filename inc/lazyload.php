@@ -1,47 +1,51 @@
 <?php
 // Lazyload Images
 function ifrs_add_lazyload($content) {
-    $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-    $dom = new DOMDocument();
-    @$dom->loadHTML($content);
+    if (!empty($content)) {
+        $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+        $dom = new DOMDocument();
+        @$dom->loadHTML($content);
 
-    $images = [];
+        $images = [];
 
-    foreach ($dom->getElementsByTagName('img') as $node) {
-        $images[] = $node;
-    }
-
-    foreach ($images as $node) {
-        $fallback = $node->cloneNode(true);
-
-        $oldClass = $node->getAttribute('class');
-        $newClass = 'lazyload ' . $oldClass;
-        $node->setAttribute('class', $newClass);
-
-        $node->setAttribute('data-sizes', 'auto');
-
-        $oldsrc = $node->getAttribute('src');
-
-        if ($oldsrc) {
-            $node->setAttribute('data-src', $oldsrc);
-            $node->removeAttribute('src');
+        foreach ($dom->getElementsByTagName('img') as $node) {
+            $images[] = $node;
         }
 
-        $oldsrcset = $node->getAttribute('srcset');
+        foreach ($images as $node) {
+            $fallback = $node->cloneNode(true);
 
-        if ($oldsrcset) {
-            $node->setAttribute('data-srcset', $oldsrcset);
-            $newsrcset = '';
-            $node->setAttribute('srcset', $newsrcset);
+            $oldClass = $node->getAttribute('class');
+            $newClass = 'lazyload ' . $oldClass;
+            $node->setAttribute('class', $newClass);
+
+            $node->setAttribute('data-sizes', 'auto');
+
+            $oldsrc = $node->getAttribute('src');
+
+            if ($oldsrc) {
+                $node->setAttribute('data-src', $oldsrc);
+                $node->removeAttribute('src');
+            }
+
+            $oldsrcset = $node->getAttribute('srcset');
+
+            if ($oldsrcset) {
+                $node->setAttribute('data-srcset', $oldsrcset);
+                $newsrcset = '';
+                $node->setAttribute('srcset', $newsrcset);
+            }
+
+            $node->setAttribute('loading', 'lazy');
+            $node->setAttribute('decoding', 'async');
         }
 
-        $node->setAttribute('loading', 'lazy');
-        $node->setAttribute('decoding', 'async');
+        $newHtml = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
+
+        return $newHtml;
     }
 
-    $newHtml = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
-
-    return $newHtml;
+    return $content;
 }
 
 add_filter('the_content', 'ifrs_add_lazyload', 99);
