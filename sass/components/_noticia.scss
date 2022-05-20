@@ -1,9 +1,11 @@
+@use 'sass:math';
+
 .noticia {
     $n: &;
 
     @include media-breakpoint-only(md) {
         &:nth-child(n+3) {
-            margin-top: 2rem;
+            margin-top: 1rem;
 
             #{$n}__img {
                 display: none;
@@ -13,7 +15,7 @@
 
     @include media-breakpoint-up(lg) {
         &:nth-child(n+4) {
-            margin-top: 2rem;
+            margin-top: 1rem;
 
             #{$n}__img {
                 display: none;
@@ -33,13 +35,15 @@
     }
 
     &__titulo {
+        $line: 21px;
+
         color: $cor-texto;
         font-size: 1rem;
         font-weight: bold;
-        line-height: 21px;
+        line-height: $line;
         margin-top: 0;
         margin-bottom: 0.5rem;
-        min-height: 42px;
+        min-height: $line * 3; // Número mínimo de linhas ocupadas.
 
         > a {
             color: $cor-texto;
@@ -47,6 +51,7 @@
     }
 
     &__meta {
+        margin-bottom: 0.5rem;
         font-size: 0.75rem;
     }
 
@@ -67,34 +72,37 @@
 
     &__resumo {
         color: $cor-texto;
-        font-size: 14px;
+        font-size: 0.9rem;
         hyphens: auto;
-        line-height: 21px;
 
         p {
-            @include trim(4);
+            @include trim(3);
         }
     }
 
     &_destaque {
         #{$n}__img {
             @include media-breakpoint-up(lg) {
+                max-width: 33%;
+                max-width: calc((100% / 3) - ($grid-gutter-width / 2));
                 float: left;
                 margin-bottom: 0;
-                margin-right: 1rem;
-                width: 40%;
+                margin-right: $grid-gutter-width;
                 object-position: top;
             }
         }
 
         #{$n}__titulo {
-            font-size: 26px;
-            line-height: 30px;
+            $line: 30px;
+
+            font-size: 1.6rem;
+            line-height: $line;
             margin-bottom: 5px;
+            min-height: $line * 2;
         }
 
         #{$n}__resumo {
-            font-size: 16px;
+            font-size: 1rem;
             p {
                 display: inline;
                 line-clamp: initial;
@@ -103,7 +111,7 @@
     }
 
     &_simples {
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
 
         #{$n}__titulo {
             margin-bottom: 5px;
