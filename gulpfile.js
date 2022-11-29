@@ -17,51 +17,51 @@ const uglify               = require('gulp-uglify');
 const webpack              = require('webpack');
 
 gulp.task('clean', async function() {
-    return await del(['css/', 'js/', 'dist/']);
+  return await del(['css/', 'js/', 'dist/']);
 });
 
 gulp.task('sass', function() {
-    let postCSSplugins = [
-        require('postcss-flexibility'),
-        pixrem(),
-        autoprefixer()
-    ];
+  let postCSSplugins = [
+    require('postcss-flexibility'),
+    pixrem(),
+    autoprefixer()
+  ];
 
-    return gulp.src('sass/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-        includePaths: ['sass', 'node_modules'],
-        outputStyle: 'expanded',
-        precision: 6
-    }).on('error', sass.logError))
-    .pipe(postcss(postCSSplugins))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('css/'))
-    .pipe(browserSync.stream());
+  return gulp.src('sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({
+    includePaths: ['sass', 'node_modules'],
+    outputStyle: 'expanded',
+    precision: 6
+  }).on('error', sass.logError))
+  .pipe(postcss(postCSSplugins))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('css/'))
+  .pipe(browserSync.stream());
 });
 
 gulp.task('datatables-css', gulp.series('sass', function datatables() {
-    return gulp.src([
-        './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
-        './css/datatables.css',
-    ])
-    .pipe(concat('datatables.css'))
-    .pipe(gulp.dest('css/'));
+  return gulp.src([
+    './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
+    './css/datatables.css',
+  ])
+  .pipe(concat('datatables.css'))
+  .pipe(gulp.dest('css/'));
 }));
 
 gulp.task('vendor-css', gulp.parallel('datatables-css', function vendor() {
-    return gulp.src([
-        './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-    ])
-    .pipe(concat('vendor.css'))
-    .pipe(gulp.dest('css/'));
+  return gulp.src([
+    './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+  ])
+  .pipe(concat('vendor.css'))
+  .pipe(gulp.dest('css/'));
 }));
 
 gulp.task('styles', gulp.series('sass', 'vendor-css', function css() {
-    return gulp.src(['css/*.css'])
-    .pipe(csso())
-    .pipe(gulp.dest('css/'))
-    .pipe(browserSync.stream());
+  return gulp.src(['css/*.css'])
+  .pipe(csso())
+  .pipe(gulp.dest('css/'))
+  .pipe(browserSync.stream());
 }));
 
 const webpackMode = argv.production ? 'production' : 'development';
@@ -69,124 +69,124 @@ let webpackPlugins = [];
 argv.bundleanalyzer ? webpackPlugins.push(new BundleAnalyzerPlugin()) : null;
 
 gulp.task('webpack', function(done) {
-    webpack({
-        mode: webpackMode,
-        devtool: 'source-map',
-        entry: {
-            'ie-lt9': './src/ie-lt9.js',
-            'ie': './src/ie.js',
-            'portal': './src/portal.js',
-            'datatables': './src/datatables.js',
-        },
-        output: {
-            path: path.resolve(__dirname, 'js'),
-            filename: '[name].js',
-        },
-        resolve: {
-            alias: {
-                jquery: 'jquery/src/jquery',
-                bootstrap: 'bootstrap/dist/js/bootstrap.bundle',
-            }
-        },
-        plugins: [
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-            }),
-            new webpack.IgnorePlugin({
-                resourceRegExp: /^\.\/locale$/,
-                contextRegExp: /moment$/,
-            }),
-            ...webpackPlugins
-        ],
-        optimization: {
-            minimize: false,
-            splitChunks: {
-                cacheGroups: {
-                    vendors: false,
-                    commons: {
-                        name: "commons",
-                        chunks: "all",
-                        minChunks: 2,
-                    }
-                }
-            }
-        },
-    }, (err, stats) => {
-        if (err) throw new PluginError('webpack', {
-            message: err.toString({
-                colors: true
-            })
-        });
-        if (stats.hasErrors()) throw new PluginError('webpack', {
-            message: stats.toString({
-                colors: true
-            })
-        });
-        if (stats) {
-            console.log(stats.toString({
-                colors: true
-            }));
+  webpack({
+    mode: webpackMode,
+    devtool: 'source-map',
+    entry: {
+      'ie-lt9': './src/ie-lt9.js',
+      'ie': './src/ie.js',
+      'portal': './src/portal.js',
+      'datatables': './src/datatables.js',
+    },
+    output: {
+      path: path.resolve(__dirname, 'js'),
+      filename: '[name].js',
+    },
+    resolve: {
+      alias: {
+        jquery: 'jquery/src/jquery',
+        bootstrap: 'bootstrap/dist/js/bootstrap.bundle',
+      }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+      }),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+      }),
+      ...webpackPlugins
+    ],
+    optimization: {
+      minimize: false,
+      splitChunks: {
+        cacheGroups: {
+          vendors: false,
+          commons: {
+            name: "commons",
+            chunks: "all",
+            minChunks: 2,
+          }
         }
-        browserSync.reload();
-        done();
+      }
+    },
+  }, (err, stats) => {
+    if (err) throw new PluginError('webpack', {
+      message: err.toString({
+        colors: true
+      })
     });
+    if (stats.hasErrors()) throw new PluginError('webpack', {
+      message: stats.toString({
+        colors: true
+      })
+    });
+    if (stats) {
+      console.log(stats.toString({
+        colors: true
+      }));
+    }
+    browserSync.reload();
+    done();
+  });
 });
 
 gulp.task('scripts', gulp.series('webpack', function js() {
-    return gulp.src(['js/*.js'])
-    .pipe(babel({
-        presets: [
-            [
-                "@babel/env",
-                { "modules": false }
-            ]
-        ]
-    }))
-    .pipe(uglify({
-        ie8: true,
-    }))
-    .pipe(gulp.dest('js/'))
-    .pipe(browserSync.stream());
+  return gulp.src(['js/*.js'])
+  .pipe(babel({
+    presets: [
+      [
+        "@babel/env",
+        { "modules": false }
+      ]
+    ]
+  }))
+  .pipe(uglify({
+    ie8: true,
+  }))
+  .pipe(gulp.dest('js/'))
+  .pipe(browserSync.stream());
 }));
 
 gulp.task('dist', function() {
-    return gulp.src([
-        '**',
-        '!.**',
-        '!css/*.map',
-        '!dist{,/**}',
-        '!js/*.map',
-        '!node_modules{,/**}',
-        '!sass{,/**}',
-        '!src{,/**}',
-        '!gulpfile.js',
-        '!package.json',
-        '!package-lock.json'
-    ])
-    .pipe(gulp.dest('dist/ifrs-portal-theme/'));
+  return gulp.src([
+    '**',
+    '!.**',
+    '!css/*.map',
+    '!dist{,/**}',
+    '!js/*.map',
+    '!node_modules{,/**}',
+    '!sass{,/**}',
+    '!src{,/**}',
+    '!gulpfile.js',
+    '!package.json',
+    '!package-lock.json'
+  ])
+  .pipe(gulp.dest('dist/ifrs-portal-theme/'));
 });
 
 if (argv.production) {
-    gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts'), 'dist'));
+  gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'scripts'), 'dist'));
 } else {
-    gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'vendor-css', 'webpack')));
+  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'vendor-css', 'webpack')));
 }
 
 const proxyURL = argv.URL || argv.url || 'localhost';
 
 gulp.task('default', gulp.series('build', function watch() {
-    browserSync.init({
-        ghostMode: false,
-        notify: false,
-        online: false,
-        open: false,
-        host: proxyURL,
-        proxy: proxyURL,
-    });
+  browserSync.init({
+    ghostMode: false,
+    notify: false,
+    online: false,
+    open: false,
+    host: proxyURL,
+    proxy: proxyURL,
+  });
 
-    gulp.watch('sass/**/*.scss', gulp.series('vendor-css'));
+  gulp.watch('sass/**/*.scss', gulp.series('vendor-css'));
 
-    gulp.watch('src/**/*.js', gulp.series('webpack'));
+  gulp.watch('src/**/*.js', gulp.series('webpack'));
 
-    gulp.watch('**/*.php').on('change', browserSync.reload);
+  gulp.watch('**/*.php').on('change', browserSync.reload);
 }));
