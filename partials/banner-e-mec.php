@@ -5,7 +5,7 @@
 ?>
 <?php if (!empty($banner_enabled) && !empty($banner_img)) : ?>
   <?php if (!empty($banner_url)) : ?>
-    <a href="<?php echo $banner_url ?>" target="_blank">
+    <a href="<?php echo $banner_url ?>" target="_blank" class="d-block" rel="noopener" data-toggle="tooltip" data-placement="top" title="Consulte o cadastro do IFRS no e-MEC">
   <?php endif; ?>
     <?php echo $banner_img; ?>
   <?php if (!empty($banner_url)) : ?>
