@@ -11,8 +11,11 @@
                 <div class="col-12 col-md-6 col-lg-6 area-rodape">
                     <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
                 </div>
-                <div class="col-12 col-md-5 offset-md-1 col-lg-3 offset-lg-3">
-                    <a href="https://www.gov.br/acessoainformacao" class="footer__lai d-block px-sm-5 px-md-0" rel="noopener" data-toggle="tooltip" data-placement="top" title="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o">
+                <div class="col-12 col-md-3 col-lg-3">
+                    <?php get_template_part('partials/banner-e-mec'); ?>
+                </div>
+                <div class="col-12 col-md-3 col-lg-3">
+                    <a href="https://www.gov.br/acessoainformacao" target="_blank" class="footer__lai d-block px-sm-5 px-md-0" rel="noopener" data-toggle="tooltip" data-placement="top" title="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o">
                         <img data-src="<?php echo esc_url(get_template_directory_uri()); ?>/img/acesso-info.svg" alt="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o (abre uma nova p&aacute;gina)" class="lazyload img-fluid mx-auto" width="544" height="228"/>
                     </a>
                     <div class="creditos">
