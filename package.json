@@ -33,7 +33,7 @@
     "postcss-flexibility": "^2.0.0",
     "respond.js": "^1.4.2",
     "sass": "^1.43.4",
-    "webpack": "^5.24.4",
+    "webpack": "^5.76.0",
     "webpack-bundle-analyzer": "^4.4.0"
   }
 }
