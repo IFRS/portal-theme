@@ -7,7 +7,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "autoprefixer": "^10.2.5",
     "bootstrap": "^4.6.0",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.29.1",
     "datatables.net": "^1.11.3",
     "datatables.net-bs4": "^1.10.24",
     "datatables.net-plugins": "^1.10.24",
