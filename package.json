@@ -10,7 +10,7 @@
     "browser-sync": "^2.26.14",
     "datatables.net": "^1.11.3",
     "datatables.net-bs4": "^1.10.24",
-    "datatables.net-plugins": "^1.10.24",
+    "datatables.net-plugins": "^1.13.4",
     "del": "^6.0.0",
     "flexibility": "^2.0.1",
     "gulp": "^4.0.2",
