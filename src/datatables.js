@@ -6,11 +6,11 @@ moment.locale('pt-br');
 require('datatables.net-plugins/sorting/datetime-moment');
 
 $(function() {
-    $.fn.dataTable.moment( 'DD/MM/YYYY', 'pt-br' );
-    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm', 'pt-br' );
+    $.fn.dataTable.moment( 'L LT', 'pt-br' );
+    $.fn.dataTable.moment( 'L', 'pt-br' );
 
     $('.documentos__table').DataTable({
-        order:      [0, 'desc'],
+        order:      [[0, 'desc'], [2, 'desc']],
         searching:  true,
         paging:     true,
         pageLength: 10,
@@ -42,7 +42,7 @@ $(function() {
     });
 
     $('.editais__table').DataTable({
-        order:      [0, 'desc'],
+        order:      [[0, 'desc'], [2, 'desc']],
         searching:  true,
         paging:     true,
         pageLength: 10,
