@@ -108,7 +108,11 @@ add_action('wp_enqueue_scripts', function() {
     if (
         is_post_type_archive('concurso') ||
         is_post_type_archive('documento') ||
+        is_tax('documento_origin') ||
+        is_tax('documento_type') ||
         is_post_type_archive('edital') ||
+        is_tax('edital_category') ||
+        is_tax('edital_status') ||
         is_singular('concurso') ||
         is_singular('documento') ||
         is_singular('edital')
