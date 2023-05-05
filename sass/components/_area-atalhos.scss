@@ -9,6 +9,17 @@
         list-style: none;
         margin: 0;
         padding: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        /* Workaround para que a última linha fique alinhada à esquerda. */
+        &::after {
+            content: '';
+            flex: auto;
+        }
     }
 
     &__widget {
@@ -17,14 +28,7 @@
         display: inline-flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        margin-bottom: 12px;
-        margin-right: 12px;
-        vertical-align: top;
         width: 80px;
-
-        &:last-child {
-            margin-right: 0;
-        }
 
         a {
             display: block;
@@ -35,6 +39,7 @@
         color: $cor-primaria-verde;
         font-size: 0.75rem;
         margin-top: 3px;
+        margin-bottom: 0;
         order: 1;
         text-align: center;
     }
