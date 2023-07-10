@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<?php if (has_nav_menu( 'campi' )) : ?>
 <div class="row">
     <div class="col-12">
     <?php
@@ -9,6 +10,7 @@
     ?>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="row">
     <div class="col-12">
