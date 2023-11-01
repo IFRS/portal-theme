@@ -40,10 +40,13 @@
         color: $cor-texto;
         font-size: 1rem;
         font-weight: bold;
-        line-height: $line;
         margin-top: 0;
         margin-bottom: 0.5rem;
-        min-height: $line * 3; // Número mínimo de linhas ocupadas.
+
+        @include media-breakpoint-up(md) {
+            line-height: $line;
+            min-height: $line * 3; // Número mínimo de linhas ocupadas.
+        }
 
         > a {
             color: $cor-texto;
