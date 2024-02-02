@@ -2,9 +2,16 @@
 // Lazyload Images
 function ifrs_add_lazyload($content) {
     if (!empty($content)) {
-        $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+        $content = mb_encode_numericentity(
+            htmlspecialchars_decode(
+                htmlentities($content, ENT_NOQUOTES, 'UTF-8', false)
+                ,ENT_NOQUOTES
+            ), [0x80, 0x10FFFF, 0, ~0],
+            'UTF-8'
+        );
         $dom = new DOMDocument();
-        @$dom->loadHTML($content);
+        libxml_use_internal_errors(true); // fix html5/svg errors
+        @$dom->loadHTML($content, LIBXML_COMPACT);
 
         $images = [];
 
