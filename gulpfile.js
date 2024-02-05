@@ -22,7 +22,6 @@ gulp.task('clean', async function() {
 
 gulp.task('sass', function() {
   let postCSSplugins = [
-    require('postcss-flexibility'),
     pixrem(),
     autoprefixer()
   ];
@@ -74,7 +73,6 @@ gulp.task('webpack', function(done) {
     devtool: 'source-map',
     entry: {
       'ie-lt9': './src/ie-lt9.js',
-      'ie': './src/ie.js',
       'portal': './src/portal.js',
       'datatables': './src/datatables.js',
     },
