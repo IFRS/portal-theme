@@ -17,7 +17,7 @@ $cards-per-line: (
         @each $name, $breakpoint in $grid-breakpoints {
             @media (min-width: $breakpoint) {
                 .card {
-                    flex: 0 0 calc(#{math.div(100, map-get($cards-per-line, $name))}% - #{$grid-gutter-width});
+                    flex: 0 0 calc(math.percentage(math.div(1, map-get($cards-per-line, $name))) - #{$grid-gutter-width});
                 }
             }
         }
