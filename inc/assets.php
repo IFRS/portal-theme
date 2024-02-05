@@ -32,9 +32,6 @@ add_action('wp_enqueue_scripts', function() {
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
     /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
 
-    wp_enqueue_script('ie-lt9', get_template_directory_uri(). '/js/ie-lt9.js', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/ie-lt9.js'), false);
-    wp_script_add_data('ie-lt9', 'conditional', 'lt IE 9');
-
     wp_enqueue_script('commons', get_template_directory_uri(). '/js/commons.js', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/commons.js'), true);
 
     wp_enqueue_script('portal', get_template_directory_uri(). '/js/portal.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.js'), true);

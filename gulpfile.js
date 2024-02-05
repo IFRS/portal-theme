@@ -8,7 +8,6 @@ const concat               = require('gulp-concat');
 const del                  = require('del');
 const gulp                 = require('gulp');
 const path                 = require('path');
-const pixrem               = require('pixrem');
 const PluginError          = require('plugin-error');
 const postcss              = require('gulp-postcss');
 const sass                 = require('gulp-sass')(require('sass'));
@@ -22,7 +21,6 @@ gulp.task('clean', async function() {
 
 gulp.task('sass', function() {
   let postCSSplugins = [
-    pixrem(),
     autoprefixer()
   ];
 
@@ -72,7 +70,6 @@ gulp.task('webpack', function(done) {
     mode: webpackMode,
     devtool: 'source-map',
     entry: {
-      'ie-lt9': './src/ie-lt9.js',
       'portal': './src/portal.js',
       'datatables': './src/datatables.js',
     },
