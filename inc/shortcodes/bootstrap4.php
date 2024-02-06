@@ -792,40 +792,51 @@ function ifrs_bs4_parse_data_attributes( $data ) {
 }
 
 function ifrs_bs4_scrape_dom_element( $tag, $content, $class, $title = '', $data = null ) {
-	$previous_value = libxml_use_internal_errors(TRUE);
+	if (!empty($content)) {
+		$content = mb_encode_numericentity(
+				htmlspecialchars_decode(
+						htmlentities($content, ENT_NOQUOTES, 'UTF-8', false)
+						,ENT_NOQUOTES
+				), [0x80, 0x10FFFF, 0, ~0],
+				'UTF-8'
+		);
 
-	$dom = new DOMDocument;
-	$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
+		$dom = new DOMDocument;
+		$previous_value = libxml_use_internal_errors(true);
+		$dom->loadHTML($content);
 
-	libxml_clear_errors();
-	libxml_use_internal_errors($previous_value);
+		libxml_clear_errors();
+		libxml_use_internal_errors($previous_value);
 
-	foreach ($tag as $find) {
-		$tags = $dom->getElementsByTagName($find);
+		foreach ($tag as $find) {
+			$tags = $dom->getElementsByTagName($find);
 
-		foreach ($tags as $find_tag) {
-			$outputdom = new DOMDocument;
-			$new_root = $outputdom->importNode($find_tag, true);
-			$outputdom->appendChild($new_root);
+			foreach ($tags as $find_tag) {
+				$outputdom = new DOMDocument;
+				$new_root = $outputdom->importNode($find_tag, true);
+				$outputdom->appendChild($new_root);
 
-			if ( is_object($outputdom->documentElement) ) {
-				$outputdom->documentElement->setAttribute('class', $outputdom->documentElement->getAttribute('class') . ' ' . esc_attr( $class ));
+				if ( is_object($outputdom->documentElement) ) {
+					$outputdom->documentElement->setAttribute('class', $outputdom->documentElement->getAttribute('class') . ' ' . esc_attr( $class ));
 
-				if ( $title ) {
-					$outputdom->documentElement->setAttribute('title', $title );
+					if ( $title ) {
+						$outputdom->documentElement->setAttribute('title', $title );
+					}
+
+					if ( $data ) {
+						$data = explode( '|', $data );
+
+						foreach( $data as $d ):
+							$d = explode(',',$d);
+							$outputdom->documentElement->setAttribute('data-'.$d[0],trim($d[1]));
+						endforeach;
+					}
 				}
 
-				if ( $data ) {
-					$data = explode( '|', $data );
-
-					foreach( $data as $d ):
-						$d = explode(',',$d);
-						$outputdom->documentElement->setAttribute('data-'.$d[0],trim($d[1]));
-					endforeach;
-				}
+				return $outputdom->saveHTML($outputdom->documentElement);
 			}
-
-			return $outputdom->saveHTML($outputdom->documentElement);
 		}
+	} else {
+		return $content;
 	}
 }

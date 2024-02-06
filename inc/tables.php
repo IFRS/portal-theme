@@ -1,9 +1,15 @@
 <?php
 add_filter( 'the_content', function($content) {
-    $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-
-    if ($content) {
+    if (!empty($content)) {
+        $content = mb_encode_numericentity(
+            htmlspecialchars_decode(
+                htmlentities($content, ENT_NOQUOTES, 'UTF-8', false)
+                ,ENT_NOQUOTES
+            ), [0x80, 0x10FFFF, 0, ~0],
+            'UTF-8'
+        );
         $dom = new DOMDocument();
+        libxml_use_internal_errors(true); // fix html5/svg errors
         @$dom->loadHTML($content);
 
         $tables = [];
