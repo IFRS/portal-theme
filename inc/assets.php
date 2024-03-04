@@ -32,9 +32,15 @@ add_action('wp_enqueue_scripts', function() {
     /* wp_register_script( $handle, $src, $deps, $ver, $in_footer ); */
     /* wp_enqueue_script( $handle[, $src, $deps, $ver, $in_footer] ); */
 
-    wp_enqueue_script('commons', get_template_directory_uri(). '/js/commons.js', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/commons.js'), true);
 
-    wp_enqueue_script('portal', get_template_directory_uri(). '/js/portal.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.js'), true);
+    $has_commons = file_exists(get_template_directory().'/js/commons.js');
+    $commons_deps = $has_commons ? array('commons') : array();
+
+    if ($has_commons) {
+        wp_enqueue_script('commons', get_template_directory_uri(). '/js/commons.js', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/commons.js'), true);
+    }
+
+    wp_enqueue_script('portal', get_template_directory_uri(). '/js/portal.js', array_merge($commons_deps, array()), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/portal.js'), true);
 
     if (!WP_DEBUG) {
         wp_enqueue_script('vlibras', 'https://vlibras.gov.br/app/vlibras-plugin.js', array(), null, true);
