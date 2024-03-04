@@ -95,14 +95,13 @@ function bundle(done) {
     },
     resolve: {
       alias: {
-        jquery: 'jquery/src/jquery',
         bootstrap: 'bootstrap/dist/js/bootstrap.bundle',
       }
     },
+    externals: {
+      jquery: 'jQuery',
+    },
     plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-      }),
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
