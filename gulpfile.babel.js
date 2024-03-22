@@ -138,7 +138,10 @@ function js() {
     presets: [
       [
         "@babel/env",
-        { "modules": false }
+        {
+          bugfixes: true,
+          modules: false,
+        }
       ]
     ]
   }))

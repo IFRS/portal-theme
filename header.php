@@ -1,19 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
     <!-- Metadados -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index,follow">
     <meta name="author" content="<?php _e('Departamento de Comunicação do Instituto Federal do Rio Grande do Sul', 'ifrs-portal-theme'); ?>">
     <meta name="description" content="<?php _e('O IFRS é uma instituição federal de ensino público e gratuito. Atua com uma estrutura multicampi para promover a educação profissional e tecnológica de excelência e impulsionar o desenvolvimento sustentável das regiões.', 'ifrs-portal-theme'); ?>">
     <meta name="keywords" content="<?php _e('ifrs, portal, site, institucional, faculdade, universidade, ensino, pesquisa, extensão, cursos', 'ifrs-portal-theme'); ?>">
+
     <?php if (!has_site_icon()) echo get_template_part('partials/favicons'); ?>
+
     <!-- Contexto Barra Brasil -->
     <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918">
+
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="<?php echo esc_attr(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
+
     <!-- WP -->
     <?php wp_head(); ?>
 </head>
