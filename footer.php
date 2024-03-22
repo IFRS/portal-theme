@@ -1,10 +1,10 @@
-                <a href="#fim-conteudo" id="fim-conteudo" class="sr-only">Fim do conte&uacute;do</a>
+                <a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden">Fim do conte&uacute;do</a>
             </main>
         </div> <!-- /div.row -->
     </section> <!-- /section.container -->
 
     <!-- Rodapé -->
-    <a href="#inicio-rodape" id="inicio-rodape" class="sr-only">In&iacute;cio do rodap&eacute;</a>
+    <a href="#inicio-rodape" id="inicio-rodape" class="visually-hidden">In&iacute;cio do rodap&eacute;</a>
     <footer class="footer">
         <div class="container">
             <div class="row footer__info">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <a href="#fim-rodape" id="fim-rodape" class="sr-only">Fim do rodap&eacute;</a>
+        <a href="#fim-rodape" id="fim-rodape" class="visually-hidden">Fim do rodap&eacute;</a>
     </footer>
 
     <?php wp_footer(); ?>

@@ -10,7 +10,7 @@
 
 <article class="page">
     <?php if (has_post_thumbnail()) : ?>
-        <h2 class="sr-only"><?php the_title(); ?></h2>
+        <h2 class="visually-hidden"><?php the_title(); ?></h2>
         <?php the_post_thumbnail('full', array('class' => 'img-fluid mx-auto')); ?>
     <?php else : ?>
         <h2 class="page__title"><?php the_title(); ?></h2>

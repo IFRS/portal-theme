@@ -6,7 +6,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __('Área principal para banners em destaque.', 'ifrs-portal-theme'),
 		'before_widget' => '<div class="col-12 col-md-6 col-lg-4"><div id="%1$s" class="area-home__widget %2$s">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="visually-hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
@@ -15,7 +15,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __('Área no cabeçalho para as Redes Sociais.', 'ifrs-portal-theme'),
 		'before_widget' => '<li id="%1$s" class="area-social__widget %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="visually-hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
@@ -24,7 +24,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __('Área acima do Menu de Relevância.', 'ifrs-portal-theme'),
 		'before_widget' => '<li id="%1$s" class="area-nav__widget %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="visually-hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
@@ -33,7 +33,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __('Área lateral abaixo das notícias, para banners, vídeos ou outros conteúdos.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="area-home-side__widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="visually-hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
@@ -69,7 +69,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __('Área mais abaixo na página inicial, antes do rodapé, para banners mais permanentes.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="widget area-banners__widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="visually-hidden">',
 		'after_title'   => '</span>',
 	));
 	register_sidebar(array(
@@ -78,7 +78,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __('Área no rodapé, após o mapa do site.', 'ifrs-portal-theme'),
 		'before_widget' => '<div id="%1$s" class="area-rodape__widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<span class="sr-only">',
+		'before_title'  => '<span class="visually-hidden">',
 		'after_title'   => '</span>',
 	));
 } );

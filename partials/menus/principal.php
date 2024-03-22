@@ -1,4 +1,4 @@
-<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="sr-only">Mostrar</span>&nbsp;Menu</button>
+<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="visually-hidden">Mostrar</span>&nbsp;Menu</button>
 <nav class="menu-navbar collapse fade show" aria-label="Navegação Principal">
     <button type="button" class="btn btn-link menu-navbar__close d-none" aria-label="Fechar Menu">
         <span aria-hidden="true">&times;</span>

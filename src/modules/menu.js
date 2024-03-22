@@ -2,7 +2,7 @@ $(function() {
     $('.menu-collapse .sub-menu').addClass('collapse');
     $('.menu-collapse .sub-menu').prev('a').addClass('collapsed');
     $('.menu-collapse .sub-menu').prev('a').attr('aria-expanded', 'false');
-    $('.menu-collapse .sub-menu').prev('a').append('<span class="sr-only"> (Expandir submenus)</span>');
+    $('.menu-collapse .sub-menu').prev('a').append('<span class="visually-hidden"> (Expandir submenus)</span>');
 
     $('.menu-collapse > .menu-item-has-children > a, .menu-collapse > .menu-item-has-children > .sub-menu > .menu-item-has-children > a').on('click', function(e) {
         $(this).nextAll('.collapse').each(function() {
@@ -15,14 +15,14 @@ $(function() {
         var collapse = $(e.target);
         collapse.prev('a').removeClass('collapsed');
         collapse.prev('a').attr('aria-expanded', 'true');
-        collapse.prev('a').children('span.sr-only').first().text(' (Ocultar submenus)');
+        collapse.prev('a').children('span.visually-hidden').first().text(' (Ocultar submenus)');
     });
 
     $('.menu-collapse .collapse').on('hide.bs.collapse', function(e) {
         var collapse = $(e.target);
         collapse.prev('a').addClass('collapsed');
         collapse.prev('a').attr('aria-expanded', 'false');
-        collapse.prev('a').children('span.sr-only').first().text(' (Expandir submenus)');
+        collapse.prev('a').children('span.visually-hidden').first().text(' (Expandir submenus)');
     });
 
     // Abre todos os collapse até o item atual.

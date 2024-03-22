@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <a href="#inicio-conteudo" class="sr-only sr-only-focusable">Pular para o conte&uacute;do</a>
+    <a href="#inicio-conteudo" class="visually-hidden visually-hidden-focusable">Pular para o conte&uacute;do</a>
 
     <?php wp_body_open(); ?>
 
@@ -68,10 +68,10 @@
         <div class="row">
             <div class="col-12 col-lg-2">
                 <!-- Menu -->
-                <a href="#inicio-menu" id="inicio-menu" class="sr-only">In&iacute;cio da navega&ccedil;&atilde;o</a>
+                <a href="#inicio-menu" id="inicio-menu" class="visually-hidden">In&iacute;cio da navega&ccedil;&atilde;o</a>
                 <?php get_template_part('partials/menus/principal'); ?>
-                <a href="#fim-menu" id="fim-menu" class="sr-only">Fim da navega&ccedil;&atilde;o</a>
+                <a href="#fim-menu" id="fim-menu" class="visually-hidden">Fim da navega&ccedil;&atilde;o</a>
             </div>
             <main role="main" class="col-12 col-lg-10">
                 <!-- Conteúdo -->
-                <a href="#inicio-conteudo" id="inicio-conteudo" class="sr-only">In&iacute;cio do conte&uacute;do</a>
+                <a href="#inicio-conteudo" id="inicio-conteudo" class="visually-hidden">In&iacute;cio do conte&uacute;do</a>

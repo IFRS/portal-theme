@@ -1,5 +1,5 @@
 <div class="title">
-    <h1 class="sr-only"><?php bloginfo('name'); ?></h1>
+    <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
     <?php if (has_custom_logo()) : ?>
         <?php the_custom_logo(); ?>
     <?php else : ?>

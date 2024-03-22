@@ -84,7 +84,7 @@ a {
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
-    @include sr-only();
+    @include visually-hidden;
 }
 
 /* Content gallery */
