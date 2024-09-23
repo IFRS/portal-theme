@@ -14,6 +14,6 @@ add_action( 'admin_enqueue_scripts', function( $hook ) {
 // Limit pages nesting depth to 3nd level
 // caution! by default affects all hierarchical CPTs
 add_action( 'page_attributes_dropdown_pages_args', function( $a ) {
-	$a['depth'] = 3;
+	$a['depth'] = 5;
 	return $a;
 } );
