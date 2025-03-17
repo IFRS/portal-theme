@@ -1,11 +1,16 @@
-/*
-Theme Name: IFRS Portal Theme
-Theme URI: https://github.com/ifrs/portal-theme
-Author: Ricardo Moro
-Author URI: https://github.com/ricardomoro
-Description: Tema Wordpress para o Portal institucional do Instituto Federal do Rio Grande do Sul.
-Text Domain: ifrs-portal-theme
-Version: 3.0.0-dev
-License: GNU General Public License 3.0
-License URI: https://www.gnu.org/licenses/gpl-3.0.txt
-*/
+/**
+ * Theme Name:        IFRS Portal Theme
+ * Theme URI:         https://github.com/ifrs/portal-theme
+ * Description:       Tema Wordpress para o Portal institucional do Instituto Federal do Rio Grande do Sul.
+ * Version:           3.0.0-dev
+ * Author:            Ricardo Moro
+ * Author URI:        https://github.com/ricardomoro
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       ifrs-portal-theme
+ * Domain Path:       /lang
+ * Tested up to:      6.4
+ * Requires at least: 5.9
+ * Requires PHP:      8.0
+ * License:           GNU General Public License 3.0
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
+ */
