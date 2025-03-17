@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "background":  {
+      "backgroundImage": true,
+      "backgroundSize": true
+    },
+    "border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+    "color": {
+      "background": false,
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "link": false,
+      "palette": [
+        {
+          "color": "#2f9e41",
+          "name": "Principal",
+          "slug": "primary"
+        },
+        {
+          "color": "#1351B4",
+          "name": "Destaque",
+          "slug": "accent"
+        },
+        {
+          "color": "#f8f9fa",
+          "name": "Claro",
+          "slug": "light"
+        },
+        {
+          "color": "#212529",
+          "name": "Escuro",
+          "slug": "dark"
+        }
+      ],
+      "text": false
+    },
+    "dimensions": {
+			"minHeight": false
+		},
+    "layout": {
+      "allowCustomContentAndWideSize": false,
+      "allowEditing": false,
+      "contentSize": "1296px",
+      "wideSize": "100dvw"
+    },
+    "lightbox": {
+      "enabled": true,
+      "allowEditing": false
+    },
+    "position": {
+			"sticky": false
+		},
+    "spacing": {
+      "blockGap": true,
+      "customSpacingSize": false
+    },
+    "typography": {
+      "customFontSize": false,
+      "dropCap": false,
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textColumns": true,
+      "textDecoration": true,
+      "textTransform": true,
+      "writingMode": false,
+      "fontFamilies": [],
+      "fluid": false,
+      "fontSizes": [],
+      "defaultFontSizes": false,
+      "textAlign": true
+    },
+    "useRootPaddingAwareAlignments": true
+  }
+}
