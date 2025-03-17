@@ -59,13 +59,13 @@
     }
 
     &__cartola {
-        color: $cor-secundaria-azul-claro;
+        // color: $accent;
         font-weight: bold;
         margin-bottom: 5px;
     }
 
     &__data {
-        color: $cor-secundaria-azul-claro;
+        // color: $accent;
         margin-bottom: 5px;
 
         &[data-toggle="tooltip"] {

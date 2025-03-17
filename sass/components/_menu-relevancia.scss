@@ -6,7 +6,7 @@
 
     > li {
         align-items: center;
-        border-top: 1px solid $menu-border;
+        border-top: 1px solid $primary;
         display: flex;
         font-size: 14px;
         min-height: 30px;
@@ -17,7 +17,7 @@
         }
 
         &:last-child {
-            border-bottom: 1px solid $menu-border;
+            border-bottom: 1px solid $primary;
         }
 
         &.current-menu-item {

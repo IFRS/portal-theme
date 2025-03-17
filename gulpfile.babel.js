@@ -45,6 +45,8 @@ function sass() {
   const sass_options = {
     loadPaths: ['sass', 'node_modules'],
     style: 'expanded',
+    quietDeps: true,
+    silenceDeprecations: ['import'],
   }
 
   return src('sass/*.scss')

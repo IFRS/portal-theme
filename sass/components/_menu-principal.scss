@@ -4,14 +4,14 @@
 
     .menu-item {
         > a {
-            border-bottom: 1px solid $menu-border;
+            border-bottom: 1px solid $primary;
         }
     }
 
     > .menu-item {
         > a {
-            background: $menu-fundo-nivel-1-2;
-            border-top: 4px solid $cor-primaria-verde;
+            background: $gray-200;
+            border-top: 4px solid $primary;
             color: #00500F;
             display: block;
             font-size: 0.75rem;
@@ -31,7 +31,7 @@
             padding-right: 15px;
 
             &:after {
-                @include icon-chevron('up', $cor-primaria-verde);
+                // @include icon-chevron('up', $primary);
 
                 content: '';
                 float: right;
@@ -41,7 +41,7 @@
             }
 
             &.collapsed:after {
-                @include icon-chevron('down', $cor-primaria-verde);
+                // @include icon-chevron('down', $primary);
             }
         }
     }
@@ -73,12 +73,12 @@
         }
 
         > .menu-item-has-children {
-            border-bottom: 1px solid $menu-inner-border;
+            border-bottom: 1px solid $primary;
 
             > a {
-                background-color: $menu-fundo-nivel-1-2;
-                border-top: 1px solid $menu-inner-border;
-                border-bottom: 1px solid $menu-inner-border;
+                background-color: $gray-200;
+                border-top: 1px solid $primary;
+                border-bottom: 1px solid $primary;
                 color: $cor-texto;
                 font-size: 0.9rem;
                 font-weight: bold;
@@ -95,7 +95,7 @@
                 > .menu-item {
                     > a {
                         // background-color: #D9DADC;
-                        border-bottom: 1px solid $menu-inner-border;
+                        border-bottom: 1px solid $primary;
                         font-size: 0.8rem;
                         padding-left: 16px;
                     }

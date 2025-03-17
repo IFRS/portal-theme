@@ -12,22 +12,22 @@
     }
 
     &__link {
-        background-color: $cor-primaria-azul;
+        // background-color: $accent;
         color: #ffffff;
 
         &:hover,
         &:active {
-            background-color: lighten($cor-primaria-azul, 5%);
+            // background-color: lighten($accent, 5%);
             color: #ffffff;
         }
 
         &:focus {
             background-color: #ffffff;
-            color: $cor-primaria-azul;
+            // color: $accent;
         }
 
         &--parent {
-            @include icon-parent-level();
+            // @include icon-parent-level();
 
             background-size: 20px;
             padding: 20px 20px;

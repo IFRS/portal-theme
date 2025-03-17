@@ -10,9 +10,6 @@
 
     <?php if (!has_site_icon()) echo get_template_part('partials/favicons'); ?>
 
-    <!-- Contexto Barra Brasil -->
-    <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/100918">
-
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="<?php echo esc_attr(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 
@@ -38,6 +35,7 @@
             </div>
             <div class="row header__content">
                 <div class="col-12 col-lg-8 header__title">
+                    <?php get_template_part('partials/menus/principal'); ?>
                     <?php echo get_template_part('partials/header-title'); ?>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -62,15 +60,17 @@
     </header>
 
     <!-- Corpo -->
-    <?php portal_breadcrumb(); ?>
+    <?php
+      if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb( '<section class="container" id="breadcrumb"><div class="row"><div class="col"><nav aria-label="Caminhos de Navegação">','</nav></div></section>' );
+      } else {
+        portal_breadcrumb();
+      }
+    ?>
 
     <section class="container">
         <div class="row">
             <div class="col-12 col-lg-2">
-                <!-- Menu -->
-                <a href="#inicio-menu" id="inicio-menu" class="visually-hidden">In&iacute;cio da navega&ccedil;&atilde;o</a>
-                <?php get_template_part('partials/menus/principal'); ?>
-                <a href="#fim-menu" id="fim-menu" class="visually-hidden">Fim da navega&ccedil;&atilde;o</a>
             </div>
             <main role="main" class="col-12 col-lg-10">
                 <!-- Conteúdo -->

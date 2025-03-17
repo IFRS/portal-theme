@@ -20,13 +20,13 @@
     }
 
     &__date {
-        color: $cor-secundaria-azul-claro;
+        // color: $accent;
         font-size: 12px;
     }
 
     &__published,
     &__updated {
-        @include icon-calendar($cor-secundaria-azul-claro);
+        // @include icon-calendar($cor-secundaria-azul-claro);
 
         background-position: left center;
         background-size: 15px;
@@ -71,12 +71,12 @@
         }
 
         a:not(.btn) {
-            @include link-bg-grow($cor-primaria-azul);
+            // @include link-bg-grow($accent);
         }
     }
 
     &__tags-separator {
-        border-color: $cor-primaria-verde;
+        border-color: $primary;
         border-width: 2px;
     }
 

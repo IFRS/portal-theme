@@ -2,7 +2,7 @@
     &__title {
         @include title-box();
 
-        color: $cor-primaria-verde;
+        color: $primary;
     }
 
     &__list {
@@ -36,7 +36,7 @@
     }
 
     &__widget-title {
-        color: $cor-primaria-verde;
+        color: $primary;
         font-size: 0.75rem;
         margin-top: 3px;
         margin-bottom: 0;

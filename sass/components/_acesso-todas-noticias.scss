@@ -2,13 +2,13 @@
     @include clearfix();
 
     &__separador {
-        border-color: $cor-primaria-verde;
+        border-color: $primary;
         border-width: 2px;
         margin-top: 0;
         margin-bottom: 10px;
     }
 
     &__link {
-        @include link-todos($cor-primaria-verde);
+        @include link-todos($primary);
     }
 }

@@ -23,7 +23,7 @@
             display: block;
 
             &:after {
-                @include icon-chevron('down');
+                // @include icon-chevron('down');
 
                 background-color: $cor-concursos;
                 background-size: 18px;
@@ -37,7 +37,7 @@
             }
 
             &.collapsed:after {
-                @include icon-chevron('right');
+                // @include icon-chevron('right');
             }
         }
     }

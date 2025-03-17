@@ -56,7 +56,7 @@
         dd,
         dt {
             a:not(.btn) {
-                @include link-bg-grow($cor-primaria-azul);
+                // @include link-bg-grow($accent);
             }
         }
     }

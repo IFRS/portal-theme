@@ -1,7 +1,7 @@
 .header {
-    background-color: $cor-primaria-cinza;
-    // background: linear-gradient(#F0F2F1, $cor-primaria-cinza); // Padrão do Governo
-    @include gradient-x(#FFFFFF, $cor-primaria-cinza);
+    background-color: $gray-500;
+    // background: linear-gradient(#F0F2F1, $gray-500); // Padrão do Governo
+    @include gradient-x(#FFFFFF, $gray-500);
     margin-bottom: $grid-gutter-width;
     padding-top: 15px;
 
@@ -41,7 +41,7 @@
 
     &__barra-servicos {
         align-items: center;
-        background-color: $cor-barra-servicos;
+        background-color: $primary;
         color: #FFFFFF;
         display: flex;
         margin-top: 30px;
@@ -50,10 +50,10 @@
     }
 
     a {
-        color: $cor-primaria-verde;
+        color: $primary;
 
         &:hover {
-            color: $cor-primaria-verde;
+            color: $primary;
         }
     }
 }

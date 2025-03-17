@@ -40,7 +40,7 @@
     }
 
     &__title {
-        color: $cor-primaria-verde;
+        color: $primary;
         font-size: 0.85rem;
         font-weight: bold;
         margin: 0;
@@ -49,7 +49,7 @@
     }
 
     &__text {
-        color: $cor-primaria-verde;
+        color: $primary;
         font-size: 0.85rem;
         padding-left: 38px;
         text-transform: uppercase;
@@ -59,7 +59,7 @@
         }
 
         a {
-            color: $cor-primaria-verde;
+            color: $primary;
         }
     }
 }

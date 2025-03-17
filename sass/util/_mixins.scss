@@ -19,12 +19,12 @@
     margin-bottom: math.div($grid-gutter-width, 2);
 }
 
-@mixin title-box($color: $cor-primaria-verde, $image-url: '') {
-    background-color: $cor-primaria-cinza;
+@mixin title-box($color: $primary, $image-url: '') {
+    background-color: $gray-500;
     border-top: 5px solid $color;
     padding: 15px 10px 25px 15px;
 
-    @if $color != $cor-primaria-verde {
+    @if $color != $primary {
         color: $color;
     }
 
@@ -36,7 +36,7 @@
     }
 }
 
-@mixin link-todos($cor: $cor-primaria-verde) {
+@mixin link-todos($cor: $primary) {
     color: $cor;
     font-size: 14px;
     text-transform: uppercase;
@@ -46,7 +46,7 @@
     }
 
     &::after {
-        @include icon-chevron('right');
+        // @include icon-chevron('right');
 
         content: '';
         background-color: $cor;
