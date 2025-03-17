@@ -8,9 +8,6 @@ require_once get_parent_theme_file_path('inc/cookie-fix.php');
 // Suporte para diversas funções
 require_once get_parent_theme_file_path('inc/theme-support.php');
 
-// Remoção de thumbnails medium_large
-require_once get_parent_theme_file_path('inc/disable-medium_large.php');
-
 // Thumbnails no feed RSS
 require_once get_parent_theme_file_path('inc/feed-thumbnail.php');
 
@@ -52,12 +49,6 @@ require_once get_parent_theme_file_path('inc/empty-search-filter.php');
 
 // Widgets
 require_once get_parent_theme_file_path('inc/widgets.php');
-
-// Custom TinyMCE
-require_once get_parent_theme_file_path('inc/custom-tinymce.php');
-
-// Permitir tag iframe
-require_once get_parent_theme_file_path('inc/allow-iframe.php');
 
 // Vídeos do YouTube responsivos
 require_once get_parent_theme_file_path('inc/responsive-youtube-embed.php');

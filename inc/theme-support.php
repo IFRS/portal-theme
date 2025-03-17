@@ -4,14 +4,6 @@ if ( ! isset( $content_width ) ) {
 }
 
 add_action('after_setup_theme', function()  {
-    // Remove Gutenberg custom options
-    add_theme_support('editor-color-palette');
-    add_theme_support('editor-gradient-presets');
-    add_theme_support('disable-custom-colors');
-    add_theme_support('disable-custom-gradients');
-    add_theme_support('disable-custom-font-sizes');
-    add_theme_support('custom-units', array());
-
     // Add theme support for Automatic Feed Links
     add_theme_support('automatic-feed-links');
 
