@@ -43,9 +43,8 @@ function sass() {
   ]
 
   const sass_options = {
-    includePaths: ['sass', 'node_modules'],
-    outputStyle: 'expanded',
-    precision: 6,
+    loadPaths: ['sass', 'node_modules'],
+    style: 'expanded',
   }
 
   return src('sass/*.scss')
@@ -59,7 +58,7 @@ function sass() {
 
 function datatablesCSS() {
   return src([
-    'node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
+    'node_modules/datatables.net-bs5/css/dataTables.bootstrap5.css',
     'css/datatables.css',
   ])
   .pipe(concat('datatables.css'))
