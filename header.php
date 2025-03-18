@@ -74,6 +74,8 @@
     </div>
   </header>
 
+  <?php do_action( 'portal_menu' ); ?>
+
   <?php
     if ( function_exists('yoast_breadcrumb') && !is_front_page() ) {
       yoast_breadcrumb( '<section class="container" id="breadcrumb"><div class="row"><div class="col"><nav aria-label="Caminhos de Navegação">','</nav></div></section>' );

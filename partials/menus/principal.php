@@ -1,17 +1,13 @@
 <a href="#inicio-menu" id="inicio-menu" class="visually-hidden">In&iacute;cio da navega&ccedil;&atilde;o</a>
-<button class="btn btn-link btn-lg btn-menu-toggle">
+<button class="btn btn-link btn-lg btn-menu-toggle" data-bs-toggle="collapse" data-bs-target="#portal-menu-principal" aria-expanded="false" aria-controls="portal-menu-principal">
   <span class="visually-hidden">Alternar Menu</span>
   <i class="fa-solid fa-bars"></i>
 </button>
 <?php
-  add_action( 'wp_footer', function() {
+  add_action( 'portal_menu', function() {
 ?>
-  <nav class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-menu-principal" aria-label="Navegação Principal">
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas-menu-principal" aria-label="Fechar Menu"></button>
-    </div>
-
-    <div class="offcanvas-body">
+  <nav class="collapse collapse__menu" tabindex="-1" id="portal-menu-principal" aria-label="Navegação Principal">
+    <div class="container-fluid">
       <?php
         wp_nav_menu(
           array(
