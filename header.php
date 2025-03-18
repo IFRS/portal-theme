@@ -42,7 +42,7 @@
       <div class="row align-items-center">
         <div class="col-12 col-lg-8 d-flex align-items-center">
           <?php get_template_part('partials/menus/principal'); ?>
-          <div class="header__title">
+          <div class="header__principal">
             <?php if (has_custom_logo()) : ?>
               <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
               <?php the_custom_logo(); ?>
