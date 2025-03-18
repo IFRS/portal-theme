@@ -28,7 +28,7 @@
 
       <div class="row align-items-center">
         <div class="col-12 col-lg-4 d-flex align-items-start">
-          <a href="https://gov.br/">
+          <a href="https://www.gov.br/pt-br">
             <img src="<?php echo get_theme_file_uri( '/img/govbr.png' ) ?>" class="header__govbr" alt="Governo do Brasil" width="200" height="72">
           </a>
           <div class="vr mx-3"></div>
