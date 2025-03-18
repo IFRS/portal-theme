@@ -1,17 +1,11 @@
 .menu-atalhos {
-    @include menu-barra();
+  @include menu-barra();
 
-    @include media-breakpoint-up(lg) {
-        text-align: left;
-    }
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
 
-    @include media-breakpoint-down(sm) {
-        display: none;
-    }
-
-    li {
-        a {
-            @include link-underline-grow();
-        }
-    }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
