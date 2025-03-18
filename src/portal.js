@@ -1,11 +1,11 @@
-require('@fortawesome/fontawesome-free/js/all.js')
-require('bootstrap');
+import '@fortawesome/fontawesome-free/js/all.js'
+// import '@popperjs/core'
+import 'bootstrap'
 
-require('lazysizes');
-require('lazysizes/plugins/native-loading/ls.native-loading');
+import 'lazysizes'
+import 'lazysizes/plugins/native-loading/ls.native-loading.js'
 
-require('./modules/picturefill-config');
-require('./modules/menu');
-require('./modules/fancybox-config');
-require('./modules/tooltips');
-require('./modules/vlibras');
+// import './modules/menu.js'
+// import './modules/fancybox-config.js'
+import './modules/tooltips.js'
+import './modules/vlibras.js'

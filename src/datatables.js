@@ -1,106 +1,107 @@
-require('datatables.net');
-require('datatables.net-bs4');
-const moment = require('moment');
-require('moment/locale/pt-br');
-moment.locale('pt-br');
-require('datatables.net-plugins/sorting/datetime-moment');
+import 'datatables.net'
+import 'datatables.net-bs5'
+import 'datatables.net-plugins/sorting/datetime-moment.js'
+import moment from 'moment'
+import 'moment/locale/pt-br.js'
+
+moment.locale('pt-br')
 
 $(function() {
-    $.fn.dataTable.moment( 'L LT', 'pt-br' );
-    $.fn.dataTable.moment( 'L', 'pt-br' );
+  $.fn.dataTable.moment( 'L LT', 'pt-br' );
+  $.fn.dataTable.moment( 'L', 'pt-br' );
 
-    $('.documentos__table').DataTable({
-        order:      [[0, 'desc'], [2, 'desc']],
-        searching:  true,
-        paging:     true,
-        pageLength: 10,
-        info:       true,
-        bAutoWidth: false,
-        language: {
-            "sEmptyTable":     "Nenhum Documento encontrado",
-            "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Documentos",
-            "sInfoEmpty":      "Mostrando 0 até 0 de 0 Documentos",
-            "sInfoFiltered":   "(Filtrados de _MAX_ Documentos)",
-            "sInfoPostFix":    "",
-            "sInfoThousands":  ".",
-            "sLengthMenu":     "_MENU_ Documentos por página",
-            "sLoadingRecords": "Carregando...",
-            "sProcessing":     "Processando...",
-            "sZeroRecords":    "Nenhum Documento encontrado",
-            "sSearch":         "Buscar:",
-            "oPaginate": {
-                "sNext":     "Próximo",
-                "sPrevious": "Anterior",
-                "sFirst":    "Primeiro",
-                "sLast":     "Último"
-            },
-            "oAria": {
-                "sSortAscending":  ": Ordenar colunas de forma ascendente",
-                "sSortDescending": ": Ordenar colunas de forma descendente"
-            }
-        }
-    });
+  $('.documentos__table').DataTable({
+    order:      [[0, 'desc'], [2, 'desc']],
+    searching:  true,
+    paging:     true,
+    pageLength: 10,
+    info:       true,
+    bAutoWidth: false,
+    language: {
+      "sEmptyTable":     "Nenhum Documento encontrado",
+      "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Documentos",
+      "sInfoEmpty":      "Mostrando 0 até 0 de 0 Documentos",
+      "sInfoFiltered":   "(Filtrados de _MAX_ Documentos)",
+      "sInfoPostFix":    "",
+      "sInfoThousands":  ".",
+      "sLengthMenu":     "_MENU_ Documentos por página",
+      "sLoadingRecords": "Carregando...",
+      "sProcessing":     "Processando...",
+      "sZeroRecords":    "Nenhum Documento encontrado",
+      "sSearch":         "Buscar:",
+      "oPaginate": {
+        "sNext":     "Próximo",
+        "sPrevious": "Anterior",
+        "sFirst":    "Primeiro",
+        "sLast":     "Último"
+      },
+      "oAria": {
+        "sSortAscending":  ": Ordenar colunas de forma ascendente",
+        "sSortDescending": ": Ordenar colunas de forma descendente"
+      }
+    }
+  });
 
-    $('.editais__table').DataTable({
-        order:      [[0, 'desc'], [2, 'desc']],
-        searching:  true,
-        paging:     true,
-        pageLength: 10,
-        info:       true,
-        bAutoWidth: false,
-        language: {
-            "sEmptyTable":     "Nenhum Edital encontrado",
-            "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Editais",
-            "sInfoEmpty":      "Mostrando 0 até 0 de 0 Editais",
-            "sInfoFiltered":   "(Filtrados de _MAX_ Editais)",
-            "sInfoPostFix":    "",
-            "sInfoThousands":  ".",
-            "sLengthMenu":     "_MENU_ Editais por página",
-            "sLoadingRecords": "Carregando...",
-            "sProcessing":     "Processando...",
-            "sZeroRecords":    "Nenhum Edital encontrado",
-            "sSearch":         "Buscar:",
-            "oPaginate": {
-                "sNext":     "Próximo",
-                "sPrevious": "Anterior",
-                "sFirst":    "Primeiro",
-                "sLast":     "Último"
-            },
-            "oAria": {
-                "sSortAscending":  ": Ordenar colunas de forma ascendente",
-                "sSortDescending": ": Ordenar colunas de forma descendente"
-            }
-        }
-    });
+  $('.editais__table').DataTable({
+    order:      [[0, 'desc'], [2, 'desc']],
+    searching:  true,
+    paging:     true,
+    pageLength: 10,
+    info:       true,
+    bAutoWidth: false,
+    language: {
+      "sEmptyTable":     "Nenhum Edital encontrado",
+      "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Editais",
+      "sInfoEmpty":      "Mostrando 0 até 0 de 0 Editais",
+      "sInfoFiltered":   "(Filtrados de _MAX_ Editais)",
+      "sInfoPostFix":    "",
+      "sInfoThousands":  ".",
+      "sLengthMenu":     "_MENU_ Editais por página",
+      "sLoadingRecords": "Carregando...",
+      "sProcessing":     "Processando...",
+      "sZeroRecords":    "Nenhum Edital encontrado",
+      "sSearch":         "Buscar:",
+      "oPaginate": {
+        "sNext":     "Próximo",
+        "sPrevious": "Anterior",
+        "sFirst":    "Primeiro",
+        "sLast":     "Último"
+      },
+      "oAria": {
+        "sSortAscending":  ": Ordenar colunas de forma ascendente",
+        "sSortDescending": ": Ordenar colunas de forma descendente"
+      }
+    }
+  });
 
-    $('.concurso__table, .documento__table, .edital__table').DataTable({
-        order: [],
-        searching:  false,
-        paging:     false,
-        info:       false,
-        bAutoWidth: false,
-        language: {
-            "sEmptyTable":     "Nenhum arquivo encontrado",
-            "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ arquivos",
-            "sInfoEmpty":      "Mostrando 0 até 0 de 0 arquivos",
-            "sInfoFiltered":   "(Filtrados de _MAX_ arquivos)",
-            "sInfoPostFix":    "",
-            "sInfoThousands":  ".",
-            "sLengthMenu":     "_MENU_ arquivos por página",
-            "sLoadingRecords": "Carregando...",
-            "sProcessing":     "Processando...",
-            "sZeroRecords":    "Nenhum arquivo encontrado",
-            "sSearch":         "Pesquisar na lista de arquivos",
-            "oPaginate": {
-                "sNext":     "Próximo",
-                "sPrevious": "Anterior",
-                "sFirst":    "Primeiro",
-                "sLast":     "Último"
-            },
-            "oAria": {
-                "sSortAscending":  ": Ordenar colunas de forma ascendente",
-                "sSortDescending": ": Ordenar colunas de forma descendente"
-            }
-        }
-    });
+  $('.concurso__table, .documento__table, .edital__table').DataTable({
+    order: [],
+    searching:  false,
+    paging:     false,
+    info:       false,
+    bAutoWidth: false,
+    language: {
+      "sEmptyTable":     "Nenhum arquivo encontrado",
+      "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ arquivos",
+      "sInfoEmpty":      "Mostrando 0 até 0 de 0 arquivos",
+      "sInfoFiltered":   "(Filtrados de _MAX_ arquivos)",
+      "sInfoPostFix":    "",
+      "sInfoThousands":  ".",
+      "sLengthMenu":     "_MENU_ arquivos por página",
+      "sLoadingRecords": "Carregando...",
+      "sProcessing":     "Processando...",
+      "sZeroRecords":    "Nenhum arquivo encontrado",
+      "sSearch":         "Pesquisar na lista de arquivos",
+      "oPaginate": {
+        "sNext":     "Próximo",
+        "sPrevious": "Anterior",
+        "sFirst":    "Primeiro",
+        "sLast":     "Último"
+      },
+      "oAria": {
+        "sSortAscending":  ": Ordenar colunas de forma ascendente",
+        "sSortDescending": ": Ordenar colunas de forma descendente"
+      }
+    }
+  });
 });

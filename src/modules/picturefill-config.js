@@ -1,5 +1,0 @@
-require('picturefill');
-
-$(function() {
-    picturefill();
-});
