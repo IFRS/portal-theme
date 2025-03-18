@@ -47,7 +47,7 @@
               <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
               <?php the_custom_logo(); ?>
             <?php else : ?>
-              <h1 class="m-0">
+              <h1 class="header__title m-0">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                   <?php bloginfo('name'); ?>
                 </a>
