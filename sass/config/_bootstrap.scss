@@ -2,6 +2,11 @@
 @import 'bootstrap/scss/functions';
 @import 'vars';
 
+$accent: $cor-ds-principal;
+$custom-colors: (
+  'accent': $accent,
+);
+
 // default variable overrides
 $primary: $cor-if;
 $success: $cor-ds-sucesso;
@@ -11,10 +16,17 @@ $danger:  $cor-ds-erro;
 
 $font-family-base: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+$body-color: #333333;
+// $body-bg:    #f8f8f8;
+
+$link-decoration:       none;
+$link-hover-decoration: underline;
+
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
 
 // default map overrides
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
