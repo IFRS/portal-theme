@@ -1,40 +1,46 @@
 <a href="#inicio-menu" id="inicio-menu" class="visually-hidden">In&iacute;cio da navega&ccedil;&atilde;o</a>
-<button class="btn btn-menu-toggle btn-lg d-block mx-auto d-lg-none"><span class="visually-hidden">Mostrar</span>&nbsp;Menu</button>
-<nav class="menu-navbar collapse fade show" aria-label="Navegação Principal">
-    <button type="button" class="btn btn-link menu-navbar__close d-none" aria-label="Fechar Menu">
-        <span aria-hidden="true">&times;</span>
-    </button>
+<button class="btn btn-link btn-lg btn-menu-toggle">
+  <span class="visually-hidden">Alternar Menu</span>
+  <i class="fa-solid fa-bars"></i>
+</button>
+<?php
+  add_action( 'wp_footer', function() {
+?>
+  <nav class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-menu-principal" aria-label="Navegação Principal">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas-menu-principal" aria-label="Fechar Menu"></button>
+    </div>
 
-    <?php if (is_active_sidebar('widget-nav')) : ?>
-    <ul class="area-nav">
-        <?php dynamic_sidebar('widget-nav'); ?>
-    </ul>
-    <?php endif; ?>
-
-    <?php
+    <div class="offcanvas-body">
+      <?php
         wp_nav_menu(
-            array(
-                'menu_class'        => 'menu-relevancia',
-                'menu_id'           => false,
-                'container'         => false,
-                'container_class'   => false,
-                'container_id'      => false,
-                'depth'             => 1,
-                'theme_location'    => 'relevancia',
-            )
+          array(
+            'menu_class'        => 'menu-relevancia',
+            'menu_id'           => false,
+            'container'         => false,
+            'container_class'   => false,
+            'container_id'      => false,
+            'depth'             => 1,
+            'theme_location'    => 'relevancia',
+          )
         );
 
         wp_nav_menu(
-            array(
-                'menu_class'        => 'menu-collapse menu-principal',
-                'menu_id'           => false,
-                'container'         => false,
-                'container_class'   => false,
-                'container_id'      => false,
-                'depth'             => 3,
-                'theme_location'    => 'principal',
-            )
+          array(
+            'menu_class'        => 'menu-principal',
+            'menu_id'           => false,
+            'container'         => false,
+            'container_class'   => false,
+            'container_id'      => false,
+            'depth'             => 3,
+            'theme_location'    => 'principal',
+          )
         );
-    ?>
-</nav>
+      ?>
+    </div>
+  </nav>
+<?php
+  } );
+?>
+
 <a href="#fim-menu" id="fim-menu" class="visually-hidden">Fim da navega&ccedil;&atilde;o</a>
