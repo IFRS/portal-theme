@@ -96,7 +96,7 @@ function bundle(done) {
     },
     resolve: {
       alias: {
-        bootstrap: 'bootstrap/dist/js/bootstrap.bundle',
+        'bootstrap': 'bootstrap/dist/js/bootstrap.bundle.js',
       }
     },
     externals: {
@@ -115,8 +115,8 @@ function bundle(done) {
         cacheGroups: {
           vendors: false,
           commons: {
-            name: "commons",
-            chunks: "all",
+            name: 'commons',
+            chunks: 'all',
             minChunks: 2,
           },
         },
