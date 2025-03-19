@@ -1,12 +1,122 @@
+.btn-menu-toggle {
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    user-select: none;
+    width: 52px;
+    height: auto;
+
+    .line {
+      fill: none;
+      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+      stroke: $primary;
+      stroke-width: 5.5;
+      stroke-linecap: round;
+    }
+
+    .top {
+      stroke-dasharray: 40 139;
+    }
+
+    .bottom {
+      stroke-dasharray: 40 180;
+    }
+  }
+
+
+  &[aria-expanded="true"] {
+    .hamRotate {
+      transform: rotate(45deg);
+    }
+
+    .hamRotate180 {
+      transform: rotate(180deg);
+    }
+
+    .ham {
+      .top {
+        stroke-dashoffset: -98px;
+      }
+
+      .bottom {
+        stroke-dashoffset: -138px;
+      }
+    }
+  }
+}
+
 .collapse__menu {
-  background-color: #f8f8f8;
+  background-color: #ededed;
   border-top: 2px solid #ffcd07;
   box-shadow: var(--wp--preset--shadow--natural, none);
   margin-bottom: $grid-gutter-width;
   padding: ($grid-gutter-width / 2) $grid-gutter-width;
+
+  height: 100dvh;
 }
 
 .menu-principal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  gap: 0.5rem;
+
+  font-weight: 500;
   list-style: none;
   padding: 0;
+
+  position: relative;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .menu-item {
+    color: $primary;
+    padding: {
+      top: 0.25rem;
+      bottom: 0.25rem;
+      left: 0.5rem;
+      right: 1.25rem;
+    };
+
+    &:hover,
+    &:has(.sub-menu.show) {
+      background-color: $primary;
+      color: $white;
+    }
+
+    .svg-inline--fa {
+      float: right;
+    }
+  }
+
+  > .menu-item-has-children,
+  .sub-menu {
+    width: var(--menu-column-width, 200px);
+  }
+
+  .sub-menu {
+    list-style: none;
+    background-color: #f8f8f8;
+    border-left: 1px solid #cccccc;
+    display: none;
+    padding: 0;
+
+    position: absolute;
+    left: 0; top: 0;
+    transform: translateX(var(--offset-left, 0));
+
+    &.show {
+      display: block;
+    }
+  }
 }
