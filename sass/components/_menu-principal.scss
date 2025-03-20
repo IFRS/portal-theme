@@ -46,14 +46,15 @@
   }
 }
 
-.collapse__menu {
+.menu-principal-collapse {
+  --collapse-height: calc(100dvh - var(--header-height, 0px));
+
   background-color: #ededed;
   border-top: 2px solid #ffcd07;
   box-shadow: var(--wp--preset--shadow--natural, none);
   margin-bottom: $grid-gutter-width;
-  padding: ($grid-gutter-width / 2) $grid-gutter-width;
 
-  height: 100dvh;
+  height: var(--collapse-height, 100dvh);
 }
 
 .menu-principal {
@@ -66,7 +67,7 @@
 
   font-weight: 500;
   list-style: none;
-  padding: 0;
+  padding: $grid-gutter-width 0;
 
   position: relative;
 
@@ -82,20 +83,36 @@
   .menu-item {
     color: $primary;
     padding: {
-      top: 0.25rem;
-      bottom: 0.25rem;
-      left: 0.5rem;
-      right: 1.25rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      left: 0.75rem;
+      right: 1rem;
     };
 
     &:hover,
-    &:has(.sub-menu.show) {
-      background-color: $primary;
+    &:has(.sub-menu.show),
+    &.current-menu-item {
+      // background-color: #009060;
+      background-color: #21752e;
       color: $white;
     }
 
+    &:not(.menu-item-has-children) {
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
     .svg-inline--fa {
-      float: right;
+      margin-inline-start: auto;
     }
   }
 
@@ -109,10 +126,11 @@
     background-color: #f8f8f8;
     border-left: 1px solid #cccccc;
     display: none;
-    padding: 0;
+    padding: $grid-gutter-width 0;
 
     position: absolute;
     left: 0; top: 0;
+    height: calc(var(--collapse-height, 100%) - 2px);
     transform: translateX(var(--offset-left, 0));
 
     &.show {

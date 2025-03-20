@@ -15,7 +15,19 @@ const menuItemResizeObserver = new ResizeObserver((entries) => {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuPrincipalNav = document.querySelector('#portal-menu-principal')
+  const cabecalho = document.querySelector('header')
+
+  const menuPrincipalNav = document.querySelector('.menu-principal-collapse')
+
+  menuPrincipalNav.addEventListener('shown.bs.collapse', () => {
+    document.body.style.overflow = 'hidden'
+  })
+
+  menuPrincipalNav.addEventListener('hidden.bs.collapse', () => {
+    document.body.style.overflow = 'auto'
+  })
+
+  menuPrincipalNav.style.setProperty('--header-height', `${(cabecalho.offsetHeight)}px`)
 
   const menuPrincipal = menuPrincipalNav.querySelector('.menu-principal')
   menuPrincipalResizeObserver.observe(menuPrincipal)
@@ -30,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     menuItemResizeObserver.observe(menuItem)
     menuItem.append(...icon.node)
     menuItem.addEventListener('click', e => {
+      if (e.target.tagName === 'A') return true
+
       e.preventDefault()
       e.stopPropagation()
 
@@ -42,4 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   })
+
+  const submenusAncestors = menuPrincipal.querySelectorAll('.current-menu-ancestor > .sub-menu')
+  submenusAncestors.forEach(submenu => submenu.classList.add('show'))
 })

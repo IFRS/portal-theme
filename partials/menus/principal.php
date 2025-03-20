@@ -15,30 +15,18 @@
 <?php
   add_action( 'portal_menu', function() {
 ?>
-  <nav class="collapse collapse__menu" tabindex="-1" id="portal-menu-principal" aria-label="Navegação Principal">
-    <div class="container">
-      <?php
-        wp_nav_menu(array(
-          'menu_class'        => 'menu-relevancia',
-          'menu_id'           => false,
-          'container'         => false,
-          'container_class'   => false,
-          'container_id'      => false,
-          'depth'             => 1,
-          'theme_location'    => 'relevancia',
-        ));
-
-        wp_nav_menu(array(
-          'menu_class'        => 'menu-principal',
-          'menu_id'           => false,
-          'container'         => false,
-          'container_class'   => false,
-          'container_id'      => false,
-          'depth'             => 3,
-          'theme_location'    => 'principal',
-        ));
-      ?>
-    </div>
+  <nav class="collapse menu-principal-collapse" tabindex="-1" id="portal-menu-principal" aria-label="Navegação Principal">
+    <?php
+      wp_nav_menu(array(
+        'menu_class'        => 'menu-principal',
+        'menu_id'           => false,
+        'container'         => 'div',
+        'container_class'   => 'container',
+        'container_id'      => false,
+        'depth'             => 3,
+        'theme_location'    => 'principal',
+      ));
+    ?>
   </nav>
 <?php
   } );
