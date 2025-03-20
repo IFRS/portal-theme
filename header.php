@@ -71,7 +71,7 @@
 
   <?php
     if ( function_exists('yoast_breadcrumb') && !is_front_page() ) {
-      yoast_breadcrumb( '<section class="container" id="breadcrumb"><div class="row"><div class="col"><nav aria-label="Caminhos de Navegação">','</nav></div></section>' );
+      yoast_breadcrumb( '<section class="container"><nav class="breadcrumb" aria-label="Caminhos de Navegação">','</nav></section>' );
     } else {
       portal_breadcrumb();
     }

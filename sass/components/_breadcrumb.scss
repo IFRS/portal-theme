@@ -1,8 +1,15 @@
-ol.breadcrumb {
-    font-size: 0.65rem;
-    margin-bottom: $grid-gutter-width;
-    text-transform: uppercase;
-    a {
-        color: #2C66CE;
-    }
+.breadcrumb {
+  border-bottom: 1px solid $gray-200;
+  font-size: 0.75rem;
+  margin: 2rem 0;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+
+  > span {
+    margin-inline-start: 0.5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
