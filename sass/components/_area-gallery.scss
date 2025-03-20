@@ -1,9 +1,0 @@
-.area-gallery {
-    &__widget-title {
-        @include title-box($cor-galeria, '../img/bg-galeria.png');
-    }
-
-    &__widget {
-        @include widget();
-    }
-}
