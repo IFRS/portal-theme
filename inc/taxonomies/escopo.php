@@ -44,7 +44,7 @@ if ( ! function_exists( 'escopo_taxonomy' ) ) {
             'show_tagcloud'              => false,
             'rewrite'                    => $rewrite,
             'capabilities'               => $capabilities,
-            'show_in_rest'               => false,
+            'show_in_rest'               => true,
         );
         register_taxonomy( 'escopo', array( 'post' ), $args );
     }
