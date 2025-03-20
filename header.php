@@ -57,13 +57,6 @@
         </div>
         <div class="col-12 col-lg-4">
           <?php get_search_form(); ?>
-          <?php if (is_active_sidebar('widget-social')) : ?>
-            <nav>
-              <ul class="area-social">
-                <?php if (!dynamic_sidebar('widget-social')) : endif; ?>
-              </ul>
-            </nav>
-          <?php endif; ?>
         </div>
       </div>
     </div>

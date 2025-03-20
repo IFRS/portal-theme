@@ -1,25 +1,48 @@
 .footer {
-    background-color: $primary;
-    margin-top: 1.25rem;
-    padding: 2rem 0;
+  background-color: $cor-rodape;
+  color: #ffffff;
+  margin-top: 1rem;
+  padding: 4rem 0 0;
 
-    &__info {
-        background-color: $primary;
-        border-radius: $border-radius;
-        color: #FFFFFF;
-        font-size: 90%;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
+  a {
+    color: inherit;
+  }
 
-        a {
-            color: #dddddd;
-        }
+  &__extra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 
-        @include media-breakpoint-up(lg) {
-            .row {
-                display: flex;
-                align-items: center;
-            }
-        }
+    margin: 3rem 0;
+  }
+
+  &__lai {
+    max-width: 200px;
+    height: auto;
+  }
+
+  &__creditos {
+    background-color: shade-color($cor-rodape, 25%);
+    font-size: 0.75rem;
+    padding: 1rem 0;
+    text-align: center;
+
+    > * {
+      color: inherit;
+      display: inline-block;
+      opacity: 0.8;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+
+      & + * {
+        margin-left: 2rem;
+      }
     }
+  }
 }
