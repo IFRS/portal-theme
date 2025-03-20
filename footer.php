@@ -1,3 +1,12 @@
+    <?php if (is_active_sidebar('area-banners')) : ?>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <?php dynamic_sidebar('area-banners'); ?>
+      </div>
+    </div>
+    <?php endif; ?>
+
     <a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden">Fim do conte&uacute;do</a>
   </main>
 
@@ -5,14 +14,12 @@
   <a href="#inicio-rodape" id="inicio-rodape" class="visually-hidden">In&iacute;cio do rodap&eacute;</a>
   <footer class="footer">
     <div class="container">
-      <?php if (!dynamic_sidebar('widget-footer')) : endif; ?>
+      <?php if (!dynamic_sidebar('area-rodape')) : endif; ?>
 
       <div class="footer__extra">
         <!-- Redes Sociais -->
-        <?php if (is_active_sidebar('widget-social')) : ?>
-          <nav class="area-social">
-            <?php if (!dynamic_sidebar('widget-social')) : endif; ?>
-          </nav>
+        <?php if (is_active_sidebar('area-social')) : ?>
+          <?php dynamic_sidebar('area-social'); ?>
         <?php endif; ?>
         <!-- Acesso à Informação -->
         <a href="https://www.gov.br/acessoainformacao" target="_blank" class="footer__lai" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o">
