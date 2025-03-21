@@ -4,19 +4,21 @@ register_block_pattern('core/query-noticias', array(
 	'title'      => 'Notícias',
 	'blockTypes' => array( 'core/query' ),
 	'categories' => array( 'query' ),
-	'content'    => '<!-- wp:query {"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
-                  <div class="wp-block-query">
-                  <!-- wp:post-template -->
-                  <!-- wp:group {"style":{"spacing":{"padding":{"top":"30px","right":"30px","bottom":"30px","left":"30px"}}},"layout":{"inherit":false}} -->
-                  <div class="wp-block-group" style="padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px">
-                  <!-- wp:post-featured-image {"isLink":true} /-->
-                  <!-- wp:post-terms {"term":"category"} /-->
-                  <!-- wp:post-title {"isLink":true} /-->
-                  <!-- wp:post-excerpt /-->
-                  <!-- wp:post-date /-->
-                  </div>
-                  <!-- /wp:group -->
-                  <!-- /wp:post-template -->
-                  </div>
-                  <!-- /wp:query -->',
+	'content'    => '
+    <!-- wp:query {"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"include","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
+    <div class="wp-block-query">
+    <!-- wp:post-template -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"30px","right":"30px","bottom":"30px","left":"30px"}}},"layout":{"inherit":false}} -->
+    <div class="wp-block-group">
+    <!-- wp:post-featured-image {"isLink":true} /-->
+    <!-- wp:post-terms {"term":"category"} /-->
+    <!-- wp:post-title {"isLink":true} /-->
+    <!-- wp:post-excerpt /-->
+    <!-- wp:post-date /-->
+    </div>
+    <!-- /wp:group -->
+    <!-- /wp:post-template -->
+    </div>
+    <!-- /wp:query -->
+  ',
 ));
