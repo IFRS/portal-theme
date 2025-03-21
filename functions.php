@@ -80,6 +80,9 @@ require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
 // Taxonomias
 require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
 
+// Padrões de Bloco
+require_once get_parent_theme_file_path('inc/block-patterns/noticias.php');
+
 // Shortcodes
 require_once get_parent_theme_file_path('inc/shortcodes/bootstrap4.php');
 require_once get_parent_theme_file_path('inc/shortcodes/noticias-escopo.php');

@@ -38,6 +38,7 @@ if ( ! function_exists( 'escopo_taxonomy' ) ) {
             'labels'                     => $labels,
             'hierarchical'               => true,
             'public'                     => true,
+            'publicly_queryable'         => true,
             'show_ui'                    => true,
             'show_admin_column'          => true,
             'show_in_nav_menus'          => false,
