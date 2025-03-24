@@ -83,33 +83,5 @@ require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
 // Padrões de Bloco
 require_once get_parent_theme_file_path('inc/block-patterns/noticias.php');
 
-// Shortcodes
-require_once get_parent_theme_file_path('inc/shortcodes/bootstrap4.php');
-require_once get_parent_theme_file_path('inc/shortcodes/noticias-escopo.php');
-require_once get_parent_theme_file_path('inc/shortcodes/posts-by-category.php');
-
-
-add_filter( 'pre_render_block', function( $pre_render, $parsed_block ) {
-  if ( $parsed_block['attrs']['namespace'] ?? '' === 'ifrs-portal-theme/noticias' ) {
-    add_filter('query_loop_block_query_vars', function( $query, $block ) use ( $parsed_block ) {
-      $escopos = get_terms(array(
-        'taxonomy' => 'escopo',
-        'hide_empty' => false,
-        'fields' => 'ids'
-      ));
-
-      $query['tax_query'] = array(
-        array(
-          'taxonomy' => 'escopo',
-          'field' => 'term_id',
-          'terms' => $escopos,
-          'operator' => 'NOT IN'
-        )
-      );
-
-      return $query;
-    }, 10, 2 );
-  }
-
-  return $pre_render;
-}, 10, 2 );
+// Variações de Bloco
+// require_once get_parent_theme_file_path('inc/block-variations/cta-banner.php');
