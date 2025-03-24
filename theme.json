@@ -20,6 +20,18 @@
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
+      "gradients": [
+        {
+          "gradient": "linear-gradient(to bottom, transparent 25%, rgb(18.8, 63.2, 26) 75%)",
+          "name": "Gradiente Principal Vertical",
+          "slug": "primary-vertical"
+        },
+        {
+          "gradient": "linear-gradient(to right, transparent 25%, rgb(18.8, 63.2, 26) 75%)",
+          "name": "Gradiente Principal",
+          "slug": "primary-horizontal"
+        }
+      ],
       "link": false,
       "palette": [
         {
