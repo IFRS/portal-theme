@@ -1,4 +1,16 @@
 <?php
+/**
+ * Gutenberg Editor
+ */
+// add_action( 'enqueue_block_editor_assets', function() {
+//   $block_asset_dependencies = [ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-data', 'wp-edit-post' ];
+
+// 	wp_enqueue_script( 'portal-blocks', get_parent_theme_file_uri( '/js/blocks.js' ), $block_asset_dependencies );
+// } );
+
+/**
+ * Frontend
+ */
 add_action('wp_enqueue_scripts', function() {
   /**
    * Styles

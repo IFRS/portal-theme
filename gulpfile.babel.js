@@ -89,6 +89,7 @@ function bundle(done) {
     entry: {
       'portal': './src/portal.js',
       'datatables': './src/datatables.js',
+      // 'blocks': './src/blocks.js',
     },
     output: {
       path: path.resolve(path.dirname(''), 'js'),
