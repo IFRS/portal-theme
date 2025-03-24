@@ -38,10 +38,6 @@ add_action('wp_enqueue_scripts', function() {
   wp_register_style('editais', get_template_directory_uri(). '/css/page_editais.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_editais.css'), 'all');
   wp_register_style('cursos', get_template_directory_uri(). '/css/page_cursos.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_cursos.css'), 'all');
 
-  /* Partials */
-  wp_register_style('share', get_template_directory_uri(). '/css/partial_share.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/partial_share.css'), 'all');
-  wp_register_style('posts-by-category', get_template_directory_uri(). '/css/partial_posts-by-category.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/partial_posts-by-category.css'), 'all');
-
   /**
    * Scripts
    */
