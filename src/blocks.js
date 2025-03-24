@@ -1,1 +1,1 @@
-import './blocks/noticias.js';
+import './blocks/cta-banner.js';
