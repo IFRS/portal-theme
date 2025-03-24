@@ -41,6 +41,16 @@
           "color": "#212529",
           "name": "Escuro",
           "slug": "dark"
+        },
+        {
+          "color": "#ffffff",
+          "name": "Branco",
+          "slug": "white"
+        },
+        {
+          "color": "#000000",
+          "name": "Preto",
+          "slug": "black"
         }
       ],
       "text": false
