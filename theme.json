@@ -50,7 +50,7 @@
 		},
     "layout": {
       "allowCustomContentAndWideSize": false,
-      "allowEditing": false,
+      "allowEditing": true,
       "contentSize": "1296px",
       "wideSize": "100dvw"
     },
@@ -83,5 +83,18 @@
       "textAlign": true
     },
     "useRootPaddingAwareAlignments": true
+  },
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "color": {
+          "background": "var(--bs-primary)",
+          "text": "var(--bs-white)"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      }
+    }
   }
 }
