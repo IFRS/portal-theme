@@ -85,6 +85,13 @@
     "useRootPaddingAwareAlignments": true
   },
   "styles": {
+    "elements": {
+      "link": {
+        "typography": {
+          "fontWeight": "500"
+        }
+      }
+    },
     "blocks": {
       "core/button": {
         "color": {
@@ -93,6 +100,58 @@
         },
         "typography": {
           "textDecoration": "none"
+        }
+      },
+      "core/post-terms": {
+        "color": {
+          "text": "var(--bs-gray-600)"
+        },
+        "typography": {
+          "fontWeight": "600"
+        },
+        "elements": {
+          "link": {
+            "color": {
+              "text": "inherit"
+            },
+            "typography": {
+              "fontWeight": "700",
+              "textDecoration": "none"
+            }
+          }
+        }
+      },
+      "core/post-title": {
+        "spacing": {
+          "margin": {
+            "top": "0.5rem"
+          }
+        },
+        "typography": {
+          "fontSize": "1.5rem",
+          "fontWeight": "700"
+        }
+      },
+      "core/post-excerpt": {
+        "spacing": {
+          "margin": {
+            "top": "0.5rem"
+          }
+        }
+      },
+      "core/post-date": {
+        "color": {
+          "text": "var(--bs-gray-600)"
+        },
+        "spacing": {
+          "margin": {
+            "top": "0.5rem"
+          }
+        },
+        "typography": {
+          "textAlign": "right",
+          "fontSize": "0.875rem",
+          "fontWeight": "500"
         }
       }
     }
