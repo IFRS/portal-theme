@@ -17,33 +17,33 @@ register_nav_menus(
 //   return $classes;
 // }, 10, 3);
 
-// add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
-//   if ($item->menu_item_parent == 0) {
-//       $classes[] = 'nav-item';
-//   }
+add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
+  if ($args->menu->slug !== 'campi') return $classes;
 
-//   if (array_search( 'menu-item-has-children', $classes ) && $item->menu_item_parent == 0) {
-//       $classes[] = 'dropdown';
-//   }
+  if ($item->menu_item_parent == 0) {
+    $classes[] = 'nav-item';
+  }
 
-//   return $classes;
-// }, 10, 4);
+  return $classes;
+}, 10, 4);
 
-// add_filter('nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
-//   $atts['class'] = 'nav-link';
+add_filter('nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
+  if ($args->menu->slug !== 'campi') return $atts;
 
-//   if (array_search('menu-item-has-children', $item->classes ) && $item->menu_item_parent == 0) {
-//       $atts['class'] .= ' dropdown-toggle';
-//       $atts['role'] = 'button';
-//       $atts['data-bs-toggle'] = 'dropdown';
-//       $atts['aria-expanded'] = 'false';
-//   } else if ($item->menu_item_parent != 0) {
-//       $atts['class'] = 'dropdown-item';
-//   }
+  $atts['class'] = 'nav-link';
 
-//   if ($item->current || $item->current_item_ancestor) {
-//       $atts['class'] .= ' active';
-//   }
+  // if (array_search('menu-item-has-children', $item->classes ) && $item->menu_item_parent == 0) {
+  //   $atts['class'] .= ' dropdown-toggle';
+  //   $atts['role'] = 'button';
+  //   $atts['data-bs-toggle'] = 'dropdown';
+  //   $atts['aria-expanded'] = 'false';
+  // } else if ($item->menu_item_parent != 0) {
+  //   $atts['class'] = 'dropdown-item';
+  // }
 
-//   return $atts;
-// }, 10, 4);
+  if ($item->current || $item->current_item_ancestor) {
+    $atts['class'] .= ' active';
+  }
+
+  return $atts;
+}, 10, 4);

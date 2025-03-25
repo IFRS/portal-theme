@@ -10,6 +10,10 @@
     <a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden">Fim do conte&uacute;do</a>
   </main>
 
+  <?php
+    if (has_nav_menu( 'campi' )) get_template_part('partials/menus/campi');
+  ?>
+
   <!-- Rodapé -->
   <a href="#inicio-rodape" id="inicio-rodape" class="visually-hidden">In&iacute;cio do rodap&eacute;</a>
   <footer class="footer">

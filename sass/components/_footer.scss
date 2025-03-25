@@ -1,8 +1,11 @@
 .footer {
   background-color: $cor-rodape;
   color: #ffffff;
-  margin-top: 1rem;
   padding: 4rem 0 0;
+
+  &:not(.menu-campi ~ &) {
+    margin-top: 1rem;
+  }
 
   a {
     color: inherit;
