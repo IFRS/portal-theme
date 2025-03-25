@@ -15,7 +15,7 @@ window.wp.domReady( () => {
       isUserOverlayColor: true,
       overlayColor: 'dark',
       style: {
-        shadow: 'var:preset|shadow|natural',
+        shadow: 'var:preset|shadow|normal',
       },
       layout: {
         type: 'constrained',
@@ -26,13 +26,9 @@ window.wp.domReady( () => {
             text: 'var:preset|color|white',
           },
         },
-        link: {
-          className: 'stretched-link',
+        paragraph: {
           color: {
             text: 'var:preset|color|white',
-          },
-          typography: {
-            textDecoration: 'none',
           },
         },
       },

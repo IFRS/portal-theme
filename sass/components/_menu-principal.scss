@@ -51,7 +51,7 @@
 
   background-color: #ededed;
   border-top: 2px solid #ffcd07;
-  box-shadow: var(--wp--preset--shadow--natural, none);
+  box-shadow: var(--bs-box-shadow-sm, none);
   margin-bottom: $grid-gutter-width;
 
   height: var(--collapse-height, 100dvh);

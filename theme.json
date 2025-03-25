@@ -83,6 +83,31 @@
     "position": {
 			"sticky": false
 		},
+    "shadow": {
+      "defaultPresets": true,
+      "presets": [
+        {
+          "name": "Normal",
+          "slug": "normal",
+          "shadow": "0 .5rem 1rem rgba(0, 0, 0, .15)"
+        },
+        {
+          "name": "Pequena",
+          "slug": "small",
+          "shadow": "0 .125rem .25rem rgba(0, 0, 0, .075)"
+        },
+        {
+          "name": "Grande",
+          "slug": "large",
+          "shadow": "0 1rem 3rem rgba(0, 0, 0, .175)"
+        },
+        {
+          "name": "Interna",
+          "slug": "inner",
+          "shadow": "inset 0 1px 2px rgba(0, 0, 0, .075)"
+        }
+      ]
+    },
     "spacing": {
       "blockGap": true,
       "customSpacingSize": false
