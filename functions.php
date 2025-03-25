@@ -79,9 +79,3 @@ require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
 
 // Taxonomias
 require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
-
-// Padrões de Bloco
-require_once get_parent_theme_file_path('inc/block-patterns/noticias.php');
-
-// Variações de Bloco
-// require_once get_parent_theme_file_path('inc/block-variations/cta-banner.php');
