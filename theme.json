@@ -110,7 +110,8 @@
     "elements": {
       "link": {
         "typography": {
-          "fontWeight": "500"
+          "fontWeight": "500",
+          "textDecoration": "none"
         }
       }
     },
