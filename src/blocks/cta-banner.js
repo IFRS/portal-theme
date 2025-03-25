@@ -2,7 +2,7 @@ window.wp.domReady( () => {
   window.wp.blocks.registerBlockVariation( 'core/cover', {
     name: 'CTA Banner',
     title: 'CTA Banner',
-    description: 'Banner Call-to-action',
+    description: 'Banner Call-to-Action',
     scope: [ 'inserter' ],
     isDefault: false,
     isActive: ( blockAttributes, variationAttributes ) => blockAttributes.className === variationAttributes.className,
@@ -33,5 +33,14 @@ window.wp.domReady( () => {
         },
       },
     },
+    innerBlocks: [
+      [
+        'core/heading', {
+          level: 2,
+          placeholder: 'Adicione um título...',
+          textAlign: 'center'
+        }
+      ],
+    ]
   })
 })
