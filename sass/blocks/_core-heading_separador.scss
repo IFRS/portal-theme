@@ -1,0 +1,29 @@
+.wp-block-heading {
+  &.is-style-separador {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: stretch;
+
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      content: '';
+      background-color: $gray-500;
+      height: 1px;
+      width: 100%;
+      flex: 1 1 0;
+    }
+
+    &::before {
+      margin-inline-end: 1rem;
+    }
+
+    &::after {
+      margin-inline-start: 1rem;
+    }
+  }
+}
