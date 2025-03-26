@@ -1,4 +1,4 @@
-<?php $id = uniqid('nav-campi-') ?>
+<?php $id = uniqid('menu-campi-collapse-'); ?>
 <nav class="menu-campi navbar navbar-expand-md bg-body-tertiary mt-3">
   <div class="container-fluid">
     <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $id; ?>" aria-expanded="false" aria-controls="<?php echo $id; ?>" aria-label="Alterna lista de Campi">
