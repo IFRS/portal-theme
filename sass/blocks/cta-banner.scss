@@ -11,9 +11,12 @@
   .wp-block-cover__inner-container {
     font-size: 2.5rem;
     font-weight: 600;
-    opacity: 0;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     transition: $transition;
+
+    @include media-breakpoint-up(md) {
+      opacity: 0;
+    }
 
     a {
       @extend .stretched-link;
@@ -22,12 +25,14 @@
     }
   }
 
-  &:hover {
-    .wp-block-cover__image-background {
-      transform: scale(1.1);
-    }
-    .wp-block-cover__inner-container {
-      opacity: 1;
+  @include media-breakpoint-up(md) {
+    &:hover {
+      .wp-block-cover__image-background {
+        transform: scale(1.1);
+      }
+      .wp-block-cover__inner-container {
+        opacity: 1;
+      }
     }
   }
 }

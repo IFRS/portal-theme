@@ -9,7 +9,7 @@ window.wp.domReady( () => {
     attributes : {
       className: 'portal-cta-banner',
       contentPosition: 'bottom center',
-      dimRatio: 20,
+      dimRatio: 50,
       minHeight: 50,
       minHeightUnit: 'dvh',
       isUserOverlayColor: true,
