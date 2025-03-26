@@ -11,17 +11,8 @@
     color: inherit;
   }
 
-  &__extra {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-
-    margin: 3rem 0;
-  }
-
   &__lai {
+    display: block;
     max-width: 200px;
     height: auto;
   }

@@ -20,15 +20,19 @@
     <div class="container">
       <?php if (!dynamic_sidebar('area-rodape')) : endif; ?>
 
-      <div class="footer__extra">
+      <div class="footer__extra row align-items-center my-4">
         <!-- Redes Sociais -->
-        <?php if (is_active_sidebar('area-social')) : ?>
-          <?php dynamic_sidebar('area-social'); ?>
-        <?php endif; ?>
+        <div class="col-12 col-sm-6">
+          <?php if (is_active_sidebar('area-social')) : ?>
+            <?php dynamic_sidebar('area-social'); ?>
+          <?php endif; ?>
+        </div>
         <!-- Acesso à Informação -->
-        <a href="https://www.gov.br/acessoainformacao" target="_blank" class="footer__lai" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o">
-          <img data-src="<?php echo esc_url( get_parent_theme_file_uri( '/img/acesso-info.svg' ) ); ?>" alt="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o (abre uma nova p&aacute;gina)" class="lazyload img-fluid mx-auto" width="544" height="228"/>
-        </a>
+        <div class="col-12 col-sm-6">
+          <a href="https://www.gov.br/acessoainformacao" target="_blank" class="footer__lai ms-0 ms-sm-auto" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o">
+            <img data-src="<?php echo esc_url( get_parent_theme_file_uri( '/img/acesso-info.svg' ) ); ?>" alt="Site sobre a Lei de Acesso &agrave; Informa&ccedil;&atilde;o (abre uma nova p&aacute;gina)" class="lazyload img-fluid mx-auto" width="544" height="228"/>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer__creditos">
