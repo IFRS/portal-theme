@@ -1,2 +1,19 @@
 .menu-campi {
+  ul {
+    &::before {
+      content: '';
+      display: none;
+      width: 200px; height: auto;
+      margin-inline-end: 1rem;
+
+      background-image: url('../img/menu-campi-title.png');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
 }
