@@ -2,7 +2,7 @@
 <nav class="menu-campi navbar navbar-expand-md bg-body-tertiary mt-3">
   <div class="container-fluid">
     <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $id; ?>" aria-expanded="false" aria-controls="<?php echo $id; ?>" aria-label="Alterna lista de Campi">
-      <span class="navbar-toggler-icon"></span>&nbsp;<?php _e('Campi do IFRS', 'ifrs-portal-theme'); ?>
+      <i class="fa-solid fa-building-columns"></i>&nbsp;<?php _e('Campi do IFRS', 'ifrs-portal-theme'); ?>
     </button>
     <?php
       wp_nav_menu(
