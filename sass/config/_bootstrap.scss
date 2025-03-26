@@ -13,6 +13,20 @@ $danger:  $cor-ds-erro;
 
 $font-family-base: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+$font-size-base: 1rem;
+$govbr-font-size-scale: 1.2;
+
+$line-height-base: 1.45;
+$line-height-sm:   1.15;
+$line-height-lg:   1.85;
+
+$h6-font-size: $font-size-base * $govbr-font-size-scale;
+$h5-font-size: $h6-font-size * $govbr-font-size-scale;
+$h4-font-size: $h5-font-size * $govbr-font-size-scale;
+$h3-font-size: $h4-font-size * $govbr-font-size-scale;
+$h2-font-size: $h3-font-size * $govbr-font-size-scale;
+$h1-font-size: $h2-font-size * $govbr-font-size-scale;
+
 $body-color: #333333;
 // $body-bg:    #f8f8f8;
 
