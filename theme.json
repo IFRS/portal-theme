@@ -168,6 +168,9 @@
         }
       },
       "core/post-featured-image": {
+        "border": {
+          "radius": "var(--bs-border-radius-sm, 0)"
+        }
       },
       "core/post-terms": {
         "color": {
