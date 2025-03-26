@@ -31,7 +31,7 @@
     "node-polyfill-webpack-plugin": "^4.1.0",
     "plugin-error": "^2.0.1",
     "postcss": "^8.2.7",
-    "sass": "^1.43.4",
+    "sass-embedded": "^1.86.0",
     "webpack": "^5.24.4",
     "webpack-bundle-analyzer": "^4.4.0"
   }
