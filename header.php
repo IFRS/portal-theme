@@ -27,20 +27,20 @@
       <?php get_template_part('partials/menus/atalhos'); ?>
 
       <div class="row align-items-center">
-        <div class="col-12 col-lg-4 d-flex align-items-start">
+        <div class="col-12 col-md-5 col-lg-5 d-flex align-items-center">
           <a href="https://www.gov.br/pt-br">
             <img src="<?php echo get_theme_file_uri( '/img/govbr.png' ) ?>" class="header__govbr" alt="Governo do Brasil" width="200" height="72">
           </a>
           <div class="vr mx-3"></div>
           <p class="m-0 fs-5">Minist&eacute;rio da Educa&ccedil;&atilde;o</p>
         </div>
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-md-7 col-lg-7">
           <?php get_template_part('partials/menus/acessibilidade'); ?>
         </div>
       </div>
 
       <div class="row align-items-center">
-        <div class="col-12 col-lg-8 d-flex align-items-center">
+        <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
           <?php get_template_part('partials/menus/principal'); ?>
           <div class="header__principal">
             <?php if (has_custom_logo()) : ?>
@@ -53,9 +53,9 @@
                 </a>
               </h1>
             <?php endif; ?>
+          </div>
         </div>
-        </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <?php get_search_form(); ?>
         </div>
       </div>
