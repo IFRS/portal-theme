@@ -1,0 +1,24 @@
+.breadcrumb-yoast {
+  border-bottom: 1px solid $gray-200;
+  color: #9e9d9d;
+  font-size: 0.75rem;
+  margin: 2rem 0 1.5rem;
+  padding: 0.5rem 0;
+
+  > span {
+    margin-inline-start: 0.5em;
+
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  a {
+    color: tint-color($link-color, 10%);
+    text-decoration: none;
+  }
+
+  .breadcrumb_last {
+    color: $gray-600;
+  }
+}
