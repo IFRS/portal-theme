@@ -82,12 +82,7 @@
 
   .menu-item {
     color: $primary;
-    padding: {
-      top: 0.5rem;
-      bottom: 0.5rem;
-      left: 0.75rem;
-      right: 1rem;
-    };
+    padding: 0.5rem 0.75rem;
 
     &:hover,
     &:has(.sub-menu.show),
@@ -110,6 +105,10 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      margin-inline-end: 2rem;
+    }
 
     .svg-inline--fa {
       margin-inline-start: auto;
