@@ -41,14 +41,8 @@ require_once get_parent_theme_file_path('inc/pagination.php');
 // Custom Queries
 require_once get_parent_theme_file_path('inc/custom-queries.php');
 
-// Share Buttons
-require_once get_parent_theme_file_path('inc/share.php');
-
 // Filtro para buscas vazias
 require_once get_parent_theme_file_path('inc/empty-search-filter.php');
-
-// Widgets
-require_once get_parent_theme_file_path('inc/widgets.php');
 
 // Vídeos do YouTube responsivos
 require_once get_parent_theme_file_path('inc/responsive-youtube-embed.php');
@@ -79,3 +73,6 @@ require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
 
 // Taxonomias
 require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
+
+// VLIBRAS
+require_once get_parent_theme_file_path( 'inc/vlibras.php' );
