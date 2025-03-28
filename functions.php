@@ -53,12 +53,6 @@ require_once get_parent_theme_file_path('inc/responsive-youtube-embed.php');
 // Customização do resumo dos posts
 require_once get_parent_theme_file_path('inc/excerpt.php');
 
-// Configurações da Galeria
-require_once get_parent_theme_file_path('inc/gallery.php');
-
-// LazyLoad
-require_once get_parent_theme_file_path('inc/lazyload.php');
-
 // Tables
 require_once get_parent_theme_file_path('inc/tables.php');
 
