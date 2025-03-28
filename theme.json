@@ -187,6 +187,13 @@
       "core/post-template": {
         "spacing": {
           "blockGap": "2rem 1.5rem"
+        },
+        "elements": {
+          "h2": {
+            "typography": {
+              "fontSize": "1.75rem"
+            }
+          }
         }
       },
       "core/post-featured-image": {
@@ -229,7 +236,6 @@
           }
         },
         "typography": {
-          "fontSize": "1.75rem",
           "fontWeight": "600"
         },
         "elements": {
