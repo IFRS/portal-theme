@@ -1,6 +1,28 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Cabeçalho do Site"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Rodapé do Site"
+    },
+    {
+      "area": "footer",
+      "name": "footer-content",
+      "title": "Conteúdo do Rodapé"
+    },
+    {
+      "area": "prefooter",
+      "name": "prefooter",
+      "title": "Pré-Rodapé"
+    }
+  ],
   "settings": {
     "background":  {
       "backgroundImage": true,
@@ -207,7 +229,7 @@
           }
         },
         "typography": {
-          "fontSize": "1.5rem",
+          "fontSize": "1.75rem",
           "fontWeight": "600"
         },
         "elements": {

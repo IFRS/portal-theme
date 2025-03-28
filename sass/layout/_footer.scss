@@ -1,14 +1,15 @@
-.footer {
-  background-color: $cor-rodape;
+footer {
   color: #ffffff;
-  padding: 4rem 0 0;
-
-  &:not(.menu-campi ~ &) {
-    margin-top: 1rem;
-  }
 
   a {
     color: inherit;
+  }
+}
+
+.footer {
+  &__content {
+    background-color: $cor-rodape;
+    padding: 4rem 0 0;
   }
 
   &__lai {

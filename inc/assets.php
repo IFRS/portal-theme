@@ -27,8 +27,6 @@ add_action('wp_enqueue_scripts', function() {
 
   wp_enqueue_style('portal', get_template_directory_uri(). '/css/portal.css', array('vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/portal.css'), 'all');
 
-  wp_enqueue_style('blocks', get_template_directory_uri(). '/css/blocks.css', array('vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/blocks.css'), 'all');
-
   /* Pages */
   wp_register_style('front-page', get_template_directory_uri(). '/css/page_front-page.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_front-page.css'), 'all');
   wp_register_style('home', get_template_directory_uri(). '/css/page_home.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_home.css'), 'all');

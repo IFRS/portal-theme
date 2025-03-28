@@ -7,19 +7,20 @@
 @import 'base/lazyload';
 @import 'base/wp';
 
+@import 'layout/header';
 @import 'layout/main';
+@import 'layout/footer';
 
 @import 'components/breadcrumb-yoast';
 @import 'components/custom-list';
 @import 'components/custom-logo';
-@import 'components/footer';
-@import 'components/header';
 @import 'components/menu-acessibilidade';
 @import 'components/menu-atalhos';
 @import 'components/menu-navbar';
 @import 'components/menu-principal';
 @import 'components/menu-relevancia';
 @import 'components/menu-servicos';
+@import 'components/menu-campi';
 @import 'components/searchform';
 
 @import 'blocks/core-heading_separador';
