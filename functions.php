@@ -14,6 +14,9 @@ require_once get_parent_theme_file_path('inc/feed-thumbnail.php');
 // Títulos personalizados
 require_once get_parent_theme_file_path('inc/custom-title.php');
 
+// SEO
+require_once get_parent_theme_file_path('inc/seo.php');
+
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
 require_once get_parent_theme_file_path('inc/depth-limit.php');
 
