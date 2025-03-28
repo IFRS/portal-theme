@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuPrincipalNav = document.querySelector('.menu-principal-collapse')
 
+  if (!menuPrincipalNav) return
+
   menuPrincipalNav.addEventListener('shown.bs.collapse', () => {
     document.body.style.overflow = 'hidden'
   })
