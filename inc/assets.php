@@ -11,6 +11,10 @@ add_action( 'enqueue_block_editor_assets', function() {
 /**
  * Frontend
  */
+add_action( 'enqueue_block_assets', function() {
+	wp_enqueue_script( 'bootstrap-blocks', get_parent_theme_file_uri( '/js/bootstrap-blocks.js' ) );
+} );
+
 add_action('wp_enqueue_scripts', function() {
   /**
    * Styles

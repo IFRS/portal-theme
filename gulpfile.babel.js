@@ -90,6 +90,7 @@ function bundle(done) {
       'portal': './src/portal.js',
       'datatables': './src/datatables.js',
       'blocks': './src/blocks.js',
+      'bootstrap-blocks': './src/bootstrap-blocks.js',
     },
     output: {
       path: path.resolve(path.dirname(''), 'js'),
