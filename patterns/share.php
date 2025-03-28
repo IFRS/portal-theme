@@ -3,7 +3,7 @@
  * Title: Compartilhamento
  * Slug: ifrs/share
  * Categories: buttons
- * Block Types: core/post-content
+ * Block Types:
  */
 
 $URL = urlencode(get_permalink());
