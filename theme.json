@@ -193,6 +193,11 @@
             "typography": {
               "fontSize": "1.75rem"
             }
+          },
+          "h3": {
+            "typography": {
+              "fontSize": "1.75rem"
+            }
           }
         }
       },

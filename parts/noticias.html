@@ -1,0 +1,31 @@
+<!-- wp:query {"query":{"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":3}} -->
+<div class="wp-block-query">
+  <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+    <!-- wp:group {"layout":{"inherit":false}} -->
+    <div class="wp-block-group">
+      <!-- wp:post-featured-image {"isLink":true} /-->
+      <!-- wp:post-terms {"term":"category"} /-->
+      <!-- wp:post-title {"level":3,"isLink":true} /-->
+      <!-- wp:post-excerpt {"excerptLength":30} /-->
+      <!-- wp:post-date /-->
+    </div>
+    <!-- /wp:group -->
+  <!-- /wp:post-template -->
+
+  <!-- wp:query-pagination {"className":"mt-5","paginationArrow":"chevron","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
+    <!-- wp:query-pagination-previous /-->
+
+    <!-- wp:query-pagination-numbers {"midSize":3} /-->
+
+    <!-- wp:query-pagination-next /-->
+  <!-- /wp:query-pagination -->
+
+  <!-- wp:query-no-results -->
+    <!-- wp:html -->
+    <div class="alert alert-warning" role="alert">
+      <strong>Ops!</strong> Não foram encontradas notícias.
+    </div>
+    <!-- /wp:html -->
+  <!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->

@@ -1,3 +1,4 @@
+/* Alinhamento */
 .aligncenter {
   margin-inline: auto;
   text-align: center;
@@ -13,7 +14,55 @@
   text-align: right;
 }
 
+/* Imagem Destaque */
 .wp-block-post-featured-image {
   @include img-fluid;
   margin: 1.5rem auto;
+}
+
+/* Paginação */
+.wp-block-query-pagination {
+  .wp-block-query-pagination-previous,
+  .page-numbers,
+  .wp-block-query-pagination-next {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 100em;
+    color: $primary;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 4px;
+    min-height: 32px;
+    min-width: 32px;
+    padding: 0 8px;
+    white-space: nowrap;
+
+    &:not(.current):not(.dots):hover {
+      background-color: var(--bs-primary-bg-subtle);
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+
+  .wp-block-query-pagination-previous-arrow {
+    margin-inline-end: 0;
+  }
+
+  .wp-block-query-pagination-next-arrow {
+    margin-inline-start: 0;
+  }
+
+  .page-numbers {
+    &.current {
+      background-color: $primary;
+      border-color: $primary;
+      color: #fff;
+    }
+  }
+
+  .wp-block-query-pagination-previous,
+  .wp-block-query-pagination-next {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
 }
