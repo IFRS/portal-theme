@@ -16,7 +16,7 @@
       <!-- wp:post-terms {"term":"category"} /-->
       <!-- wp:post-title {"isLink":true} /-->
       <!-- wp:post-excerpt {"excerptLength":30} /-->
-      <!-- wp:post-date /-->
+      <!-- wp:post-date {"textAlign":"right"} /-->
     </div>
     <!-- /wp:group -->
   <!-- /wp:post-template -->
