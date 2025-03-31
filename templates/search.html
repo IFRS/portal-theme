@@ -1,0 +1,37 @@
+<!-- wp:template-part {"slug":"header","theme":"ifrs-portal-theme","area":"header","lock":{"move":true,"remove":true}} /-->
+
+<main class="container">
+  <!-- wp:query-title {"type":"search","level":2,"className":"mb-4"} /-->
+
+  <!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"parents":[],"format":[]}} -->
+  <div class="wp-block-query">
+    <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"layout":{"type":"default","columnCount":3}} -->
+      <!-- wp:post-title {"level":3,"isLink":true} /-->
+
+      <!-- wp:pattern {"slug":"ifrs/permalink"} /-->
+
+      <!-- wp:post-excerpt {"excerptLength":50} /-->
+
+      <!-- wp:post-date {"textAlign":"left"} /-->
+    <!-- /wp:post-template -->
+
+    <!-- wp:query-pagination {"className":"mt-5","paginationArrow":"chevron","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
+      <!-- wp:query-pagination-previous /-->
+
+      <!-- wp:query-pagination-numbers {"midSize":5} /-->
+
+      <!-- wp:query-pagination-next /-->
+    <!-- /wp:query-pagination -->
+
+    <!-- wp:query-no-results -->
+      <!-- wp:html -->
+      <div class="alert alert-warning" role="alert">
+        <strong>Ops!</strong> N&atilde;o foram encontrados resultados para essa busca. Tente com outros termos.
+      </div>
+      <!-- /wp:html -->
+    <!-- /wp:query-no-results -->
+  </div>
+  <!-- /wp:query -->
+</main>
+
+<!-- wp:template-part {"slug":"footer","theme":"ifrs-portal-theme","area":"footer","lock":{"move":true,"remove":true}} /-->
