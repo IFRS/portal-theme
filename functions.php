@@ -11,6 +11,15 @@ require_once get_parent_theme_file_path('inc/theme-support.php');
 // Thumbnails no feed RSS
 require_once get_parent_theme_file_path('inc/feed-thumbnail.php');
 
+// Favicon Fallback
+require_once get_parent_theme_file_path('inc/favicon-fallback.php');
+
+// Desabilita Emoji
+require_once get_parent_theme_file_path('inc/disable-emoji.php');
+
+// Remove todas as menções de "version"
+require_once get_parent_theme_file_path('inc/remove-version.php');
+
 // Títulos personalizados
 require_once get_parent_theme_file_path('inc/custom-title.php');
 
@@ -41,9 +50,6 @@ require_once get_parent_theme_file_path('inc/breadcrumb.php');
 // Paginação personalizada
 require_once get_parent_theme_file_path('inc/pagination.php');
 
-// Custom Queries
-require_once get_parent_theme_file_path('inc/custom-queries.php');
-
 // Filtro para buscas vazias
 require_once get_parent_theme_file_path('inc/empty-search-filter.php');
 
@@ -55,15 +61,6 @@ require_once get_parent_theme_file_path('inc/excerpt.php');
 
 // Tables
 require_once get_parent_theme_file_path('inc/tables.php');
-
-// Disable emoji
-require_once get_parent_theme_file_path('inc/disable-emoji.php');
-
-// Remove all "version" text from output
-require_once get_parent_theme_file_path('inc/remove-version.php');
-
-// Configurações Personalizadas
-require_once get_parent_theme_file_path('inc/options.php');
 
 // Metaboxes
 require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
