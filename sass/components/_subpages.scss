@@ -4,7 +4,7 @@
   box-shadow: var(--bs-box-shadow, none);
   float: inline-start;
   margin-block-start: 1rem;
-  margin-inline-end: 1.5rem;
+  margin-inline-end: $grid-gutter-width;
 
   .nav-link {
     padding: 1rem;
