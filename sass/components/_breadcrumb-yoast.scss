@@ -1,9 +1,11 @@
 .breadcrumb-yoast {
   border-bottom: 1px solid $gray-200;
-  font-size: 0.75rem;
+  font-size: $breadcrumb-font-size;
   margin: 2rem 0 0 0;
-  padding: 0.5rem 0;
+  padding: 0 0 0.5rem 0;
 
   display: inline-flex;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: start;
+  gap: $breadcrumb-item-padding-x;
 }
