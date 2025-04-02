@@ -1,5 +1,5 @@
 .menu-campi {
-  ul {
+  .navbar-nav {
     &::before {
       content: '';
       display: none;
@@ -13,6 +13,16 @@
 
       @include media-breakpoint-up(md) {
         display: block;
+      }
+    }
+
+    .nav-link {
+      background: linear-gradient(var(--bs-primary-text-emphasis, $primary) 0 0) var(--p, 0) 100% / var(--d, 0) 2px no-repeat;
+      transition: 0.3s, background-position 0s 0.3s;
+
+      &:hover {
+        --d: 100%;
+        --p: 100%;
       }
     }
   }
