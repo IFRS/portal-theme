@@ -24,9 +24,10 @@ $depth = count($ancestors);
 <?php if (count($children) > 0) : ?>
   <ul class="nav flex-column subpages">
   <?php if ($parent) : ?>
-    <li class="nav-item">
+    <li class="nav-item border-bottom">
       <a class="nav-link" href="<?php echo get_page_link($parent); ?>">
-        <i class="fa-solid fa-chevron-left me-1"></i>
+        <!-- <i class="fa-solid fa-chevron-left me-1"></i> -->
+        <i class="fa-solid fa-arrow-turn-up me-1"></i>
         <?php echo get_the_title($parent); ?>
       </a>
     </li>
