@@ -12,7 +12,7 @@
   <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
     <!-- wp:group {"layout":{"inherit":false}} -->
     <div class="wp-block-group">
-      <!-- wp:post-featured-image {"isLink":true} /-->
+      <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
       <!-- wp:post-terms {"term":"category"} /-->
       <!-- wp:post-title {"isLink":true} /-->
       <!-- wp:post-excerpt {"excerptLength":30} /-->
