@@ -47,9 +47,6 @@ require_once get_parent_theme_file_path('inc/menus.php');
 // Breadcrumb
 require_once get_parent_theme_file_path('inc/breadcrumb.php');
 
-// Paginação personalizada
-require_once get_parent_theme_file_path('inc/pagination.php');
-
 // Filtro para buscas vazias
 require_once get_parent_theme_file_path('inc/empty-search-filter.php');
 
