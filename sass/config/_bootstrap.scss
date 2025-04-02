@@ -48,6 +48,9 @@ $input-focus-box-shadow: 0 0 0 0.25rem rgba($input-focus-border-color, 0.25);
 $navbar-padding-y: 1rem;
 $navbar-toggler-font-size: 1rem;
 
+$nav-link-color: shade-color($primary, 20%);
+$nav-link-font-weight: 500;
+
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
 

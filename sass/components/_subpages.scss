@@ -1,0 +1,16 @@
+.subpages {
+  background-color: $gray-100;
+  border-radius: $border-radius-sm;
+  box-shadow: var(--bs-box-shadow, none);
+  float: inline-start;
+  margin-block-start: 1rem;
+  margin-inline-end: 1.5rem;
+
+  .nav-link {
+    padding: 1rem;
+
+    &:hover {
+      background-color: var(--bs-primary-bg-subtle);
+    }
+  }
+}
