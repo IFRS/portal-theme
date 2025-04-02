@@ -24,6 +24,14 @@
     }
   ],
   "settings": {
+    "blocks": {
+      "core/image": {
+        "lightbox": {
+          "enabled": true,
+          "allowEditing": false
+        }
+      }
+    },
     "background":  {
       "backgroundImage": true,
       "backgroundSize": true
@@ -237,7 +245,8 @@
         },
         "spacing": {
           "margin": {
-            "top": "0.5rem"
+            "top": "0.5rem",
+            "bottom": "1rem"
           }
         },
         "typography": {
@@ -255,6 +264,13 @@
         "spacing": {
           "margin": {
             "top": "0.5rem"
+          }
+        }
+      },
+      "core/post-content": {
+        "spacing": {
+          "margin": {
+            "top": "2rem"
           }
         }
       },
