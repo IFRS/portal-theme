@@ -1,105 +1,55 @@
 @use 'sass:math';
 
-@mixin menu-barra() {
-    font-size: 10px;
-    list-style: none;
-    margin-bottom: 1rem;
-    padding-left: 0;
-
-    li {
-        display: inline-block;
-        margin-right: 10px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-@mixin widget() {
-    margin-bottom: math.div($grid-gutter-width, 2);
-}
-
 @mixin title-box($color: $primary, $image-url: '') {
-    background-color: $gray-500;
-    border-top: 5px solid $color;
-    padding: 15px 10px 25px 15px;
+  background-color: $gray-500;
+  border-top: 5px solid $color;
+  padding: 15px 10px 25px 15px;
 
-    @if $color != $primary {
-        color: $color;
-    }
+  @if $color != $primary {
+    color: $color;
+  }
 
-    @if $image-url != '' {
-        background-image: url($image-url);
-        background-position: center right;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+  @if $image-url != '' {
+    background-image: url($image-url);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 @mixin link-todos($cor: $primary) {
+  color: $cor;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &:hover {
     color: $cor;
-    font-size: 14px;
-    text-transform: uppercase;
+  }
 
-    &:hover {
-        color: $cor;
-    }
+  &::after {
+    // @include icon-chevron('right');
 
-    &::after {
-        // @include icon-chevron('right');
-
-        content: '';
-        background-color: $cor;
-        background-position: center center;
-        background-size: 15px;
-        padding: 0 10px;
-        border-radius: 4px;
-        margin-left: 5px;
-    }
-}
-
-@mixin link-bg-grow($cor-fundo, $cor-texto: #ffffff) {
-    @supports (--css: variables) {
-        text-decoration: none;
-
-        background: linear-gradient($cor-fundo 0 0) 50% calc(-2px - 100%) / var(--d, 0%) 200% no-repeat;
-        transition: 0.2s, background-size 0.2s 0.2s;
-
-        &:hover {
-            --d: 100%;
-            background-position: 50% 0%;
-            color: $cor-texto;
-            transition: 0.2s, background-position 0.2s 0.2s, color 0.2s 0.2s;
-        }
-    }
-}
-
-@mixin link-underline-grow() {
-    @supports (--css: variables) {
-        background:
-            linear-gradient(currentColor 0 0)
-            bottom / var(--d, 0) 1px
-            no-repeat;
-            transition:0.5s;
-        &:hover {
-            --d: 100%;
-            text-decoration: none;
-        }
-    }
+    content: '';
+    background-color: $cor;
+    background-position: center center;
+    background-size: 15px;
+    padding: 0 10px;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
 }
 
 @mixin trim($numLines: 1) {
-    @if $numLines > 1 {
-        display: -webkit-box;
-        -webkit-line-clamp: $numLines;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    } @else {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+  @if $numLines > 1 {
+    display: -webkit-box;
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

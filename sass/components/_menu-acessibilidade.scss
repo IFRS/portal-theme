@@ -1,20 +1,19 @@
 .menu-acessibilidade {
-    @include menu-barra();
+  @extend %menu-barra;
 
-    margin-top: 10px;
-    text-transform: uppercase;
+  margin-block-start: 0.5rem;
+  text-transform: uppercase;
 
-    @include media-breakpoint-up(lg) {
-        margin-top: 0;
-        text-align: right;
+  @include media-breakpoint-up(lg) {
+    justify-content: end;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+
+    &:hover {
+      text-decoration: none;
     }
-
-    a {
-        text-decoration: underline;
-        text-decoration-style: dotted;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
+  }
 }

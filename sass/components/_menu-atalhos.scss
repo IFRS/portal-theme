@@ -1,9 +1,7 @@
 .menu-atalhos {
-  @include menu-barra();
+  @extend %menu-barra;
 
-  @include media-breakpoint-up(lg) {
-    text-align: left;
-  }
+  justify-content: end;
 
   @include media-breakpoint-down(sm) {
     display: none;

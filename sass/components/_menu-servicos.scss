@@ -17,8 +17,6 @@
         }
 
         a {
-            @include link-underline-grow();
-
             color: #FFFFFF;
 
             &:hover,
