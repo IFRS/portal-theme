@@ -6,14 +6,18 @@
  * Block Types:
  */
 
+$ID = get_the_ID();
+
+$option = get_post_meta($ID, '_page_subpages', true);
+
 $children = get_pages(
   array(
     'sort_column' => 'menu_order',
-    'parent' => get_the_ID(),
+    'parent' => $ID,
   )
 );
-$parent = wp_get_post_parent_id( get_the_ID() );
-$ancestors = get_post_ancestors( get_the_ID() );
+$parent = wp_get_post_parent_id( $ID );
+$ancestors = get_post_ancestors( $ID );
 $depth = count($ancestors);
 ?>
 
