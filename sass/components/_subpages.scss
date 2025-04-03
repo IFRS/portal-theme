@@ -2,9 +2,13 @@
   background-color: $gray-100;
   border-radius: $border-radius-sm;
   box-shadow: var(--bs-box-shadow, none);
-  float: inline-start;
+  float: inline-end;
   margin-block-start: 1rem;
-  margin-inline-end: $grid-gutter-width;
+  margin-inline-start: $grid-gutter-width;
+
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
 
   .nav-link {
     padding: 1rem;
