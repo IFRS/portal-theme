@@ -28,16 +28,8 @@
     <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
       <?php get_template_part('partials/menus/principal'); ?>
       <div class="header__principal">
-        <?php if (has_custom_logo()) : ?>
-          <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
-          <?php the_custom_logo(); ?>
-        <?php else : ?>
-          <h1 class="header__title m-0">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-              <?php bloginfo('name'); ?>
-            </a>
-          </h1>
-        <?php endif; ?>
+        <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
+        <!-- wp:template-part {"slug":"header-content","lock":{"move":true,"remove":true}} /-->
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-4">
