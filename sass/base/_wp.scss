@@ -3,6 +3,12 @@
   margin-block-start: 2rem;
 }
 
+body.home {
+  .wp-site-blocks > *:not(:first-child) {
+    margin-block-start: 4rem;
+  }
+}
+
 /* Alinhamento */
 .aligncenter {
   margin-inline: auto;
@@ -17,6 +23,13 @@
 .alignright {
   margin-inline-start: auto;
   text-align: right;
+}
+
+/* Site Logo */
+.wp-block-site-logo {
+  .custom-logo {
+    @include img-fluid;
+  }
 }
 
 /* Imagem Destaque */
