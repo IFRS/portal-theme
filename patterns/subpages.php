@@ -24,7 +24,7 @@ $depth = count($ancestors);
 <?php if (count($children) > 0) : ?>
   <ul class="nav subpages">
   <?php if ($parent) : ?>
-    <li class="nav-item border-bottom">
+    <li class="nav-item nav-item--parent">
       <a class="nav-link" href="<?php echo get_page_link($parent); ?>">
         <i class="fa-solid fa-arrow-turn-up me-1"></i>
         <?php echo get_the_title($parent); ?>

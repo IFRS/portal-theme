@@ -2,13 +2,26 @@
   background-color: $gray-100;
   border-radius: $border-radius-sm;
   box-shadow: var(--bs-box-shadow, none);
-  float: inline-end;
   margin-block-start: 1rem;
-  margin-inline-start: $grid-gutter-width;
 
-  flex-direction: column;
-  flex-wrap: nowrap;
   align-items: stretch;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    float: inline-end;
+    margin-inline-start: $grid-gutter-width;
+
+  }
+
+  .nav-item {
+    &--parent {
+      @include media-breakpoint-up(lg) {
+        border-bottom: $border-width $border-style $border-color;
+      }
+    }
+  }
 
   .nav-link {
     padding: 1rem;
