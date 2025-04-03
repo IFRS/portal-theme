@@ -1,10 +1,12 @@
 .btn-menu-toggle {
+  margin-inline-end: 0.5rem;
+
   .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: transform 400ms;
     user-select: none;
-    width: 52px;
+    width: 72px;
     height: auto;
 
     .line {
