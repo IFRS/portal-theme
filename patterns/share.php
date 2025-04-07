@@ -16,7 +16,7 @@ $emailURL = "mailto:?subject=$title&body=$URL";
 $facebookURL = "https://www.facebook.com/sharer.php?u=$URL";
 $twitterURL = "https://twitter.com/intent/tweet?text=$title&amp;url=$URL";
 $linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=$URL";
-$whatsappURL = "whatsapp://send/?text=$title%20$URL";
+$whatsappURL = "https://wa.me/?text=$title%20$URL";
 ?>
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
 <div class="wp-block-group" style="color: var(--bs-secondary);">
