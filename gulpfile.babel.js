@@ -20,21 +20,47 @@ import BundleAnalyzer     from 'webpack-bundle-analyzer'
 
 browserSync.create()
 
-const { name } = JSON.parse(readFileSync('./package.json'))
+const { name: themeSlug } = JSON.parse(readFileSync('./package.json'))
 const { src, dest, series, parallel, watch } = gulp
+
 const sassCompiler = gulpSass(dartSass)
-const argv = parseArgs(process.argv.slice(2))
+
+const knownOptions = {
+  string: [
+    'url',
+  ],
+  boolean: [
+    'production',
+    'bundleanalyzer',
+    'ui',
+  ],
+  alias: {
+    'url': 'URL',
+    'production': 'prod',
+    'bundleanalyzer': ['wpba', 'ba'],
+  },
+  default: {
+    'url': 'localhost',
+    'production': false,
+    'bundleanalyzer': false,
+    'ui': false,
+  },
+}
+const argv = parseArgs(process.argv.slice(2), knownOptions)
 
 const IS_PRODUCTION = argv.production || argv.prod
 
-const BROWSERSYNC_URL = argv.URL || argv.url || 'localhost'
+const BROWSERSYNC_URL = argv.URL || argv.url
 
 let webpack_plugins = []
 webpack_plugins.push(new NodePolyfillPlugin())
 if (argv.bundleanalyzer) webpack_plugins.push(new BundleAnalyzer.BundleAnalyzerPlugin())
 
-async function clean() {
-  return await deleteAsync(['css/', 'js/', 'dist/'])
+async function cleanBuild() {
+  return await deleteAsync(['build/**'])
+};
+async function cleanDist() {
+  return await deleteAsync(['dist/'])
 };
 
 function sass() {
@@ -54,17 +80,17 @@ function sass() {
   .pipe(sassCompiler.sync(sass_options).on('error', sassCompiler.logError))
   .pipe(postCSS(postCSS_plugins))
   .pipe(sourcemaps.write('./'))
-  .pipe(dest('css/'))
+  .pipe(dest('build/css/'))
   .pipe(browserSync.stream())
 }
 
 function datatablesCSS() {
   return src([
     'node_modules/datatables.net-bs5/css/dataTables.bootstrap5.css',
-    'css/datatables.css',
+    'build/css/datatables.css',
   ])
   .pipe(concat('datatables.css'))
-  .pipe(dest('css/'))
+  .pipe(dest('build/css/'))
 }
 
 function vendorCSS() {
@@ -72,13 +98,13 @@ function vendorCSS() {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
   ])
   .pipe(concat('vendor.css'))
-  .pipe(dest('css/'))
+  .pipe(dest('build/css/'))
 }
 
 function css() {
-  return src(['css/*.css'])
+  return src(['build/css/*.css'])
   .pipe(csso())
-  .pipe(dest('css/'))
+  .pipe(dest('build/css/'))
   .pipe(browserSync.stream())
 }
 
@@ -93,7 +119,7 @@ function bundle(done) {
       'bootstrap-blocks': './src/bootstrap-blocks.js',
     },
     output: {
-      path: path.resolve(path.dirname(''), 'js'),
+      path: path.resolve(__dirname, 'build/js'),
       filename: '[name].js',
     },
     resolve: {
@@ -136,7 +162,7 @@ function bundle(done) {
 }
 
 function js() {
-  return src(['js/*.js'])
+  return src(['build/js/*.js'])
   .pipe(babel({
     presets: [
       [
@@ -149,25 +175,51 @@ function js() {
     ]
   }))
   .pipe(uglify())
-  .pipe(dest('js/'))
+  .pipe(dest('build/js/'))
   .pipe(browserSync.stream())
+}
+
+// function dist() {
+//   return src([
+//     '**',
+//     '!.**',
+//     '!css/*.map',
+//     '!dist{,/**}',
+//     '!js/*.map',
+//     '!node_modules{,/**}',
+//     '!sass{,/**}',
+//     '!src{,/**}',
+//     '!gulpfile.js',
+//     '!package.json',
+//     '!package-lock.json'
+//   ])
+//   .pipe(dest('dist/' + themeSlug))
+// }
+
+function buildCopy() {
+  return src([
+    'theme/**/*',
+    'favicons{,/**}',
+    'fonts{,/**}',
+    'img{,/**}',
+    '!.**',
+    // '!node_modules{,/**}',
+    // '!sass{,/**}',
+    // '!src{,/**}',
+    // '!gulpfile.js',
+    // '!package.json',
+    // '!package-lock.json'
+  ], { encoding: false })
+  .pipe(dest('build/'))
 }
 
 function dist() {
   return src([
-    '**',
-    '!.**',
-    '!css/*.map',
-    '!dist{,/**}',
-    '!js/*.map',
-    '!node_modules{,/**}',
-    '!sass{,/**}',
-    '!src{,/**}',
-    '!gulpfile.js',
-    '!package.json',
-    '!package-lock.json'
-  ])
-  .pipe(dest('dist/' + name))
+    'build/**/*',
+    '!build/css/*.map',
+    '!build/js/*.map',
+  ], { encoding: false })
+  .pipe(dest('dist/' + themeSlug))
 }
 
 function serve() {
@@ -185,14 +237,18 @@ function serve() {
 
   watch('src/**/*.js', bundle)
 
-  watch('**/*.php').on('change', browserSync.reload)
+  watch('theme/**/*', buildCopy)
+
+  watch('build/**/*').on('change', browserSync.reload)
 }
+
+const clean = parallel(cleanBuild, cleanDist);
 
 const styles = series(sass, datatablesCSS, vendorCSS, css);
 
 const scripts = series(bundle, js);
 
-const build = IS_PRODUCTION ? series(clean, parallel(styles, scripts), dist) : series(clean, parallel(series(sass, datatablesCSS, vendorCSS), bundle));
+const build = IS_PRODUCTION ? series(clean, parallel(styles, scripts), buildCopy, dist, cleanBuild) : series(clean, parallel(series(sass, datatablesCSS, vendorCSS), bundle, buildCopy));
 
 export { clean, sass, bundle, styles, scripts, build };
 
