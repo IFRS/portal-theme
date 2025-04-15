@@ -7,18 +7,20 @@
   align-items: stretch;
 
   @include media-breakpoint-up(lg) {
-    flex-direction: column;
-    flex-wrap: nowrap;
+    &:has(+ .wp-block-post-content) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      float: inline-end;
+      margin-inline-start: $grid-gutter-width;
+      max-width: 20%;
+      position: sticky;
+      top: 0.5rem; right: 0;
+      z-index: 1;
 
-    float: inline-end;
-    margin-inline-start: $grid-gutter-width;
-
-  }
-
-  .nav-item {
-    &--parent {
-      @include media-breakpoint-up(lg) {
-        border-bottom: $border-width $border-style $border-color;
+      .nav-item {
+        &--parent {
+          border-bottom: $border-width $border-style $border-color;
+        }
       }
     }
   }
