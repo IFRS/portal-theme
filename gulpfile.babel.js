@@ -179,23 +179,6 @@ function js() {
   .pipe(browserSync.stream())
 }
 
-// function dist() {
-//   return src([
-//     '**',
-//     '!.**',
-//     '!css/*.map',
-//     '!dist{,/**}',
-//     '!js/*.map',
-//     '!node_modules{,/**}',
-//     '!sass{,/**}',
-//     '!src{,/**}',
-//     '!gulpfile.js',
-//     '!package.json',
-//     '!package-lock.json'
-//   ])
-//   .pipe(dest('dist/' + themeSlug))
-// }
-
 function buildCopy() {
   return src([
     'theme/**/*',
@@ -203,12 +186,6 @@ function buildCopy() {
     'fonts{,/**}',
     'img{,/**}',
     '!.**',
-    // '!node_modules{,/**}',
-    // '!sass{,/**}',
-    // '!src{,/**}',
-    // '!gulpfile.js',
-    // '!package.json',
-    // '!package-lock.json'
   ], { encoding: false })
   .pipe(dest('build/'))
 }
@@ -237,7 +214,18 @@ function serve() {
 
   watch('src/**/*.js', bundle)
 
-  watch('theme/**/*', buildCopy)
+  watch('theme/**/*').on('change', function(file) {
+    src(file, { base: 'theme' }).pipe(dest('build/')).pipe(browserSync.stream());
+  })
+  watch('favicons/**/*').on('change', function(file) {
+    src(file, { base: '.' }).pipe(dest('build/')).pipe(browserSync.stream());
+  })
+  watch('fonts/**/*').on('change', function(file) {
+    src(file, { base: '.' }).pipe(dest('build/')).pipe(browserSync.stream());
+  })
+  watch('img/**/*').on('change', function(file) {
+    src(file, { base: '.' }).pipe(dest('build/')).pipe(browserSync.stream());
+  })
 
   watch('build/**/*').on('change', browserSync.reload)
 }
