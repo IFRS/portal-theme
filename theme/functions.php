@@ -29,9 +29,6 @@ require_once get_parent_theme_file_path('inc/seo.php');
 // Limita o número de níveis na construção dos menus e de aninhamento das páginas
 require_once get_parent_theme_file_path('inc/depth-limit.php');
 
-// Desabilita a geração de links para páginas de anexo
-require_once get_parent_theme_file_path('inc/disable-attachment-link.php');
-
 // Preconnect, Prefetch, Preload, etc...
 require_once get_parent_theme_file_path('inc/resource-hints.php');
 
@@ -57,7 +54,7 @@ require_once get_parent_theme_file_path('inc/responsive-youtube-embed.php');
 require_once get_parent_theme_file_path('inc/tables.php');
 
 // Metaboxes
-require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
+// require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
 
 // Taxonomias
 require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
