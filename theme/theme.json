@@ -1,6 +1,15 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
+  "customTemplates": [
+    {
+      "name": "page_feature-image-as-header",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Imagem Destacada como Cabeçalho"
+    }
+  ],
   "templateParts": [
     {
       "area": "header",
