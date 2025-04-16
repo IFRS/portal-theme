@@ -15,7 +15,7 @@ const menuItemResizeObserver = new ResizeObserver((entries) => {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-  const cabecalho = document.querySelector('header')
+  const cabecalho = document.querySelector('header > .container')
 
   const menuPrincipalNav = document.querySelector('.menu-principal-collapse')
 
@@ -38,13 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuItems = menuPrincipal.querySelectorAll('.menu-item-has-children')
 
-  // const submenus = menuPrincipal.querySelectorAll('.sub-menu')
-
   menuItems.forEach(menuItem => {
     menuItemResizeObserver.observe(menuItem)
     menuItem.append(...icon.node)
     menuItem.addEventListener('click', e => {
-      if (e.target.tagName === 'A') return true
+      if (!e.target.classList.contains('menu-item-has-children') && !e.target.parentElement.classList.contains('menu-item-has-children')) return true
 
       e.preventDefault()
       e.stopPropagation()
