@@ -1,13 +1,15 @@
 <?php
-register_nav_menus(
+add_action( 'after_setup_theme', function() {
+  register_nav_menus(
     array(
-        'acessibilidade' => __('Barra de Acessibilidade', 'ifrs-portal-theme'),
-        'servicos'       => __('Barra de Serviços', 'ifrs-portal-theme'),
-        'campi'          => __('Lista de Campi', 'ifrs-portal-theme'),
-        // 'relevancia'     => __('Menu de Relevância', 'ifrs-portal-theme'),
-        'principal'      => __('Menu Principal', 'ifrs-portal-theme')
+      'acessibilidade' => __('Barra de Acessibilidade', 'ifrs-portal-theme'),
+      'servicos'       => __('Barra de Serviços', 'ifrs-portal-theme'),
+      'campi'          => __('Lista de Campi', 'ifrs-portal-theme'),
+      // 'relevancia'     => __('Menu de Relevância', 'ifrs-portal-theme'),
+      'principal'      => __('Menu Principal', 'ifrs-portal-theme')
     )
-);
+  ) ;
+} );
 
 // add_filter('nav_menu_submenu_css_class', function( $classes, $args, $depth ) {
 //   if ($depth > 0) {
