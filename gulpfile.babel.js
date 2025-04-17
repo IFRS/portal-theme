@@ -9,6 +9,7 @@ import csso               from 'gulp-csso'
 import * as dartSass      from 'sass-embedded'
 import gulpSass           from 'gulp-sass'
 import autoprefixer       from 'autoprefixer'
+import postcssPresetEnv   from 'postcss-preset-env'
 import path               from 'path'
 import pluginError        from 'plugin-error'
 import postCSS            from 'gulp-postcss'
@@ -65,6 +66,7 @@ async function cleanDist() {
 
 function sass() {
   const postCSS_plugins = [
+    postcssPresetEnv({ autoprefixer: false }),
     autoprefixer,
   ]
 
