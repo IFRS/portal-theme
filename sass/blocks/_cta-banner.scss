@@ -12,7 +12,7 @@
   }
 
   .wp-block-cover__inner-container {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     transition: $transition;
@@ -23,11 +23,14 @@
       opacity: 0;
     }
 
-    a {
-      @extend .stretched-link;
+    * {
       color: inherit;
       font-size: inherit;
       font-weight: inherit;
+    }
+
+    a {
+      @extend .stretched-link;
       text-decoration: none;
     }
   }
