@@ -116,7 +116,8 @@
     }
   }
 
-  > .menu-item-has-children,
+  > .menu-item,
+  .menu-item-has-children,
   .sub-menu {
     width: max(var(--menu-column-width, 0), 300px);
   }
