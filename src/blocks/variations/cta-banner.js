@@ -10,10 +10,8 @@ window.wp.domReady( () => {
       className: 'portal-cta-banner',
       contentPosition: 'bottom center',
       dimRatio: 50,
-      // minHeight: 50,
-      // minHeightUnit: 'dvh',
       isUserOverlayColor: true,
-      overlayColor: 'dark',
+      gradient:'primary-vertical',
       style: {
         shadow: 'var:preset|shadow|normal',
       },
