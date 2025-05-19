@@ -1,13 +1,13 @@
 header {
   .row:not(:last-of-type) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
 .header {
   &__govbr {
     @include img-fluid();
-    width: 120px;
+    width: 100px;
   }
 
   &__principal {

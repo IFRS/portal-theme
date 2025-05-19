@@ -9,10 +9,14 @@
   }
 
   a {
+    border-radius: $btn-border-radius-lg;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
     text-decoration: underline;
     text-decoration-style: dotted;
 
     &:hover {
+      background-color: var(--bs-primary-bg-subtle);
+      color: var(--bs-primary-text-emphasis);
       text-decoration: none;
     }
   }
