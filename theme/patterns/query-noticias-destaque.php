@@ -1,15 +1,15 @@
 <?php
 /**
- * Title: Notícias
- * Slug: core/query-noticias
+ * Title: Notícias Destaque
+ * Slug: core/query-noticias-destaque
  * Categories: query
  * Block Types: core/query
  */
 ?>
 
-<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":3}} -->
-<div class="wp-block-query">
-  <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:query {"query":{"perPage":2,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"only","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":2},"className":"noticias-destaque"} -->
+<div class="wp-block-query noticias-destaque">
+  <!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
     <!-- wp:group {"layout":{"inherit":false}} -->
     <div class="wp-block-group">
       <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
