@@ -2,6 +2,10 @@
   margin-inline-start: -18px; // TODO: remover ao achar SVG para menu hamburguer sem bleeding edge
   margin-inline-end: 0.5rem;
 
+  &:hover {
+    background-color: var(--bs-primary-bg-subtle, transparent);
+  }
+
   .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
