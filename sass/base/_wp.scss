@@ -32,6 +32,13 @@ body.home {
   }
 }
 
+/* Botões */
+.wp-block-button {
+  .wp-block-button__link {
+    text-decoration: none;
+  }
+}
+
 /* Imagem Destaque */
 .wp-block-post-featured-image {
   @include img-fluid;
