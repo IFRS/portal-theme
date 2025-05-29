@@ -190,6 +190,34 @@
       }
     },
     "blocks": {
+      "core/search": {
+        "css": " .wp-block-search__inside-wrapper { border-radius: var(--bs-border-radius, 0); }",
+        "elements": {
+          "button": {
+            "spacing": {
+              "padding": {
+                "top": "calc(0.667em + 2px)",
+                "bottom": "calc(0.667em + 2px)",
+                "left": "calc(0.667em + 2px)",
+                "right": "calc(0.667em + 2px)"
+              }
+            },
+            "border": {
+              "radius": "var(--bs-border-radius-pill, 0)"
+            },
+            "color": {
+              "background": "transparent",
+              "text": "var(--bs-primary)"
+            },
+            ":hover": {
+              "color": {
+                "background": "var(--bs-primary-bg-subtle)",
+                "text": "var(--bs-primary-emphasis)"
+              }
+            }
+          }
+        }
+      },
       "core/button": {
         "color": {
           "background": "var(--bs-primary)",

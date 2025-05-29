@@ -1,4 +1,4 @@
-<button class="btn btn-link p-0 mt-1 btn-menu-toggle" data-bs-toggle="collapse" data-bs-target="#portal-menu-principal" aria-expanded="false" aria-controls="portal-menu-principal" aria-label="Alternar Menu">
+<button id="portal-menu-principal-toggle" class="btn btn-link p-0 mt-1 btn-menu-toggle" data-bs-toggle="collapse" data-bs-target="#portal-menu-principal" aria-expanded="false" aria-controls="portal-menu-principal" aria-label="Alternar Menu">
   <svg class="ham hamRotate" viewBox="0 0 100 100">
     <path
       class="line top"
