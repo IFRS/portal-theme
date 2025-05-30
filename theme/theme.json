@@ -191,7 +191,6 @@
     },
     "blocks": {
       "core/search": {
-        "css": " .wp-block-search__inside-wrapper { border-radius: var(--bs-border-radius, 0); }",
         "elements": {
           "button": {
             "spacing": {
