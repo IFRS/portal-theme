@@ -66,7 +66,7 @@ async function cleanDist() {
 
 function sass() {
   const postCSS_plugins = [
-    postcssPresetEnv({ autoprefixer: false }),
+    // postcssPresetEnv({ autoprefixer: true }),
     autoprefixer,
   ]
 
@@ -79,7 +79,7 @@ function sass() {
 
   return src('sass/*.scss')
   .pipe(sourcemaps.init())
-  .pipe(sassCompiler.sync(sass_options).on('error', sassCompiler.logError))
+  .pipe(sassCompiler(sass_options).on('error', sassCompiler.logError))
   .pipe(postCSS(postCSS_plugins))
   .pipe(sourcemaps.write('./'))
   .pipe(dest('build/css/'))
