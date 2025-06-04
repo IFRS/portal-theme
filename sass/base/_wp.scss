@@ -3,14 +3,13 @@
   margin-block-start: 2rem;
 }
 
-:root .is-layout-flow > * {
-  margin-block-start: 3rem;
-  margin-block-end: 0;
-}
-
 body.home {
   .wp-site-blocks > *:not(:first-child) {
     margin-block-start: 4rem;
+  }
+
+  .wp-block-post-content-is-layout-flow > * {
+    margin-block-start: 3rem;
   }
 }
 
