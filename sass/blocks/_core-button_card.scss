@@ -16,14 +16,14 @@
       background-color: $gray-200;
       border-radius: $border-radius;
       box-shadow: var(--bs-box-shadow-sm, none);
-      color: $cor-rodape;
+      color: var(--bs-primary-text-emphasis);
       font-size: $font-size-lg;
       font-weight: 500;
       text-decoration: none;
+      transition: $transition-base;
 
       &:hover {
-        background-color: tint-color($cor-rodape, 80%);
-        color: $cor-rodape;
+        background-color: var(--bs-primary-bg-subtle);
       }
     }
   }
