@@ -27,8 +27,6 @@
   }
 
   &::after {
-    // @include icon-chevron('right');
-
     content: '';
     background-color: $cor;
     background-position: center center;
