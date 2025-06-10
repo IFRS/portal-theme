@@ -218,6 +218,17 @@
         }
       },
       "core/button": {
+        "variations": {
+          "outline": {
+            "color": {
+              "background": "transparent",
+              "text": "var(--bs-primary-emphasis)"
+            },
+            "border": {
+              "color": "var(--bs-primary)"
+            }
+          }
+        },
         "color": {
           "background": "var(--bs-primary)",
           "text": "var(--bs-white)"
