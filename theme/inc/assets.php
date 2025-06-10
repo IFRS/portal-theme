@@ -22,11 +22,6 @@ add_action('wp_enqueue_scripts', function() {
   /* wp_register_style( $handle, $src, $deps, $ver, $media ); */
   /* wp_enqueue_style( $handle[, $src, $deps, $ver, $media] ); */
 
-  // if (!is_admin()) {
-  //   wp_dequeue_style( 'wp-block-library' );
-  //   wp_deregister_style( 'wp-block-library' );
-  // }
-
   wp_enqueue_style('vendor', get_template_directory_uri(). '/css/vendor.css', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/vendor.css'), 'all');
 
   wp_enqueue_style('portal', get_template_directory_uri(). '/css/portal.css', array('vendor'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/portal.css'), 'all');
@@ -41,6 +36,7 @@ add_action('wp_enqueue_scripts', function() {
   wp_register_style('documentos', get_template_directory_uri(). '/css/page_documentos.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_documentos.css'), 'all');
   wp_register_style('editais', get_template_directory_uri(). '/css/page_editais.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_editais.css'), 'all');
   wp_register_style('cursos', get_template_directory_uri(). '/css/page_cursos.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/page_cursos.css'), 'all');
+  wp_register_style('cursos-estude', get_template_directory_uri(). '/css/plugin_cursos-estude.css', array('portal'), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/plugin_cursos-estude.css'), 'all');
 
   /**
    * Scripts
@@ -135,6 +131,10 @@ add_action('wp_enqueue_scripts', function() {
   ) {
     wp_enqueue_style('datatables', get_template_directory_uri(). '/css/datatables.css', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/datatables.css'), 'all');
     wp_enqueue_script('datatables', get_template_directory_uri(). '/js/datatables.js', array('commons'), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.js'), true);
+  }
+
+  if (is_plugin_active( 'ifrs-portal-plugin-cursos-estude/portal-plugin-cursos-estude.php' )) {
+    wp_enqueue_style( 'cursos-estude' );
   }
 }, 1);
 
