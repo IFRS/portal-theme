@@ -7,6 +7,10 @@
   aspect-ratio: 4/5 !important; // Mesmo formato do Instagram
   max-width: 100%;
 
+  &:focus-within {
+    outline: auto;
+  }
+
   .wp-block-cover__image-background {
     transition: $transition;
   }
