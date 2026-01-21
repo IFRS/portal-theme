@@ -1,23 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
-  "customTemplates": [
-    {
-      "name": "page_feature-image-as-header",
-      "postTypes": [
-        "page"
-      ],
-      "title": "Imagem Destacada como Cabeçalho"
-    }
-  ],
   "templateParts": [
     {
       "area": "header",
-      "name": "header",
-      "title": "Cabeçalho do Site"
-    },
-    {
-      "area": "uncategorized",
       "name": "header-content",
       "title": "Conteúdo do Cabeçalho"
     },
@@ -33,11 +19,11 @@
     },
     {
       "area": "footer",
-      "name": "footer",
-      "title": "Rodapé do Site"
+      "name": "social",
+      "title": "Redes Sociais"
     },
     {
-      "area": "uncategorized",
+      "area": "footer",
       "name": "footer-content",
       "title": "Conteúdo do Rodapé"
     }

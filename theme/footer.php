@@ -1,11 +1,8 @@
-<?php
-/**
- * Title: Rodapé Padrão do Site
- * Slug: ifrs/site-footer
- * Categories: footer
- * Block Types: core/template-part/footer
- */
-?>
+<a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden">Fim do conte&uacute;do</a>
+
+<!-- wp:template-part {"slug":"prefooter","theme":"ifrs-portal-theme","area":"prefooter","lock":{"move":true,"remove":true}} /-->
+
+<?php if (has_nav_menu( 'campi' )) get_template_part('partials/menus/campi'); ?>
 
 <!-- Rodapé -->
 <a href="#inicio-rodape" id="inicio-rodape" class="visually-hidden">In&iacute;cio do rodap&eacute;</a>
@@ -17,19 +14,7 @@
     <div class="row align-items-center py-4">
       <!-- Redes Sociais -->
       <div class="col-12 col-sm-6">
-        <!-- wp:social-links {"openInNewTab":true} -->
-        <ul class="wp-block-social-links">
-          <!-- wp:social-link {"url":"https://www.facebook.com/IFRSOficial","service":"facebook"} /-->
-
-          <!-- wp:social-link {"url":"https://www.instagram.com/IFRSOficial","service":"instagram"} /-->
-
-          <!-- wp:social-link {"url":"https://twitter.com/IFRSOficial","service":"x"} /-->
-
-          <!-- wp:social-link {"url":"https://www.youtube.com/IFRSOficial","service":"youtube"} /-->
-
-          <!-- wp:social-link {"url":"https://www.linkedin.com/school/ifrs","service":"linkedin"} /-->
-        </ul>
-        <!-- /wp:social-links -->
+        <?php echo block_template_part( 'social' ); ?>
       </div>
       <!-- Acesso à Informação -->
       <div class="col-12 col-sm-6">
@@ -60,3 +45,8 @@
 </section>
 
 <a href="#fim-rodape" id="fim-rodape" class="visually-hidden">Fim do rodap&eacute;</a>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

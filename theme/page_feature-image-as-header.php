@@ -1,12 +1,19 @@
-<!-- wp:template-part {"slug":"header","theme":"ifrs-portal-theme","area":"header","lock":{"move":true,"remove":true}} /-->
+<?php
+/**
+* Template Name: Imagem Destacada como Cabeçalho
+* Template Post Type: page
+*/
+?>
+<?php get_header(); ?>
 
 <main class="container-lg">
+  <?php ob_start(); ?>
 
-  <!-- wp:post-title /-->
+  <!-- wp:post-featured-image {"align":"center","className":"overflow-image"} /-->
+
+  <!-- wp:post-title {"className":"screen-reader-text"} /-->
 
   <!-- wp:pattern {"slug":"ifrs/subpages"} /-->
-
-  <!-- wp:post-featured-image {"width":"100%","align":"center"} /-->
 
   <!-- wp:post-content /-->
 
@@ -23,6 +30,8 @@
     <!-- wp:pattern {"slug":"ifrs/share"} /-->
   </div>
   <!-- /wp:group -->
+
+  <?php echo do_blocks(ob_get_clean()); ?>
 </main>
 
-<!-- wp:template-part {"slug":"footer","theme":"ifrs-portal-theme","area":"footer","lock":{"move":true,"remove":true}} /-->
+<?php get_footer(); ?>

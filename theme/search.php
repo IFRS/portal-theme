@@ -1,6 +1,8 @@
-<!-- wp:template-part {"slug":"header","theme":"ifrs-portal-theme","area":"header","lock":{"move":true,"remove":true}} /-->
+<?php get_header(); ?>
 
 <main class="container">
+  <?php ob_start(); ?>
+
   <!-- wp:query-title {"type":"search","level":2,"className":"mb-4"} /-->
 
   <!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"parents":[],"format":[]}} -->
@@ -30,6 +32,8 @@
     <!-- /wp:query-no-results -->
   </div>
   <!-- /wp:query -->
+
+  <?php echo do_blocks(ob_get_clean()); ?>
 </main>
 
-<!-- wp:template-part {"slug":"footer","theme":"ifrs-portal-theme","area":"footer","lock":{"move":true,"remove":true}} /-->
+<?php get_footer(); ?>

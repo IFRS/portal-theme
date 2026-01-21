@@ -1,11 +1,15 @@
-<!-- wp:template-part {"slug":"header","theme":"ifrs-portal-theme","area":"header","lock":{"move":true,"remove":true}} /-->
+<?php get_header(); ?>
 
 <main class="container">
+  <?php ob_start(); ?>
+
   <!-- wp:heading {"className":"mb-4"} -->
   <h2 class="wp-block-heading mb-4">Todas as Not&iacute;cias</h2>
   <!-- /wp:heading -->
 
   <!-- wp:template-part {"slug":"noticias","lock":{"move":true,"remove":true}} /-->
+
+  <?php echo do_blocks(ob_get_clean()); ?>
 </main>
 
-<!-- wp:template-part {"slug":"footer","theme":"ifrs-portal-theme","area":"footer","lock":{"move":true,"remove":true}} /-->
+<?php get_footer(); ?>

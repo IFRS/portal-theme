@@ -1,6 +1,8 @@
-<!-- wp:template-part {"slug":"header","theme":"ifrs-portal-theme","area":"header","lock":{"move":true,"remove":true}} /-->
+<?php get_header(); ?>
 
 <main class="container">
+  <?php ob_start(); ?>
+
   <!-- wp:post-terms {"term":"category"} /-->
 
   <!-- wp:post-title /-->
@@ -26,6 +28,8 @@
   <!-- wp:post-content /-->
 
   <!-- wp:post-terms {"term":"post_tag","prefix":"\u003cstrong\u003ePalavras-chave:\u003c/strong\u003e ","className":"mt-5","style":{"typography":{"textTransform":"capitalize"}}} /-->
+
+  <?php echo do_blocks(ob_get_clean()); ?>
 </main>
 
-<!-- wp:template-part {"slug":"footer","theme":"ifrs-portal-theme","area":"footer","lock":{"move":true,"remove":true}} /-->
+<?php get_footer(); ?>
