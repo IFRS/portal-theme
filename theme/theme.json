@@ -3,7 +3,7 @@
   "version": 3,
   "templateParts": [
     {
-      "area": "header",
+      "area": "uncategorized",
       "name": "header-content",
       "title": "Conteúdo do Cabeçalho"
     },
@@ -13,17 +13,17 @@
       "title": "Lista de Notícias"
     },
     {
-      "area": "prefooter",
+      "area": "uncategorized",
       "name": "prefooter",
       "title": "Pré-Rodapé"
     },
     {
-      "area": "footer",
+      "area": "uncategorized",
       "name": "social",
       "title": "Redes Sociais"
     },
     {
-      "area": "footer",
+      "area": "uncategorized",
       "name": "footer-content",
       "title": "Conteúdo do Rodapé"
     }
