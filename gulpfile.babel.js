@@ -212,24 +212,80 @@ function serve() {
     proxy: BROWSERSYNC_URL,
   })
 
+  // Watch SASS files
   watch('sass/**/*.scss', sass)
 
+  // Watch JavaScript source files
   watch('src/**/*.js', bundle)
 
-  watch('theme/**/*').on('change', function(file) {
-    src(file, { base: 'theme' }).pipe(dest('build/')).pipe(browserSync.stream());
-  })
-  watch('favicons/**/*').on('change', function(file) {
-    src(file, { base: '.' }).pipe(dest('build/')).pipe(browserSync.stream());
-  })
-  watch('fonts/**/*').on('change', function(file) {
-    src(file, { base: '.' }).pipe(dest('build/')).pipe(browserSync.stream());
-  })
-  watch('img/**/*').on('change', function(file) {
-    src(file, { base: '.' }).pipe(dest('build/')).pipe(browserSync.stream());
-  })
+  // Watch theme files (hot reload)
+  watch('theme/**/*')
+    .on('change', function(file) {
+      return src(file, { base: 'theme' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('add', function(file) {
+      return src(file, { base: 'theme' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('unlink', function(file) {
+      const buildFile = file.replace(/^theme\//, 'build/')
+      deleteAsync([buildFile])
+    })
 
-  watch('build/**/*').on('change', browserSync.reload)
+  // Watch favicons
+  watch('favicons/**/*')
+    .on('change', function(file) {
+      return src(file, { base: '.' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('add', function(file) {
+      return src(file, { base: '.' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('unlink', function(file) {
+      deleteAsync([`build/${file}`])
+    })
+
+  // Watch fonts
+  watch('fonts/**/*')
+    .on('change', function(file) {
+      return src(file, { base: '.' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('add', function(file) {
+      return src(file, { base: '.' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('unlink', function(file) {
+      deleteAsync([`build/${file}`])
+    })
+
+  // Watch images
+  watch('img/**/*')
+    .on('change', function(file) {
+      return src(file, { base: '.' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('add', function(file) {
+      return src(file, { base: '.' })
+        .pipe(dest('build/'))
+        .pipe(browserSync.stream())
+    })
+    .on('unlink', function(file) {
+      deleteAsync([`build/${file}`])
+    })
+
+  // Watch build directory
+  watch('build/**/*', { ignoreInitial: true, delay: 500 })
+    .on('change', browserSync.reload)
 }
 
 const clean = parallel(cleanBuild, cleanDist);
