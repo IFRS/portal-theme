@@ -313,7 +313,8 @@
       "core/post-content": {
         "spacing": {
           "margin": {
-            "top": "2rem"
+            "top": "2rem",
+            "bottom": "2rem"
           }
         }
       },
