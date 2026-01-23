@@ -64,3 +64,6 @@ require_once get_parent_theme_file_path('inc/template-parts-areas.php');
 
 // VLIBRAS
 require_once get_parent_theme_file_path( 'inc/vlibras.php' );
+
+// Plugin Documentos IFRS
+require_once get_parent_theme_file_path('inc/documentos.php');
