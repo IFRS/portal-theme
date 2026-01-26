@@ -130,7 +130,7 @@ add_action('wp_enqueue_scripts', function() {
     is_singular('edital')
   ) {
     wp_enqueue_style('datatables', get_template_directory_uri(). '/css/datatables.css', array(), WP_DEBUG ? null : filemtime(get_template_directory() . '/css/datatables.css'), 'all');
-    wp_enqueue_script('datatables', get_template_directory_uri(). '/js/datatables.js', array_merge($commons_deps, array()), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.js'), true);
+    wp_enqueue_script('datatables', get_template_directory_uri(). '/js/datatables.js', array_merge($commons_deps, array('jquery')), WP_DEBUG ? null : filemtime(get_template_directory() . '/js/datatables.js'), true);
   }
 
   if (is_plugin_active( 'ifrs-portal-plugin-cursos-estude/portal-plugin-cursos-estude.php' )) {
