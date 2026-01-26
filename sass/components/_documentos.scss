@@ -1,17 +1,9 @@
 .documentos {
-    &__title {
-        @include title-box($cor-documentos, '../img/bg-documentos.png');
-    }
+  a {
+    color: $cor-documentos;
+  }
 
-    &__table {
-        a {
-            color: $cor-documentos;
-        }
-    }
-
-    .filter {
-        button {
-            color: $cor-documentos;
-        }
-    }
+  .wp-block-query-title {
+    color: $cor-documentos;
+  }
 }

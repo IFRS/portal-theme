@@ -5,6 +5,10 @@
 
   .wp-block-post-title {
     color: $cor-documentos;
+
+    small {
+      font-weight: 500;
+    }
   }
 
   &__meta {
