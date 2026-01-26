@@ -1,4 +1,14 @@
 <?php
+// Archive
+add_action('ifrs_documentos_before_archive', function() {
+  echo '<main class="container-lg">';
+});
+
+add_action('ifrs_documentos_after_archive', function() {
+  echo '</main>';
+});
+
+// Single
 add_action('ifrs_documentos_before_single', function() {
   echo '<main class="container-lg">';
 });
