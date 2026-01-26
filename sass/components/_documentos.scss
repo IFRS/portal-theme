@@ -6,4 +6,38 @@
   .wp-block-query-title {
     color: $cor-documentos;
   }
+
+  .filter {
+    &:has(details[open]) {
+      background: $gray-100;
+    }
+
+    details {
+      summary {
+        list-style: none; // remove marker padrão
+        &::marker { content: none; }
+        &::-webkit-details-marker { display: none; }
+
+        // position: relative;
+        padding-left: 0.25rem;
+
+        // marker customizado (SVG do Font Awesome Free)
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 0.9rem; height: 0.9rem;
+          margin-right: 0.25rem;
+          background: no-repeat center / contain
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor'%3E%3Cpath d='M96 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L210.8 256L73.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C112.4 444.9 104.2 448 96 448z'/%3E%3C/svg%3E");
+          color: $cor-documentos; // usa currentColor no SVG
+          transition: transform 0.2s ease;
+        }
+      }
+
+      // rotaciona no estado aberto
+      &[open] summary::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
