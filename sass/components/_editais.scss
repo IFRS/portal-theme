@@ -1,17 +1,13 @@
 .editais {
-    &__title {
-        @include title-box($cor-editais, '../img/bg-editais.png');
-    }
+  a {
+    color: $cor-editais;
+  }
 
-    &__table {
-        a {
-            color: $cor-editais;
-        }
-    }
+  .wp-block-query-title {
+    color: $cor-editais;
+  }
 
-    .filter {
-        button {
-            color: $cor-editais;
-        }
-    }
+  &__filter {
+    @include filtro($cor-editais);
+  }
 }
