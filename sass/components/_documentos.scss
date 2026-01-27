@@ -18,34 +18,39 @@
 
     details {
       summary {
-        list-style: none; // remove marker padrão
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        list-style: none;
         &::marker { content: none; }
         &::-webkit-details-marker { display: none; }
 
         color: $cor-documentos;
         font-weight: 500;
-        padding: $grid-gutter-width / 4;
+        padding: ($grid-gutter-width / 4) ($grid-gutter-width / 2);
 
-        // marker customizado (SVG do Font Awesome Free)
-        &::before {
+        &:hover {
+          background-color: $gray-100;
+        }
+
+        &::after {
           content: '';
-          display: inline-block;
+          display: block;
           width: 0.9rem; height: 0.9rem;
-          margin-right: $grid-gutter-width / 4;
+          margin-left: auto;
           background: no-repeat center / contain
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor'%3E%3Cpath d='M96 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L210.8 256L73.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C112.4 444.9 104.2 448 96 448z'/%3E%3C/svg%3E");
-          color: $cor-documentos; // usa currentColor no SVG
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'%3E%3C!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath d='M297.4 470.6C309.9 483.1 330.2 483.1 342.7 470.6L534.7 278.6C547.2 266.1 547.2 245.8 534.7 233.3C522.2 220.8 501.9 220.8 489.4 233.3L320 402.7L150.6 233.4C138.1 220.9 117.8 220.9 105.3 233.4C92.8 245.9 92.8 266.2 105.3 278.7L297.3 470.7z'/%3E%3C/svg%3E");
+          color: $cor-documentos;
           transition: transform 0.2s ease;
         }
       }
 
-      // rotaciona no estado aberto
       &[open] summary {
         color: $body-color;
         font-weight: normal;
 
-        &::before {
-          transform: rotate(90deg);
+        &::after {
+          transform: rotate(180deg);
         }
       }
     }
@@ -60,10 +65,6 @@
 
       fieldset + fieldset {
         margin-top: 0.75rem;
-      }
-
-      .btn-group {
-        margin-top: 1rem;
       }
     }
   }
