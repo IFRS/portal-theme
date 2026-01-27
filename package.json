@@ -16,6 +16,7 @@
     "datatables.net": "^2.2.2",
     "datatables.net-bs5": "^2.2.2",
     "datatables.net-plugins": "^2.2.1",
+    "datatables.net-responsive": "^3.0.7",
     "del": "^8.0.0",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",

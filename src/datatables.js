@@ -1,4 +1,5 @@
 import 'datatables.net-bs5'
+import 'datatables.net-responsive'
 import 'datatables.net-plugins/sorting/datetime-moment.js'
 import moment from 'moment'
 import 'moment/locale/pt-br.js'
@@ -17,6 +18,7 @@ jQuery(function($) {
       pageLength: 10,
       info:       true,
       bAutoWidth: false,
+      responsive: true,
       language: {
         "sEmptyTable":     "Nenhum Documento encontrado",
         "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Documentos",
@@ -49,6 +51,7 @@ jQuery(function($) {
       pageLength: 10,
       info:       true,
       bAutoWidth: false,
+      responsive: true,
       language: {
         "sEmptyTable":     "Nenhum Edital encontrado",
         "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ Editais",
@@ -80,6 +83,7 @@ jQuery(function($) {
       paging:     false,
       info:       false,
       bAutoWidth: false,
+      responsive: true,
       language: {
         "sEmptyTable":     "Nenhum arquivo encontrado",
         "sInfo":           "Mostrando de _START_ até _END_ de _TOTAL_ arquivos",
