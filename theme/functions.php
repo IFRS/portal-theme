@@ -60,7 +60,7 @@ require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
 require_once get_parent_theme_file_path('inc/template-parts-areas.php');
 
 // VLIBRAS
-require_once get_parent_theme_file_path( 'inc/vlibras.php' );
+require_once get_parent_theme_file_path('inc/vlibras.php');
 
-// Plugin Documentos IFRS
-require_once get_parent_theme_file_path('inc/documentos.php');
+// Plugin Hooks
+require_once get_parent_theme_file_path('inc/plugins-hooks.php');
