@@ -1,4 +1,3 @@
-// import 'datatables.net'
 import 'datatables.net-bs5'
 import 'datatables.net-plugins/sorting/datetime-moment.js'
 import moment from 'moment'
@@ -11,7 +10,7 @@ jQuery(function($) {
     $.fn.dataTable.moment( 'L LT', 'pt-br' )
     $.fn.dataTable.moment( 'L', 'pt-br' )
 
-    $('.documentos__table > table').DataTable({
+    $('.documentos__table').DataTable({
       order:      [[0, 'desc'], [2, 'desc']],
       searching:  true,
       paging:     true,
@@ -31,10 +30,10 @@ jQuery(function($) {
         "sZeroRecords":    "Nenhum Documento encontrado",
         "sSearch":         "Buscar:",
         "oPaginate": {
-          "sNext":     "Próximo",
-          "sPrevious": "Anterior",
-          "sFirst":    "Primeiro",
-          "sLast":     "Último"
+          "sNext":     "&#12297;",
+          "sPrevious": "&#12296;",
+          "sFirst":    "&#12298;",
+          "sLast":     "&#12299;"
         },
         "oAria": {
           "sSortAscending":  ": Ordenar colunas de forma ascendente",
@@ -63,10 +62,10 @@ jQuery(function($) {
         "sZeroRecords":    "Nenhum Edital encontrado",
         "sSearch":         "Buscar:",
         "oPaginate": {
-          "sNext":     "Próximo",
-          "sPrevious": "Anterior",
-          "sFirst":    "Primeiro",
-          "sLast":     "Último"
+          "sNext":     "&#12297;",
+          "sPrevious": "&#12296;",
+          "sFirst":    "&#12298;",
+          "sLast":     "&#12299;"
         },
         "oAria": {
           "sSortAscending":  ": Ordenar colunas de forma ascendente",
@@ -75,7 +74,7 @@ jQuery(function($) {
       }
     })
 
-    $('.concurso__table, .documento__table > table, .edital__table').DataTable({
+    $('.concurso__table, .documento__table, .edital__table').DataTable({
       order: [],
       searching:  false,
       paging:     false,
@@ -94,10 +93,10 @@ jQuery(function($) {
         "sZeroRecords":    "Nenhum arquivo encontrado",
         "sSearch":         "Pesquisar na lista de arquivos",
         "oPaginate": {
-          "sNext":     "Próximo",
-          "sPrevious": "Anterior",
-          "sFirst":    "Primeiro",
-          "sLast":     "Último"
+          "sNext":     "&#12297;",
+          "sPrevious": "&#12296;",
+          "sFirst":    "&#12298;",
+          "sLast":     "&#12299;"
         },
         "oAria": {
           "sSortAscending":  ": Ordenar colunas de forma ascendente",
