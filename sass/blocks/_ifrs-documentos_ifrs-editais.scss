@@ -1,4 +1,5 @@
-.ultimos-documentos {
+.ultimos-documentos,
+.ultimos-editais {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -6,7 +7,8 @@
   gap: 1rem;
 }
 
-.documento-recente {
+.documento-recente,
+.edital-recente {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -29,18 +31,19 @@
     text-decoration: none;
   }
 
+  &__meta {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
   &__datetime {
     display: inline-block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
 }
 
-  &__types {
+  &__taxonomy-list {
     display: inline;
-    font-size: 0.9rem;
     font-weight: bold;
     list-style: none;
-    margin-bottom: 0;
     padding-left: 0;
 
     > * {
