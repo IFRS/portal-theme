@@ -2,6 +2,9 @@
 // Queries personalizadas
 require_once get_parent_theme_file_path('inc/custom-queries.php');
 
+// Feature image fallback
+require_once get_parent_theme_file_path('inc/feature-image-fallback.php');
+
 // Restrições para usuários
 require_once get_parent_theme_file_path('inc/restrictions.php');
 
