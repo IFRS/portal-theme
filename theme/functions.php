@@ -1,4 +1,7 @@
 <?php
+// Queries personalizadas
+require_once get_parent_theme_file_path('inc/custom-queries.php');
+
 // Restrições para usuários
 require_once get_parent_theme_file_path('inc/restrictions.php');
 

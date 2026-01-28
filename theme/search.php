@@ -5,7 +5,7 @@
 
   <!-- wp:query-title {"type":"search","level":2,"className":"mb-4"} /-->
 
-  <!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"parents":[],"format":[]}} -->
+  <!-- wp:query {"query":{"inherit":true}} -->
   <div class="wp-block-query">
     <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"layout":{"type":"default","columnCount":3}} -->
       <!-- wp:post-title {"level":3,"isLink":true} /-->
