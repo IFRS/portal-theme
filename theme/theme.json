@@ -197,7 +197,7 @@
             ":hover": {
               "color": {
                 "background": "var(--bs-primary-bg-subtle)",
-                "text": "var(--bs-primary-emphasis)"
+                "text": "var(--bs-primary-text-emphasis)"
               }
             }
           }
@@ -208,11 +208,12 @@
           "outline": {
             "color": {
               "background": "transparent",
-              "text": "var(--bs-primary-emphasis)"
+              "text": "var(--bs-primary-text-emphasis)"
             },
             "border": {
               "color": "var(--bs-primary)"
-            }
+            },
+            "css": ".wp-block-button__link:hover { background-color: var(--bs-primary); color: var(--bs-white); }"
           }
         },
         "color": {
@@ -220,6 +221,7 @@
           "text": "var(--bs-white)"
         },
         "typography": {
+          "fontWeight": "500",
           "textDecoration": "none"
         },
         "elements": {
@@ -228,8 +230,9 @@
               "textDecoration": "none"
             },
             ":hover": {
-              "typography": {
-                "textDecoration": "none"
+              "color": {
+                "background": "var(--bs-primary-bg-subtle)",
+                "text": "var(--bs-primary-text-emphasis)"
               }
             }
           }
