@@ -1,37 +1,52 @@
-/* Screen Reader Text FIX */
+/* [Fix] Screen Reader Text */
 .screen-reader-text {
   width: 1px !important;
 }
 
 /* Layout */
-.wp-site-blocks > * {
-  margin-block-start: 2rem;
-}
+// .wp-site-blocks > * {
+//   margin-block-start: 2rem;
+// }
 
-body.home {
-  .wp-site-blocks > *:not(:first-child) {
-    margin-block-start: 4rem;
-  }
+// body.home {
+//   .wp-site-blocks > *:not(:first-child) {
+//     margin-block-start: 4rem;
+//   }
 
-  .wp-block-post-content-is-layout-flow > * {
-    margin-block-start: 3rem;
-  }
-}
+//   .wp-block-post-content-is-layout-flow > * {
+//     margin-block-start: 3rem;
+//   }
+// }
 
 /* Alinhamento */
 .aligncenter {
-  margin-inline: auto;
-  text-align: center;
+  margin-inline: auto !important;
+  text-align: center !important;
 }
 
 .alignleft {
-  margin-inline-end: auto;
-  text-align: left;
+  margin-inline-end: auto !important;
+  text-align: left !important;
 }
 
 .alignright {
-  margin-inline-start: auto;
-  text-align: right;
+  margin-inline-start: auto !important;
+  text-align: right !important;
+}
+
+.alignwide {
+  width: 100dvw !important;
+  max-width: 100vw !important;
+  margin-inline-start: 50% !important;
+  transform: translateX(-50%) !important;
+  padding: 0 $grid-gutter-width !important;
+  position: relative !important;
+}
+
+.alignfull {
+  @extend .alignwide;
+
+  padding: 0 !important;
 }
 
 /* Site Logo */
@@ -57,13 +72,6 @@ body.home {
         font-style: italic;
       }
     }
-  }
-}
-
-/* Botões */
-.wp-block-button {
-  .wp-block-button__link {
-    text-decoration: none;
   }
 }
 

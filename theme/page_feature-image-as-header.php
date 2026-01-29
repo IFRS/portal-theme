@@ -9,7 +9,7 @@
 <main class="container-lg">
   <?php ob_start(); ?>
 
-  <!-- wp:post-featured-image {"align":"center","className":"overflow-image"} /-->
+  <!-- wp:post-featured-image {"align":"full","className":"mt-0"} /-->
 
   <!-- wp:post-title {"className":"screen-reader-text"} /-->
 
