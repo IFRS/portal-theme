@@ -34,3 +34,17 @@ add_action('ifrs_editais_after_archive', 'portal_close_main');
 add_action('ifrs_editais_before_single', 'portal_open_main');
 
 add_action('ifrs_editais_after_single', 'portal_close_main');
+
+/**
+ * Concuros
+ */
+
+// Archive
+add_action('ifrs_concursos_before_archive', 'portal_open_main');
+
+add_action('ifrs_concursos_after_archive', 'portal_close_main');
+
+// Single
+add_action('ifrs_concursos_before_single', 'portal_open_main');
+
+add_action('ifrs_concursos_after_single', 'portal_close_main');
