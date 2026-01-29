@@ -49,6 +49,13 @@
   padding: 0 !important;
 }
 
+/* Botões */
+.wp-block-button {
+  .wp-block-button__link {
+    text-decoration: none;
+  }
+}
+
 /* Site Logo */
 .wp-block-site-logo {
   .custom-logo {

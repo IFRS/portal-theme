@@ -223,19 +223,6 @@
         "typography": {
           "fontWeight": "500",
           "textDecoration": "none"
-        },
-        "elements": {
-          "link": {
-            "typography": {
-              "textDecoration": "none"
-            },
-            ":hover": {
-              "color": {
-                "background": "var(--bs-primary-bg-subtle)",
-                "text": "var(--bs-primary-text-emphasis)"
-              }
-            }
-          }
         }
       },
       "core/post-template": {
