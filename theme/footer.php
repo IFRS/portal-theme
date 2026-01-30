@@ -1,6 +1,6 @@
 <a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden">Fim do conte&uacute;do</a>
 
-<?php echo do_blocks('<!-- wp:template-part {"slug":"prefooter","className":"container","theme":"ifrs-portal-theme","lock":{"move":true,"remove":true}} /-->'); ?>
+<?php echo do_blocks('<!-- wp:template-part {"slug":"prefooter","className":"container mb-5","theme":"ifrs-portal-theme","lock":{"move":true,"remove":true}} /-->'); ?>
 
 <?php if (has_nav_menu( 'campi' )) get_template_part('partials/menus/campi'); ?>
 
