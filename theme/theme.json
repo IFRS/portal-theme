@@ -109,7 +109,7 @@
       "allowCustomContentAndWideSize": false,
       "allowEditing": true,
       "contentSize": "1296px",
-      "wideSize": "100dvw"
+      "wideSize": "2560px"
     },
     "lightbox": {
       "enabled": true,
