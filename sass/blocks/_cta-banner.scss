@@ -18,9 +18,9 @@
   .wp-block-cover__inner-container {
     font-size: 2rem;
     font-weight: 600;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     transition: $transition;
-    position: static;
+    position: static !important;
     z-index: 1;
 
     @include media-breakpoint-up(md) {

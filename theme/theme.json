@@ -192,7 +192,7 @@
             },
             "color": {
               "background": "transparent",
-              "text": "var(--bs-primary)"
+              "text": "var(--bs-primary-text-emphasis)"
             },
             ":hover": {
               "color": {

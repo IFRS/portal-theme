@@ -34,7 +34,7 @@
               <img src="<?php echo get_theme_file_uri( '/img/govbr.png' ) ?>" class="header__govbr" alt="Governo do Brasil" width="200" height="72">
             </a>
             <div class="vr mx-3"></div>
-            <p class="m-0 fs-6">Minist&eacute;rio da Educa&ccedil;&atilde;o</p>
+            <p class="m-0 fw-medium">Minist&eacute;rio da Educa&ccedil;&atilde;o</p>
           </div>
         </div>
         <div class="col-12 col-md-7 col-lg-7">
