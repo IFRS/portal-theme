@@ -6,11 +6,8 @@ Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Inst
 
 Esse tema depende obrigatoriamente dos plugins [Metabox](https://br.wordpress.org/plugins/meta-box/) e [CMB2](https://br.wordpress.org/plugins/cmb2/). Além desses, recomenda-se o uso dos plugins abaixo:
 
-- [Editor Clássico](https://br.wordpress.org/plugins/classic-editor/): Plugin para desabilitar o Gutenberg, o novo editor de conteúdo do Worpress.
-- [Widgets Clássicos](https://br.wordpress.org/plugins/classic-widgets/): Plugin para desabilitar a nova forma de adição de widgets baseada no Gutenberg.
 - [Disable Comments](https://br.wordpress.org/plugins/disable-comments/): Plugin que desabilita a funcionalidade de comentários globalmente, já que este tema não suporta comentários.
 - [IFRS Portal Plugin Roles](https://github.com/IFRS/portal-plugin-roles): Plugin para criação de funções administrativas extras.
-- [IFRS Portal Plugin Cartola](https://github.com/IFRS/portal-plugin-cartola): Plugin para transformar as categorias dos posts (notícias) em Cartola.
 - [IFRS Portal Plugin Sitesort](https://github.com/IFRS/portal-plugin-sitesort): Plugin para ordenar a lista de sites em uma instalação multisite do Wordpress.
 - [IFRS Portal Plugin Concursos](https://github.com/IFRS/portal-plugin-concursos): Plugin para gerenciamento de Concursos.
 - [IFRS Portal Plugin Documentos](https://github.com/IFRS/portal-plugin-documentos): Plugin para gerenciamento de Documentos.
