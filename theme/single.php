@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="container">
+<main id="post-<?php the_ID(); ?>" <?php post_class(['container']); ?>>
   <?php ob_start(); ?>
 
   <!-- wp:post-terms {"term":"category"} /-->

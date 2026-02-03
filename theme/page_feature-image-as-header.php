@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 
-<main class="container-lg">
+<main id="page-<?php the_ID(); ?>" <?php post_class(['container-lg']); ?>>
   <?php ob_start(); ?>
 
   <!-- wp:post-featured-image {"align":"full","className":"mt-0"} /-->
