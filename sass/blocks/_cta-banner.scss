@@ -34,7 +34,7 @@
     }
 
     a {
-      @extend .stretched-link;
+      @extend .stretched-link !optional;
       text-decoration: none;
     }
   }

@@ -9,10 +9,11 @@ add_action( 'enqueue_block_editor_assets', function() {
 } );
 
 /**
- * Frontend
+ * Gutenberg Content
  */
 add_action( 'enqueue_block_assets', function() {
 	wp_enqueue_script( 'bootstrap-blocks', get_parent_theme_file_uri( '/js/bootstrap-blocks.js' ) );
+  wp_enqueue_style( 'portal-editor-styles', get_parent_theme_file_uri( '/css/editor-styles.css' ) );
 } );
 
 add_action('wp_enqueue_scripts', function() {
