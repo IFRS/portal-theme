@@ -14,7 +14,7 @@
       <div class="row align-items-center py-4">
         <!-- Redes Sociais -->
         <div class="col-12 col-sm-6">
-          <?php echo block_template_part( 'social' ); ?>
+          <?php block_template_part( 'social' ); ?>
         </div>
         <!-- Acesso à Informação -->
         <div class="col-12 col-sm-6">
@@ -38,8 +38,8 @@
       <i class="ms-1 fa-solid fa-arrow-up-right-from-square"></i>
     </a>
     <!-- Creative Commons -->
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR" target="_blank" rel="noopener license" data-bs-toggle="tooltip" data-bs-placement="top" title="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional">
-      <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/creditos-cc-by-nc-sa.png' ) ); ?>" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-N&atilde;oComercial-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" class="lazyload" width="80" height="15" loading="lazy" />
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR" target="_blank" rel="noopener license" data-bs-toggle="tooltip" data-bs-placement="top" title="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-CompartilhaIgual 4.0 Internacional">
+      <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/creditos-cc-by-sa.png' ) ); ?>" alt="M&iacute;dia licenciada sob a Licen&ccedil;a Creative Commons Atribui&ccedil;&atilde;o-CompartilhaIgual 4.0 Internacional (abre uma nova p&aacute;gina)" class="lazyload" width="80" height="15" loading="lazy" />
       <i class="ms-1 fa-solid fa-arrow-up-right-from-square"></i>
     </a>
   </section>
