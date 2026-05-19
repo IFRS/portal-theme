@@ -65,8 +65,8 @@
   </header>
 
   <?php
-    if ( function_exists('yoast_breadcrumb') && !is_front_page() ) {
-      yoast_breadcrumb( '<section class="container"><nav class="breadcrumb-yoast" aria-label="Caminhos de Navegação">','</nav></section>' );
-    } else {
-      portal_breadcrumb();
-    }
+  if ( function_exists('yoast_breadcrumb') ) {
+    yoast_breadcrumb( '<section class="container"><nav class="breadcrumb-yoast" aria-label="Caminhos de Navegação">','</nav></section>' );
+  } else {
+    echo do_blocks('<!-- wp:breadcrumbs /-->');
+  }

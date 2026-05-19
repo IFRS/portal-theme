@@ -38,9 +38,6 @@ require_once get_parent_theme_file_path('inc/depth-limit.php');
 // Preconnect, Prefetch, Preload, etc...
 require_once get_parent_theme_file_path('inc/resource-hints.php');
 
-// Fonts
-require_once get_parent_theme_file_path('inc/fonts.php');
-
 // Scripts & Styles
 require_once get_parent_theme_file_path('inc/assets.php');
 
