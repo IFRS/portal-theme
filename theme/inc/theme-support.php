@@ -4,6 +4,24 @@ if ( ! isset( $content_width ) ) {
 }
 
 add_action('after_setup_theme', function()  {
+  // Add theme support for HTML5 markup.
+  add_theme_support('html5', array(
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
+    'meta',
+    'style',
+    'script',
+  ));
+
+  // Add theme support for Editor Styles
+  add_theme_support('editor-styles');
+
+  // Add theme support for Block Styles
+  add_theme_support('wp-block-styles');
+
   // Add theme support for Automatic Feed Links
   add_theme_support('automatic-feed-links');
 
@@ -15,6 +33,9 @@ add_action('after_setup_theme', function()  {
 
   // Add theme support for Responsive Embeds
   add_theme_support('responsive-embeds');
+
+  // Add theme support for Wide Alignment
+  add_theme_support('align-wide');
 
   // Adiciona a possibilidade de logo personalizado
   add_theme_support('custom-logo', array(
