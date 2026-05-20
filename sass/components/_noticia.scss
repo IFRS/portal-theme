@@ -87,7 +87,7 @@
         #{$n}__img {
             @include media-breakpoint-up(lg) {
                 max-width: 33%;
-                max-width: calc((100% / 3) - ($grid-gutter-width / 2));
+                max-width: calc((100% / 3) - math.div($grid-gutter-width, 2));
                 float: left;
                 margin-bottom: 0;
                 margin-right: $grid-gutter-width;

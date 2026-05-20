@@ -20,7 +20,7 @@
 
       color: $color;
       font-weight: 500;
-      padding: ($grid-gutter-width / 4) ($grid-gutter-width / 2);
+      padding: math.div($grid-gutter-width, 4) math.div($grid-gutter-width, 2);
 
       &:hover {
         background-color: $gray-100;
@@ -49,7 +49,7 @@
   }
 
   form {
-    padding: ($grid-gutter-width / 2) $grid-gutter-width;
+    padding: math.div($grid-gutter-width, 2) $grid-gutter-width;
 
     legend {
       font-weight: bold;
