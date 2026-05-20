@@ -8,8 +8,6 @@
     <meta name="description" content="<?php _e('O IFRS é uma instituição federal de ensino público e gratuito. Atua com uma estrutura multicampi para promover a educação profissional e tecnológica de excelência e impulsionar o desenvolvimento sustentável das regiões.', 'ifrs-portal-theme'); ?>">
     <meta name="keywords" content="<?php _e('ifrs, portal, site, institucional, faculdade, universidade, ensino, pesquisa, extensão, cursos', 'ifrs-portal-theme'); ?>">
 
-    <?php if (!has_site_icon()) echo get_template_part('partials/favicons'); ?>
-
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="<?php echo esc_attr(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 
@@ -65,7 +63,7 @@
   </header>
 
   <?php
-  if ( function_exists('yoast_breadcrumb') ) {
+  if ( function_exists('yoast_breadcrumb') && ! is_front_page() ) {
     yoast_breadcrumb( '<section class="container"><nav class="breadcrumb-yoast" aria-label="Caminhos de Navegação">','</nav></section>' );
   } else {
     echo do_blocks('<!-- wp:breadcrumbs /-->');

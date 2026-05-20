@@ -17,15 +17,6 @@ require_once get_parent_theme_file_path('inc/theme-support.php');
 // Thumbnails no feed RSS
 require_once get_parent_theme_file_path('inc/feed-thumbnail.php');
 
-// Favicon Fallback
-require_once get_parent_theme_file_path('inc/favicon-fallback.php');
-
-// Desabilita Emoji
-require_once get_parent_theme_file_path('inc/disable-emoji.php');
-
-// Remove todas as menções de "version"
-require_once get_parent_theme_file_path('inc/remove-version.php');
-
 // Títulos personalizados
 require_once get_parent_theme_file_path('inc/custom-title.php');
 
