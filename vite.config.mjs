@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     target: 'es2020',
-    sourcemap: mode === 'development' ? 'inline' : false,
+    sourcemap: mode === 'development' ? true : false,
     assetsDir: 'assets',
     manifest: true,
     outDir: normalizePath(resolve(_root, 'build')),
