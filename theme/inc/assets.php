@@ -69,7 +69,7 @@ if (file_exists($manifestFile)) {
     wp_enqueue_script_module($manifest['src/portal.js']['name'], get_parent_theme_file_uri($manifest['src/portal.js']['file']), array(), null, array('in_footer' => true));
 
     /* DataTables */
-    wp_register_script_module($manifest['src/datatables.js']['name'], get_parent_theme_file_uri($manifest['src/datatables.js']['file']), array('jquery'), null, array('in_footer' => true, 'strategy' => 'async', 'fetchpriority' => 'low'));
+    wp_register_script_module($manifest['src/datatables.js']['name'], get_parent_theme_file_uri($manifest['src/datatables.js']['file']), array(), null, array('in_footer' => true, 'strategy' => 'async', 'fetchpriority' => 'low'));
 
     /* Polyfill: DOM4, ES2020, ES2021, ES2022, ES2023 */
     wp_enqueue_script('polyfill', 'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=dom4%2Ces2023%2Ces2022%2Ces2021%2Ces2020', array(), null, array('in_footer' => false, 'strategy' => 'defer', 'fetchpriority' => 'high'));
