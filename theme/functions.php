@@ -53,6 +53,9 @@ require_once get_parent_theme_file_path('inc/empty-search-filter.php');
 // Vídeos do YouTube responsivos
 require_once get_parent_theme_file_path('inc/responsive-youtube-embed.php');
 
+// Paginação de posts
+require_once get_parent_theme_file_path('inc/post-pagination.php');
+
 // Metaboxes
 // require_once get_parent_theme_file_path('inc/pages-metaboxes.php');
 
