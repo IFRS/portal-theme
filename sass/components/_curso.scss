@@ -1,6 +1,6 @@
 .curso {
     &__title {
-        @include title-box($cor-cursos, '../img/bg-cursos.png');
+        @include title-box($cor-cursos, '/img/bg-cursos.png');
     }
 
     &__thumb {

@@ -29,7 +29,7 @@
   <section class="footer__creditos">
     <!-- Wordpress -->
     <a href="https://br.wordpress.org/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Desenvolvido com Wordpress">
-      <img src="<?php echo esc_url (get_parent_theme_file_uri( '/img/creditos-wordpress.png' ) ); ?>" alt="Desenvolvido com Wordpress (abre uma nova p&aacute;gina)" class="lazyload" width="98" height="20" loading="lazy" />
+      <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/creditos-wordpress.png' ) ); ?>" alt="Desenvolvido com Wordpress (abre uma nova p&aacute;gina)" class="lazyload" width="98" height="20" loading="lazy" />
       <i class="ms-1 fa-solid fa-arrow-up-right-from-square"></i>
     </a>
     <!-- Código-fonte -->

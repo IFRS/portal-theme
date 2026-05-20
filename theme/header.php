@@ -31,7 +31,7 @@
         <div class="col-12 col-md-5 col-lg-5">
           <div class="d-flex align-items-center mb-2 mb-md-0">
             <a href="https://www.gov.br/pt-br">
-              <img src="<?php echo get_theme_file_uri( '/img/govbr.png' ) ?>" class="header__govbr" alt="Governo do Brasil" width="200" height="72">
+              <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/govbr.png' ) ); ?>" class="header__govbr" alt="Governo do Brasil" width="200" height="72">
             </a>
             <div class="vr mx-3"></div>
             <p class="m-0 fw-medium">Minist&eacute;rio da Educa&ccedil;&atilde;o</p>

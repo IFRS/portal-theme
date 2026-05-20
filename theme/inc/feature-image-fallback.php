@@ -14,7 +14,7 @@ add_filter('render_block_core/post-featured-image', function($output, $block) {
   // Verifica se o post existe e não tem imagem destacada
   if ($is_query_loop && empty($output) && $post) {
     // Define a URL da imagem padrão
-    $fallback_image_url = get_template_directory_uri() . '/img/noticia-placeholder.jpg';
+    $fallback_image_url = get_theme_file_uri('/img/noticia-placeholder.jpg');
 
     // Extrai os atributos do bloco para manter as dimensões e alinhamento
     $attributes = isset($block['attrs']) ? $block['attrs'] : array();
