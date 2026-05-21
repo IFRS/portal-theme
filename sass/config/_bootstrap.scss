@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* Bootstrap Config */
 @import 'bootstrap/scss/functions';
 @import 'vars';
@@ -7,48 +9,39 @@ $accent: $cor-ds-principal;
 // default variable overrides
 $primary: $cor-if;
 $success: $cor-ds-sucesso;
-$info:    $cor-ds-info;
+$info: $cor-ds-info;
 $warning: $cor-ds-alerta;
-$danger:  $cor-ds-erro;
-
-$font-family-base: "Raleway Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
+$danger: $cor-ds-erro;
+$font-family-base: "Raleway Variable", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-size-base: 1rem;
 $govbr-font-size-scale: 1.2;
-
 $line-height-base: 1.45;
-$line-height-sm:   1.15;
-$line-height-lg:   1.85;
-
+$line-height-sm: 1.15;
+$line-height-lg: 1.85;
 $h6-font-size: $font-size-base * $govbr-font-size-scale;
 $h5-font-size: $h6-font-size * $govbr-font-size-scale;
 $h4-font-size: $h5-font-size * $govbr-font-size-scale;
 $h3-font-size: $h4-font-size * $govbr-font-size-scale;
 $h2-font-size: $h3-font-size * $govbr-font-size-scale;
 $h1-font-size: $h2-font-size * $govbr-font-size-scale;
-
 $body-color: #333333;
+
 // $body-bg:    #f8f8f8;
 
-$link-decoration:       none;
+$link-decoration: none;
 $link-hover-decoration: underline;
-
-$border-radius:     0.5rem;
-$border-radius-sm:  0.25rem;
-$border-radius-lg:  1rem;
-$border-radius-xl:  1.5rem;
+$border-radius: 0.5rem;
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
 $border-radius-xxl: 2rem;
-
 $breadcrumb-font-size: 0.875rem;
 $breadcrumb-margin-bottom: 0;
-
 $input-bg: #f8f8f8;
 $input-focus-border-color: #C2850C;
 $input-focus-box-shadow: 0 0 0 0.25rem rgba($input-focus-border-color, 0.25);
-
 $navbar-padding-y: 1rem;
 $navbar-toggler-font-size: 1rem;
-
 $nav-link-color: shade-color($primary, 20%);
 $nav-link-font-weight: 500;
 
@@ -59,7 +52,7 @@ $nav-link-font-weight: 500;
 $custom-colors: (
   'accent': $accent,
 );
-$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map.merge($theme-colors, $custom-colors);
 
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';

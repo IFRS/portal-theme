@@ -1,11 +1,10 @@
 .portal-cta-banner {
   $transition: all 0.5s ease-in-out;
 
-  border-radius: $border-radius-lg;
-  color: #ffffff;
-
-  aspect-ratio: 4/5 !important; // Mesmo formato do Instagram
   max-width: 100%;
+  aspect-ratio: 4/5 !important; // Mesmo formato do Instagram
+  color: #ffffff;
+  border-radius: $border-radius-lg;
 
   &:focus-within {
     outline: auto;
@@ -16,25 +15,26 @@
   }
 
   .wp-block-cover__inner-container {
-    font-size: 2rem;
-    font-weight: 600;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-    transition: $transition;
     position: static !important;
     z-index: 1;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgb(0 0 0 / 80%);
+    transition: $transition;
 
     @include media-breakpoint-up(md) {
       opacity: 0;
     }
 
     * {
-      color: inherit;
       font-size: inherit;
       font-weight: inherit;
+      color: inherit;
     }
 
     a {
       @extend .stretched-link !optional;
+
       text-decoration: none;
     }
   }
@@ -44,6 +44,7 @@
       .wp-block-cover__image-background {
         transform: scale(1.1);
       }
+
       .wp-block-cover__inner-container {
         opacity: 1;
       }

@@ -9,6 +9,8 @@
     "node_modules/**"
   ],
   "rules": {
-    "color-hex-length": "long"
+    "color-hex-length": "long",
+    "selector-class-pattern": null,
+    "custom-property-pattern": null
   }
 }

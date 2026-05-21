@@ -29,23 +29,23 @@
 
     &__img {
         aspect-ratio: 1 / 1;
-        border-radius: $border-radius;
         margin-bottom: 1rem;
         object-fit: contain;
+        border-radius: $border-radius;
     }
 
     &__titulo {
         $line: 21px;
 
-        color: $cor-texto;
-        font-size: 1rem;
-        font-weight: bold;
         margin-top: 0;
         margin-bottom: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $cor-texto;
 
         @include media-breakpoint-up(md) {
-            line-height: $line;
             min-height: $line * 3; // Número mínimo de linhas ocupadas.
+            line-height: $line;
         }
 
         > a {
@@ -59,9 +59,10 @@
     }
 
     &__cartola {
+        margin-bottom: 5px;
+
         // color: $accent;
         font-weight: bold;
-        margin-bottom: 5px;
     }
 
     &__data {
@@ -74,8 +75,8 @@
     }
 
     &__resumo {
-        color: $cor-texto;
         font-size: 0.9rem;
+        color: $cor-texto;
         hyphens: auto;
 
         p {
@@ -86,11 +87,11 @@
     &_destaque {
         #{$n}__img {
             @include media-breakpoint-up(lg) {
+                float: left;
                 max-width: 33%;
                 max-width: calc((100% / 3) - math.div($grid-gutter-width, 2));
-                float: left;
-                margin-bottom: 0;
                 margin-right: $grid-gutter-width;
+                margin-bottom: 0;
                 object-position: top;
             }
         }
@@ -98,13 +99,14 @@
         #{$n}__titulo {
             $line: 30px;
 
+            min-height: $line * 2;
             font-size: 1.6rem;
             line-height: $line;
-            min-height: $line * 2;
         }
 
         #{$n}__resumo {
             font-size: 1rem;
+
             p {
                 display: inline;
                 line-clamp: initial;
@@ -116,8 +118,8 @@
         margin-bottom: 1rem;
 
         #{$n}__titulo {
-            margin-bottom: 5px;
             min-height: auto;
+            margin-bottom: 5px;
         }
     }
 }

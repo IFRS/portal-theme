@@ -1,11 +1,10 @@
 .menu-campi {
   .navbar-nav {
     &::before {
-      content: '';
       display: none;
       width: 200px; height: auto;
       margin-inline-end: 1rem;
-
+      content: '';
       background-image: url('/img/menu-campi-title.png');
       background-repeat: no-repeat;
       background-position: left center;

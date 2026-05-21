@@ -2,8 +2,8 @@
 
 @mixin filtro($color: $primary) {
   margin-bottom: 1rem;
-  border-bottom: 1px solid $gray-400;
   border-top: 1px solid $gray-400;
+  border-bottom: 1px solid $gray-400;
 
   &:has(details[open]) {
     background: $gray-100;
@@ -14,33 +14,32 @@
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
+      padding: math.div($grid-gutter-width, 4) math.div($grid-gutter-width, 2);
+      font-weight: 500;
+      color: $color;
       list-style: none;
       &::marker { content: none; }
       &::-webkit-details-marker { display: none; }
-
-      color: $color;
-      font-weight: 500;
-      padding: math.div($grid-gutter-width, 4) math.div($grid-gutter-width, 2);
 
       &:hover {
         background-color: $gray-100;
       }
 
       &::after {
-        content: '';
         display: block;
         width: 0.9rem; height: 0.9rem;
         margin-left: auto;
+        color: $color;
+        content: '';
         background: no-repeat center / contain
           url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'%3E%3C!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath d='M297.4 470.6C309.9 483.1 330.2 483.1 342.7 470.6L534.7 278.6C547.2 266.1 547.2 245.8 534.7 233.3C522.2 220.8 501.9 220.8 489.4 233.3L320 402.7L150.6 233.4C138.1 220.9 117.8 220.9 105.3 233.4C92.8 245.9 92.8 266.2 105.3 278.7L297.3 470.7z'/%3E%3C/svg%3E");
-        color: $color;
         transition: transform 0.2s ease;
       }
     }
 
     &[open] summary {
-      color: $body-color;
       font-weight: normal;
+      color: $body-color;
 
       &::after {
         transform: rotate(180deg);
@@ -52,8 +51,8 @@
     padding: math.div($grid-gutter-width, 2) $grid-gutter-width;
 
     legend {
-      font-weight: bold;
       font-size: 1.1rem;
+      font-weight: bold;
     }
 
     fieldset + fieldset {
@@ -63,9 +62,9 @@
 }
 
 @mixin title-box($color: $primary, $image-url: '') {
+  padding: 15px 10px 25px 15px;
   background-color: $gray-500;
   border-top: 5px solid $color;
-  padding: 15px 10px 25px 15px;
 
   @if $color != $primary {
     color: $color;
@@ -73,15 +72,15 @@
 
   @if $image-url != '' {
     background-image: url($image-url);
-    background-position: center right;
     background-repeat: no-repeat;
+    background-position: center right;
     background-size: contain;
   }
 }
 
 @mixin link-todos($cor: $primary) {
-  color: $cor;
   font-size: 14px;
+  color: $cor;
   text-transform: uppercase;
 
   &:hover {
@@ -89,23 +88,23 @@
   }
 
   &::after {
+    padding: 0 10px;
+    margin-left: 5px;
     content: '';
     background-color: $cor;
     background-position: center center;
     background-size: 15px;
-    padding: 0 10px;
     border-radius: 4px;
-    margin-left: 5px;
   }
 }
 
 @mixin trim($numLines: 1) {
   @if $numLines > 1 {
     display: -webkit-box;
-    -webkit-line-clamp: $numLines;
-    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
   } @else {
     display: block;
     overflow: hidden;

@@ -1,14 +1,15 @@
 .post {
   &__category {
-    text-transform: uppercase;
-    font-weight: bold;
     margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__title {
+    margin-top: 15px;
+
     // font-size: 34px;
     margin-bottom: 30px;
-    margin-top: 15px;
   }
 
   &__separator {
@@ -23,17 +24,18 @@
 
   &__published,
   &__updated {
+    padding-left: 18px;
+
     // @include icon-calendar($cor-secundaria-azul-claro);
 
     background-position: left center;
     background-size: 15px;
-    padding-left: 18px;
   }
 
   &__thumb {
     display: inline-block;
-    margin-inline: auto;
     margin-block: 1rem;
+    margin-inline: auto;
     text-align: center;
 
     // @include media-breakpoint-up(md) {
@@ -46,8 +48,8 @@
   }
 
   &__content {
-    margin-bottom: 30px;
     margin-top: 20px;
+    margin-bottom: 30px;
     font-size: 15px;
     line-height: 21px;
     color: $cor-texto;
@@ -67,7 +69,7 @@
     }
 
     img {
-      @include img-fluid();
+      @include img-fluid;
     }
   }
 
@@ -77,15 +79,15 @@
   }
 
   &__tags {
+    padding: 0;
+    margin: 0;
     font-size: 0.75rem;
     list-style: none;
-    margin: 0;
-    padding: 0;
   }
 
   &__tag {
     display: inline-block;
-    margin-bottom: 5px;
     margin-right: 5px;
+    margin-bottom: 5px;
   }
 }

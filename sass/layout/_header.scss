@@ -6,7 +6,8 @@ header {
 
 .header {
   &__govbr {
-    @include img-fluid();
+    @include img-fluid;
+
     width: 100px;
   }
 

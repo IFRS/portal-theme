@@ -8,8 +8,8 @@ footer {
 
 .footer {
   &__content {
-    background-color: $cor-rodape;
     padding: 4rem 0 0;
+    background-color: $cor-rodape;
   }
 
   &__lai {
@@ -19,20 +19,20 @@ footer {
   }
 
   &__creditos {
-    background-color: shade-color($cor-rodape, 25%);
-    font-size: 0.75rem;
     padding: 1rem 0;
+    font-size: 0.75rem;
     text-align: center;
+    background-color: shade-color($cor-rodape, 25%);
 
     > * {
-      color: inherit;
       display: inline-block;
-      opacity: 0.8;
+      color: inherit;
       text-decoration: none;
+      opacity: 0.8;
 
       &:hover {
-        opacity: 1;
         text-decoration: none;
+        opacity: 1;
       }
 
       & + * {

@@ -11,10 +11,8 @@
 
     &__content {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: flex-start;
+        flex-flow: row wrap;
+        place-content: flex-start space-around;
         align-items: stretch;
         padding-top: 15px;
 
@@ -25,8 +23,8 @@
 }
 
 .curso-item {
-    align-self: flex-start;
     flex: 0 0 100%;
+    align-self: flex-start;
     margin-bottom: 15px;
 
     @include media-breakpoint-up(sm) {
@@ -50,15 +48,15 @@
     }
 
     &__modalidade {
-        color: $cor-cursos;
         display: block;
-        font-size: 0.75rem;
         margin-top: 5px;
+        font-size: 0.75rem;
+        color: $cor-cursos;
     }
 
     &__nivel {
-        color: #666666;
         font-size: 0.75rem;
+        color: #666666;
         text-transform: uppercase;
 
         a {
@@ -67,10 +65,10 @@
     }
 
     &__title {
-        color: $primary;
+        margin: 5px 0;
         font-size: 1.1rem;
         font-weight: bold;
-        margin: 5px 0;
+        color: $primary;
 
         a {
             color: $primary;

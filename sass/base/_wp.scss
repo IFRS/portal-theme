@@ -20,19 +20,21 @@
 }
 
 .alignwide {
+  position: relative !important;
   width: 100dvw !important;
   max-width: var(--wp--style--global--wide-size, 2560px) !important;
+  padding: 0 $grid-gutter-width !important;
   margin-inline-start: 50% !important;
   transform: translateX(-50%) !important;
-  padding: 0 $grid-gutter-width !important;
-  position: relative !important;
 }
 
 .alignfull {
-  @extend .alignwide;
-
+  position: relative !important;
+  width: 100dvw !important;
   max-width: 100vw;
   padding: 0 !important;
+  margin-inline-start: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
 /* Botões */
@@ -54,9 +56,9 @@
 .wp-block-search {
   &.wp-block-search__button-inside.wp-block-search__icon-button {
     .wp-block-search__inside-wrapper {
+      padding: 8px;
       background-color: var(--bs-gray-200);
       border-radius: var(--bs-border-radius, 0);
-      padding: 8px;
     }
 
     .wp-block-search__input {
@@ -72,6 +74,7 @@
 /* Imagem Destacada */
 .wp-block-post-featured-image {
   @include img-fluid;
+
   margin: 1.5rem auto;
 }
 
@@ -80,22 +83,22 @@
   .wp-block-query-pagination-previous,
   .page-numbers,
   .wp-block-query-pagination-next {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0 8px;
+    margin: 0 4px;
+    color: $primary;
+    white-space: nowrap;
     border: 1px solid transparent;
     border-radius: 100em;
-    color: $primary;
-    display: inline-flex;
-    justify-content: center;
-    margin: 0 4px;
-    min-height: 32px;
-    min-width: 32px;
-    padding: 0 8px;
-    white-space: nowrap;
 
-    &:not(.current):not(.dots):hover {
-      background-color: var(--bs-primary-bg-subtle);
+    &:not(.current, .dots):hover {
       color: $primary;
       text-decoration: none;
+      background-color: var(--bs-primary-bg-subtle);
     }
   }
 
@@ -111,9 +114,9 @@
 
   .page-numbers {
     &.current {
+      color: #ffffff;
       background-color: $primary;
       border-color: $primary;
-      color: #fff;
     }
   }
 

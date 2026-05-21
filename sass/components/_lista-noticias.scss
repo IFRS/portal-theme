@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:map';
 
 $cards-per-line: (
     xs: 1,
@@ -11,14 +12,14 @@ $cards-per-line: (
 
 .lista-noticias {
     &__title {
-        @include title-box();
+        @include title-box;
     }
 
     &__content {
         @each $name, $breakpoint in $grid-breakpoints {
             @media (min-width: $breakpoint) {
                 .card {
-                    flex: 0 0 calc(math.percentage(math.div(1, map-get($cards-per-line, $name))) - #{$grid-gutter-width});
+                    flex: 0 0 calc(math.percentage(math.div(1, map.get($cards-per-line, $name))) - #{$grid-gutter-width});
                 }
             }
         }

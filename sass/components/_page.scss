@@ -1,32 +1,32 @@
 .page {
     &__title {
-        color: $cor-texto;
-        line-height: 37px;
-        font-size: 34px;
-        margin-bottom: 30px;
         margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 34px;
+        line-height: 37px;
+        color: $cor-texto;
     }
 
     &__separator {
-        margin-bottom: 0;
         margin-top: 0;
+        margin-bottom: 0;
     }
 
     &__thumb {
         margin-bottom: 20px;
 
         @include media-breakpoint-up(md) {
+            float: left;
             width: 50%;
             height: auto;
-            float: left;
             margin-right: 15px;
             margin-bottom: 10px;
         }
     }
 
     &__content {
-        margin-bottom: 30px;
         margin-top: 20px;
+        margin-bottom: 30px;
         font-size: 15px;
         line-height: 21px;
         color: $cor-texto;
@@ -46,7 +46,7 @@
         }
 
         img {
-            @include img-fluid();
+            @include img-fluid;
         }
 
         p,

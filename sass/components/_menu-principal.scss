@@ -1,25 +1,24 @@
 .btn-menu-toggle {
-  margin-inline-start: -18px; // TODO: remover ao achar SVG para menu hamburguer sem bleeding edge
-  margin-inline-end: 0.5rem;
+  margin-inline: -18px 0.5rem; // TODO: remover ao achar SVG para menu hamburguer sem bleeding edge
 
   &:hover {
     background-color: var(--bs-primary-bg-subtle, transparent);
   }
 
   .ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    user-select: none;
     width: 72px;
     height: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 400ms;
+    -webkit-tap-highlight-color: transparent;
 
     .line {
       fill: none;
-      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
       stroke: $primary;
       stroke-width: 5.5;
       stroke-linecap: round;
+      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     }
 
     .top {
@@ -56,26 +55,22 @@
 .menu-principal-collapse {
   --collapse-height: calc(100dvh - var(--header-height, 0px));
 
+  height: var(--collapse-height, 100dvh);
+  margin-bottom: $grid-gutter-width;
   background-color: #ededed;
   border-top: 2px solid #ffcd07;
   box-shadow: var(--bs-box-shadow-sm, none);
-  margin-bottom: $grid-gutter-width;
-
-  height: var(--collapse-height, 100dvh);
 }
 
 .menu-principal {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   align-items: start;
   justify-content: start;
-
+  padding: $grid-gutter-width 0;
   font-weight: 500;
   list-style: none;
-  padding: $grid-gutter-width 0;
-
-  position: relative;
 
   a {
     color: inherit;
@@ -89,9 +84,10 @@
     &:hover,
     &:has(.sub-menu.show),
     &.current-menu-item {
+      color: $white;
+
       // background-color: #009060;
       background-color: #21752e;
-      color: $white;
     }
 
     &.current-menu-item {
@@ -102,21 +98,19 @@
 
     a {
       display: block;
-      padding: 0.5rem 0.75rem;
       width: 100%; height: 100%;
+      padding: 0.5rem 0.75rem;
     }
   }
 
   .menu-item-has-children {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
 
     .svg-inline--fa {
-      margin-inline-start: auto;
-      margin-inline-end: 0.75rem;
+      margin-inline: auto 0.75rem;
     }
   }
 
@@ -127,15 +121,14 @@
   }
 
   .sub-menu {
+    position: absolute; top: 0;
+    left: 0;
+    display: none;
+    height: calc(var(--collapse-height, 100%) - 2px);
+    padding: $grid-gutter-width 0;
     list-style: none;
     background-color: #f8f8f8;
-    border-left: 1px solid #bbb;
-    display: none;
-    padding: $grid-gutter-width 0;
-
-    position: absolute;
-    left: 0; top: 0;
-    height: calc(var(--collapse-height, 100%) - 2px);
+    border-left: 1px solid #bbbbbb;
 
     @include media-breakpoint-up(sm) {
       transform: translateX(var(--offset-left, 0));

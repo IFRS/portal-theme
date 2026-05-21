@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:string";
 
 /**
  * Replace `$search` with `$replace` in `$string`
@@ -9,23 +10,21 @@
  * @return {String} - Updated string
  */
 @function str-replace($string, $search, $replace: '') {
-    $index: str-index($string, $search);
+    $index: string.index($string, $search);
 
     @if $index {
-        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
     }
 
     @return $string;
 }
 
-@function clampBuilder( $minWidthPx, $maxWidthPx, $minSize, $maxSize ) {
-  $pixelsPerRem: 16;
+@function clamp-builder( $minWidthPx, $maxWidthPx, $minSize, $maxSize ) {
+  $pixels-per-rem: 16;
+  $min-width: math.div($minWidthPx, $pixels-per-rem);
+  $max-width: math.div($maxWidthPx, $pixels-per-rem);
+  $slope: math.div( ( $maxSize - $minSize ), ( $max-width - $min-width ) );
+  $y-axis-intersection: ($min-width * -1) * $slope + $minSize;
 
-  $minWidth: math.div($minWidthPx, $pixelsPerRem);
-  $maxWidth: math.div($maxWidthPx, $pixelsPerRem);
-
-  $slope: math.div( ( $maxSize - $minSize ), ( $maxWidth - $minWidth ) );
-  $yAxisIntersection: ($minWidth * -1) * $slope + $minSize;
-
-  @return clamp( #{$minSize}rem, #{$yAxisIntersection}rem + #{$slope * 100}vw, #{$maxSize}rem );
+  @return clamp( #{$minSize}rem, #{$y-axis-intersection}rem + #{$slope * 100}vw, #{$maxSize}rem );
 }

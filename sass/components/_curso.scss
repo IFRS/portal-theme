@@ -4,9 +4,9 @@
     }
 
     &__thumb {
+        float: left;
         width: 25%;
         height: auto;
-        float: left;
         margin-right: 20px;
         margin-bottom: 10px;
     }
@@ -28,8 +28,8 @@
     }
 
     &__content {
-        font-size: 0.9rem;
         padding: 0 10px;
+        font-size: 0.9rem;
     }
 }
 
@@ -40,18 +40,18 @@
     }
 
     &__title {
-        color: $primary;
+        padding-left: 38px;
+        margin: 0;
         font-size: 0.85rem;
         font-weight: bold;
-        margin: 0;
-        padding-left: 38px;
+        color: $primary;
         text-transform: uppercase;
     }
 
     &__text {
-        color: $primary;
-        font-size: 0.85rem;
         padding-left: 38px;
+        font-size: 0.85rem;
+        color: $primary;
         text-transform: uppercase;
 
         &--lower {
@@ -66,8 +66,8 @@
 
 .curso-coordenador {
     &__nome {
-        font-weight: bold;
         margin: 0;
+        font-weight: bold;
     }
 
     &__titulacao {
