@@ -20,6 +20,9 @@ require_once get_parent_theme_file_path('inc/feed-thumbnail.php');
 // Títulos personalizados
 require_once get_parent_theme_file_path('inc/custom-title.php');
 
+// Custom Labels
+require_once get_parent_theme_file_path('inc/labels.php');
+
 // SEO
 require_once get_parent_theme_file_path('inc/seo.php');
 
