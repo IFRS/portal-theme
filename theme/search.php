@@ -12,7 +12,17 @@
 
       <!-- wp:post-excerpt {"excerptLength":99} /-->
 
-      <!-- wp:post-date /-->
+      <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+      <div class="wp-block-group">
+        <!-- wp:group {"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group">
+          <!-- wp:portal/post-type-badge /-->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:post-date /-->
+      </div>
+      <!-- /wp:group -->
     <!-- /wp:post-template -->
 
     <!-- wp:query-pagination {"className":"mt-5","paginationArrow":"chevron","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
