@@ -44,7 +44,6 @@ if (file_exists($manifestFile)) {
     /* Pages */
     wp_register_style($manifest['sass/page_front-page.scss']['name'], get_parent_theme_file_uri($manifest['sass/page_front-page.scss']['file']), array($manifest['sass/portal.scss']['name']), null, 'all');
     wp_register_style($manifest['sass/page_home.scss']['name'], get_parent_theme_file_uri($manifest['sass/page_home.scss']['file']), array($manifest['sass/portal.scss']['name']), null, 'all');
-    wp_register_style($manifest['sass/page_search.scss']['name'], get_parent_theme_file_uri($manifest['sass/page_search.scss']['file']), array($manifest['sass/portal.scss']['name']), null, 'all');
     wp_register_style($manifest['sass/page_single.scss']['name'], get_parent_theme_file_uri($manifest['sass/page_single.scss']['file']), array($manifest['sass/portal.scss']['name']), null, 'all');
     wp_register_style($manifest['sass/page_page.scss']['name'], get_parent_theme_file_uri($manifest['sass/page_page.scss']['file']), array($manifest['sass/portal.scss']['name']), null, 'all');
     wp_register_style($manifest['sass/page_concursos.scss']['name'], get_parent_theme_file_uri($manifest['sass/page_concursos.scss']['file']), array($manifest['sass/portal.scss']['name']), null, 'all');
@@ -84,10 +83,6 @@ if (file_exists($manifestFile)) {
 
     if (is_home() || is_category() || is_tag() || is_tax('escopo')) {
       wp_enqueue_style($manifest['sass/page_home.scss']['name']);
-    }
-
-    if (is_search()) {
-      wp_enqueue_style($manifest['sass/page_search.scss']['name']);
     }
 
     if (is_single()) {

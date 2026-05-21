@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="container">
+<main class="container" data-search-term="<?php echo esc_attr(get_search_query()); ?>">
   <?php ob_start(); ?>
 
   <!-- wp:query-title {"type":"search","level":2,"className":"mb-4"} /-->

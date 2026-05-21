@@ -64,7 +64,6 @@ export default defineConfig(({ mode }) => ({
         pageFrontPageStyle: normalizePath(resolve(_root, 'sass/page_front-page.scss')),
         pageHomeStyle: normalizePath(resolve(_root, 'sass/page_home.scss')),
         pagePageStyle: normalizePath(resolve(_root, 'sass/page_page.scss')),
-        pageSearchStyle: normalizePath(resolve(_root, 'sass/page_search.scss')),
         pageSingleStyle: normalizePath(resolve(_root, 'sass/page_single.scss')),
         pluginCursosEstudeStyle: normalizePath(resolve(_root, 'sass/plugin_cursos-estude.scss')),
         datatablesStyle: normalizePath(resolve(_root, 'sass/datatables.scss')),
