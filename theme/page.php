@@ -13,7 +13,7 @@
 
   <div class="clearfix"></div>
 
-  <!-- wp:group {"className":"my-4 p-2 border-top","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <!-- wp:group {"className":"my-4 p-2 border-top","layout":{"type":"flex","flexWrap":"wrap"}} -->
   <div class="wp-block-group my-4 p-2 border-top">
     <!-- wp:post-date {"displayType":"modified","format":"\\A\\t\\u\\a\\l\\i\\z\\a\\d\\o \\e\\m j \\d\\e F \\d\\e Y"} /-->
 

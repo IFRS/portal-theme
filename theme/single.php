@@ -7,11 +7,11 @@
 
   <!-- wp:post-title /-->
 
-  <!-- wp:group {"className":"my-4 p-2 border-top border-bottom","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <!-- wp:group {"className":"my-4 p-2 border-top border-bottom","layout":{"type":"flex","flexWrap":"wrap"}} -->
   <div class="wp-block-group my-4 p-2 border-top border-bottom">
     <!-- wp:post-date {"format":"\\P\\u\\b\\l\\i\\c\\a\\d\\o \\e\\m j \\d\\e F \\d\\e Y"} /-->
 
-    <div class="vr"></div>
+    <div class="vr d-none d-md-block"></div>
 
     <!-- wp:post-date {"displayType":"modified","format":"\\A\\t\\u\\a\\l\\i\\z\\a\\d\\o \\e\\m j \\d\\e F \\d\\e Y"} /-->
 
