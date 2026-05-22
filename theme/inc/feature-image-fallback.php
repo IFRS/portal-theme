@@ -23,7 +23,7 @@ add_filter('render_block_core/post-featured-image', function($output, $block) {
 
     // Monta a tag img com a imagem fallback
     $output = sprintf(
-      '<figure class="wp-block-post-featured-image %s"><img src="%s" alt="" style="width: %s;" /></figure>',
+      '<figure class="wp-block-post-featured-image %s"><img src="%s" alt="" style="width: %s;" loading="lazy" /></figure>',
       esc_attr($align),
       esc_url($fallback_image_url),
       esc_attr($width)
