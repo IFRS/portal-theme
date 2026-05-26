@@ -55,15 +55,14 @@
 .menu-principal-collapse {
   --collapse-height: calc(100dvh - var(--header-height, 0));
 
+  position: absolute; right: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
   margin-bottom: $grid-gutter-width;
   background-color: #ededed;
   border-top: 2px solid #ffcd07;
   box-shadow: var(--bs-box-shadow-sm, none);
-
-  position: absolute;
-  width: 100%;
-  left: 0; right: 0;
-  z-index: 9999;
 
   .container {
     height: var(--collapse-height, 100dvh);
