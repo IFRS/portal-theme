@@ -2,6 +2,10 @@ mark {
   border-radius: $border-radius-sm;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 ul {
   margin: 0;
   list-style-position: inside;
