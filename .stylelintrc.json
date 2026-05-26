@@ -10,7 +10,8 @@
   ],
   "rules": {
     "color-hex-length": "long",
-    "selector-class-pattern": null,
-    "custom-property-pattern": null
+    "custom-property-pattern": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "selector-class-pattern": null
   }
 }
