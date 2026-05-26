@@ -53,13 +53,22 @@
 }
 
 .menu-principal-collapse {
-  --collapse-height: calc(100dvh - var(--header-height, 0px));
+  --collapse-height: calc(100dvh - var(--header-height, 0));
 
-  height: var(--collapse-height, 100dvh);
   margin-bottom: $grid-gutter-width;
   background-color: #ededed;
   border-top: 2px solid #ffcd07;
   box-shadow: var(--bs-box-shadow-sm, none);
+
+  position: absolute;
+  width: 100%;
+  left: 0; right: 0;
+  z-index: 9999;
+
+  .container {
+    height: var(--collapse-height, 100dvh);
+    overflow-y: auto;
+  }
 }
 
 .menu-principal {
@@ -85,8 +94,6 @@
     &:has(.sub-menu.show),
     &.current-menu-item {
       color: $white;
-
-      // background-color: #009060;
       background-color: #21752e;
     }
 
