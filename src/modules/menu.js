@@ -34,13 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuPrincipal = menuPrincipalNav.querySelector('.menu-principal')
   menuPrincipalResizeObserver.observe(menuPrincipal)
 
-  const icon = window.FontAwesome.icon({ prefix: 'fas', iconName: 'angle-right' })
+  const createNativeIcon = () => {
+    const icon = document.createElement('span')
+    icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6l-6 6" /></svg>'
+    return icon.firstElementChild
+  }
+
+  const faIcon = window.FontAwesome?.icon({ prefix: 'fas', iconName: 'angle-right' })
 
   const menuItems = menuPrincipal.querySelectorAll('.menu-item-has-children')
 
   menuItems.forEach(menuItem => {
     menuItemResizeObserver.observe(menuItem)
-    menuItem.append(...icon.node)
+
+    const iconNode = faIcon?.node?.[0]?.cloneNode(true) ?? createNativeIcon()
+    if (iconNode) menuItem.append(iconNode)
+
     menuItem.addEventListener('click', e => {
       if (!e.target.classList.contains('menu-item-has-children') && !e.target.parentElement.classList.contains('menu-item-has-children')) return true
 
