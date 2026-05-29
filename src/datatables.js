@@ -1,19 +1,18 @@
-import moment from 'moment'
-import 'moment/locale/pt-br.js'
+import { Settings } from 'luxon'
 import DataTable from 'datatables.net-bs5'
 import 'datatables.net-responsive-bs5'
 
-moment.locale('pt-br')
+Settings.defaultLocale = "pt-BR"
 
 // REGISTRA os formatos de data usados nas células
-DataTable.datetime('DD/MM/YYYY', 'pt-br');
-DataTable.datetime('DD/MM/YYYY HH:mm', 'pt-br');
+DataTable.datetime('dd/MM/yyyy', 'pt-BR')
+DataTable.datetime('dd/MM/yyyy HH:mm', 'pt-BR')
 
 new DataTable('.documentos__table', {
   order:      [[0, 'desc'], [2, 'desc']],
   columnDefs: [
-    { targets: 0, type: 'datetime-DD/MM/YYYY HH:mm' },
-    { targets: 2, type: 'datetime-DD/MM/YYYY' }
+    { targets: 0, type: 'datetime-dd/MM/yyyy HH:mm' },
+    { targets: 2, type: 'datetime-dd/MM/yyyy' }
   ],
   searching:  true,
   paging:     true,
@@ -49,8 +48,8 @@ new DataTable('.documentos__table', {
 new DataTable('.editais__table', {
   order:      [[0, 'desc'], [2, 'desc']],
   columnDefs: [
-    { targets: 0, type: 'datetime-DD/MM/YYYY HH:mm' },
-    { targets: 2, type: 'datetime-DD/MM/YYYY' }
+    { targets: 0, type: 'datetime-dd/MM/yyyy HH:mm' },
+    { targets: 2, type: 'datetime-dd/MM/yyyy' }
   ],
   searching:  true,
   paging:     true,
