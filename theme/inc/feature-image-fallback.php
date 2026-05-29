@@ -16,6 +16,9 @@ add_filter('render_block_core/post-featured-image', function($output, $block) {
     // Define a URL da imagem padrão
     $fallback_image_url = get_theme_file_uri('/img/noticia-placeholder.jpg');
 
+    // Adiciona um link para a página do post
+    $post_url = get_permalink($post->ID);
+
     // Extrai os atributos do bloco para manter as dimensões e alinhamento
     $attributes = isset($block['attrs']) ? $block['attrs'] : array();
     $width = isset($attributes['width']) ? $attributes['width'] : 'auto';
@@ -23,8 +26,9 @@ add_filter('render_block_core/post-featured-image', function($output, $block) {
 
     // Monta a tag img com a imagem fallback
     $output = sprintf(
-      '<figure class="wp-block-post-featured-image %s"><img src="%s" alt="" style="width: %s;" loading="lazy" /></figure>',
+      '<figure class="wp-block-post-featured-image %s"><a href="%s" target="_self"><img src="%s" alt="" style="width: %s;" loading="lazy" /></a></figure>',
       esc_attr($align),
+      esc_url($post_url),
       esc_url($fallback_image_url),
       esc_attr($width)
     );

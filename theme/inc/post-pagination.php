@@ -13,7 +13,7 @@ add_filter('wp_link_pages_link', function ($link, $i) {
 
   if ($i === $page) {
     // Página atual — sem link
-    return '<li class="page-item disabled" aria-current="page"><a class="page-link">' . $i . '</a></li>';
+    return '<li class="page-item disabled"><span class="page-link" aria-current="page">' . $i . '</span></li>';
   }
 
   // Envolve o link em <li> e adiciona classe Bootstrap à âncora

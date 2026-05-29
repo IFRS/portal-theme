@@ -90,6 +90,7 @@
     cursor: pointer;
 
     &:hover,
+    &:focus-within,
     &:has(.sub-menu.show),
     &.current-menu-item {
       color: $white;

@@ -1,8 +1,3 @@
-/* [Fix] Screen Reader Text */
-.screen-reader-text {
-  width: 1px !important;
-}
-
 /* Alinhamento */
 .aligncenter {
   margin-inline: auto !important;
@@ -86,8 +81,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    min-height: 32px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0 8px;
     margin: 0 4px;
     color: $primary;
