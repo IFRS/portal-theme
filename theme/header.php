@@ -64,7 +64,10 @@
 
   <?php
   if ( function_exists('yoast_breadcrumb') && ! is_front_page() ) {
-    yoast_breadcrumb( '<section class="container"><nav class="breadcrumb-yoast" aria-label="Caminhos de Navegação">','</nav></section>' );
+    yoast_breadcrumb('<section class="container"><nav class="breadcrumb-yoast" aria-label="Caminhos de Navegação">','</nav></section>');
   } else {
     echo do_blocks('<!-- wp:breadcrumbs /-->');
   }
+  ?>
+
+  <a id="inicio-conteudo" href="#inicio-conteudo" class="visually-hidden visually-hidden-focusable">In&iacute;cio do conte&uacute;do</a>
