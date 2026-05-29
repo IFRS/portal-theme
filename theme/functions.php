@@ -44,8 +44,8 @@ require_once get_parent_theme_file_path('inc/breadcrumb.php');
 // Filtro para buscas vazias
 require_once get_parent_theme_file_path('inc/empty-search-filter.php');
 
-// Vídeos do YouTube responsivos
-require_once get_parent_theme_file_path('inc/responsive-youtube-embed.php');
+// Incorporações responsivas
+require_once get_parent_theme_file_path('inc/responsive-embeds.php');
 
 // Paginação de posts
 require_once get_parent_theme_file_path('inc/post-pagination.php');
