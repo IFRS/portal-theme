@@ -9,27 +9,23 @@
 
 $accent: DS.$color-primary-default;
 
-// default variable overrides
-$primary: #2f9e41; // 0%: #2f9e41, 10%: #2a8e3b, 20%: #267e34
+// default colors overrides
+$primary: #2a8e3b; // 0%: #2f9e41, 10%: #2a8e3b, 20%: #267e34
 $success: DS.$color-success;
 $info: DS.$color-info;
 $warning: DS.$color-warning;
 $danger: DS.$color-danger;
 
-$font-family-base: "Raleway Variable", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-size-base: 1rem;
-$govbr-font-size-scale: 1.2;
-
 $line-height-base: DS.$font-line-height-medium;
 $line-height-sm: DS.$font-line-height-low;
 $line-height-lg: DS.$font-line-height-high;
 
-$h6-font-size: $font-size-base * $govbr-font-size-scale;
-$h5-font-size: $h6-font-size * $govbr-font-size-scale;
-$h4-font-size: $h5-font-size * $govbr-font-size-scale;
-$h3-font-size: $h4-font-size * $govbr-font-size-scale;
-$h2-font-size: $h3-font-size * $govbr-font-size-scale;
-$h1-font-size: $h2-font-size * $govbr-font-size-scale;
+$h6-font-size: DS.$font-size-scale-up-02;
+$h5-font-size: DS.$font-size-scale-up-03;
+$h4-font-size: DS.$font-size-scale-up-04;
+$h3-font-size: DS.$font-size-scale-up-05;
+$h2-font-size: DS.$font-size-scale-up-06;
+$h1-font-size: DS.$font-size-scale-up-07;
 
 $body-color: #333333;
 
@@ -44,17 +40,15 @@ $border-radius-lg: DS.$rounder-lg;
 $border-radius-xl: DS.$rounder-lg * 1.5;
 $border-radius-xxl: DS.$rounder-lg * 2;
 
-$breadcrumb-font-size: 0.875rem;
+$breadcrumb-font-size: DS.$font-size-scale-base;
 $breadcrumb-margin-bottom: 0;
 
-$input-bg: #f8f8f8;
 $input-focus-border-color: #C2850C;
 $input-focus-box-shadow: 0 0 0 0.25rem rgba($input-focus-border-color, 0.25);
 
-$navbar-padding-y: 1rem;
-$navbar-toggler-font-size: 1rem;
 $nav-link-color: shade-color($primary, 20%);
-$nav-link-font-weight: 500;
+
+// $mark-bg: DS.$color-highlight;
 
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
@@ -64,6 +58,12 @@ $custom-colors: (
   'accent': $accent,
 );
 $theme-colors: map.merge($theme-colors, $custom-colors);
+
+$font-family-base: "Raleway Variable", #{$font-family-sans-serif};
+$input-bg: $gray-200;
+$navbar-padding-y: $spacer;
+$navbar-toggler-font-size: $font-size-base;
+$nav-link-font-weight: $font-weight-medium;
 
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
