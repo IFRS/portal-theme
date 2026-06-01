@@ -1,14 +1,16 @@
 window.wp.domReady( () => {
   window.wp.blocks.registerBlockVariation( 'core/cover', {
-    name: 'CTA Banner',
+    name: 'cta-banner',
     title: 'CTA Banner',
     description: 'Banner Call-to-Action',
     scope: [ 'inserter' ],
     isDefault: false,
-    isActive: ( blockAttributes, variationAttributes ) => blockAttributes.className === variationAttributes.className,
+    isActive: [ 'className' ],
     attributes : {
       className: 'portal-cta-banner',
       contentPosition: 'bottom center',
+      allowedBlocks: [ 'core/heading' ],
+      templateLock: 'all',
       dimRatio: 50,
       isUserOverlayColor: true,
       gradient:'primary-vertical',
@@ -36,7 +38,13 @@ window.wp.domReady( () => {
         'core/heading', {
           level: 2,
           placeholder: 'Adicione um título...',
-          textAlign: 'center'
+          textAlign: 'center',
+          className: 'has-text-align-center',
+          style: {
+            typography: {
+              textAlign: 'center',
+            },
+          },
         }
       ],
     ]

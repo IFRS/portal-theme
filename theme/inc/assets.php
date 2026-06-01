@@ -9,9 +9,7 @@ if (file_exists($manifestFile)) {
    * Gutenberg Editor
    */
   add_action('enqueue_block_editor_assets', function() use ($manifest) {
-    $block_asset_dependencies = ['wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-data', 'wp-edit-post'];
-
-    wp_enqueue_script_module($manifest['src/blocks.js']['name'], get_parent_theme_file_uri( $manifest['src/blocks.js']['file'] ), $block_asset_dependencies);
+    wp_enqueue_script_module($manifest['src/blocks.js']['name'], get_parent_theme_file_uri( $manifest['src/blocks.js']['file'] ));
   });
 
   /**
