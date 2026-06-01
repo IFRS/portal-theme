@@ -128,10 +128,10 @@
   }
 
   .sub-menu {
-    position: absolute; top: 0;
-    left: 0;
+    position: absolute;
+    top: 0; left: 0;
     display: none;
-    height: calc(var(--collapse-height, 100%) - 2px);
+    height: 100%;
     padding: $grid-gutter-width 0;
     list-style: none;
     background-color: #f8f8f8;
