@@ -1,4 +1,18 @@
 .menu-campi {
+  .navbar-toggler {
+    font-weight: 500;
+
+    &:not(.collapsed) {
+      background-color: var(--bs-primary-bg-subtle, $primary);
+    }
+
+    svg {
+      margin-inline-end: 0.25rem;
+      vertical-align: baseline;
+      baseline-shift: -0.125em;
+    }
+  }
+
   .navbar-nav {
     &::before {
       display: none;
