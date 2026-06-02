@@ -64,6 +64,11 @@
       }
     }
   }
+
+  // Keep hidden search labels truly clipped even when core sets width:100%.
+  .wp-block-search__label.screen-reader-text {
+    width: 1px !important;
+  }
 }
 
 /* Imagem Destacada */
