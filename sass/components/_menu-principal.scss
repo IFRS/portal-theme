@@ -10,12 +10,16 @@
   }
 
   .ham {
-    width: 72px;
+    width: 54px;
     height: auto;
     cursor: pointer;
     user-select: none;
     transition: transform 400ms;
     -webkit-tap-highlight-color: transparent;
+
+    @include media-breakpoint-up(lg) {
+      width: 72px;
+    }
 
     .line {
       fill: none;
