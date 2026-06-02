@@ -9,6 +9,7 @@ if (file_exists($manifestFile)) {
    * Gutenberg Editor
    */
   add_action('enqueue_block_editor_assets', function() use ($manifest) {
+    wp_enqueue_style($manifest['sass/editor-styles.scss']['name'], get_parent_theme_file_uri( $manifest['sass/editor-styles.scss']['file'] ));
     wp_enqueue_script_module($manifest['src/blocks.js']['name'], get_parent_theme_file_uri( $manifest['src/blocks.js']['file'] ));
   });
 
@@ -16,7 +17,6 @@ if (file_exists($manifestFile)) {
    * Gutenberg Content
    */
   add_action('enqueue_block_assets', function() use ($manifest) {
-    wp_enqueue_style($manifest['sass/editor-styles.scss']['name'], get_parent_theme_file_uri( $manifest['sass/editor-styles.scss']['file'] ));
     wp_enqueue_script_module($manifest['src/bootstrap-blocks.js']['name'], get_parent_theme_file_uri( $manifest['src/bootstrap-blocks.js']['file'] ));
   });
 
