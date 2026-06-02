@@ -45,3 +45,15 @@
     font-weight: 500;
   }
 }
+
+// In editor preview, featured image may not load; use safe text contrast.
+.editor-styles-wrapper .wp-block-query.noticias-destaque {
+  .wp-block-post {
+    color: $body-color;
+    background-color: $gray-200;
+  }
+
+  .wp-block-post-featured-image::after {
+    background: transparent;
+  }
+}
