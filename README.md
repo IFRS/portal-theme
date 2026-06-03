@@ -47,7 +47,6 @@ Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Inst
 
 - [Node.js](https://nodejs.org/) (versão LTS recomendada)
 - [NPM](https://www.npmjs.com/)
-- [Gulp CLI](https://gulpjs.com/) (`npm install -g gulp-cli`)
 
 ## Dependências
 
@@ -85,7 +84,7 @@ npm install
 Para compilar/construir o tema no ambiente de desenvolvimento:
 
 ```bash
-gulp build
+npm run dev
 ```
 
 *Os arquivos compilados ficam na pasta `build/`.*
@@ -95,7 +94,7 @@ gulp build
 Para desenvolvimento contínuo com recompilação automática:
 
 ```bash
-gulp
+npm run start
 ```
 
 ### Compilação para Produção
@@ -103,18 +102,10 @@ gulp
 Para criar uma versão otimizada e minificada para produção:
 
 ```bash
-gulp build --production
+npm run build
 ```
 
-*Será criada a pasta `dist/ifrs-portal-theme` com o tema completo, otimizado e pronto para ser utilizado em produção.*
-
-### Browser Sync (Desenvolvimento)
-
-Para utilizar o Browser Sync durante o desenvolvimento:
-
-```bash
-gulp --url=seusite.local
-```
+*Será atualizada a pasta `build/` com os assets otimizados para produção.*
 
 ## Configuração
 
