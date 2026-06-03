@@ -23,10 +23,18 @@ add_filter( 'wpseo_breadcrumb_separator', function( string $output ) {
 } );
 
 add_filter( 'wpseo_breadcrumb_single_link', function( $link ) {
-  if ( strpos( $link, 'breadcrumb_last' ) !== false ) {
-    $link = str_replace( 'breadcrumb_last', 'breadcrumb-item active', $link );
+  if (strpos($link, 'breadcrumb_last') !== false) {
+    if (preg_match('/class="([^"]*)"/', $link)) {
+      $link = preg_replace('/class="([^"]*)"/', 'class="breadcrumb-item active"', $link, 1);
+    } else {
+      $link = preg_replace('/<li(\s|>)/', '<li class="breadcrumb-item active"$1', $link, 1);
+    }
   } else {
-    $link = str_replace( '<li>', '<li class="breadcrumb-item">', $link );
+    if (preg_match('/<li\s+class="([^"]*)"/', $link)) {
+      $link = preg_replace('/<li\s+class="([^"]*)"/', '<li class="$1 breadcrumb-item"', $link, 1);
+    } else {
+      $link = preg_replace('/<li(\s|>)/', '<li class="breadcrumb-item"$1', $link, 1);
+    }
   }
 
 	return $link;
