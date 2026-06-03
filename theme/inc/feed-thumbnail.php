@@ -7,12 +7,15 @@ add_action( 'rss2_item', function() {
 
 	if (empty($thumbnail_file)) return;
 
-	$upload_dir = wp_upload_dir();
+	if (!is_readable($thumbnail_file)) return;
+
+	$thumbnail_size = filesize($thumbnail_file);
+	if ($thumbnail_size === false) return;
 
 	printf(
 		'<enclosure url="%s" length="%s" type="%s" />',
 		esc_url(get_the_post_thumbnail_url(get_the_ID())),
-		(int) filesize($thumbnail_file),
+		(int) $thumbnail_size,
 		esc_attr(get_post_mime_type($thumbnail_id))
 	);
 } );
