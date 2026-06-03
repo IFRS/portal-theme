@@ -9,14 +9,14 @@
     <meta name="description" content="<?php esc_attr_e('O IFRS é uma instituição federal de ensino público e gratuito. Atua com uma estrutura multicampi para promover a educação profissional e tecnológica de excelência e impulsionar o desenvolvimento sustentável das regiões.', 'ifrs-portal-theme'); ?>">
 
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="<?php echo esc_attr(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
+    <link rel="alternate" type="application/rss+xml" title="<?php echo esc_attr(sprintf(__('%s Feed', 'ifrs-portal-theme'), get_bloginfo('name'))); ?>" href="<?php echo esc_url(get_feed_link()); ?>">
 
     <!-- WP -->
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <a href="#inicio-conteudo" class="visually-hidden visually-hidden-focusable">Pular para o conte&uacute;do</a>
+  <a href="#inicio-conteudo" class="visually-hidden visually-hidden-focusable"><?php esc_html_e('Pular para o conteúdo', 'ifrs-portal-theme'); ?></a>
 
   <?php wp_body_open(); ?>
 
@@ -29,10 +29,10 @@
         <div class="col-12 col-md-5 col-lg-5">
           <div class="d-flex align-items-center mb-2 mb-md-0">
             <a href="https://www.gov.br/pt-br">
-              <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/govbr.png' ) ); ?>" class="header__govbr" alt="Governo do Brasil" width="200" height="72" loading="eager">
+              <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/govbr.png' ) ); ?>" class="header__govbr" alt="<?php esc_attr_e('Governo do Brasil', 'ifrs-portal-theme'); ?>" width="200" height="72" loading="eager">
             </a>
             <div class="vr mx-3"></div>
-            <p class="m-0 fw-medium">Minist&eacute;rio da Educa&ccedil;&atilde;o</p>
+            <p class="m-0 fw-medium"><?php esc_html_e('Ministério da Educação', 'ifrs-portal-theme'); ?></p>
           </div>
         </div>
         <div class="col-12 col-md-7 col-lg-7">
@@ -64,10 +64,14 @@
 
   <?php
   if ( function_exists('yoast_breadcrumb') && ! is_front_page() ) {
-    yoast_breadcrumb('<section class="container"><nav class="breadcrumb-yoast" aria-label="Caminhos de Navegação">','</nav></section>');
+    $breadcrumb_start = sprintf(
+      '<section class="container"><nav class="breadcrumb-yoast" aria-label="%s">',
+      esc_attr__('Caminhos de navegação', 'ifrs-portal-theme')
+    );
+    yoast_breadcrumb($breadcrumb_start,'</nav></section>');
   } else {
     echo do_blocks('<!-- wp:breadcrumbs /-->');
   }
   ?>
 
-  <a id="inicio-conteudo" href="#inicio-conteudo" class="visually-hidden visually-hidden-focusable">In&iacute;cio do conte&uacute;do</a>
+  <a id="inicio-conteudo" href="#inicio-conteudo" class="visually-hidden visually-hidden-focusable"><?php esc_html_e('Início do conteúdo', 'ifrs-portal-theme'); ?></a>
