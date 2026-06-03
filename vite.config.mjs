@@ -50,6 +50,7 @@ export default defineConfig(({ mode }) => ({
       input: {
         /* Scripts */
         portalScript: normalizePath(resolve(_root, 'src/portal.js')),
+        searchHighlightScript: normalizePath(resolve(_root, 'src/search-highlight.js')),
         datatablesScript: normalizePath(resolve(_root, 'src/datatables.js')),
         blocksScript: normalizePath(resolve(_root, 'src/blocks.js')),
         bootstrapBlocksScript: normalizePath(resolve(_root, 'src/bootstrap-blocks.js')),

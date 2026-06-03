@@ -78,6 +78,9 @@ if (file_exists($manifestFile)) {
 
     wp_enqueue_script_module($manifest['src/portal.js']['name'], get_parent_theme_file_uri($manifest['src/portal.js']['file']), array(), null, array('in_footer' => true));
 
+    /* Search Highlight */
+    wp_register_script_module($manifest['src/search-highlight.js']['name'], get_parent_theme_file_uri($manifest['src/search-highlight.js']['file']), array(), null, array('in_footer' => true, 'strategy' => 'defer', 'fetchpriority' => 'low'));
+
     /* DataTables */
     wp_register_script_module($manifest['src/datatables.js']['name'], get_parent_theme_file_uri($manifest['src/datatables.js']['file']), array(), null, array('in_footer' => true, 'strategy' => 'async', 'fetchpriority' => 'low'));
 
@@ -103,6 +106,10 @@ if (file_exists($manifestFile)) {
 
     if (is_page()) {
       wp_enqueue_style($manifest['sass/page_page.scss']['name']);
+    }
+
+    if (is_search()) {
+      wp_enqueue_script_module($manifest['src/search-highlight.js']['name']);
     }
 
     if (

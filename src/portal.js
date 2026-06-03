@@ -1,5 +1,4 @@
 import './modules/bs5.js'
 import './modules/menu.js'
-import './modules/search-highlight.js'
 import './modules/vlibras.js'
 import './modules/cta-banner-stretched-link.js'
