@@ -83,6 +83,7 @@ if (file_exists($manifestFile)) {
 
     /* Polyfill: DOM4, ES2020, ES2021, ES2022, ES2023 */
     wp_enqueue_script('polyfill', 'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=dom4%2Ces2023%2Ces2022%2Ces2021%2Ces2020', array(), null, array('in_footer' => false, 'strategy' => 'defer', 'fetchpriority' => 'high'));
+    wp_script_add_data('polyfill', 'nomodule', true);
 
     /**
      * Conditionals
