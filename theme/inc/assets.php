@@ -1,4 +1,17 @@
 <?php
+if (!function_exists('portal_is_plugin_active')) {
+  function portal_is_plugin_active($plugin) {
+    if (!function_exists('is_plugin_active')) {
+      $plugin_file = ABSPATH . 'wp-admin/includes/plugin.php';
+      if (file_exists($plugin_file)) {
+        require_once $plugin_file;
+      }
+    }
+
+    return function_exists('is_plugin_active') && is_plugin_active($plugin);
+  }
+}
+
 /* Vite Manifest */
 $manifestFile = get_theme_file_path('.vite/manifest.json');
 
@@ -145,7 +158,7 @@ if (file_exists($manifestFile)) {
       wp_enqueue_script_module($manifest['src/datatables.js']['name']);
     }
 
-    if (is_plugin_active( 'ifrs-portal-plugin-cursos-estude/portal-plugin-cursos-estude.php' )) {
+    if (portal_is_plugin_active('ifrs-portal-plugin-cursos-estude/portal-plugin-cursos-estude.php')) {
       wp_enqueue_style( $manifest['sass/plugin_cursos-estude.scss']['name'] );
     }
 
