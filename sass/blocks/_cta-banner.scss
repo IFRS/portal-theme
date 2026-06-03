@@ -48,4 +48,18 @@
       }
     }
   }
+
+  // If selected in editor preview, disable effects.
+  &.is-selected,
+  &.has-child-selected {
+    &:hover {
+      .wp-block-cover__image-background {
+        transform: none;
+      }
+    }
+
+    .wp-block-cover__inner-container {
+      opacity: 1;
+    }
+  }
 }
