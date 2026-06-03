@@ -16,7 +16,12 @@ if (!function_exists('portal_is_plugin_active')) {
 $manifestFile = get_theme_file_path('.vite/manifest.json');
 
 if (file_exists($manifestFile)) {
-  $manifest = json_decode(file_get_contents($manifestFile), true);
+  $manifest_content = file_get_contents($manifestFile);
+  $manifest = $manifest_content ? json_decode($manifest_content, true) : null;
+
+  if (!is_array($manifest)) {
+    return;
+  }
 
   /**
    * Gutenberg Editor
