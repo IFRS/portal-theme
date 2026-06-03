@@ -1,4 +1,4 @@
-<nav class="collapse menu-principal-collapse" tabindex="-1" id="portal-menu-principal" aria-label="Navegação Principal">
+<nav class="collapse menu-principal-collapse" tabindex="-1" id="portal-menu-principal" aria-label="<?php esc_attr_e('Navegação principal', 'ifrs-portal-theme'); ?>">
   <?php
     wp_nav_menu(array(
       'menu_class'        => 'menu-principal',
@@ -11,4 +11,4 @@
     ));
   ?>
 </nav>
-<a href="#fim-menu" id="fim-menu" class="visually-hidden">Fim da navega&ccedil;&atilde;o</a>
+<a href="#fim-menu" id="fim-menu" class="visually-hidden"><?php esc_html_e('Fim da navegação', 'ifrs-portal-theme'); ?></a>
