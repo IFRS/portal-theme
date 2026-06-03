@@ -8,6 +8,8 @@
 
 .documento-recente,
 .edital-recente {
+  @extend %card;
+
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -15,12 +17,6 @@
   justify-content: start;
   width: 100%;
   padding: 1rem;
-  color: var(--bs-primary-text-emphasis);
-  text-decoration: none;
-  background-color: var(--bs-gray-200);
-  border-radius: var(--bs-border-radius, 1rem);
-  box-shadow: var(--bs-box-shadow-sm, none);
-  transition: $transition-base;
 
   &:hover,
   &:active {

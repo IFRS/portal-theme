@@ -13,19 +13,14 @@
     }
 
     > .wp-block-button__link {
+      @extend %card;
+
       font-size: $font-size-lg;
       font-weight: 500;
-      color: var(--bs-primary-text-emphasis);
-      text-decoration: none;
-      background-color: $gray-200;
-      border: 1px solid $gray-300;
-      border-radius: $border-radius;
-      box-shadow: var(--bs-box-shadow-sm, none);
-      transition: $transition-base;
 
       &:hover {
         // background-color: var(--bs-primary-bg-subtle);
-        background-color: $gray-100;
+        background-color: var(--bs-light, $gray-100);
         box-shadow: var(--bs-box-shadow, none);
         transform: translateY(-0.25rem);
       }
