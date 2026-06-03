@@ -11,8 +11,8 @@ add_action( 'rss2_item', function() {
 
 	printf(
 		'<enclosure url="%s" length="%s" type="%s" />',
-		get_the_post_thumbnail_url(get_the_ID()),
-		filesize($thumbnail_file),
-		get_post_mime_type($thumbnail_id)
+		esc_url(get_the_post_thumbnail_url(get_the_ID())),
+		(int) filesize($thumbnail_file),
+		esc_attr(get_post_mime_type($thumbnail_id))
 	);
 } );
