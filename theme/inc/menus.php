@@ -20,7 +20,7 @@ add_action( 'after_setup_theme', function() {
 // }, 10, 3);
 
 add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
-  if ($args->menu->slug !== 'campi') return $classes;
+  if (!isset($args->theme_location) || $args->theme_location !== 'campi') return $classes;
 
   if ($item->menu_item_parent == 0) {
     $classes[] = 'nav-item';
@@ -30,7 +30,7 @@ add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
 }, 10, 4);
 
 add_filter('nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
-  if ($args->menu->slug !== 'campi') return $atts;
+  if (!isset($args->theme_location) || $args->theme_location !== 'campi') return $atts;
 
   $atts['class'] = 'nav-link';
 
