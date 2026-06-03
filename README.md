@@ -39,7 +39,7 @@ Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Inst
 
 ### Sistema
 
-- **WordPress**: 6.3 ou superior
+- **WordPress**: 6.9 ou superior
 - **PHP**: 8.1 ou superior
 - **MySQL**: 5.7 ou superior (ou MariaDB equivalente)
 
