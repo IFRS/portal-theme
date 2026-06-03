@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Notícias Destaque
- * Slug: core/query-noticias-destaque
+ * Slug: ifrs/query-noticias-destaque
  * Categories: query
  * Block Types: core/query
  */
