@@ -7,10 +7,3 @@ add_filter( 'wpseo_metadesc', function( $description ) {
   }
   return $description;
 } );
-
-add_action('wp_head', function() {
-?>
-  <meta name="author" content="<?php _e('Departamento de Comunicação do Instituto Federal do Rio Grande do Sul', 'ifrs-portal-theme'); ?>">
-  <meta name="keywords" content="<?php _e('ifrs, portal, site, institucional, instituto, federal, faculdade, universidade, cursos, ensino, pesquisa, extensão, ead', 'ifrs-portal-theme'); ?>">
-<?php
-});
