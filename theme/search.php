@@ -25,7 +25,7 @@
       <!-- /wp:group -->
     <!-- /wp:post-template -->
 
-    <!-- wp:query-pagination {"className":"mt-5","paginationArrow":"chevron","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
+    <!-- wp:query-pagination {"className":"mt-5 mb-3","paginationArrow":"chevron","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
       <!-- wp:query-pagination-previous /-->
 
       <!-- wp:query-pagination-numbers {"midSize":5} /-->
