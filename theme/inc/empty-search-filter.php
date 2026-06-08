@@ -4,18 +4,9 @@ add_filter('pre_get_posts', function($query) {
       return $query;
    }
 
-   $search_get = null;
-   $search_post = null;
+   $search_term = get_query_var('s', '');
 
-   if (isset($_GET['s'])) {
-      $search_get = sanitize_text_field(wp_unslash($_GET['s']));
-   }
-
-   if (isset($_POST['s'])) {
-      $search_post = sanitize_text_field(wp_unslash($_POST['s']));
-   }
-
-   if (($search_get !== null && $search_get === '') || ($search_post !== null && $search_post === '')) {
+   if (!is_string($search_term) || preg_match('/\S/u', $search_term) !== 1) {
       $query->is_search = false;
    }
 
