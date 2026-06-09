@@ -53,8 +53,8 @@ require_once get_parent_theme_file_path('inc/iframe-lazy-loading.php');
 // Paginação de posts
 require_once get_parent_theme_file_path('inc/post-pagination.php');
 
-// Taxonomias
-require_once get_parent_theme_file_path('inc/taxonomies/escopo.php');
+// Ocultação de categorias na página inicial
+require_once get_parent_theme_file_path('inc/category-home-visibility.php');
 
 // Template Parts Areas
 require_once get_parent_theme_file_path('inc/template-parts-areas.php');

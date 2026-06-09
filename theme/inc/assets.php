@@ -101,7 +101,7 @@ if (file_exists($manifestFile)) {
       wp_enqueue_style($manifest['sass/page_front-page.scss']['name']);
     }
 
-    if (is_home() || is_category() || is_tag() || is_tax('escopo')) {
+    if (is_home() || is_category() || is_tag()) {
       wp_enqueue_style($manifest['sass/page_home.scss']['name']);
     }
 
