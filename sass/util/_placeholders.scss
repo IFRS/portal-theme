@@ -15,11 +15,11 @@
 }
 
 %card {
+  color: var(--bs-primary-text-emphasis, $body-color);
+  text-decoration: none;
   background-color: var(--bs-gray-200);
   border: var(--bs-border-width, 1px) var(--bs-border-style, solid) var(--bs-border-color, $gray-300);
   border-radius: var(--bs-border-radius, 1rem);
   box-shadow: var(--bs-box-shadow-sm, none);
-  color: var(--bs-primary-text-emphasis, $body-color);
-  text-decoration: none;
   transition: $transition-base;
 }
