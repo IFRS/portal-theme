@@ -1,7 +1,14 @@
-const CTA_HEADING_LINK_SELECTOR = '.portal-cta-banner .wp-block-heading a';
+const STRETCHED_LINK_SELECTORS = [
+  '.portal-cta-banner .wp-block-heading a',
+  '.noticias-destaque .wp-block-post-title a',
+];
+
+function isStretchedLinkTarget(element) {
+  return STRETCHED_LINK_SELECTORS.some((selector) => element.matches(selector));
+}
 
 function applyStretchedLinkClass(root = document) {
-  root.querySelectorAll(CTA_HEADING_LINK_SELECTOR).forEach((link) => {
+  root.querySelectorAll(STRETCHED_LINK_SELECTORS.join(', ')).forEach((link) => {
     link.classList.add('stretched-link');
   });
 }
@@ -14,7 +21,7 @@ function watchForHeadingLinkChanges() {
           return;
         }
 
-        if (node.matches(CTA_HEADING_LINK_SELECTOR)) {
+        if (isStretchedLinkTarget(node)) {
           node.classList.add('stretched-link');
           return;
         }
