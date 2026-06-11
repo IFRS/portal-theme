@@ -67,14 +67,18 @@
   left: 0;
   z-index: 9999;
   width: 100%;
-  margin-bottom: $grid-gutter-width;
+  margin-bottom: 0;
   background-color: #ededed;
   border-top: 2px solid #ffcd07;
   box-shadow: var(--bs-box-shadow-sm, none);
 
   .container {
     height: var(--collapse-height, 100dvh);
+    overflow-x: hidden;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    overflow-anchor: none;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -87,6 +91,7 @@
   padding: $grid-gutter-width 0;
   font-weight: 500;
   list-style: none;
+  min-height: 100%;
 
   a {
     color: inherit;
@@ -139,7 +144,9 @@
     position: absolute;
     top: 0; left: 0;
     display: none;
-    height: 100%;
+    min-height: 100%;
+    max-height: var(--collapse-height, 100dvh);
+    overscroll-behavior: contain;
     padding: $grid-gutter-width 0;
     list-style: none;
     background-color: #f8f8f8;

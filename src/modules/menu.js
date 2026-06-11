@@ -19,17 +19,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuPrincipalNav = document.querySelector('.menu-principal-collapse')
 
-  if (!menuPrincipalNav) return
+  if (!menuPrincipalNav || !cabecalho) return
+
+  const setHeaderHeight = () => {
+    menuPrincipalNav.style.setProperty('--header-height', `${cabecalho.offsetHeight}px`)
+  }
+
+  const setCollapseHeight = () => {
+    const viewportHeight = window.visualViewport?.height ?? window.innerHeight
+    const navTop = menuPrincipalNav.getBoundingClientRect().top
+    const availableHeight = Math.max(0, Math.floor(viewportHeight - navTop))
+    menuPrincipalNav.style.setProperty('--collapse-height', `${availableHeight}px`)
+  }
+
+  const updateMenuViewportMetrics = () => {
+    setHeaderHeight()
+    setCollapseHeight()
+  }
 
   menuPrincipalNav.addEventListener('shown.bs.collapse', () => {
+    updateMenuViewportMetrics()
     document.body.style.overflow = 'hidden'
   })
 
   menuPrincipalNav.addEventListener('hidden.bs.collapse', () => {
-    document.body.style.overflow = 'auto'
+    document.body.style.overflow = ''
   })
 
-  menuPrincipalNav.style.setProperty('--header-height', `${(cabecalho.offsetHeight)}px`)
+  updateMenuViewportMetrics()
+
+  window.addEventListener('resize', updateMenuViewportMetrics)
+  window.addEventListener('orientationchange', updateMenuViewportMetrics)
+  window.visualViewport?.addEventListener('resize', updateMenuViewportMetrics)
 
   const menuPrincipal = menuPrincipalNav.querySelector('.menu-principal')
   menuPrincipalResizeObserver.observe(menuPrincipal)
