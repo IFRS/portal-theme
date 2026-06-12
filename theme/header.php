@@ -42,7 +42,7 @@
 
       <div class="row align-items-center mb-3">
         <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center mb-3 mb-md-0">
-          <?php get_template_part('partials/menus/principal', 'toggle'); ?>
+          <?php get_template_part('partials/menus/principal', 'mobile'); ?>
           <div class="header__principal">
             <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
             <?php echo do_blocks('<!-- wp:template-part {"slug":"header-content","lock":{"move":true,"remove":true}} /-->'); ?>
@@ -59,7 +59,7 @@
         <?php get_template_part('partials/menus/servicos'); ?>
       </div>
     </div>
-    <?php get_template_part('partials/menus/principal', 'nav'); ?>
+    <?php get_template_part('partials/menus/principal', 'horizontal'); ?>
   </header>
 
   <?php
