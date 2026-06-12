@@ -44,6 +44,8 @@ $border-radius-xxl: DS.$rounder-lg * 2;
 $breadcrumb-font-size: DS.$font-size-scale-base;
 $breadcrumb-margin-bottom: 0;
 
+$dropdown-padding-y: 0;
+
 $input-focus-border-color: $gold;
 $input-focus-box-shadow: 0 0 0 0.25rem rgba($input-focus-border-color, 0.25);
 
@@ -61,8 +63,14 @@ $custom-colors: (
 );
 $theme-colors: map.merge($theme-colors, $custom-colors);
 
+$dropdown-link-hover-bg: $primary-bg-subtle;
+$dropdown-link-active-color: $primary-text-emphasis;
+$dropdown-link-active-bg: $primary-bg-subtle;
+
 $font-family-base: "Raleway Variable", #{$font-family-sans-serif};
+
 $input-bg: $gray-200;
+
 $navbar-padding-y: $spacer;
 $navbar-toggler-font-size: $font-size-base;
 $nav-link-font-weight: $font-weight-medium;
