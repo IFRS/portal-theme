@@ -8,6 +8,7 @@
 @import 'vars';
 
 $accent: DS.$color-primary-default;
+$gold: DS.$gold-vivid-40;
 
 // default colors overrides
 $primary: #2a8e3b; // 0%: #2f9e41, 10%: #2a8e3b, 20%: #267e34
@@ -43,7 +44,7 @@ $border-radius-xxl: DS.$rounder-lg * 2;
 $breadcrumb-font-size: DS.$font-size-scale-base;
 $breadcrumb-margin-bottom: 0;
 
-$input-focus-border-color: #C2850C;
+$input-focus-border-color: $gold;
 $input-focus-box-shadow: 0 0 0 0.25rem rgba($input-focus-border-color, 0.25);
 
 $nav-link-color: shade-color($primary, 20%);
@@ -56,6 +57,7 @@ $nav-link-color: shade-color($primary, 20%);
 // default map overrides
 $custom-colors: (
   'accent': $accent,
+  'gold': $gold,
 );
 $theme-colors: map.merge($theme-colors, $custom-colors);
 

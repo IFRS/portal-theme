@@ -54,6 +54,10 @@
       padding: 8px;
       background-color: var(--bs-gray-200);
       border-radius: var(--bs-border-radius, 0);
+
+      &:focus-within {
+        border-color: $gold;
+      }
     }
 
     .wp-block-search__input {
