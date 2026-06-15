@@ -16,3 +16,11 @@ ul {
     font-style: italic;
   }
 }
+
+body.admin-bar .offcanvas {
+  margin-top: 46px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 32px;
+  }
+}

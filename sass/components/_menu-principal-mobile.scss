@@ -1,0 +1,52 @@
+@use 'sass:math';
+
+.btn-menu-toggle {
+  svg {
+    width: 48px;
+    height: auto;
+
+    @include media-breakpoint-up(sm) {
+      width: 56px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 64px;
+    }
+  }
+}
+
+.menu-principal-mobile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: math.div($spacer, 2);
+  border-left: 1px solid $gold;
+  list-style: none;
+  padding-inline-start: $spacer;
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+
+  > .menu-item {
+    border-radius: $border-radius-lg;
+    color: var(--bs-primary-text-emphasis);
+    font-weight: 600;
+
+    &:hover,
+    &:focus-within,
+    &:has(.sub-menu.show),
+    &.current-menu-item,
+    &.current-menu-ancestor {
+      background-color: var(--bs-primary-bg-subtle);
+    }
+
+    > a {
+      display: block;
+      line-height: $line-height-lg;
+      padding: $btn-padding-y $btn-padding-x;
+      text-decoration: none;
+    }
+  }
+}
