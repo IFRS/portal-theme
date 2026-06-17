@@ -187,6 +187,11 @@
                 "text": "var(--bs-primary-text-emphasis)"
               }
             }
+          },
+          "textInput": {
+            "color": {
+              "background": "inherit"
+            }
           }
         }
       },
@@ -236,12 +241,12 @@
         "elements": {
           "h2": {
             "typography": {
-              "fontSize": "1.75rem"
+              "fontSize": "1.5rem"
             }
           },
           "h3": {
             "typography": {
-              "fontSize": "1.75rem"
+              "fontSize": "1.5rem"
             }
           }
         }

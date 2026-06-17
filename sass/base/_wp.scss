@@ -52,17 +52,17 @@
   &.wp-block-search__button-inside.wp-block-search__icon-button {
     .wp-block-search__inside-wrapper {
       padding: 8px;
-      background-color: var(--bs-gray-200);
+      background-color: var(--bs-gray-300);
+      border-color: transparent;
       border-radius: var(--bs-border-radius, 0);
 
       &:focus-within {
+        background-color: var(--bs-gray-200);
         border-color: $gold;
       }
     }
 
     .wp-block-search__input {
-      background-color: inherit;
-
       &::placeholder {
         font-style: italic;
       }
