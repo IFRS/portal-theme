@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 /* Design System GOV.BR */
 @use '~/@govbr-ds/core/src/partial/scss/_base.scss' as DS;
@@ -7,11 +7,12 @@
 @import 'bootstrap/scss/functions';
 @import 'vars';
 
+/* Custom Variables */
 $accent: DS.$color-primary-default;
 $gold: DS.$gold-vivid-40;
 
-// default colors overrides
-$primary: #2a8e3b; // 0%: #2f9e41, 10%: #2a8e3b, 20%: #267e34
+/* Bootstrap Variables Overrides */
+$primary: $if-10;
 $success: DS.$color-success;
 $info: DS.$color-info;
 $warning: DS.$color-warning;
@@ -66,6 +67,8 @@ $theme-colors: map.merge($theme-colors, $custom-colors);
 $dropdown-link-hover-bg: $primary-bg-subtle;
 $dropdown-link-active-color: $primary-text-emphasis;
 $dropdown-link-active-bg: $primary-bg-subtle;
+$dropdown-item-padding-y: $spacer * .5;
+$dropdown-item-padding-x: $spacer;
 
 $font-family-base: "Raleway Variable", #{$font-family-sans-serif};
 
