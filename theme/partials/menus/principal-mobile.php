@@ -22,6 +22,8 @@
         'container_id'      => false,
         'depth'             => 3,
         'theme_location'    => 'principal',
+        'walker'            => new IFRS_Walker_Nav_Menu_Mobile_Collapse(),
+        'principal_mobile_collapse' => true,
       ));
     ?>
   </div>

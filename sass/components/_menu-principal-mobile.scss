@@ -22,17 +22,39 @@
   gap: math.div($spacer, 2);
   border-left: 1px solid $gold;
   list-style: none;
-  padding-inline-start: $spacer;
+  // padding: 0;
+  padding-inline-start: math.div($spacer, 2);
 
   a {
     color: inherit;
     font-weight: inherit;
+    text-decoration: none;
+
+    &[data-bs-toggle='collapse'] {
+      @include caret('down');
+
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      &::after {
+        margin-inline-start: auto;
+      }
+
+      &[aria-expanded='true'] {
+        @include caret('up');
+      }
+    }
   }
 
   > .menu-item {
     border-radius: $border-radius-lg;
     color: var(--bs-primary-text-emphasis);
     font-weight: 600;
+
+    &:has(.sub-menu.show) {
+      padding-bottom: $btn-padding-y;
+    }
 
     &:hover,
     &:focus-within,
@@ -43,10 +65,19 @@
     }
 
     > a {
-      display: block;
       line-height: $line-height-lg;
       padding: $btn-padding-y $btn-padding-x;
-      text-decoration: none;
+    }
+  }
+
+  .sub-menu {
+    font-weight: 500;
+    list-style: none;
+    padding-inline-start: $btn-padding-x * 1.5;
+    padding-inline-end: $btn-padding-x;
+
+    a {
+      line-height: $line-height-lg;
     }
   }
 }
