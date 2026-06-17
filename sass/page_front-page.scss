@@ -1,3 +1,9 @@
 @import 'commons';
 @import 'components/area-banners';
 @import 'components/noticia';
+
+body.home {
+  .entry-content.is-layout-flow > *:not(:first-child) {
+    margin-top: 4rem;
+  }
+}
