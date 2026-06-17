@@ -32,7 +32,7 @@
               <img src="<?php echo esc_url( get_parent_theme_file_uri( '/img/govbr.png' ) ); ?>" class="header__govbr" alt="<?php esc_attr_e('Governo do Brasil', 'ifrs-portal-theme'); ?>" width="200" height="72" loading="eager">
             </a>
             <div class="vr mx-3"></div>
-            <p class="m-0 fw-medium"><?php esc_html_e('Ministério da Educação', 'ifrs-portal-theme'); ?></p>
+            <p class="header__mec"><?php esc_html_e('Ministério da Educação', 'ifrs-portal-theme'); ?></p>
           </div>
         </div>
         <div class="col-12 col-md-7 col-lg-7">
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <div class="row align-items-center mb-3">
+      <div class="row align-items-center">
         <div class="col-12 col-md-8 col-lg-8 d-flex align-items-center mb-3 mb-md-0">
           <?php get_template_part('partials/menus/principal', 'mobile'); ?>
           <div class="header__principal">
@@ -52,14 +52,11 @@
           <?php get_search_form(); ?>
         </div>
       </div>
-    </div>
 
-    <div class="header__barra-servicos">
-      <div class="container">
-        <?php get_template_part('partials/menus/servicos'); ?>
+      <div class="row align-items-center">
+        <?php get_template_part('partials/menus/principal'); ?>
       </div>
     </div>
-    <?php get_template_part('partials/menus/principal', 'horizontal'); ?>
   </header>
 
   <?php

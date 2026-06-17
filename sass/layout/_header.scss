@@ -1,10 +1,12 @@
 @use 'sass:math';
 
 header {
+  background-color: $gray-100;
   padding-top: math.div($spacer, 2);
+  padding-bottom: $spacer;
 
   .row:not(:last-of-type) {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -12,7 +14,13 @@ header {
   &__govbr {
     @include img-fluid;
 
-    width: 100px;
+    width: 80px;
+  }
+
+  &__mec {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0;
   }
 
   &__principal {
