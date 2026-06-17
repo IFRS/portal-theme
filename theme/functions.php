@@ -56,9 +56,6 @@ require_once get_parent_theme_file_path('inc/post-pagination.php');
 // Ocultação de categorias na página inicial
 require_once get_parent_theme_file_path('inc/category-home-visibility.php');
 
-// Template Parts Areas
-require_once get_parent_theme_file_path('inc/template-parts-areas.php');
-
 // VLIBRAS
 require_once get_parent_theme_file_path('inc/vlibras.php');
 

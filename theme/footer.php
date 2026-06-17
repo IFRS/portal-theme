@@ -1,7 +1,5 @@
 <a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden"><?php esc_html_e('Fim do conteúdo', 'ifrs-portal-theme'); ?></a>
 
-<?php echo do_blocks('<!-- wp:template-part {"slug":"prefooter","className":"container mb-5","theme":"ifrs-portal-theme","lock":{"move":true,"remove":true}} /-->'); ?>
-
 <?php if (has_nav_menu( 'campi' )) get_template_part('partials/menus/campi'); ?>
 
 <footer>
