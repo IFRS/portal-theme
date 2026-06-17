@@ -55,10 +55,21 @@
       background-color: var(--bs-gray-300);
       border-color: transparent;
       border-radius: var(--bs-border-radius, 0);
+      width: 100%;
+      margin-inline-start: auto;
+      transition: background-color 0.2s ease, border-color 0.2s ease, max-width 0.2s ease;
 
       &:focus-within {
         background-color: var(--bs-gray-200);
         border-color: $gold;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-width: 300px;
+
+        &:focus-within {
+          max-width: 100%;
+        }
       }
     }
 
