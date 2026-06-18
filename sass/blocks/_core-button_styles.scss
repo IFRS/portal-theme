@@ -38,4 +38,11 @@
   &.is-style-wide {
     @include portal-button-card-variation(math.div(21, 9));
   }
+
+  :where(.wp-block-buttons.is-vertical) > &.is-style-card,
+  :where(.wp-block-buttons.is-vertical) > &.is-style-wide {
+    flex: 0 0 auto;
+    width: min(100%, 28rem);
+    max-width: 28rem;
+  }
 }
