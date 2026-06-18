@@ -1,6 +1,7 @@
 import 'bootstrap/js/dist/collapse'
 import 'bootstrap/js/dist/offcanvas'
 import 'bootstrap/js/dist/dropdown'
+import 'bootstrap/js/dist/tab'
 import Tooltip from 'bootstrap/js/dist/tooltip'
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
