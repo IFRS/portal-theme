@@ -351,6 +351,11 @@
           "fontSize": "0.875rem",
           "fontWeight": "500"
         }
+      },
+      "core/separator": {
+        "border": {
+          "color": "var(--bs-gray-500)"
+        }
       }
     },
     "elements": {
