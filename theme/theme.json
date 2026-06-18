@@ -241,12 +241,12 @@
         "elements": {
           "h2": {
             "typography": {
-              "fontSize": "1.5rem"
+              "fontSize": "1.3rem"
             }
           },
           "h3": {
             "typography": {
-              "fontSize": "1.5rem"
+              "fontSize": "1.2rem"
             }
           }
         }
@@ -266,6 +266,7 @@
           }
         },
         "typography": {
+          "fontSize": "0.875rem",
           "fontWeight": "600",
           "textTransform": "uppercase"
         },
