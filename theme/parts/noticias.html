@@ -1,13 +1,13 @@
 <!-- wp:query {"query":{"inherit":true}} -->
 <div class="wp-block-query">
   <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
-    <!-- wp:group {"layout":{"inherit":false}} -->
-    <div class="wp-block-group">
+    <!-- wp:group {"className":"h-100","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+    <div class="wp-block-group h-100">
       <!-- wp:post-featured-image {"isLink":true} /-->
       <!-- wp:post-terms {"term":"category"} /-->
       <!-- wp:post-title {"level":3,"isLink":true} /-->
       <!-- wp:post-excerpt {"excerptLength":30} /-->
-      <!-- wp:post-date {"textAlign":"right"} /-->
+      <!-- wp:post-date {"textAlign":"right","className":"w-100 mt-auto"} /-->
     </div>
     <!-- /wp:group -->
   <!-- /wp:post-template -->
@@ -23,7 +23,7 @@
   <!-- wp:query-no-results -->
     <!-- wp:html -->
     <div class="alert alert-warning" role="alert">
-      <strong>Ops!</strong> Não foram encontradas notícias.
+      <strong>Ops!</strong> N&atilde;o foram encontradas not&iacute;cias.
     </div>
     <!-- /wp:html -->
   <!-- /wp:query-no-results -->
