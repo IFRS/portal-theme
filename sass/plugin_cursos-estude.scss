@@ -2,12 +2,15 @@
 
 .cursos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: row;
   gap: 2rem;
   place-content: stretch stretch;
   place-items: stretch stretch;
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   @include media-breakpoint-down(lg) {
     grid-template-columns: repeat(2, 1fr);
@@ -26,7 +29,7 @@
     align-items: start;
     justify-content: start;
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
 
     &:hover,
     &:active {
@@ -48,7 +51,7 @@
     }
 
     &__titulo {
-      font-size: clamp-builder(600, 1200, 1.25, 2);
+      font-size: clamp-builder(600, 1200, 1.2, 1.5);
     }
 
     &__meta {
