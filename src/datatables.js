@@ -1,8 +1,11 @@
-import { Settings } from 'luxon'
+import * as luxon from 'luxon'
 import DataTable from 'datatables.net-bs5'
 import 'datatables.net-responsive-bs5'
 
-Settings.defaultLocale = "pt-BR"
+luxon.Settings.defaultLocale = 'pt-BR'
+
+// Register Luxon explicitly for DataTables datetime parsing in ESM builds.
+DataTable.use(luxon)
 
 // REGISTRA os formatos de data usados nas células
 DataTable.datetime('dd/MM/yyyy', 'pt-BR')
