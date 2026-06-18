@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+@mixin portal-button-card-variation($desktop-ratio, $mobile-ratio: $desktop-ratio) {
+  flex: 0 1 calc(25% - 18px);
+  aspect-ratio: $desktop-ratio;
+
+  @include media-breakpoint-down(lg) {
+    flex: 0 1 calc(50% - 12px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex: 0 1 100%;
+    aspect-ratio: $mobile-ratio;
+  }
+}
+
+.wp-block-button {
+  &.is-style-card,
+  &.is-style-wide {
+    > .wp-block-button__link {
+      @extend %card;
+
+      font-size: $font-size-lg;
+      font-weight: 500;
+
+      &:hover {
+        background-color: var(--bs-light, $gray-100);
+        box-shadow: var(--bs-box-shadow, none);
+        transform: translateY(-0.25rem);
+      }
+    }
+  }
+
+  &.is-style-card {
+    @include portal-button-card-variation(math.div(4, 3), math.div(16, 9));
+  }
+
+  &.is-style-wide {
+    @include portal-button-card-variation(math.div(21, 9));
+  }
+}
