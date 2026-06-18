@@ -52,45 +52,65 @@
       "defaultPalette": false,
       "gradients": [
         {
-          "gradient": "linear-gradient(to bottom, transparent 25%, rgb(18.8, 63.2, 26) 75%)",
-          "name": "Gradiente Principal Vertical",
-          "slug": "primary-vertical"
+          "gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.95) 90%, rgba(0, 0, 0, 1) 100%)",
+          "name": "Gradiente Escuro Vertical",
+          "slug": "dark-vertical"
         },
         {
-          "gradient": "linear-gradient(to right, transparent 25%, rgb(18.8, 63.2, 26) 75%)",
-          "name": "Gradiente Principal",
-          "slug": "primary-horizontal"
+          "gradient": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.95) 90%, rgba(0, 0, 0, 1) 100%)",
+          "name": "Gradiente Escuro Horizontal",
+          "slug": "dark-horizontal"
+        },
+        {
+          "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.95) 90%, rgba(255, 255, 255, 1) 100%)",
+          "name": "Gradiente Claro Vertical",
+          "slug": "light-vertical"
+        },
+        {
+          "gradient": "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.95) 90%, rgba(255, 255, 255, 1) 100%)",
+          "name": "Gradiente Claro Horizontal",
+          "slug": "light-horizontal"
         }
       ],
       "link": false,
       "palette": [
         {
-          "color": "#2f9e41",
+          "color": "var(--bs-primary)",
           "name": "Principal",
           "slug": "primary"
         },
         {
-          "color": "#1351B4",
+          "color": "var(--bs-secondary)",
+          "name": "Secundário",
+          "slug": "secondary"
+        },
+        {
+          "color": "var(--bs-accent)",
           "name": "Destaque",
           "slug": "accent"
         },
         {
-          "color": "#f8f9fa",
+          "color": "var(--bs-gold)",
+          "name": "Dourado",
+          "slug": "gold"
+        },
+        {
+          "color": "var(--bs-light)",
           "name": "Claro",
           "slug": "light"
         },
         {
-          "color": "#212529",
+          "color": "var(--bs-dark)",
           "name": "Escuro",
           "slug": "dark"
         },
         {
-          "color": "#ffffff",
+          "color": "var(--bs-white)",
           "name": "Branco",
           "slug": "white"
         },
         {
-          "color": "#000000",
+          "color": "var(--bs-black)",
           "name": "Preto",
           "slug": "black"
         }
@@ -119,22 +139,22 @@
         {
           "name": "Normal",
           "slug": "normal",
-          "shadow": "0 .5rem 1rem rgba(0, 0, 0, .15)"
+          "shadow": "var(--bs-box-shadow)"
         },
         {
           "name": "Pequena",
           "slug": "small",
-          "shadow": "0 .125rem .25rem rgba(0, 0, 0, .075)"
+          "shadow": "var(--bs-box-shadow-sm)"
         },
         {
           "name": "Grande",
           "slug": "large",
-          "shadow": "0 1rem 3rem rgba(0, 0, 0, .175)"
+          "shadow": "var(--bs-box-shadow-lg)"
         },
         {
           "name": "Interna",
           "slug": "inner",
-          "shadow": "inset 0 1px 2px rgba(0, 0, 0, .075)"
+          "shadow": "var(--bs-box-shadow-inset)"
         }
       ]
     },

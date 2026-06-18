@@ -11,9 +11,9 @@ window.wp.domReady( () => {
       contentPosition: 'bottom center',
       allowedBlocks: [ 'core/heading' ],
       templateLock: 'all',
-      dimRatio: 50,
+      dimRatio: 90,
       isUserOverlayColor: true,
-      gradient:'primary-vertical',
+      gradient:'dark-vertical',
       style: {
         shadow: 'var:preset|shadow|normal',
       },
