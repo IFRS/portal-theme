@@ -1,15 +1,99 @@
 <?php
 add_action( 'after_setup_theme', function() {
-  register_nav_menus(
-    array(
-      'acessibilidade' => __('Barra de Acessibilidade', 'ifrs-portal-theme'),
-      // 'servicos'       => __('Barra de Serviços', 'ifrs-portal-theme'),
-      'campi'          => __('Lista de Campi', 'ifrs-portal-theme'),
-      // 'relevancia'     => __('Menu de Relevância', 'ifrs-portal-theme'),
-      'principal'      => __('Menu Principal', 'ifrs-portal-theme'),
-    )
-  ) ;
+  $menus = array(
+    'acessibilidade' => __('Barra de Acessibilidade', 'ifrs-portal-theme'),
+    'principal'      => __('Menu Principal', 'ifrs-portal-theme'),
+  );
+
+  if (!is_multisite() || is_main_site()) {
+    $menus['campi'] = __('Lista de Campi', 'ifrs-portal-theme');
+  }
+
+  register_nav_menus($menus);
 } );
+
+function ifrs_get_network_main_site_id() {
+  if (function_exists('get_main_site_id')) {
+    return (int) get_main_site_id();
+  }
+
+  if (defined('BLOG_ID_CURRENT_SITE')) {
+    return (int) BLOG_ID_CURRENT_SITE;
+  }
+
+  return 1;
+}
+
+function ifrs_get_network_campi_menu_id() {
+  if (!is_multisite()) {
+    return has_nav_menu('campi') ? (int) get_nav_menu_locations()['campi'] : 0;
+  }
+
+  $main_site_id = ifrs_get_network_main_site_id();
+  $current_site_id = (int) get_current_blog_id();
+  $is_switched = false;
+
+  if ($current_site_id !== $main_site_id) {
+    switch_to_blog($main_site_id);
+    $is_switched = true;
+  }
+
+  $locations = get_nav_menu_locations();
+  $menu_id = !empty($locations['campi']) ? (int) $locations['campi'] : 0;
+
+  if ($is_switched) {
+    restore_current_blog();
+  }
+
+  return $menu_id;
+}
+
+function ifrs_has_campi_menu() {
+  if (!is_multisite() || is_main_site()) {
+    return has_nav_menu('campi');
+  }
+
+  return ifrs_get_network_campi_menu_id() > 0;
+}
+
+function ifrs_get_campi_nav_menu_args( $collapse_id ) {
+  $args = array(
+    'container'            => 'div',
+    'container_class'      => 'collapse navbar-collapse',
+    'container_id'         => esc_attr($collapse_id),
+    'container_aria_label' => __('Lista de campi', 'ifrs-portal-theme'),
+    'menu_class'           => 'navbar-nav flex-wrap',
+    'menu_id'              => false,
+    'depth'                => 1,
+    'item_spacing'         => 'discard',
+  );
+
+  if (!is_multisite() || is_main_site()) {
+    $args['theme_location'] = 'campi';
+    return $args;
+  }
+
+  $network_menu_id = ifrs_get_network_campi_menu_id();
+
+  if ($network_menu_id > 0) {
+    $args['menu'] = $network_menu_id;
+    $args['ifrs_network_campi'] = true;
+  }
+
+  return $args;
+}
+
+function ifrs_is_campi_menu_args( $args ) {
+  if (!is_object($args)) {
+    return false;
+  }
+
+  if (!empty($args->theme_location) && $args->theme_location === 'campi') {
+    return true;
+  }
+
+  return !empty($args->ifrs_network_campi);
+}
 
 function ifrs_is_principal_horizontal_bootstrap_menu_args( $args ) {
   return is_object($args) && !empty($args->principal_horizontal_bootstrap);
@@ -55,7 +139,7 @@ class IFRS_Walker_Nav_Menu_Mobile_Collapse extends Walker_Nav_Menu {
 }
 
 add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
-  if (!isset($args->theme_location) || $args->theme_location !== 'campi') return $classes;
+  if (!ifrs_is_campi_menu_args($args)) return $classes;
 
   if ($item->menu_item_parent == 0) {
     $classes[] = 'nav-item';
@@ -65,7 +149,7 @@ add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
 }, 10, 4);
 
 add_filter('nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
-  if (!isset($args->theme_location) || $args->theme_location !== 'campi') return $atts;
+  if (!ifrs_is_campi_menu_args($args)) return $atts;
 
   $atts['class'] = 'nav-link';
 

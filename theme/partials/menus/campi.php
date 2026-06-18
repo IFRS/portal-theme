@@ -9,19 +9,7 @@
       <?php esc_html_e('Campi do IFRS', 'ifrs-portal-theme'); ?>
     </button>
     <?php
-      wp_nav_menu(
-        array(
-          'theme_location'       => 'campi',
-          'container'            => 'div',
-          'container_class'      => 'collapse navbar-collapse',
-          'container_id'         => esc_attr($id),
-          'container_aria_label' => __('Lista de campi', 'ifrs-portal-theme'),
-          'menu_class'           => 'navbar-nav flex-wrap',
-          'menu_id'              => false,
-          'depth'                => 1,
-          'item_spacing'         => 'discard',
-        )
-      );
+      wp_nav_menu(ifrs_get_campi_nav_menu_args($id));
     ?>
   </div>
 </nav>
