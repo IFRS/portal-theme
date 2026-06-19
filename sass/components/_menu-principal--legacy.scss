@@ -74,8 +74,7 @@
 
   .container {
     height: var(--collapse-height, 100dvh);
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
     overscroll-behavior: contain;
     overflow-anchor: none;
     -webkit-overflow-scrolling: touch;
@@ -88,10 +87,10 @@
   flex-flow: column nowrap;
   align-items: start;
   justify-content: start;
+  min-height: 100%;
   padding: $grid-gutter-width 0;
   font-weight: 500;
   list-style: none;
-  min-height: 100%;
 
   a {
     color: inherit;
@@ -146,8 +145,8 @@
     display: none;
     min-height: 100%;
     max-height: var(--collapse-height, 100dvh);
-    overscroll-behavior: contain;
     padding: $grid-gutter-width 0;
+    overscroll-behavior: contain;
     list-style: none;
     background-color: #f8f8f8;
     border-left: 1px solid #bbbbbb;

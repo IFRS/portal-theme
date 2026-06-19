@@ -1,9 +1,9 @@
 @use 'sass:math';
 
 header {
-  background-color: $gray-100;
   padding-top: math.div($spacer, 2);
   padding-bottom: $spacer;
+  background-color: $gray-100;
 
   .row:not(:last-of-type) {
     margin-bottom: 3rem;
@@ -18,9 +18,9 @@ header {
   }
 
   &__mec {
+    margin-bottom: 0;
     font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 0;
   }
 
   &__principal {

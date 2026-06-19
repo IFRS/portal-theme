@@ -41,8 +41,8 @@
     &--todos {
       place-content: center center;
       color: var(--bs-light, #ffffff);
-      background-color: var(--bs-link-color);
       text-align: center;
+      background-color: var(--bs-link-color);
 
       &:hover,
       &:active {

@@ -8,22 +8,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: math.div($spacer, 2);
-  font-weight: 600;
   padding: 0;
+  font-weight: 600;
 
   a {
-    color: inherit;
     font-size: inherit;
     font-weight: inherit;
+    color: inherit;
     text-decoration: none;
   }
 
   > .menu-item {
-    list-style: none;
     position: relative;
-    border-radius: $border-radius-lg;
-    color: var(--bs-primary-text-emphasis);
     font-size: 0.95rem;
+    color: var(--bs-primary-text-emphasis);
+    list-style: none;
+    border-radius: $border-radius-lg;
 
     &:hover,
     &:focus-within,
@@ -35,8 +35,8 @@
 
     > a {
       display: block;
-      line-height: $line-height-sm;
       padding: $btn-padding-y $btn-padding-x;
+      line-height: $line-height-sm;
     }
   }
 
@@ -45,8 +45,8 @@
     font-weight: 500;
 
     > .menu-item > .dropdown-item.dropdown-toggle {
-      align-items: center;
       display: flex;
+      align-items: center;
 
       &::after {
         margin-inline-start: auto;

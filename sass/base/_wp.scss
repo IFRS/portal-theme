@@ -51,12 +51,12 @@
 .wp-block-search {
   &.wp-block-search__button-inside.wp-block-search__icon-button {
     .wp-block-search__inside-wrapper {
+      width: 100%;
       padding: 8px;
+      margin-inline-start: auto;
       background-color: var(--bs-gray-300);
       border-color: transparent;
       border-radius: var(--bs-border-radius, 0);
-      width: 100%;
-      margin-inline-start: auto;
       transition: background-color 0.2s ease, border-color 0.2s ease, max-width 0.2s ease;
 
       &:focus-within {
