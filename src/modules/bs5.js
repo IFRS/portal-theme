@@ -11,6 +11,7 @@ const socialLinks = document.querySelectorAll('.wp-block-social-link-anchor')
 socialLinks.forEach(link => {
   let title = link.querySelector('.wp-block-social-link-label').textContent
   new Tooltip(link, {
+    offset: [0, 12],
     placement: 'top',
     title: title,
   })
