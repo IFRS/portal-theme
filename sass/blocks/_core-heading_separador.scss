@@ -1,6 +1,4 @@
 .wp-block-heading {
-  $font-size-scale: 1.1;
-
   &.is-style-separador {
     display: flex;
     flex-flow: row nowrap;
@@ -25,12 +23,6 @@
 
     &::after {
       margin-inline-start: 1rem;
-    }
-
-    @for $i from 1 through 6 {
-      @at-root h#{$i}#{&} {
-        font-size: $font-size-base * $font-size-scale * pow($font-size-scale, 6 - $i);
-      }
     }
   }
 }
