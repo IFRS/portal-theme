@@ -62,5 +62,8 @@ require_once get_parent_theme_file_path('inc/vlibras.php');
 // Plugin Hooks
 require_once get_parent_theme_file_path('inc/plugins-hooks.php');
 
+// Limita níveis de título para impedir H1 no conteúdo
+require_once get_parent_theme_file_path('inc/heading-level-restrictions.php');
+
 // Bloco dinâmico da badge de post type
 require_once get_parent_theme_file_path('blocks/post-type-badge-block.php');

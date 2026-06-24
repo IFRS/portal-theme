@@ -1,6 +1,7 @@
 /* Block Styles */
 import './blocks/styles/core-button.js'
 import './blocks/styles/core-heading_separador.js'
+import './blocks/filters/no-h1-levels.js'
 import './modules/stretched-link.js'
 
 /* Block Variations */
