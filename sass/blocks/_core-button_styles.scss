@@ -1,11 +1,11 @@
 @use 'sass:math';
 
 @mixin portal-button-card-variation($desktop-ratio, $mobile-ratio: $desktop-ratio) {
-  flex: 0 1 calc(25% - 18px);
+  flex: 0 1 calc(25% - var(--wp--style--block-gap, 2rem));
   aspect-ratio: $desktop-ratio;
 
   @include media-breakpoint-down(lg) {
-    flex: 0 1 calc(50% - 12px);
+    flex: 0 1 calc(50% - var(--wp--style--block-gap, 2rem));
   }
 
   @include media-breakpoint-down(sm) {
