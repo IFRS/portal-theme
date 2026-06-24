@@ -1,8 +1,8 @@
 <a href="#fim-conteudo" id="fim-conteudo" class="visually-hidden"><?php esc_html_e('Fim do conteúdo', 'ifrs-portal-theme'); ?></a>
 
-<?php if (ifrs_has_campi_menu()) get_template_part('partials/menus/campi'); ?>
-
 <footer>
+  <?php if (ifrs_has_campi_menu()) get_template_part('partials/menus/campi'); ?>
+
   <a href="#inicio-rodape" id="inicio-rodape" class="visually-hidden"><?php esc_html_e('Início do rodapé', 'ifrs-portal-theme'); ?></a>
 
   <section class="footer__content">
