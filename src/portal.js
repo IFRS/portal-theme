@@ -1,4 +1,5 @@
 import './modules/bs5.js'
 import './modules/menu.js'
+import './modules/back-to-top.js'
 import './modules/vlibras.js'
 import './modules/stretched-link.js'
