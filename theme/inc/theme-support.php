@@ -46,4 +46,6 @@ add_action('after_setup_theme', function()  {
     'header-text'          => array('header__title'),
     'unlink-homepage-logo' => false,
   ));
+  // Remove core block patterns
+  remove_theme_support( 'core-block-patterns' );
 });
