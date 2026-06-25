@@ -1,23 +1,42 @@
 <?php
 /**
- * Title: Notícias
+ * Title: Lista de Notícias
  * Slug: ifrs/query-noticias
  * Categories: query
+ * Description: Exibe as notícias em grid, normalmente usado na página de notícias.
  * Block Types: core/query
+ * Post types: page
  */
 ?>
 
-<!-- wp:query {"query":{"perPage":4,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":4}} -->
+<!-- wp:query {"query":{"inherit":true}} -->
 <div class="wp-block-query">
-  <!-- wp:post-template {"layout":{"type":"grid","columnCount":4}} -->
+  <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
     <!-- wp:group {"className":"h-100","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
     <div class="wp-block-group h-100">
+      <!-- wp:post-featured-image {"isLink":true} /-->
       <!-- wp:post-terms {"term":"category"} /-->
-      <!-- wp:post-title {"isLink":true} /-->
-      <!-- wp:post-excerpt {"excerptLength":25} /-->
-      <!-- wp:post-date {"className":"mt-auto","style":{"layout":{"selfStretch":"fit","flexSize":null}}} /-->
+      <!-- wp:post-title {"level":3,"isLink":true} /-->
+      <!-- wp:post-excerpt {"excerptLength":30} /-->
+      <!-- wp:post-date {"textAlign":"right","className":"w-100 mt-auto"} /-->
     </div>
     <!-- /wp:group -->
   <!-- /wp:post-template -->
+
+  <!-- wp:query-pagination {"className":"mt-5","paginationArrow":"chevron","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
+    <!-- wp:query-pagination-previous /-->
+
+    <!-- wp:query-pagination-numbers {"midSize":3} /-->
+
+    <!-- wp:query-pagination-next /-->
+  <!-- /wp:query-pagination -->
+
+  <!-- wp:query-no-results -->
+    <!-- wp:html -->
+    <div class="alert alert-warning" role="alert">
+      <strong>Ops!</strong> N&atilde;o foram encontradas not&iacute;cias.
+    </div>
+    <!-- /wp:html -->
+  <!-- /wp:query-no-results -->
 </div>
 <!-- /wp:query -->

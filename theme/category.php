@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<?php get_template_part('partials/archive-noticias'); ?>
+<main class="container">
+  <?php echo do_blocks('<!-- wp:template-part {"slug":"noticias"} /-->'); ?>
+</main>
 
 <?php get_footer(); ?>

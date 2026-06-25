@@ -7,7 +7,7 @@
   <h2 class="wp-block-heading mb-4">Todas as Not&iacute;cias</h2>
   <!-- /wp:heading -->
 
-  <!-- wp:template-part {"slug":"noticias","lock":{"move":true,"remove":true}} /-->
+  <!-- wp:pattern {"slug":"ifrs/query-noticias","lock":{"move":true,"remove":true}} /-->
 
   <?php echo do_blocks(ob_get_clean()); ?>
 </main>
