@@ -13,7 +13,7 @@ window.wp.domReady( () => {
       templateLock: 'all',
       dimRatio: 90,
       isUserOverlayColor: true,
-      gradient:'dark-vertical',
+      gradient:'banner-dark-vertical',
       style: {
         shadow: 'var:preset|shadow|normal',
       },
