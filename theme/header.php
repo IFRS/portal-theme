@@ -41,7 +41,7 @@
       </div>
 
       <div class="row align-items-center">
-        <div class="col-12 col-md-8 col-lg-7 d-flex align-items-center mb-3 mb-md-0">
+        <div class="col-12 col-md-8 col-lg-7 d-flex align-items-center mb-5 mb-md-0">
           <?php get_template_part('partials/menus/principal', 'mobile'); ?>
           <div class="header__principal">
             <h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
