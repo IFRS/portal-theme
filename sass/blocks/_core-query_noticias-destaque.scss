@@ -43,6 +43,10 @@
 
   .wp-block-post-excerpt {
     font-weight: 500;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 }
 
