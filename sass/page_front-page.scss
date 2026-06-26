@@ -3,7 +3,13 @@
 @import 'components/noticia';
 
 body.home {
-  .entry-content.is-layout-flow > *:not(:first-child) {
-    margin-top: 4rem;
+  .entry-content {
+    &.wp-block-post-content {
+      margin-top: 0;
+    }
+
+    &.is-layout-flow > *:not(:first-child) {
+      margin-top: 4rem;
+    }
   }
 }
