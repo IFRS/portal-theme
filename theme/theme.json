@@ -225,7 +225,7 @@
           "outline": {
             "color": {
               "background": "transparent",
-              "text": "var(--bs-primary-text-emphasis)"
+              "text": "var(--bs-primary)"
             },
             "border": {
               "color": "var(--bs-primary)"
@@ -246,7 +246,7 @@
           "text": "var(--bs-white)"
         },
         "typography": {
-          "fontWeight": "500",
+          "fontWeight": "600",
           "textDecoration": "none"
         },
         ":hover": {
@@ -283,7 +283,7 @@
       },
       "core/post-terms": {
         "color": {
-          "text": "var(--bs-gray-600)"
+          "text": "var(--bs-primary-text-emphasis)"
         },
         "spacing": {
           "margin": {
@@ -291,7 +291,7 @@
           }
         },
         "typography": {
-          "fontSize": "0.875rem",
+          "fontSize": "0.825rem",
           "fontWeight": "600",
           "textTransform": "uppercase"
         },
