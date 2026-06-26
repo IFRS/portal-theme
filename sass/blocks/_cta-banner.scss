@@ -2,9 +2,13 @@
   $transition: all 0.5s ease-in-out;
 
   max-width: 100%;
-  aspect-ratio: 9/16 !important; // Mesmo formato de reels e stories do Instagram.
+  aspect-ratio: 4/5 !important; // Mesmo formato de post vertical do Instagram.
   color: #ffffff;
   border-radius: $border-radius-lg;
+
+  @include media-breakpoint-up(md) {
+    aspect-ratio: 9/16 !important; // Mesmo formato de reels e stories do Instagram.
+  }
 
   &:focus-within {
     outline: auto;
@@ -20,7 +24,6 @@
     font-size: 1.5rem;
     font-weight: 600;
 
-    // text-shadow: 1px 1px 4px rgb(0 0 0 / 80%);
     transition: $transition;
 
     @include media-breakpoint-up(md) {
