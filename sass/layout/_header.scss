@@ -2,7 +2,7 @@
 
 header {
   padding-top: math.div($spacer, 2);
-  padding-bottom: $spacer;
+  padding-bottom: $spacer * 1.5;
   background-color: $gray-100;
 
   .row:not(:last-of-type) {
