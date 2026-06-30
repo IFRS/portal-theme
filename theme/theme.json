@@ -359,7 +359,8 @@
       },
       "core/separator": {
         "border": {
-          "color": "var(--bs-gray-300)"
+          "color": "var(--bs-gray-400)",
+          "width": "1px"
         }
       }
     },
