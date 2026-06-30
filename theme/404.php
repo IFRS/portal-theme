@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="container">
+<main class="container py-0">
   <?php ob_start(); ?>
 
   <!-- wp:image {"scale":"cover","sizeSlug":"full","lightbox":{"enabled":false},"linkDestination":"none","align":"center","className":"img-fluid"} -->
