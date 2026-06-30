@@ -47,6 +47,7 @@
     > .menu-item > .dropdown-item.dropdown-toggle {
       display: flex;
       align-items: center;
+      gap: math.div($spacer, 2);
 
       &::after {
         margin-inline-start: auto;
