@@ -359,7 +359,7 @@
       },
       "core/separator": {
         "border": {
-          "color": "var(--bs-gray-500)"
+          "color": "var(--bs-gray-300)"
         }
       }
     },
