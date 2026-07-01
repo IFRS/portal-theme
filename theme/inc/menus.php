@@ -103,6 +103,14 @@ function ifrs_is_principal_mobile_collapse_menu_args( $args ) {
   return is_object($args) && !empty($args->principal_mobile_collapse);
 }
 
+function ifrs_principal_menu_allows_dropdown( $depth, $args ) {
+  if (!is_object($args) || empty($args->depth)) {
+    return true;
+  }
+
+  return $depth < ((int) $args->depth - 1);
+}
+
 class IFRS_Walker_Nav_Menu_Mobile_Collapse extends Walker_Nav_Menu {
   private $submenu_parent_ids = array();
 
@@ -165,7 +173,7 @@ add_filter('nav_menu_css_class', function( $classes, $item, $args, $depth ) {
 
   $has_children = in_array('menu-item-has-children', $classes, true);
 
-  if ($has_children) {
+  if ($has_children && ifrs_principal_menu_allows_dropdown($depth, $args)) {
     $classes[] = ($depth === 0) ? 'dropdown' : 'dropend';
   }
 
@@ -210,7 +218,7 @@ add_filter('nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
     $classes[] = 'dropdown-item';
   }
 
-  if ($has_children) {
+  if ($has_children && ifrs_principal_menu_allows_dropdown($depth, $args)) {
     $classes[] = 'dropdown-toggle';
 
     $atts['data-bs-toggle'] = 'dropdown';
