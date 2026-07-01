@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const backToTopLink = document.querySelector('.footer__back-to-top')
+  const backToTopButton = document.querySelector('.footer__back-to-top')
 
-  if (!backToTopLink) return
+  if (!backToTopButton) return
 
   let ticking = false
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ticking = false
 
     const scrollThreshold = Math.max(240, Math.round(window.innerHeight * 0.35))
-    backToTopLink.classList.toggle('is-visible', window.scrollY > scrollThreshold)
+    backToTopButton.classList.toggle('is-visible', window.scrollY > scrollThreshold)
   }
 
   const scheduleBackToTopUpdate = () => {
@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   updateBackToTopState()
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
 
   window.addEventListener('scroll', scheduleBackToTopUpdate, { passive: true })
   window.addEventListener('resize', scheduleBackToTopUpdate)
