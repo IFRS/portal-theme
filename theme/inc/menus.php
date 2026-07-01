@@ -118,8 +118,9 @@ class IFRS_Walker_Nav_Menu_Mobile_Collapse extends Walker_Nav_Menu {
     if (ifrs_is_principal_mobile_collapse_menu_args($args)) {
       $classes = is_array($data_object->classes) ? $data_object->classes : array();
       $has_children = in_array('menu-item-has-children', $classes, true);
+      $allows_collapse = ifrs_principal_menu_allows_dropdown($depth, $args);
 
-      if ($has_children) {
+      if ($has_children && $allows_collapse) {
         $this->submenu_parent_ids[$depth] = (int) $data_object->ID;
       } else {
         unset($this->submenu_parent_ids[$depth]);
@@ -184,8 +185,9 @@ add_filter('nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
   if (ifrs_is_principal_mobile_collapse_menu_args($args)) {
     $classes = array();
     $has_children = is_array($item->classes) && in_array('menu-item-has-children', $item->classes, true);
+    $allows_collapse = ifrs_principal_menu_allows_dropdown($depth, $args);
 
-    if ($has_children) {
+    if ($has_children && $allows_collapse) {
       $submenu_id = 'menu-principal-mobile-collapse-' . (int) $item->ID;
 
       $classes[] = 'collapsed';
