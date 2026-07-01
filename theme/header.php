@@ -60,14 +60,8 @@
   </header>
 
   <?php
-  if ( function_exists('yoast_breadcrumb') && ! is_front_page() ) {
-    $breadcrumb_start = sprintf(
-      '<section class="container"><nav class="breadcrumb-yoast" aria-label="%s">',
-      esc_attr__('Caminhos de navegação', 'ifrs-portal-theme')
-    );
-    yoast_breadcrumb($breadcrumb_start,'</nav></section>');
-  } else {
-    echo do_blocks('<!-- wp:breadcrumbs /-->');
+  if (function_exists('portal_render_header_breadcrumb')) {
+    echo portal_render_header_breadcrumb();
   }
   ?>
 

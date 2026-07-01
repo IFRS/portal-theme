@@ -38,8 +38,11 @@ require_once get_parent_theme_file_path('inc/assets.php');
 // Registra os menus
 require_once get_parent_theme_file_path('inc/menus.php');
 
-// Breadcrumb
-require_once get_parent_theme_file_path('inc/breadcrumb.php');
+// Breadcrumb nativo do tema
+require_once get_parent_theme_file_path('inc/breadcrumb-portal.php');
+
+// Integração de renderização do breadcrumb (Yoast -> Portal)
+require_once get_parent_theme_file_path('inc/breadcrumb-integration.php');
 
 // Filtro para buscas vazias
 require_once get_parent_theme_file_path('inc/empty-search-filter.php');
