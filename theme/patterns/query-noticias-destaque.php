@@ -10,11 +10,11 @@
  */
 ?>
 
-<!-- wp:query {"query":{"perPage":2,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"only","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":2},"className":"noticias-destaque"} -->
+<!-- wp:query {"query":{"perPage":2,"pages":1,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"only","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":2},"className":"noticias-destaque"} -->
 <div class="wp-block-query noticias-destaque">
   <!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
-    <!-- wp:group {"layout":{"inherit":false}} -->
-    <div class="wp-block-group">
+    <!-- wp:group {"className":"w-100","layout":{"inherit":false}} -->
+    <div class="wp-block-group w-100">
       <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
       <!-- wp:post-terms {"term":"category"} /-->
       <!-- wp:post-title {"isLink":true} /-->
@@ -26,10 +26,10 @@
 </div>
 <!-- /wp:query -->
 
-<!-- wp:query {"query":{"perPage":4,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":4}} -->
+<!-- wp:query {"query":{"perPage":4,"pages":1,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"disable_pagination":true},"displayLayout":{"type":"flex","columns":4}} -->
 <div class="wp-block-query">
   <!-- wp:post-template {"layout":{"type":"grid","columnCount":4}} -->
-    <!-- wp:group {"className":"h-100","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+    <!-- wp:group {"className":"h-100","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
     <div class="wp-block-group h-100">
       <!-- wp:post-terms {"term":"category"} /-->
       <!-- wp:post-title {"isLink":true} /-->

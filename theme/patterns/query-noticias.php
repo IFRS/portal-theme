@@ -12,7 +12,7 @@
 <!-- wp:query {"query":{"inherit":true}} -->
 <div class="wp-block-query">
   <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
-    <!-- wp:group {"className":"h-100","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+    <!-- wp:group {"className":"h-100","style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
     <div class="wp-block-group h-100">
       <!-- wp:post-featured-image {"isLink":true} /-->
       <!-- wp:post-terms {"term":"category"} /-->
