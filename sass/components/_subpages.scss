@@ -72,5 +72,14 @@
       background-color: var(--bs-primary-bg-subtle);
       text-decoration: none;
     }
+
+    &:has(> svg) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: math.div($spacer, 4);
+    }
   }
 }
