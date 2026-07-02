@@ -26,13 +26,21 @@ const belowMd = window.matchMedia('(max-width: 767.98px)')
 
 const syncCollapseWithBreakpoint = event => {
   collapseSubpages.forEach(collapseEl => {
-    const collapse = Collapse.getOrCreateInstance(collapseEl)
     if (event.matches) {
+      // On small screens we control visibility through Bootstrap collapse.
+      const collapse = Collapse.getOrCreateInstance(collapseEl, { toggle: false })
       collapse.hide()
       return
     }
 
-    collapse.show()
+    // On desktop keep the content open and remove JS instance side effects.
+    const collapse = Collapse.getInstance(collapseEl)
+    if (collapse) {
+      collapse.dispose()
+    }
+
+    collapseEl.classList.add('show')
+    collapseEl.style.removeProperty('height')
   })
 }
 
