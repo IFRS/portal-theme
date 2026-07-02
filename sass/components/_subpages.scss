@@ -1,40 +1,76 @@
+@use 'sass:math';
+
 .subpages {
-  align-items: stretch;
-  margin-block-end: 1rem;
-  background-color: $gray-100;
-  border-radius: $border-radius-sm;
-  box-shadow: var(--bs-box-shadow, none);
+  border-inline-start: $border-width $border-style $border-color;
+  max-width: 100%;
+  width: 100%;
 
-  @include media-breakpoint-up(lg) {
-    &:has(+ .wp-block-post-content) {
-      position: sticky;
-      top: 0.5rem; right: 0;
-      z-index: 1;
-      float: inline-start;
-      flex-flow: column nowrap;
-      max-width: 20%;
-      margin-inline-end: $spacer * 2;
+  @include media-breakpoint-up(md) {
+    max-width: max-content;
+  }
 
-      .nav-item {
-        &--parent {
-          border-right: none;
-          border-bottom: $border-width $border-style $border-color;
-        }
-      }
+  &:has(+ .wp-block-post-content) {
+    @include media-breakpoint-up(md) {
+      float: inline-end;
+      margin-inline-start: $spacer * 2;
+      max-width: 30%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 25%;
     }
   }
 
-  .nav-item {
+  &:has(.subpages__menu.show) {
+    .subpages__toggle {
+      @include caret('up');
+    }
+  }
+
+  &__toggle {
+    border-radius: 0;
+    width: 100%;
+    text-align: left;
+    color: $link-color;
+    font-weight: 500;
+
+    @include caret('down');
+
+    &:hover,
+    &:active {
+      color: $link-hover-color;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    margin-block-start: $spacer;
+    padding: 0;
+  }
+
+  &__item {
+    color: $primary-text-emphasis;
+    font-size: 0.9rem;
+    font-weight: 500;
+
     &--parent {
-      border-right: $border-width $border-style $border-color;
+      font-weight: 600;
+      margin-block-end: math.div($spacer, 2);
     }
   }
 
-  .nav-link {
-    padding: 1rem;
+  &__link {
+    color: inherit;
+    font-weight: inherit;
+    display: block;
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+    text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: var(--bs-primary-bg-subtle);
+      text-decoration: none;
     }
   }
 }
