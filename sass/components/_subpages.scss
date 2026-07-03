@@ -55,7 +55,9 @@
   }
 
   &__item {
-    font-size: 0.9rem;
+    @include media-breakpoint-up(md) {
+      font-size: 0.9rem;
+    }
     font-weight: 500;
     color: $primary-text-emphasis;
 
