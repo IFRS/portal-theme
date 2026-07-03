@@ -76,7 +76,7 @@
     &:has(> svg) {
       display: flex;
       flex-flow: row nowrap;
-      gap: math.div($spacer, 4);
+      gap: math.div($spacer, 2);
       align-items: center;
       justify-content: flex-start;
     }
