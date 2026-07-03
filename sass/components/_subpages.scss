@@ -13,11 +13,17 @@
     @include media-breakpoint-up(md) {
       float: inline-end;
       max-width: 30%;
+      margin-block-end: $spacer * 3;
       margin-inline-start: $spacer * 2;
     }
 
     @include media-breakpoint-up(xl) {
       max-width: 25%;
+    }
+
+    & + .wp-block-post-content {
+      display: block;
+      overflow: visible;
     }
   }
 
@@ -54,7 +60,6 @@
     color: $primary-text-emphasis;
 
     &--parent {
-      margin-block-end: math.div($spacer, 2);
       font-weight: 600;
     }
   }
@@ -78,7 +83,7 @@
       flex-flow: row nowrap;
       gap: math.div($spacer, 2);
       align-items: center;
-      justify-content: flex-start;
+      justify-content: start;
     }
   }
 }
