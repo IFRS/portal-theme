@@ -417,7 +417,7 @@ if (!function_exists('portal_render_breadcrumb_html')) {
     }
 
     $defaults = array(
-      'container_class' => 'container',
+      'container_class' => 'container-lg',
       'nav_class' => 'breadcrumb-portal',
       'label' => __('Caminhos de navegação', 'ifrs-portal-theme'),
     );
@@ -487,7 +487,7 @@ if (!function_exists('portal_register_breadcrumb_block')) {
       'attributes' => array(
         'containerClass' => array(
           'type' => 'string',
-          'default' => 'container',
+          'default' => 'container-lg',
         ),
         'navClass' => array(
           'type' => 'string',
