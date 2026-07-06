@@ -1,8 +1,4 @@
 .curso {
-    &__title {
-        @include title-box($cor-cursos, '/img/bg-cursos.png');
-    }
-
     &__thumb {
         float: left;
         width: 25%;
@@ -22,10 +18,6 @@
 
 .curso-aside {
     margin-bottom: 20px;
-
-    &__title {
-        @include title-box($cor-cursos);
-    }
 
     &__content {
         padding: 0 10px;

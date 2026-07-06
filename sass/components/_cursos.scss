@@ -1,8 +1,4 @@
 .cursos {
-    &__title {
-        @include title-box($cor-cursos, '/img/bg-cursos.png');
-    }
-
     &__search {
         .btn-search-cursos {
             @include button-variant($cor-cursos, $cor-cursos);
@@ -77,9 +73,5 @@
 
     &__turnos {
         font-size: 0.8rem;
-
-        a {
-            // color: $accent;
-        }
     }
 }

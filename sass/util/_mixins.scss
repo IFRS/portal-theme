@@ -61,43 +61,6 @@
   }
 }
 
-@mixin title-box($color: $primary, $image-url: '') {
-  padding: 15px 10px 25px 15px;
-  background-color: $gray-500;
-  border-top: 5px solid $color;
-
-  @if $color != $primary {
-    color: $color;
-  }
-
-  @if $image-url != '' {
-    background-image: url($image-url);
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: contain;
-  }
-}
-
-@mixin link-todos($cor: $primary) {
-  font-size: 14px;
-  color: $cor;
-  text-transform: uppercase;
-
-  &:hover {
-    color: $cor;
-  }
-
-  &::after {
-    padding: 0 10px;
-    margin-left: 5px;
-    content: '';
-    background-color: $cor;
-    background-position: center center;
-    background-size: 15px;
-    border-radius: 4px;
-  }
-}
-
 @mixin trim($numLines: 1) {
   @if $numLines > 1 {
     display: -webkit-box;
