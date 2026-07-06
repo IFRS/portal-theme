@@ -6,7 +6,7 @@
     "start": "vite build --watch",
     "dev": "vite build --watch --mode development",
     "build": "vite build",
-    "analyze": "analyze",
+    "analyze": "analyze --open false",
     "lint:js": "eslint src --ext .js",
     "lint:css": "stylelint \"sass/**/*.scss\"",
     "lint": "npm run lint:js && npm run lint:css",
