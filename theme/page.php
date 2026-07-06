@@ -5,9 +5,9 @@
 
   <!-- wp:post-title /-->
 
-  <!-- wp:pattern {"slug":"ifrs/subpages"} /-->
-
   <!-- wp:post-featured-image {"width":"100%","align":"center"} /-->
+
+  <!-- wp:pattern {"slug":"ifrs/subpages"} /-->
 
   <!-- wp:post-content /-->
 

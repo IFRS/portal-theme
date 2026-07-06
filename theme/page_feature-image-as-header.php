@@ -9,9 +9,9 @@
 <main id="page-<?php the_ID(); ?>" <?php post_class(['container-lg']); ?>>
   <?php ob_start(); ?>
 
-  <!-- wp:post-featured-image {"align":"full","className":"mt-0"} /-->
-
   <!-- wp:post-title {"className":"screen-reader-text"} /-->
+
+  <!-- wp:post-featured-image {"align":"full","className":"mt-0"} /-->
 
   <!-- wp:pattern {"slug":"ifrs/subpages"} /-->
 
