@@ -81,6 +81,11 @@ export default defineConfig(({ mode }) => ({
           dest: '.',
           rename: { stripBase: 1 },
         },
+        {
+          src: 'LICENSE',
+          dest: '.',
+          rename: 'license.txt',
+        }
       ],
       watch: {
         reloadPageOnChange: true,
