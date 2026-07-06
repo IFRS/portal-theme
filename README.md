@@ -22,24 +22,25 @@ Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Inst
 
 - **Editor de Blocos (Gutenberg)**: Suporte completo ao editor de blocos com Block Patterns customizados
 - **Block Theme**: Tema moderno baseado em blocos com `theme.json` configurado
-- **Sistema de Taxonomias**: Taxonomia "Escopo" para categorização avançada de posts
 - **Template Parts Editáveis**: Cabeçalho, rodapé e outras áreas editáveis via editor de blocos
 - **Bootstrap 5**: Framework CSS responsivo e moderno
 - **Design GOV.BR**: Integração com componentes do Design System do Governo Federal
 - **Multisite**: Desenvolvido especificamente para instalações multisite do WordPress
 - **SEO Otimizado**: Sistema de SEO integrado com suporte para Yoast SEO
 - **Acessibilidade**: Integração com VLibras e recursos de acessibilidade WCAG
-- **Breadcrumb Automático**: Navegação estrutural automática
-- **Imagens Responsivas**: Lazy loading e tratamento automático de imagens
-- **Vídeos Responsivos**: Embeds do YouTube automaticamente responsivos
+- **Breadcrumb Automático**: Navegação estrutural automática nativa com integração ao Yoast SEO
+- **Imagens Responsivas**: Lazy loading nativo e imagem de destaque padrão (fallback) em listagens
+- **Vídeos e iFrames Responsivos**: Embeds e iframes com lazy loading automático
 - **DataTables**: Tabelas interativas e responsivas
 - **Font Awesome**: Biblioteca completa de ícones
+- **Bloco Dinâmico**: Bloco `portal/post-type-badge` para exibir badge do tipo de post em Query Loops
+- **Restrições de Heading**: Bloco H1 desabilitado no conteúdo do editor para preservar a hierarquia de headings
 
 ## Requisitos
 
 ### Sistema
 
-- **WordPress**: 6.9 ou superior
+- **WordPress**: 6.9 ou superior (testado até 7.0)
 - **PHP**: 8.1 ou superior
 - **MySQL**: 5.7 ou superior (ou MariaDB equivalente)
 
@@ -49,11 +50,6 @@ Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Inst
 - [NPM](https://www.npmjs.com/)
 
 ## Dependências
-
-### Plugins Obrigatórios
-
-- [Meta Box](https://br.wordpress.org/plugins/meta-box/): Framework para criação de custom fields e metaboxes
-- [CMB2](https://br.wordpress.org/plugins/cmb2/): Framework adicional para metaboxes (compatibilidade)
 
 ### Plugins Recomendados
 
@@ -68,6 +64,8 @@ Tema do [Wordpress](https://wordpress.org/) para o Portal Institucional do [Inst
 - [IFRS Portal Plugin Documentos](https://github.com/IFRS/portal-plugin-documentos): Sistema de gestão de documentos institucionais
 - [IFRS Portal Plugin Editais](https://github.com/IFRS/portal-plugin-editais): Gerenciamento de editais e processos seletivos
 - [IFRS Portal Plugin Cursos Estude](https://github.com/IFRS/portal-plugin-cursos-estude): Cursos obtidos do catálogo de cursos do site Estude no IFRS
+- [Meta Box](https://br.wordpress.org/plugins/meta-box/): Framework para custom fields e metaboxes utilizado pelos plugins do ecossistema
+- [CMB2](https://br.wordpress.org/plugins/cmb2/): Framework adicional para metaboxes utilizado pelos plugins do ecossistema
 
 ## Instalação e Desenvolvimento
 
@@ -107,16 +105,30 @@ npm run build
 
 *Será atualizada a pasta `build/` com os assets otimizados para produção.*
 
+### Análise do Bundle
+
+Para visualizar o tamanho e composição do bundle gerado:
+
+```bash
+npm run analyze
+```
+
+### Linting
+
+```bash
+npm run lint        # Verifica JS e CSS
+npm run lint:fix    # Corrige automaticamente quando possível
+```
+
 ## Configuração
 
 ### Menus de Navegação
 
-O tema oferece 4 localizações de menu:
+O tema oferece 3 localizações de menu:
 
 1. **Barra de Acessibilidade** (`acessibilidade`): Atalhos de acessibilidade
-2. **Barra de Serviços** (`servicos`): Sistemas e serviços institucionais
-3. **Lista de Campi** (`campi`): Lista de campi do IFRS
-4. **Menu Principal** (`principal`): Navegação principal
+2. **Lista de Campi** (`campi`): Lista de campi do IFRS — registrado apenas no site principal em instalações multisite
+3. **Menu Principal** (`principal`): Navegação principal
 
 ### Logo Personalizado
 
@@ -127,24 +139,26 @@ O tema oferece 4 localizações de menu:
 
 ### Paleta de Cores
 
-O tema possui uma paleta de cores predefinida:
+O tema possui uma paleta de cores predefinida, mapeada para variáveis CSS do Bootstrap:
 
-- **Principal** (`primary`): #2f9e41 - Verde IFRS
-- **Destaque** (`accent`): #1351B4 - Azul GOV.BR
-- **Claro** (`light`): #f8f9fa
-- **Escuro** (`dark`): #212529
-- **Branco** (`white`): #ffffff
-- **Preto** (`black`): #000000
+- **Principal** (`primary`): Verde IFRS — `var(--bs-primary)`
+- **Secundário** (`secondary`): `var(--bs-secondary)`
+- **Destaque** (`accent`): Azul GOV.BR — `var(--bs-accent)`
+- **Dourado** (`gold`): `var(--bs-gold)`
+- **Claro** (`light`): `var(--bs-light)`
+- **Escuro** (`dark`): `var(--bs-dark)`
+- **Branco** (`white`): `var(--bs-white)`
+- **Preto** (`black`): `var(--bs-black)`
 
-### Taxonomia "Escopo"
+### Gradientes
 
-O tema inclui uma taxonomia customizada chamada **Escopo** para categorizar posts por abrangência (institucional, servidores, alunos, etc.).
+O tema oferece gradientes predefinidos no editor de blocos:
 
-**Permissões:**
-- Gerenciar termos: `manage_escopos`
-- Editar termos: `edit_escopos`
-- Deletar termos: `delete_escopos`
-- Atribuir termos: `edit_posts`
+- **Gradiente Escuro Vertical** (`dark-vertical`)
+- **Gradiente Escuro Horizontal** (`dark-horizontal`)
+- **Gradiente Claro Vertical** (`light-vertical`)
+- **Gradiente Claro Horizontal** (`light-horizontal`)
+- **Gradiente para Banner Escuro Vertical** (`banner-dark-vertical`)
 
 ## Template Parts
 
@@ -152,7 +166,6 @@ O tema inclui uma taxonomia customizada chamada **Escopo** para categorizar post
 |---------------|------|------|-----------|
 | Conteúdo do Cabeçalho | `header-content` | Cabeçalho | Conteúdo personalizado no cabeçalho do site |
 | Lista de Notícias | `noticias` | Geral | Lista de notícias para a página inicial |
-| Pré-Rodapé | `prefooter` | Pré-rodapé | Área antes do rodapé, para informações adicionais |
 | Redes Sociais | `social` | Geral | Links para redes sociais institucionais |
 | Conteúdo do Rodapé | `footer-content` | Rodapé | Conteúdo personalizado no rodapé |
 
@@ -204,17 +217,23 @@ add_action('wp_enqueue_scripts', function() {
 O tema oferece diversos hooks para customização. Principais arquivos em `inc/`:
 
 - `custom-queries.php`: Queries personalizadas
-- `feature-image-fallback.php`: Imagem de destaque padrão
+- `feature-image-fallback.php`: Imagem de destaque padrão em listagens
 - `custom-title.php`: Títulos personalizados
-- `seo.php`: Otimizações de SEO
-- `breadcrumb.php`: Customização do breadcrumb
-- `plugins-hooks.php`: Hooks para integração com plugins
+- `seo.php`: Otimizações de SEO (integração com Yoast SEO)
+- `breadcrumb-portal.php`: Breadcrumb nativo do tema
+- `breadcrumb-integration.php`: Integração do breadcrumb do Yoast com o Portal
+- `plugins-hooks.php`: Hooks para integração com plugins do ecossistema IFRS
+- `heading-level-restrictions.php`: Restrição de H1 no editor de blocos
+- `category-home-visibility.php`: Controle de visibilidade de categorias na página inicial
+- `iframe-lazy-loading.php`: Lazy loading em iframes
+- `post-pagination.php`: Paginação de posts
+- `restrictions.php`: Restrições de interface para usuários não-administradores
 
 ### Limitações de Profundidade
 
 O tema limita automaticamente:
-- **Menus**: Níveis de navegação (configurável em `inc/depth-limit.php`)
-- **Páginas**: Aninhamento de páginas hierárquicas
+- **Menus**: Máximo de 3 níveis de navegação (configurado em `inc/depth-limit.php`)
+- **Páginas**: Aninhamento de páginas hierárquicas (máximo 5 níveis no seletor de página pai)
 
 ## Recursos de Acessibilidade
 
@@ -238,8 +257,8 @@ O tema implementa automaticamente:
 
 - **Remoção de Emojis**: Desabilita os emojis nativos do WordPress
 - **Remoção de Versões**: Remove informações de versão do WordPress do HTML
-- **Resource Hints**: Preconnect, prefetch e preload para recursos críticos
-- **Lazy Loading**: Carregamento sob demanda de imagens (via LazySizes)
+- **Resource Hints**: Preconnect e preload para recursos críticos (VLibras, logo)
+- **Lazy Loading**: Carregamento sob demanda nativo para imagens e iframes
 - **Minificação**: CSS e JS minificados em produção
 - **Concatenação**: Redução do número de requisições HTTP
 
