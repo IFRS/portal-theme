@@ -28,8 +28,15 @@ const syncCollapseWithBreakpoint = event => {
   collapseSubpages.forEach(collapseEl => {
     if (event.matches) {
       // On small screens we control visibility through Bootstrap collapse.
+      const subpages = collapseEl.closest('.subpages')
+      const hasPostContentSibling = !!subpages?.parentElement?.querySelector(':scope > .wp-block-post-content')
       const collapse = Collapse.getOrCreateInstance(collapseEl, { toggle: false })
-      collapse.hide()
+      if (hasPostContentSibling) {
+        collapse.hide()
+        return
+      }
+
+      collapse.show()
       return
     }
 
